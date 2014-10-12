@@ -12,7 +12,7 @@
    height="50"
    version="1.1"
    inkscape:version="0.91pre2 r13516"
-   sodipodi:docname="teplomer_2o.svg">
+   sodipodi:docname="teplomer_2.svg">
   <metadata
      id="metadata9">
     <rdf:RDF>
@@ -21,7 +21,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,13 +38,12 @@
      id="namedview7"
      showgrid="false"
      inkscape:zoom="13.350176"
-     inkscape:cx="-5.81994"
-     inkscape:cy="41.42803"
+     inkscape:cx="5.2286035"
+     inkscape:cy="26.446954"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"
-     borderlayer="false" />
+     inkscape:current-layer="svg2" />
   <defs
      id="defs8" />
   <g
