@@ -10,37 +10,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="js/libs/snap.svg/snap.svg.js"></script>
-
-        <script>
-            window.onload = function () {
-            var s = Snap(1000, 800);
-                    Snap.load("stanica.svg", function (f) {
-                    var rura1 = f.select("#rura1"),
-                            voda1 = f.select("#voda1"),
-                            rura2 = f.select("#rura2"),
-                            voda2 = f.select("#voda2"),
-                            motor1 = f.select("#motor1"),
-                            vrtulky = f.select("#vrtulky"),
-                            rura3 = f.attr("rura3"),
-                            ventil = f.attr("ventil"),
-                            voda3 = f.select("#voda3"),
-                            voda4 = f.select("#voda4"),
-                            rura4 = f.attr("rura4"),
-                            hladina1 = f.select("#hladina1")
-                            hladina1cx = hladina1.attr("cx"),
-                            hladina1cy = hladina1.attr("cy");
-                            
-                            
-                    });
-
-
-
-
-
-
-        </script>
+        <script type="text/javascript" src="stanica.js"></script>
     </head>
-    <body>
+    <body onload="onPageLoad();">
         <div>Precerpavacia Stanica</div>
         <li> <a href="stanica.svg">stanica.svg</a></li>
         <li> <a href="http://snapsvg.io/demos/#coffee">Demo priklad z snapsvg.io</a></li>
