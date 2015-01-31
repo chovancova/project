@@ -1,0 +1,139 @@
+\chapter{...}
+
+
+Postup práce: 
+\begin{itemize}
+\item Nájsť spôsob ako nakresliť vizualizáciu v open-source SVG grafickom editore, kde výstupom sú grafické objekty vo formáte SVG. 
+\end{itemize}
+\begin{itemize}
+\item Nájsť spôsob ako výsledné vytvorené SVG objekty, použiť na webovej stránke a prepojiť s funkciami napísanými v JavaScripte na ovládanie animácií, nastavovanie farieb a podobne. 
+\end{itemize}
+
+\section{SVG grafické editory}
+\subsection{Adobe Illustrator}
+Adobe Illustrator is a vector graphics editor developed and marketed by Adobe Systems. 
+ It's not free and not open source.
+http://www.adobe.com/products/illustrator.html
+
+\subsection{CorelDraw}
+CorelDraw (styled CorelDRAW) is a vector graphics editor developed and marketed by Corel Corporation of Ottawa, Canada. CorelDRAW X7, a vector-illustration and page-layout application.  It's not free and not open source.
+http://www.coreldraw.com/rw/
+http://www.coreldraw.com/rw/product/graphic-design-software/
+
+\subsection{Inkscape}
+Inkscape is a professional vector graphics editor for Windows, Mac OS X and Linux. It's free and open source.
+http://www.inkscape.org/en/about/features/
+<br>
+
+\textbf{Features of Inkscape}
+
+ Object creation
+
+\begin{itemize}
+\item      Drawing: pencil tool (freehand drawing with simple paths), pen tool (creating Bézier curves and straight lines), calligraphy tool (freehand drawing using filled paths representing calligraphic strokes)
+\item     Shape tools: rectangles (may have rounded corners), ellipses (includes circles, arcs, segments), stars/polygons (can be rounded and/or randomized), spirals
+\item     Clones ("live" linked copies of objects), including a tool to create patterns and arrangements of clones
+\end{itemize}
+
+
+\textbf{Object manipulation}
+
+
+\begin{itemize}
+\item     Transformations (moving, scaling, rotating, skewing), both interactively and by specifying exact numeric values
+\item     Z-order operations (raising and lowering)
+\item     Grouping objects ("select in group" without ungrouping, or "enter the group" making it a temporary layer)
+\item     Layers (lock and/or hide individual layers, rearrange them, etc; layers can form a hierarchical tree)
+\item     Alignment and distribution commands
+\end{itemize}
+
+
+\textbf{Operations on paths}
+  
+\begin{itemize}
+\item    Node editing: moving nodes and Bezier handles, node alignment and distribution, etc.
+\item       Converting to path (for text objects or shapes), including converting stroke to path
+\item     Boolean operations
+\item     Path simplification, with variable threshold
+\item       Path insetting and outsetting, including dynamic and linked offset objects
+\end{itemize}
+
+
+\textbf{Rendering}
+
+\begin{itemize}
+\item     Fully anti-aliased display
+    Alpha transparency support for display and PNG export
+    Complete "as you drag" rendering of objects during interactive transformations
+\end{itemize}
+
+\textbf{Misc}
+ 
+\begin{itemize}
+\item    Live watching and editing the document tree in the XML editor
+    PNG, OpenDocument Drawing, DXF, sk1, PDF, EPS and PostScript export formats
+    Command line options for export and conversions
+    Perfectly compliant SVG format file generation and editing
+\end{itemize}
+
+
+
+\section{JavaScript knižnice SVG}
+
+\subsection{D3}
+D3  - \textbf{D}ata \textbf{D}riven \textbf{D}ocument -  http://d3js.org/
+
+D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation. 
+
+D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.
+
+D3 is not a monolithic framework that seeks to provide every conceivable feature. Instead, D3 solves the crux of the problem: efficient manipulation of documents based on data. This avoids proprietary representation and affords extraordinary flexibility, exposing the full capabilities of web standards such as CSS3, HTML5 and SVG. With minimal overhead, D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation. D3’s functional style allows code reuse through a diverse collection of components and plugins. 
+
+\subsection{Raphaël}
+http://raphaeljs.com/
+
+ Raphaël is a small JavaScript library that should simplify your work with vector graphics on the web. If you want to create your own specific chart or image crop and rotate widget, for example, you can achieve it simply and easily with this library.
+
+Raphaël  uses the SVG W3C Recommendation and VML as a base for creating graphics. This means every graphical object you create is also a DOM object, so you can attach JavaScript event handlers or modify them later. Raphaël’s goal is to provide an adapter that will make drawing vector art compatible cross-browser and easy.
+
+Raphaël currently supports Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+. 
+
+
+\subsection{Snap.svg }
+
+http://snapsvg.io/
+
+Snap.svg is a brand new JavaScript library for working with SVG. Snap provides web developers with a clean, streamlined, intuitive, and powerful API for animating and manipulating both existing SVG content, and SVG content generated with Snap.
+
+Currently, the most popular library for working with SVG is Raphaël. One of the primary reasons Raphaël became the de facto standard is that it supports browsers all the way back to IE 6. However, supporting so many browsers means only being able to implement a common subset of SVG features. Snap was written entirely from scratch by the author of Raphaël (Dmitry Baranovskiy), and is designed specifically for modern browsers (IE9 and up, Safari, Chrome, Firefox, and Opera). Targeting more modern browsers means that Snap can support features like masking, clipping, patterns, full gradients, groups, and more.
+
+Another unique feature of Snap is its ability to work with existing SVG. That means your SVG content does not have to be generated with Snap for you to be able to use Snap to work with it (think “jQuery or Zepto for SVG”). That means you create SVG content in tools like Illustrator, Inkscape, or Sketch then animate or otherwise manipulate it using Snap. You can even work with strings of SVG (for example, SVG files loaded via Ajax) without having to actually render it first which means you can do things like query specific shapes out of an SVG file, essentially turning it into a resource container or sprite sheet.
+
+Finally, Snap supports animation. By providing a simple and intuitive JavaScript API for animation, Snap can help make your SVG content more interactive and engaging.
+
+Snap is    free and   open-source (released under an Apache 2 license).
+
+\subsection{SVG.JS}
+http://www.svgjs.com/
+
+A lightweight library for manipulating and animating SVG. 
+    
+\begin{itemize}
+\item easy readable uncluttered syntax
+\item    animations on size, position, transformations, color, ...
+ \item   painless extension thanks to the modular structure
+    \item various useful plugins available
+   \item unified api between shape types with move, size, center, ...
+   \item binding events to elements
+   \item full support for opacity masks and clipping paths
+   \item text paths, even animated
+ \item   element groups and sets
+\item   dynamic gradients
+\end{itemize}
+
+
+
+
+
+
+
