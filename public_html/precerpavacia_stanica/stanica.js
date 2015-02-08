@@ -1,5 +1,7 @@
 window.onload = function () {
-    var s = Snap(1000, 800);
+    var s = Snap(1000, 800),
+            openVentil = 0,
+            openMotor = 0;
     Snap.load("stanica.svg", function (f) {
         var rura1 = f.select("#rura1"),
                 voda1 = f.select("#voda1"),
@@ -17,7 +19,12 @@ window.onload = function () {
                 hladina1cy = hladina1.attr("cy");
 
 
-});
+        x = +hladina1.attr("cx");
+        y = +hladina1.attr("cy");
+
+
+
+    });
 
 
 };
