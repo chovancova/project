@@ -2,7 +2,8 @@ window.onload = function () {
     var s = Snap(1000, 800),
             openVentil = 0,
             openMotor = 0;
-    Snap.load("stanica.svg", function (f) {
+   
+    /*Snap.load("stanica.svg", function (f) {
         var rura1 = f.select("#rura1"),
                 voda1 = f.select("#voda1"),
                 rura2 = f.select("#rura2"),
@@ -25,6 +26,6 @@ window.onload = function () {
 
 
     });
-
+*/
 
 };
