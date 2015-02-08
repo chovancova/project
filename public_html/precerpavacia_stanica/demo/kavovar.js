@@ -142,18 +142,41 @@ window.onload = function () {
                 dr = grp.path(doors(0)).attr("class", "doors"),
                 /**zadefinujem si typy kav*/
                 types = {
-                    0: function(){
+                    0: function () {
                         /*AMERICANO*/
                         cover.attr("class", "water");
                         ct2.attr("fill", gwater);
                         middle = 10 + o3;
-                        pieCoffee = 1 / 3; 
+                        pieCoffee = 1 / 3;
                         pieType = "water";
+                        pietTitle = "Americano";
+                        gstream = "l(0,1,0,0)#60544F-#60544F:33-#B4D6DB";
+                    },
+                    /*LATE*/
+                    72: function () {
+                        cover.attr("class", "water");
+                        ct2.attr("fill", gmilk);
+                        middle = 10 + o3 * 2;
+                        pieCoffee = 2 / 3;
+                        pieType = "milk";
+                        pieTitle = "LATTE";
+                        gstream = "l(0,1,0,0)#60544F-#60544F:66-#fff";
+                    },
+                    /*MOCHA*/
+                    144: function () {
+                        cover.attr("class", "milk");
+                        ct2.attr("fill", gmilk);
+                        middle = 10 + o3;
+                        pieCoffee = 1 / 3;
+                        pieType = "milk";
+                        pieTitle = "Mocha";
+                        gstream = "l(0,1,0,0)#60544F-#60544F:33-#fff";
                     }
-                    
-                    
+                    /*Maciatto*/
+
+
                 }
-                
+
     });
 
 
