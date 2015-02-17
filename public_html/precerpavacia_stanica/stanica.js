@@ -1,7 +1,13 @@
-window.onload = function () {
+window.onload = function (boolVentil, boolCerpadla, intHladiny) {
     var s = Snap(1000, 1200),
             openVentil = 0,
             openMotor = 0;
+/*d path fullTankStr a emptyTankStr
+zmena iba v  M90,147.6 na M90,30 a L150,147.6 na L150,30 
+rozdiel y osi je vyska vyplne*/
+var fullTankStr = "M90,30L150,30V150V150S120,170,90,150V90V30";
+var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
+
 
     Snap.load("stanica.svg", function (f) {
         /* var rura1 = f.select("#rura1"),
@@ -63,6 +69,60 @@ window.onload = function () {
      // colorInOut(false, false); /*nevyteka nic*/
      // */
         
+        
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      /**ANIMACIA nadrze
+        parameter
+      ak bude zadany naplnBool true
+          tank sa bude vypraznovat
+        inak
+          tak sa bude naplnovat
+        Zatial su natvrdo nastavene path cez string
+        
+        ANIMACIA nadrze
+      vyuzivam schopnost animate
+      funkcia na zmenu hodnot suradnic M a L na osi y elementu fillPath 
+       var animateTank = function (a, naplnBool, percento)
+             //zanimovanie po urcite percennto
+        */
+      var animateTank = function (a, naplnBool){
+        var fillMe = " ";
+        var fp = s.selectAll(a);
+        //naplnenie tanku vodou
+       if(naplnBool===true)  {
+          fp.attr({fill: "blue", d: emptyTankStr});
+         fillMe = fullTankStr;
+         } 
+        else{
+          //vypraznenie tanku vodou
+          fp.attr({fill: "blue", d: fullTankStr});
+           fillMe = emptyTankStr;}
+           fp.animate({path: fillMe }, 3500);
+         };
+    
+      // /* priklad
+       animateTank("#hladina1", true );
+      // animateTank("#hladina1", false); 
+     
+     /*
+      animateWaterTank = function(isIn, isOut){
+      if(isIn || isOut) {
+       colorInOut(isIn, isOut);
+        animateTank("#hladina1", isIn );}
+       else{
+        return (isIn) ? animateWaterTank(true, true) : animateWaterTank(false, false);
+       }       
+     };
+     
+     */
+     //TESTOVANIE FUNKCNOSTI ANIMACIE
+     // animateWaterTank(true, true);
+     // animateWaterTank(true, false);
+     // animateWaterTank(false, true);
+     // animateWaterTank(false, false);
+   
+     
         
     });
 };
