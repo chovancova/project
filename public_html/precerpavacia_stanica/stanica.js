@@ -1,5 +1,5 @@
 window.onload = function (boolVentil, boolCerpadla, intHladiny) {
-    var s = Snap(1000, 1200),
+    var s = Snap(750, 600),
             openVentil = 0,
             openMotor = 0;
 /*d path fullTankStr a emptyTankStr
@@ -33,7 +33,7 @@ var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
          
          
          */
-        s.add(f.select("g"));
+        s.add(f.selectAll("#stanica"));
         
         
         /**
@@ -46,8 +46,8 @@ var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
          };
      
      //*/ overenie funkcnosti
-    // setColorValve("#ventil", true);
-     setColorValve("#ventil", false);
+     setColorValve("#ventil", true);
+   //  setColorValve("#ventil", false);
      //setColorValve("#ventil", "true");
      //setColorValve("#ventil", true);
      //setColorValve("#ventil", "yellow"); 
