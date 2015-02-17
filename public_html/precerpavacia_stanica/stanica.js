@@ -2,6 +2,7 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
     var s = Snap(750, 600),
             openVentil = 0,
             openMotor = 0;
+    var perc = 60;
 /*d path fullTankStr a emptyTankStr
 zmena iba v  M90,147.6 na M90,30 a L150,147.6 na L150,30 
 rozdiel y osi je vyska vyplne*/
@@ -122,6 +123,38 @@ var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
      // animateWaterTank(false, true);
      // animateWaterTank(false, false);
    
+     
+      this.perc = perc;
+     this.animateS = function animateThermometer( perc ) {  
+        var vyska =  350*( perc / 100);
+        var py = 557-vyska  ;
+        s.selectAll("#empty").animate({height: vyska, y:py, x:"342.882"}, 800);
+        
+};   
+    this.neAnimuj = function neAnimuj(perc){
+                var vyska =  350*( perc / 100);
+        var py = 557-vyska  ;
+         s.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
+    }
+
+this.setValue = function setValue (par1) {
+        this.perc = par1;
+      
+    };
+    
+    (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) ? perc = 0 : null;
+
+    var vyska = 600 * ((perc) / 100);
+    var py = (600 - vyska);
+
+    s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
+
+    s.append(s);
+           
+    
+     
+     
+     
      
         
     });
