@@ -9,7 +9,7 @@ var fullTankStr = "M90,30L150,30V150V150S120,170,90,150V90V30";
 var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
 
 
-    Snap.load("stanica.svg", function (f) {
+    Snap.load("stanica2.svg", function (f) {
         /* var rura1 = f.select("#rura1"),
          voda1 = f.select("#voda1"),
          rura2 = f.select("#rura2"),
