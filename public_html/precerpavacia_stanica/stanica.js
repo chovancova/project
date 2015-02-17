@@ -30,5 +30,39 @@ window.onload = function () {
         s.add(f.select("g"));
         
         
+        /**
+        funkcia nastavi farbu valve a podla bool hodnoty
+        prvy parameter je id ventila
+      */
+       var setColorValve = function(a, isOpened){
+          var color = (isOpened === true) ? "green" : "red" ;
+          s.selectAll(a).attr({fill: color});
+         };
+     
+     //*/ overenie funkcnosti
+    // setColorValve("#ventil", true);
+     setColorValve("#ventil", false);
+     //setColorValve("#ventil", "true");
+     //setColorValve("#ventil", true);
+     //setColorValve("#ventil", "yellow"); 
+     //*/ 
+     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     
+     /**funkcia nastavi farby jednotlivych ventilov
+       * parameter boolean udava prepustnost ventilu*/
+      var colorInOut =  function (isOpenIn, isOpenOut){
+          setColorValve("#ventil", isOpenIn);
+          //nastartovanie motora, alebo stupanei hladiny
+         // setColorValve("#ventil", isOpenOut);
+        };
+      //colorInOut(1, 1); 
+     /*/* Priklady
+     // colorInOut(true, true);  /*preteka cez nadrz*/
+     // colorInOut(true, false); /*vteka do nadrze*/
+     // colorInOut(false, true); /*vyteka z nadrze */
+     // colorInOut(false, false); /*nevyteka nic*/
+     // */
+        
+        
     });
 };
