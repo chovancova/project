@@ -1,13 +1,15 @@
 window.onload = function (boolVentil, boolCerpadla, intHladiny) {
     var s = Snap(750, 600),
             openVentil = 0,
-            openMotor = 0;
-    var perc = 60;
+            openMotor = 0,
+            perc = 60,
+            fullTankStr, emptyTankStr;
     /*d path fullTankStr a emptyTankStr
      zmena iba v  M90,147.6 na M90,30 a L150,147.6 na L150,30 
-     rozdiel y osi je vyska vyplne*/
-    var fullTankStr = "M90,30L150,30V150V150S120,170,90,150V90V30";
-    var emptyTankStr = "M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
+     rozdiel y osi je vyska vyplne
+     var fullTankStr = "M90,30L150,30V150V150S120,170,90,150V90V30";
+     var emptyTankStr = "M90,147.6L150,147.6V150V150S120,170,90,150V90V30";*/
+
 
     Snap.load("stanica2.svg", function (f) {
         /* var rura1 = f.select("#rura1"),
@@ -116,7 +118,7 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
         };
 
         // /* priklad
-        animateTank("#hladina1", true);
+        //animateTank("#hladina1", true);
         // animateTank("#hladina1", false); 
 
         /*
@@ -160,9 +162,9 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
         var vyska = 600 * ((perc) / 100);
         var py = (600 - vyska);
 
-        s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
+       // s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
 
-        s.append(s);
+       // s.append(s);
 
 
 
