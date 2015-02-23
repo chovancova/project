@@ -12,7 +12,7 @@ $(document).ready(function () {
     function getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
     }
-
+//////////////////////////////////////////////////////////////////
     raysAnimation();
 
     //nekonecna animacia slnecnych lucov
@@ -27,7 +27,7 @@ $(document).ready(function () {
                 }
         );
     }
-
+////////////////////////////////////////////////////////////////
     var cloud_snow = Snap.select('#cloud_snow');
     var flakes = ['flake-1', 'flake-2', 'flake-3'];
 
@@ -54,5 +54,23 @@ $(document).ready(function () {
             animateFlake(flake, cx, cy);
         });
     }
-
+/////////////////////////////////////////////////////////////////////////
+    var cloud_lightning = Snap.select("#cloud_lightning");
+    var strikeCount = 0;
+    function strike() {
+        var bolt = cloud_lightning.select('#lightning-bolt');
+        if (strikeCount < 4) {
+            var opacity = parseInt(bolt.attr("opacity"));
+            var newOpacity = (opacity === 1) ? 0 : 1;
+            bolt.stop().animate({opacity: newOpacity}, 100, strike);
+            strikeCount++;
+        }
+        else {
+            strikeCount = 0;
+            setTimeout(strike, getRandomArbitrary(1000, 5000));
+            var x = getRandomArbitrary(-200, 200);
+            bolt.attr({transform: 't' + x + ',0'});
+        }
+    }
+    strike();
 });
