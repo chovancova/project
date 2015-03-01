@@ -16,3 +16,5 @@
 <li>Implementujte vzorovú sadu grafických komponentov.
 <li>Zhodnoťte výkonnosť riešenia a definujte výkonnostné obmedzenia.
 </ol>
+
+koncept práce: https://docs.google.com/document/d/1OAneSuBY0WMFwy_0b815vG-HkNIc1a1xhGWQDdeDthc/edit?usp=sharing
