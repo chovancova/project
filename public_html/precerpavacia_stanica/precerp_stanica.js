@@ -4,6 +4,17 @@ function ComponentTank(a, fillPercentage){
 }
 
 function ComponentValve(a, isOpen){
+    /*
+     * nacitanie valve zo svg, podla id a / 
+     */
+    
+    /*funkcia na nastavenie farby  valve podla bool hodnoty a id ventila*/
+    
+    setColorValve = function(a, isOpen){
+        var color = (isOpened === true) ? "green" : "red";
+        s.select(a).attr({fill: color});
+        /*zmena atributu - a je css selector - a menim attribut farby*/
+    };
     
     
 }
@@ -17,6 +28,12 @@ function ComponetEngine(a, isOn){
     
 }
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+/**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
 var nadrz, motor, pipe, valve;
 
 function initSchema01(){
@@ -41,7 +58,7 @@ function onPageLoad(){
 }
 
 
-//////////na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
+//na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
 function toggleDemoStart(){
     var button = document.getElementById("demo");
     /*
