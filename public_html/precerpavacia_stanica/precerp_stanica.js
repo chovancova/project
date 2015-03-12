@@ -5,12 +5,20 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
      */
     this.rychlostVMs = 800;
     this.fillPerc = fillPerc;
-    this.animateTank = function animateTank(fillPerc) {
-        var vyska = cislo1 * (perc / 100);
-        var py = cislo2 - vyska;
+    this.vyska = cislo1 * (this.fillPerc / 100);
+    this.py = cislo2 - vyska;
+    
+    this.animateTank = function animateTank() {
         s.select(a).animate({height: vyska, y: py, x: cislo1}, rychlostVMs);
     };
 
+    this.nastavNadrzNaPozadovanePercento = function nastavNadrz(percento) {
+        this.vyska = cislo1 * (percento / 100);
+    };
+
+    this.setValue = function setValue(hodnota){
+        this.fillPerc = hodnota;
+    }
 
 }
 
@@ -50,6 +58,11 @@ var nadrz, motor, pipe, valve;
 function initSchema01() {
 
     var schema01Paper = new Snap("#svg");
+    Snap.load("stanica.svg", function(f){
+        schema01Paper.append(f);
+        
+    });
+            
     /*
      * nacitanie jednotlivych komponentov cez funkcie / a cez svg.. 
      * 
@@ -75,4 +88,7 @@ function toggleDemoStart() {
     /*
      * volanie funkcie updateSchema01 s roznymi parametrami a podmienkami if...
      */
+    
+    /*kon3truktorom si vytvorim napr. nadrz s danymi hodnotoami a nastavim si hodnoty update schemy*/
+    
 }
