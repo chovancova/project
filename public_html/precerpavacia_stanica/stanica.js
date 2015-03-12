@@ -37,8 +37,9 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
          */
         s.add(f.selectAll("#stanica"));
 
-        otacajMotor();
+        //otacajMotor();
         var motor = Snap.select("#vrtule");
+       /*
         function otacajMotor() {
               motor.attr()(
              {transform: 'r88'}, 
@@ -49,7 +50,7 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
              });
         }
 
-        otacajMotor();
+        otacajMotor();*/
 
         /**
          funkcia nastavi farbu valve a podla bool hodnoty
