@@ -40,16 +40,16 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
         otacajMotor();
         var motor = Snap.select("#vrtule");
         function otacajMotor() {
-            /*  motor.animate()(
-             {transform: 'r90,256,256'}, 
+              motor.attr()(
+             {transform: 'r88'}, 
              1000, 
              function(){
              motor.attr({transform: 'rotate(0 256 256)'});
              otacajMotor();
-             });*/
+             });
         }
 
-
+        otacajMotor();
 
         /**
          funkcia nastavi farbu valve a podla bool hodnoty
@@ -83,6 +83,7 @@ window.onload = function (boolVentil, boolCerpadla, intHladiny) {
         // colorInOut(false, true); /*vyteka z nadrze */
         // colorInOut(false, false); /*nevyteka nic*/
         // */
+
 
 
 
