@@ -5,6 +5,9 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
      */
     this.rychlostVMs = 800;
     this.fillPerc = fillPerc;
+    if(!(fillPerc >= 0 && fillPerc <= 100) || fillPerc === undefined || fillPerc === null)
+        fillPerc = 0;
+    
     this.vyska = cislo1 * (this.fillPerc / 100);
     this.py = cislo2 - vyska;
     
