@@ -5,12 +5,11 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
      */
     this.rychlostVMs = 800;
     this.fillPerc = fillPerc;
-    if(!(fillPerc >= 0 && fillPerc <= 100) || fillPerc === undefined || fillPerc === null)
-        fillPerc = 0;
-    
+
+
     this.vyska = cislo1 * (this.fillPerc / 100);
     this.py = cislo2 - vyska;
-    
+
     this.animateTank = function animateTank() {
         s.select(a).animate({height: vyska, y: py, x: cislo1}, rychlostVMs);
     };
@@ -19,8 +18,13 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
         this.vyska = cislo1 * (percento / 100);
     };
 
-    this.setValue = function setValue(hodnota){
-        this.fillPerc = hodnota;
+    this.setValue = function setValue(hodnota) {
+        if (!(hodnota >= 0 && hodnota <= 100) || hodnota === undefined || hodnota === null)
+            this.fillPerc = 0;
+        else if (hodnota >= 100)
+            this.fillPerc = 100;
+        else
+            this.fillPerc = hodnota;
     }
 
 }
@@ -57,15 +61,14 @@ function ComponetEngine(a, isOn) {
 
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
 var nadrz, motor, pipe, valve;
-
+//var schema01Paper = Snap("#svg");
+var s = Snap(750, 600);
 function initSchema01() {
+    Snap.load("stanica2.svg", function (f) {
 
-    var schema01Paper = new Snap("#svg");
-    Snap.load("stanica.svg", function(f){
-        schema01Paper.append(f);
-        
+         s.add(f.selectAll("#stanica"));
     });
-            
+
     /*
      * nacitanie jednotlivych komponentov cez funkcie / a cez svg.. 
      * 
@@ -84,14 +87,14 @@ function onPageLoad() {
     initSchema01();
 }
 
-
 //na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
 function toggleDemoStart() {
     var button = document.getElementById("demo");
+   // onPageLoad();
     /*
      * volanie funkcie updateSchema01 s roznymi parametrami a podmienkami if...
      */
-    
+
     /*kon3truktorom si vytvorim napr. nadrz s danymi hodnotoami a nastavim si hodnoty update schemy*/
-    
+
 }

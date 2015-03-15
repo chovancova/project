@@ -10,11 +10,14 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="../js/snap.svg.js"></script>
-        <script type="text/javascript" src="stanica.js"></script>
+        <script type="text/javascript" src="precerp_stanica.js"></script>
          
     </head>
-    <body>
-        <!--svg  id ="svg"></svg-->
-       
+   <body onload="onPageLoad();">
+
+
+        <svg  id ="stanica" width = "240" height = "180" ></svg>
+        <br/>
+        <button id="demo" type="button" onclick="toggleDemoStart();">Start Demo</button> 
     </body>
 </html>
