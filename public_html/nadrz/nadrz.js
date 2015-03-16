@@ -13,13 +13,18 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
   
   /*metoda na kreslenie komponentu*/
   this.draw = function(){
-      if (100 < this.fillPercentage) {this.fillPercentage = 100;}
+      var outlinePathStr;
+      var fillPathStr;
+      var backgroundPathStr;
+      var fillYOff;
+      if (this.fillPercentage > 100) {this.fillPercentage = 100;}
     /*hodnota ktora sa vyplni*/
-    var fillYOff = (sizeY*((100-this.fillPercentage)/100));
-    
+    fillYOff = (sizeY*((100-this.fillPercentage)/100));
+
+
     /*podla dokumentacie string na pre metodu path */
     /* je taky isty ako u Raphael*/
-        var backgroundPathStr =
+        backgroundPathStr =
              "M" +  x            + "," +  y + /*Move to x , y*/
              "S" + (x+(sizeX/2)) + "," + (y-20)   + "," + /*/smooth curveto */
                    (x+sizeX)     + "," +  y +             /*/(x2 y2 x y)+*/
@@ -29,7 +34,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
              "V" +  x            + "," +  y;
          
          
-         var fillPathStr = 
+         fillPathStr =
              "M" +  x            + "," + (y+fillYOff) +  /*Move to */ 
              "L" + (x+sizeX)     + "," + (y+fillYOff) + /*lineTo*/
              "V" + (x+sizeX)     + "," + (y+sizeY) + 
@@ -37,7 +42,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
              "," +  x            + "," + (y+sizeY) + 
              "V" +  x            + "," +  y;
               
-         var outlinePathStr = 
+         outlinePathStr =
              "M" +  x            + "," +  y + //moveto
              "S" + (x+(sizeX/2)) + "," + (y-20) + /*horny obluk nadrze*/ 
              "," + (x+sizeX)     + "," +  y + 
@@ -138,16 +143,17 @@ function ComponentValve(rPaper, x, y, sizeX, sizeY, horizontal, opened){
     /* Creates a drawing surface or wraps existing SVG element.
      - DOM (SVGElement) element to be wrapped into Snap structure*/
 
-      var schema01Paper;
+      var pipeLine;
+      var pipeLineStr;
       schema01Paper = new Snap ("#svg");
     
     
-    var pipeLineStr = "M 0, 130 " +   /*move to -prava rura*/
+    pipeLineStr = "M 0, 130 " +   /*move to -prava rura*/
                       "H 90 " +       /*Horizontal LineTo */
                       "M 150, 130 " + /*umiestnenie lavej rury*/
                       "H 240 ";       /*sirka rury*/
     
-   var pipeLine = schema01Paper.path(pipeLineStr);   
+   pipeLine = schema01Paper.path(pipeLineStr);
 
     pipeLine.attr({strokeWidth: 6, stroke: "#444"});
     
@@ -166,7 +172,6 @@ function updateSchema01(valveInIsOpened, valveOutIsOpened, tankLevel){
   waterTank.setFillPercentage(tankLevel);
 }
 
-
 function onPageLoad(){
   initSchema01();
 }
@@ -175,18 +180,16 @@ var isFull = false;
 
 function toggleDemoStart(){
   var button = document.getElementById("demo");
-  if(isFull){
-    //zastav demo 
-    button.innerHTML = "Fill Tank";
-    updateSchema01(isFull = false, true, 0);
-    
-  }else{
-    //spusti demo
-     button.innerHTML = "Empty Tank";
-   // isFull = true;
-    updateSchema01(isFull = true, false, 100);
-  }
-  
+    if (!isFull) {
+        //spusti demo
+        button.innerHTML = "Empty Tank";
+        // isFull = true;
+        updateSchema01 (isFull = true, false, 100);
+    } else {
+        //zastav demo
+        button.innerHTML = "Fill Tank";
+        updateSchema01 (isFull = false, true, 0);
+    }
 }
 
                      

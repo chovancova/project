@@ -84,7 +84,8 @@ function updateSchema01(hodnota1, hodnota2, hodnota3) {
      * volam z atributu funkciu 
      * napr valveIn.setOpened(isOpened);
      */
-
+    alert("hodnota1: " + hodnota1 + "-------hodnota2: " + hodnota2 + " -----hodnota3: " + hodnota3);
+    initSchema01();
 }
 
 function onPageLoad() {
