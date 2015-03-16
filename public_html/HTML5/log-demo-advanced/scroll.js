@@ -64,7 +64,7 @@ function LogViewer(id) {
       tableRow = document.createElement("tr");
       style = "log-viewer-line-" + style.toLowerCase();
       tableRow.className = style;
-      if (this.lineVisibilityMask[style] === undefined) {
+       if (this.lineVisibilityMask[style] === undefined) {
          this.lineVisibilityMask[style] = true;
       }
       if (this.lineVisibilityMask[style]) { 

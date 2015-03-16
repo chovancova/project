@@ -11,10 +11,10 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
     this.fillPercentage = fillPercentage;
     
     this.draw = function() {
-       if (100 < this.fillPercentage) {
+        if (100 < this.fillPercentage) {
            this.fillPercentage = 100;
        }
-       if (this.outlinePath === undefined) {
+        if (this.outlinePath === undefined) {
            fillYOff = (sizeY*((100-this.fillPercentage)/100));
            outlinePathStr = "M" + x + "," + y + "S" + (x+(sizeX/2)) + "," + (y-20) + "," + (x+sizeX) + "," + y + "V" + (x+sizeX) + "," + (y+sizeY) + "S" + (x+(sizeX/2)) + "," + (y+sizeY+20) + "," + x + "," + (y+sizeY) + "V" + x + "," + y;
            this.bakgroundPath = rPaper.path(outlinePathStr);
@@ -49,7 +49,7 @@ function ComponentValve(rPaper, x, y, sizeX, sizeY, horizontal, opened) {
     this.horizontal = horizontal;
     
     this.draw = function() {
-       if (this.pathValve === undefined) {
+        if (this.pathValve === undefined) {
            this.pathValve = rPaper.path("M" + x + "," + y + "L" + (x+sizeX) + "," + (y+sizeY) +"L" + (x+sizeX) + "," + y + "L" + x + "," + (y+sizeY) + "L" + x + "," + y + "Z");
        }
        if (this.opened) {

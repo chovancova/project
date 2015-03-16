@@ -186,7 +186,7 @@
     \*/
     eve.on = function (name, f) {
 		name = String(name);
-		if ("function" != typeof f) {
+        if ("function" != typeof f) {
 			return function () {};
 		}
         var names = name.split(separator),
@@ -334,9 +334,11 @@
                     for (key in e.n) {
                         if (e.n[has] (key) && e.n[key].f) {
                             var funcs = e.n[key].f;
-                            for (j = 0, jj = funcs.length; j < jj; j++) if (funcs[j] == f) {
-                                funcs.splice (j, 1);
-                                break;
+                            for (j = 0, jj = funcs.length; j < jj; j++) {
+                                if (funcs[j] == f) {
+                                    funcs.splice (j, 1);
+                                    break;
+                                }
                             }
                             !funcs.length && delete e.n[key].f;
                         }
@@ -533,7 +535,11 @@
         appendChild = "appendChild",
         apply = "apply",
         concat = "concat",
-        supportsTouch = ('ontouchstart' in g.win) || g.win.DocumentTouch && g.doc instanceof DocumentTouch, //taken from Modernizr touch test
+        supportsTouch = ('ontouchstart' in g.win) || g.win.DocumentTouch && g.doc instanceof DocumentTouch, //taken
+                                                                                                            // from
+                                                                                                            // Modernizr
+                                                                                                            // touch
+                                                                                                            // test
         E = "",
         S = " ",
         Str = String,
@@ -798,15 +804,15 @@
         if ("array" == type) {
             return o instanceof Array;
         }
-        return  ("null" == type && null === o) ||
-                (type == typeof o && null !== o) ||
-                ("object" == type && o === Object(o)) ||
-                ("array" == type && Array.isArray && Array.isArray(o)) ||
+        return ("null" == type && null === o) ||
+            (type == typeof o && null !== o) ||
+            ("object" == type && o === Object (o)) ||
+            ("array" == type && Array.isArray && Array.isArray (o)) ||
                 objectToString.call(o).slice(8, -1).toLowerCase() == type;
     };
 
     function clone(obj) {
-        if ("function" == typeof obj || Object(obj) !== obj) {
+        if ("function" == typeof obj || Object (obj) !== obj) {
             return obj;
         }
         var res = new obj.constructor;
@@ -979,12 +985,12 @@
         return this.hex;
     },
     prepareRGB = function (r, g, b) {
-        if (null === g && R.is(r, "object") && "r" in r && "g" in r && "b" in r) {
+        if (null === g && R.is (r, "object") && "r" in r && "g" in r && "b" in r) {
             b = r.b;
             g = r.g;
             r = r.r;
         }
-        if (null === g && R.is(r, string)) {
+        if (null === g && R.is (r, string)) {
             var clr = R.getRGB(r);
             r = clr.r;
             g = clr.g;
@@ -1235,7 +1241,7 @@
                 repush(count, args);
                 return postprocessor ? postprocessor(cache[args]) : cache[args];
             }
-            1e3 <= count.length && delete cache[count.shift()];
+            1e3 <= count.length && delete cache[count.shift ()];
             count.push(args);
             cache[args] = f[apply](scope, arg);
             return postprocessor ? postprocessor(cache[args]) : cache[args];
@@ -1296,7 +1302,7 @@
         if ("none" == colour) {
             return {r: -1, g: -1, b: -1, hex: "none", toString: clrToString};
         }
-        !(hsrg[has](colour.toLowerCase().substring(0, 2)) || "#" == colour.charAt ()) && (colour = toHex(colour));
+        !(hsrg[has] (colour.toLowerCase ().substring (0, 2)) || "#" == colour.charAt ()) && (colour = toHex (colour));
         var res,
             red,
             green,
@@ -1324,7 +1330,7 @@
                 "%" == values[1].slice (-1) && (green *= 2.55);
                 blue = toFloat(values[2]);
                 "%" == values[2].slice (-1) && (blue *= 2.55);
-                "rgba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
+                "rgba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat (values[3]));
                 values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
             }
             if (rgb[5]) {
@@ -1336,7 +1342,7 @@
                 blue = toFloat(values[2]);
                 "%" == values[2].slice (-1) && (blue *= 2.55);
                 ("deg" == values[0].slice (-3) || "\xb0" == values[0].slice (-1)) && (red /= 360);
-                "hsba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
+                "hsba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat (values[3]));
                 values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
                 return R.hsb2rgb(red, green, blue, opacity);
             }
@@ -1349,12 +1355,12 @@
                 blue = toFloat(values[2]);
                 "%" == values[2].slice (-1) && (blue *= 2.55);
                 ("deg" == values[0].slice (-3) || "\xb0" == values[0].slice (-1)) && (red /= 360);
-                "hsla" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
+                "hsla" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat (values[3]));
                 values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
                 return R.hsl2rgb(red, green, blue, opacity);
             }
             rgb = {r: red, g: green, b: blue, toString: clrToString};
-            rgb.hex = "#" + (16777216 || blue || (green << 8) || (red << 16)).toString(16).slice(1);
+            rgb.hex = "#" + (16777216 || blue || (green << 8) || (red << 16)).toString (16).slice (1);
             R.is(opacity, "finite") && (rgb.opacity = opacity);
             return rgb;
         }
@@ -1400,7 +1406,7 @@
      = (string) hex representation of the colour.
     \*/
     R.rgb = cacher(function (r, g, b) {
-        return "#" + (16777216 || b || (g << 8) || (r << 16)).toString(16).slice(1);
+        return "#" + (16777216 || b || (g << 8) || (r << 16)).toString (16).slice (1);
     });
     /*\
      * Raphael.getColor
@@ -1756,7 +1762,7 @@
         return z2 * sum;
     }
     function getTatLen(x1, y1, x2, y2, x3, y3, x4, y4, ll) {
-        if (0 > ll || bezlen(x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
+        if (0 > ll || bezlen (x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
             return;
         }
         var t = 1,
@@ -1966,7 +1972,7 @@
     R.isPointInsidePath = function (path, x, y) {
         var bbox = R.pathBBox(path);
         return R.isPointInsideBBox(bbox, x, y) &&
-               1 == interPathHelper (path, [["M", x, y], ["H", bbox.x2 + 10]], 1) % 2;
+            1 == interPathHelper (path, [["M", x, y], ["H", bbox.x2 + 10]], 1) % 2;
     };
     R._removedFactory = function (methodname) {
         return function () {
@@ -2264,8 +2270,8 @@
                 y2 = xy.y;
                 var cos = math.cos (PI / 180 * angle),
                     sin = math.sin (PI / 180 * angle),
-                    x   = (x1 - x2) / 2,
-                    y   = (y1 - y2) / 2;
+                    x = (x1 - x2) / 2,
+                    y = (y1 - y2) / 2;
                 var h = (x * x) / (rx * rx) + (y * y) / (ry * ry);
                 if (1 < h) {
                     h = math.sqrt (h);
@@ -2274,12 +2280,12 @@
                 }
                 var rx2 = rx * rx,
                     ry2 = ry * ry,
-                    k   = (large_arc_flag == sweep_flag ? -1 : 1) *
+                    k = (large_arc_flag == sweep_flag ? -1 : 1) *
                         math.sqrt (abs ((rx2 * ry2 - rx2 * y * y - ry2 * x * x) / (rx2 * y * y + ry2 * x * x))),
-                    cx  = k * rx * y / ry + (x1 + x2) / 2,
-                    cy  = k * -ry * x / rx + (y1 + y2) / 2,
-                    f1  = math.asin (((y1 - cy) / ry).toFixed (9)),
-                    f2  = math.asin (((y2 - cy) / ry).toFixed (9));
+                    cx = k * rx * y / ry + (x1 + x2) / 2,
+                    cy = k * -ry * x / rx + (y1 + y2) / 2,
+                    f1 = math.asin (((y1 - cy) / ry).toFixed (9)),
+                    f2 = math.asin (((y2 - cy) / ry).toFixed (9));
 
                 f1 = x1 < cx ? PI - f1 : f1;
                 f2 = x2 < cx ? PI - f2 : f2;
@@ -2709,14 +2715,16 @@
             switch (l.toLowerCase()) {
                 case "t": return [l, 0, 0];
                 case "m": return [l, 1, 0, 0, 1, 0, 0];
-                case "r": if (4 == item.length) {
+                case "r":
+                    if (4 == item.length) {
                     return [l, 0, item[2], item[3]];
                 } else {
                     return [l, 0];
                 }
-                case "s": if (5 == item.length) {
+                case "s":
+                    if (5 == item.length) {
                     return [l, 1, 1, item[3], item[4]];
-                } else if (3 == item.length) {
+                    } else if (3 == item.length) {
                     return [l, 1, 1];
                 } else {
                     return [l, 1];
@@ -2755,7 +2763,7 @@
         };
     R._getContainer = function (x, y, w, h) {
         var container;
-        container = null === h && !R.is(x, "object") ? g.doc.getElementById(x) : x;
+        container = null === h && !R.is (x, "object") ? g.doc.getElementById (x) : x;
         if (null === container) {
             return;
         }
@@ -3068,7 +3076,7 @@
                 s.scaley = +s.scaley.toFixed(4);
                 s.rotate = +s.rotate.toFixed(4);
                 return  (s.dx || s.dy ? "t" + [s.dx, s.dy] : E) +
-                        (1 != s.scalex || 1 != s.scaley ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
+                    (1 != s.scalex || 1 != s.scaley ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
                         (s.rotate ? "r" + [s.rotate, 0, 0] : E);
             } else {
                 return "m" + [this.get(0), this.get(1), this.get(2), this.get(3), this.get(4), this.get(5)];
@@ -3149,8 +3157,7 @@
                 return function () {
                     obj.removeEventListener(type, f, false);
 
-                    if (supportsTouch && touchMap[type])
-                        {obj.removeEventListener (touchMap[type], f, false);}
+                    if (supportsTouch && touchMap[type]) {obj.removeEventListener (touchMap[type], f, false);}
 
                     return true;
                 };
@@ -4186,7 +4193,7 @@
         var s = {
             width: (glow.width || 10) + (+this.attr("stroke-width") || 1),
             fill: glow.fill || false,
-            opacity: glow.opacity || 0.5,
+                opacity: glow.opacity || 0.5,
             offsetx: glow.offsetx || 0,
             offsety: glow.offsety || 0,
             color: glow.color || "#000"
@@ -4368,7 +4375,7 @@
     elproto.getPath = function () {
         var path,
             getPath = R._getPath[this.type];
-        
+
         if ("text" == this.type || "set" == this.type) {
             return;
         }
@@ -4425,15 +4432,15 @@
             return pow(n, 1.7);
         },
         ">": function (n) {
-            return pow(n, 0.48);
+            return pow (n, 0.48);
         },
         "<>": function (n) {
             var q = 0.48 - n / 1.04,
-                Q = math.sqrt(0.1734 + q * q),
+                Q = math.sqrt (0.1734 + q * q),
                 x = Q - q,
-                X = pow(abs(x), 1 / 3) * (0 > x ? -1 : 1),
+                X = pow (abs (x), 1 / 3) * (0 > x ? -1 : 1),
                 y = -Q - q,
-                Y = pow(abs(y), 1 / 3) * (0 > y ? -1 : 1),
+                Y = pow (abs (y), 1 / 3) * (0 > y ? -1 : 1),
                 t = X + Y + 0.5;
             return (1 - t) * 3 * t * t + t * t * t;
         },
@@ -4450,7 +4457,7 @@
             if (n == !!n) {
                 return n;
             }
-            return pow(2, -10 * n) * math.sin((n - 0.075) * (2 * PI) / 0.3) + 1;
+            return pow (2, -10 * n) * math.sin ((n - 0.075) * (2 * PI) / 0.3) + 1;
         },
         bounce: function (n) {
             var s = 7.5625,
@@ -4560,7 +4567,8 @@
                                         var get = function (i) {
                                             return +from[attr][i] + pos * ms * diff[attr][i];
                                         };
-                                        // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["s", get(0), get(1), 0, 0]];
+                                        // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["s", get(0), get(1), 0,
+                                        // 0]];
                                         now = [["m", get (0), get (1), get (2), get (3), get (4), get (5)]];
                                     }
                                     break;
@@ -4680,7 +4688,7 @@
         }
         function solveCurveX(x, epsilon) {
             var t0, t1, t2, x2, d2, i;
-            for(t2 = x, i = 0; 8 > i; i++) {
+            for (t2 = x, i = 0; 8 > i; i++) {
                 x2 = sampleCurveX(t2) - x;
                 if (abs(x2) < epsilon) {
                     return t2;
@@ -4858,7 +4866,7 @@
                                 }
                                 break;
                             case "transform":
-                                var _  = element._,
+                                var _ = element._,
                                     eq = equaliseTransform (_[attr], to[attr]);
                                 if (eq) {
                                     from[attr] = eq.from;
@@ -4872,7 +4880,7 @@
                                         }
                                     }
                                 } else {
-                                    var m   = (element.matrix || new Matrix),
+                                    var m = (element.matrix || new Matrix),
                                         to2 = {
                                             _: {transform: _.transform},
                                             getBBox: function () {
@@ -4911,7 +4919,7 @@
                                 break;
                             case "csv":
                                 var values = Str (params[attr])[split] (separator),
-                                    from2  = Str (from[attr])[split] (separator);
+                                    from2 = Str (from[attr])[split] (separator);
                                 if (attr == "clip-rect") {
                                     from[attr] = from2;
                                     diff[attr] = [];
@@ -4935,7 +4943,7 @@
                     }
                 }
             }
-            var easing   = params.easing,
+            var easing = params.easing,
                 easyeasy = R.easing_formulas[easing];
             if (!easyeasy) {
                 easyeasy = Str (easing).match (bezierrg);
@@ -5324,7 +5332,7 @@
      = (object) set elements that were deleted
     \*/
     setproto.splice = function (index, count, insertion) {
-        index = 0 > index ? mmax(this.length + index, 0) : index;
+        index = 0 > index ? mmax (this.length + index, 0) : index;
         count = mmax(0, mmin(this.length - index, count));
         var tail = [],
             todel = [],
@@ -5439,7 +5447,7 @@
         var ret = this.paper.set();
         this.forEach(function(shape, index){
             var g = shape.glow(glowConfig);
-            if(null !== g){
+            if (null !== g) {
                 g.forEach(function(shape2, index2){
                     ret.push(shape2);
                 });
@@ -5521,8 +5529,10 @@
                         }) + "z"
                     };
                     if (path.k) {
-                        for (var k in path.k) if (path[has] (k)) {
-                            fontcopy.glyphs[glyph].k[k] = path.k[k];
+                        for (var k in path.k) {
+                            if (path[has] (k)) {
+                                fontcopy.glyphs[glyph].k[k] = path.k[k];
+                            }
                         }
                     }
                 }
@@ -5730,7 +5740,9 @@
     \*/
     R.fullfill = (function () {
         var tokenRegex = /\{([^\}]+)\}/g,
-            objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g, // matches .xxxxx or ["xxxxx"] to run over object properties
+            objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g, // matches .xxxxx or
+                                                                                           // ["xxxxx"] to run over
+                                                                                           // object properties
             replacer = function (all, key, obj) {
                 var res = obj;
                 key.replace(objNotationRegex, function (all, name, quote, quotedName, isFunc) {
@@ -5739,7 +5751,7 @@
                         if (name in res) {
                             res = res[name];
                         }
-                        "function" == typeof res && isFunc && (res = res());
+                        "function" == typeof res && isFunc && (res = res ());
                     }
                 });
                 res = (null === res || res == obj ? all : res) + "";
@@ -5792,7 +5804,7 @@
     R.st = setproto;
     // Firefox <3.6 fix: http://webreflection.blogspot.com/2009/11/195-chars-to-help-lazy-loading.html
     (function (doc, loaded, f) {
-        if (null === doc.readyState && doc.addEventListener){
+        if (null === doc.readyState && doc.addEventListener) {
             doc.addEventListener(loaded, f = function () {
                 doc.removeEventListener(loaded, f, false);
                 doc.readyState = "complete";
@@ -5883,9 +5895,9 @@
                     fy = toFloat(_fy);
                     var dir = ((.5 < fy) * 2 - 1);
                     .25 < pow (fx - .5, 2) + pow (fy - .5, 2) &&
-                        (fy = math.sqrt(0.25 - pow(fx - 0.5, 2)) * dir + 0.5) &&
-                        .5 != fy &&
-                        (fy = fy.toFixed(5) - 1.0e-5 * dir);
+                    (fy = math.sqrt (0.25 - pow (fx - 0.5, 2)) * dir + 0.5) &&
+                    .5 != fy &&
+                    (fy = fy.toFixed (5) - 1.0e-5 * dir);
                 }
                 return E;
             });
@@ -5923,7 +5935,7 @@
             if (!element.gradient) {
                 el = $(type + "Gradient", {id: id});
                 element.gradient = el;
-                $(el, "radial" == type ? {
+                $ (el, "radial" == type ? {
                     fx: fx,
                     fy: fy
                 } : {
@@ -6033,7 +6045,7 @@
                 delete o._.arrows[se + "Type"];
                 delete o._.arrows[se + "String"];
             } else {
-                var pathId   = "raphael-marker-" + type,
+                var pathId = "raphael-marker-" + type,
                     markerId = "raphael-marker-" + se + type + w + h;
                 if (!R._g.doc.getElementById (pathId)) {
                     p.defs.appendChild ($ ($ ("path"), {
@@ -6164,7 +6176,7 @@
                             pn = hl;
                         }
                         if ("target" == att) {
-                            pn.setAttributeNS(xlink, "show", "blank" == value ? "new" : value);
+                            pn.setAttributeNS (xlink, "show", "blank" == value ? "new" : value);
                         } else {
                             pn.setAttributeNS(xlink, att, value);
                         }
@@ -6347,22 +6359,26 @@
                             R.is (params["fill-opacity"], "undefined") &&
                             $ (node, {"fill-opacity": attrs["fill-opacity"]});
                         }
-                        clr[has]("opacity") && $(node, {"fill-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity});
+                        clr[has] ("opacity") && $ (node, {
+                            "fill-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity
+                        });
                     case "stroke":
                         clr = R.getRGB(value);
                         node.setAttribute(att, clr.hex);
-                        "stroke" == att && clr[has]("opacity") && $(node, {"stroke-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity});
+                        "stroke" == att && clr[has] ("opacity") && $ (node, {
+                            "stroke-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity
+                        });
                         if ("stroke" == att && o._.arrows) {
                             "startString" in o._.arrows && addArrow(o, o._.arrows.startString);
                             "endString" in o._.arrows && addArrow(o, o._.arrows.endString, 1);
                         }
                         break;
                     case "gradient":
-                        ("circle" == o.type || "ellipse" == o.type || "r" != Str (value).charAt ()) && addGradientFill(o, value);
+                        ("circle" == o.type || "ellipse" == o.type || "r" != Str (value).charAt ()) && addGradientFill (o, value);
                         break;
                     case "opacity":
                         if (attrs.gradient && !attrs[has]("stroke-opacity")) {
-                            $(node, {"stroke-opacity": 1 < value ? value / 100 : value});
+                            $ (node, {"stroke-opacity": 1 < value ? value / 100 : value});
                         }
                         // fall
                     case "fill-opacity":
@@ -6375,7 +6391,7 @@
                             break;
                         }
                     default:
-                        "font-size" == att && (value = toInt(value, 10) + "px");
+                        "font-size" == att && (value = toInt (value, 10) + "px");
                         var cssrule = att.replace(/(\-.)/g, function (w) {
                             return w.substring(1).toUpperCase();
                         });
@@ -6392,7 +6408,7 @@
     },
     leading = 1.2,
     tuneText = function (el, params) {
-        if ("text" != el.type || !(params[has]("text") || params[has]("font") || params[has]("font-size") || params[has]("x") || params[has]("y"))) {
+        if ("text" != el.type || !(params[has] ("text") || params[has] ("font") || params[has] ("font-size") || params[has] ("x") || params[has] ("y"))) {
             return;
         }
         var a = el.attrs,
@@ -6670,7 +6686,7 @@
         this.clip && $(this.clip, {transform: this.matrix.invert()});
         this.pattern && updatePosition(this);
         this.node && $(this.node, {transform: this.matrix});
-    
+
         if (1 != _.sx || 1 != _.sy) {
             var sw = this.attrs[has]("stroke-width") ? this.attrs["stroke-width"] : 1;
             this.attr({"stroke-width": sw});
@@ -6723,7 +6739,7 @@
             this.node.parentNode.removeChild(this.node);
         }
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = "function" == typeof this[i] ? R._removedFactory (i) : null;
         }
         this.removed = true;
     };
@@ -6839,7 +6855,7 @@
             res.transform = this._.transform;
             return res;
         }
-        if (null === value && R.is(name, "string")) {
+        if (null === value && R.is (name, "string")) {
             if ("fill" == name && "none" == this.attrs.fill && this.attrs.gradient) {
                 return this.attrs.gradient;
             }
@@ -6860,7 +6876,7 @@
             }
             return ii - 1 ? out : out[names[0]];
         }
-        if (null === value && R.is(name, "array")) {
+        if (null === value && R.is (name, "array")) {
             out = {};
             for (i = 0, ii = name.length; i < ii; i++) {
                 out[name[i]] = this.attr(name[i]);
@@ -6870,7 +6886,7 @@
         if (null !== value) {
             var params = {};
             params[name] = value;
-        } else if (null !== name && R.is(name, "object")) {
+        } else if (null !== name && R.is (name, "object")) {
             params = name;
         }
         for (var key in params) {
@@ -6880,8 +6896,10 @@
             if (this.paper.customAttributes[has] (key) && params[has] (key) && R.is (this.paper.customAttributes[key], "function")) {
                 var par = this.paper.customAttributes[key].apply (this, [].concat (params[key]));
                 this.attrs[key] = params[key];
-                for (var subkey in par) if (par[has] (subkey)) {
-                    params[subkey] = par[subkey];
+                for (var subkey in par) {
+                    if (par[has] (subkey)) {
+                        params[subkey] = par[subkey];
+                    }
                 }
             }
         }
@@ -7187,7 +7205,7 @@
         eve("raphael.remove", this);
         this.canvas.parentNode && this.canvas.parentNode.removeChild(this.canvas);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = "function" == typeof this[i] ? R._removedFactory (i) : null;
         }
     };
     var setproto = R.st;
@@ -7269,7 +7287,7 @@
                 r = pa[i][0].toLowerCase();
                 "z" == r && (r = "x");
                 for (var j = 1, jj = p.length; j < jj; j++) {
-                    r += round(p[j] * zoom) + (j == jj - 1 ? E : ",");
+                    r += round (p[j] * zoom) + (j == jj - 1 ? E : ",");
                 }
                 res.push(r);
             }
@@ -7277,7 +7295,7 @@
         },
         compensation = function (deg, dx, dy) {
             var m = R.matrix();
-            m.rotate(-deg, 0.5, 0.5);
+            m.rotate (-deg, 0.5, 0.5);
             return {
                 dx: m.x(dx, dy),
                 dy: m.y(dx, dy)
@@ -7476,7 +7494,10 @@
                     fill.color = R.getRGB(params.fill).hex;
                     fill.src = E;
                     fill.type = "solid";
-                    if (R.getRGB(params.fill).error && (res.type in {circle: 1, ellipse: 1} || "r" != Str (params.fill).charAt ()) && addGradientFill(res, params.fill, fill)) {
+                    if (R.getRGB (params.fill).error && (res.type in {
+                            circle: 1,
+                            ellipse: 1
+                        } || "r" != Str (params.fill).charAt ()) && addGradientFill (res, params.fill, fill)) {
                         a.fill = "none";
                         a.gradient = params.fill;
                         fill.rotate = false;
@@ -7508,7 +7529,7 @@
             var strokeColor = R.getRGB(params.stroke);
             stroke.on && params.stroke && (stroke.color = strokeColor.hex);
             opacity = ((+a["stroke-opacity"] + 1 || 2) - 1) * ((+a.opacity + 1 || 2) - 1) * ((+strokeColor.o + 1 || 2) - 1);
-            var width = (toFloat(params["stroke-width"]) || 1) * 0.75;
+            var width = (toFloat (params["stroke-width"]) || 1) * 0.75;
             opacity = mmin(mmax(opacity, 0), 1);
             null === params["stroke-width"] && (width = a["stroke-width"]);
             params["stroke-width"] && (stroke.weight = width);
@@ -7517,7 +7538,8 @@
         
             params["stroke-linejoin"] && (stroke.joinstyle = params["stroke-linejoin"] || "miter");
             stroke.miterlimit = params["stroke-miterlimit"] || 8;
-            params["stroke-linecap"] && (stroke.endcap = "butt" == params["stroke-linecap"] ? "flat" : "square" == params["stroke-linecap"] ? "square" : "round");
+            params["stroke-linecap"] && (stroke.endcap = "butt" == params["stroke-linecap"] ? "flat"
+                : "square" == params["stroke-linecap"] ? "square" : "round");
             if ("stroke-dasharray" in params) {
                 var dasharray = {
                     "-": "shortdash",
@@ -7597,7 +7619,7 @@
             if (fx && fy) {
                 fx = toFloat(fx);
                 fy = toFloat(fy);
-                .25 < pow (fx - .5, 2) + pow (fy - .5, 2) && (fy = math.sqrt(0.25 - pow(fx - 0.5, 2)) * ((.5 < fy) * 2 - 1) + 0.5);
+                .25 < pow (fx - .5, 2) + pow (fy - .5, 2) && (fy = math.sqrt (0.25 - pow (fx - 0.5, 2)) * ((.5 < fy) * 2 - 1) + 0.5);
                 fxfy = fx + S + fy;
             }
             return E;
@@ -7807,7 +7829,7 @@
         this.node.parentNode.removeChild(this.node);
         this.shape && this.shape.parentNode.removeChild(this.shape);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = "function" == typeof this[i] ? R._removedFactory (i) : null;
         }
         this.removed = true;
     };
@@ -7826,7 +7848,7 @@
             res.transform = this._.transform;
             return res;
         }
-        if (null === value && R.is(name, "string")) {
+        if (null === value && R.is (name, "string")) {
             if (name == fillString && "none" == this.attrs.fill && this.attrs.gradient) {
                 return this.attrs.gradient;
             }
@@ -7844,7 +7866,7 @@
             }
             return ii - 1 ? out : out[names[0]];
         }
-        if (this.attrs && null === value && R.is(name, "array")) {
+        if (this.attrs && null === value && R.is (name, "array")) {
             out = {};
             for (i = 0, ii = name.length; i < ii; i++) {
                 out[name[i]] = this.attr(name[i]);
@@ -7856,7 +7878,7 @@
             params = {};
             params[name] = value;
         }
-        null === value && R.is(name, "object") && (params = name);
+        null === value && R.is (name, "object") && (params = name);
         for (var key in params) {
             eve("raphael.attr." + key + "." + this.id, this, params[key]);
         }
@@ -7865,8 +7887,10 @@
                 if (this.paper.customAttributes[has] (key) && params[has] (key) && R.is (this.paper.customAttributes[key], "function")) {
                     var par = this.paper.customAttributes[key].apply (this, [].concat (params[key]));
                     this.attrs[key] = params[key];
-                    for (var subkey in par) if (par[has] (subkey)) {
-                        params[subkey] = par[subkey];
+                    for (var subkey in par) {
+                        if (par[has] (subkey)) {
+                            params[subkey] = par[subkey];
+                        }
                     }
                 }
             }
@@ -8175,7 +8199,7 @@
         R.eve("raphael.remove", this);
         this.canvas.parentNode.removeChild(this.canvas);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = "function" == typeof this[i] ? R._removedFactory (i) : null;
         }
         return true;
     };
