@@ -13,11 +13,12 @@ var spustiTestValve = function () {
     setColorValve (0);
     setColorValve (1);
     setColorValve ("yellow");
+    setColorValve(0);
 };
 /**
 na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
  */
-function toggleDemoStart() {
+function spustiTesty() {
     var button = document.getElementById("demo");
     spustiTestValve ();
 }
