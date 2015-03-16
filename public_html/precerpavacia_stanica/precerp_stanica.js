@@ -66,11 +66,16 @@ function ComponetEngine(a, isOn) {
 var nadrz, motor, pipe, valve;
 //var schema01Paper = Snap("#svg");
 var s;
+var setColorValve = function setColorValve(a, isOpened) {
+    var color = (true === isOpened) ? "green" : "red";
+    s.selectAll(a).attr({fill: color});
+};
 function initSchema01() {
-    var s = Snap(750, 600);
+    s = Snap("#svgStanica");
     Snap.load("stanica2.svg", function (f) {
 
          s.add(f.selectAll("#stanica"));
+        setColorValve ( '#ventil', true);
     });
 
     /*
@@ -103,3 +108,24 @@ function toggleDemoStart() {
     /*kon3truktorom si vytvorim napr. nadrz s danymi hodnotoami a nastavim si hodnoty update schemy*/
 
 }
+
+var eZmenafarby;
+eZmenafarby = function (s, a, isOpened) {
+    /**
+     funkcia nastavi farbu valve a podla bool hodnoty
+     prvy parameter je id ventila
+     */
+    var setColorValve = function (a, isOpened) {
+        var color = (true === isOpened) ? "green" : "red";
+        s.selectAll (a).attr ({fill: color});
+    };
+
+    //*/ overenie funkcnosti
+    setColorValve ("#ventil", true);
+    //  setColorValve("#ventil", false);
+    //setColorValve("#ventil", "true");
+    //setColorValve("#ventil", true);
+    //setColorValve("#ventil", "yellow");
+    //*/
+    return setColorValve;
+};
