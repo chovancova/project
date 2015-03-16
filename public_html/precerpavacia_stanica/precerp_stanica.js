@@ -59,7 +59,7 @@ function ComponetEngine(a, isOn) {
 
 
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
-var nadrz;
+var nadrz = "#hladina1";/*toto je modra hladina nadrze*/
 var motor;
 var pipe;
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/

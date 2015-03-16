@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="893e0e69-50fc-46cd-8268-efca91cfd0c2" name="Default" comment="opravovane cez inspektora js">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/precerpavacia_stanica/testStanica.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/index.html" afterPath="$PROJECT_DIR$/precerpavacia_stanica/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" afterPath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,21 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="425">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.5802048" vertical-offset="0" max-vertical-offset="586">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="precerp_stanica.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="precerp_stanica.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4016" vertical-offset="1347" max-vertical-offset="1972">
-              <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1972">
+              <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -89,9 +88,9 @@
         <option value="$PROJECT_DIR$/nadrz/index.html" />
         <option value="$PROJECT_DIR$/nadrz/nadrz.js" />
         <option value="$PROJECT_DIR$/precerpavacia_stanica/stanica2.svg" />
-        <option value="$PROJECT_DIR$/precerpavacia_stanica/index.html" />
-        <option value="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" />
         <option value="$PROJECT_DIR$/precerpavacia_stanica/testStanica.js" />
+        <option value="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" />
+        <option value="$PROJECT_DIR$/precerpavacia_stanica/index.html" />
       </list>
     </option>
   </component>
@@ -734,18 +733,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/index.html">
+    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="425">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1972">
+          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
+    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4016" vertical-offset="1347" max-vertical-offset="1972">
-          <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5802048" vertical-offset="0" max-vertical-offset="586">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
