@@ -57,10 +57,6 @@ function ComponetEngine(a, isOn) {
 
 }
 
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
 
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
 var nadrz;
@@ -69,28 +65,6 @@ var pipe;
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var schema01Paper = Snap("#svg");
 var s;
-var colorValve = "yellow";
-/**
- nastavi farbu valve a podla bool hodnoty
- prvy parameter je id ventila zo svg - css selektor
- druhy je hodnota 0, alebo 1 podla toho ci ma byt cerveny alebo zeleny
- ////mozne je tuto metodu prerobit, aby tam nebol id zo svg
- //ako aj to - aby bola nastavitelna farba - podla toho aku zadam
- //alebo aby to len fungovalo ako true/false - pripadne, ze tuto funkciu bude volat dalsia...
- // overenie funkcnosti
- //setColorValve (valve, true);
- // setColorValve(valve, false);
- //setColorValve(valve, "true");
- //setColorValve(valve, true);
- //setColorValve(valve, 0);
- //setColorValve(valve, 1);
- //setColorValve(valve, "yellow"); //nahlasi chybu
- */
-function setColorValve(isOpened) {
-    colorValve = (!isOpened) ? "green" : "red";
-     s.selectAll (valve).attr ({fill: colorValve});
-    return "farba ventila sa zmenila ";
-}
 
 
 function initSchema01() {
@@ -120,23 +94,17 @@ function onPageLoad() {
     initSchema01();
 }
 
-//na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
-function toggleDemoStart() {
-    var button = document.getElementById("demo");
-    // overenie funkcnosti
-    //setColorValve (valve, true);
-    // setColorValve(valve, false);
-    //setColorValve(valve, "true");
-    //setColorValve(valve, true);
-    //setColorValve(valve, 0); //hodi cervenu farbu
-    //setColorValve(valve, 1);//hodi zelenu farbu
-    //setColorValve(valve, "yellow"); //da na zeleno??? / vyhodnoti to ako chybu(potom uz nemeni farby) - da sa to riesit v if ===
-    //setColorValve (true);
-     setColorValve( false);
-    //setColorValve( "true");
-    //setColorValve(true);
-    //setColorValve(0); //hodi cervenu farbu
-    //setColorValve( 1);//hodi zelenu farbu
-    //setColorValve( "yellow"); //da na zeleno??? / vyhodnoti to ako chybu(potom uz nemeni farby) - da sa to riesit v if ===
-   }
+
+/**
+ Funkcia setColorValve nastavi farbu ventila.
+
+    @param isOpened Ak je isOpened true, tak farba bude nastavena nacerveno, inak nazeleno.
+    @return string činností
+ */
+function setColorValve(isOpened) {
+    colorValve = (!isOpened) ? "green" : "red";
+    s.selectAll (valve).attr ({fill: colorValve});
+    return  console.log("farba ventila sa zmenila " + colorValve);
+}
+
 
