@@ -1,3 +1,106 @@
+var eZmenafarby = function (s) {
+    /**
+     funkcia nastavi farbu valve a podla bool hodnoty
+     prvy parameter je id ventila
+     */
+    var setColorValve = function (a, isOpened) {
+        var color = (isOpened === true) ? "green" : "red";
+        s.selectAll(a).attr({fill: color});
+    };
+
+    //*/ overenie funkcnosti
+    setColorValve("#ventil", true);
+    //  setColorValve("#ventil", false);
+    //setColorValve("#ventil", "true");
+    //setColorValve("#ventil", true);
+    //setColorValve("#ventil", "yellow");
+    //*/
+    return setColorValve;
+};
+var eZmenaFarby2 = function (setColorValve) {
+    /**funkcia nastavi farby jednotlivych ventilov
+     * parameter boolean udava prepustnost ventilu*/
+    var colorInOut = function (isOpenIn, isOpenOut) {
+        setColorValve("#ventil", isOpenIn);
+        //nastartovanie motora, alebo stupanei hladiny
+        // setColorValve("#ventil", isOpenOut);
+    };
+    //colorInOut(1, 1);
+    /*/* Priklady
+          // colorInOut(true, true);  /*preteka cez nadrz*/
+    // colorInOut(true, false); /*vteka do nadrze*/
+    // colorInOut(false, true); /*vyteka z nadrze */
+    // colorInOut(false, false); /*nevyteka nic*/
+// */
+};
+var eAnimaciaTanku = function (s, emptyTankStr, fullTankStr) {
+    /**ANIMACIA nadrze
+     parameter
+     ak bude zadany naplnBool true
+     tank sa bude vypraznovat
+     inak
+     tak sa bude naplnovat
+     Zatial su natvrdo nastavene path cez string
+
+     ANIMACIA nadrze
+     vyuzivam schopnost animate
+     funkcia na zmenu hodnot suradnic M a L na osi y elementu fillPath
+     var animateTank = function (a, naplnBool, percento)
+     //zanimovanie po urcite percennto
+     */
+    var animateTank = function (a, naplnBool) {
+        var fillMe = " ";
+        var fp = s.selectAll(a);
+        //naplnenie tanku vodou
+        if (naplnBool === true) {
+            fp.attr({fill: "blue", d: emptyTankStr});
+            fillMe = fullTankStr;
+        }
+        else {
+            //vypraznenie tanku vodou
+            fp.attr({fill: "blue", d: fullTankStr});
+            fillMe = emptyTankStr;
+        }
+        fp.animate({path: fillMe}, 3500);
+    };
+
+    // /* priklad
+    //animateTank("#hladina1", true);
+    // animateTank("#hladina1", false);
+};
+var eAnimate2 = function (s) {
+    this.animateS = function animateThermometer(perc) {
+        var vyska = 350 * (perc / 100);
+        var py = 557 - vyska;
+        s.selectAll("#empty").animate({height: vyska, y: py, x: "342.882"}, 800);
+
+    };
+};
+var eNeAnimuj = function (s) {
+    this.neAnimuj = function neAnimuj(perc) {
+        var vyska = 350 * (perc / 100);
+        var py = 557 - vyska;
+        s.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
+    }
+};
+var extracted = function (perc) {
+    this.setValue = function setValue(par1) {
+
+        this.perc = par1;
+
+    };
+
+    (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) ? perc = 0 : null;
+
+    var vyska = 600 * ((perc) / 100);
+    var py = (600 - vyska);
+
+    // s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
+
+    // s.append(s);
+    return perc;
+};
+
 window.onload = function () {
     var s = Snap(750, 600);
     var openVentil = 0;
@@ -52,78 +155,11 @@ window.onload = function () {
         }
 
         otacajMotor();*/
-
-        /**
-         funkcia nastavi farbu valve a podla bool hodnoty
-         prvy parameter je id ventila
-         */
-        var setColorValve = function (a, isOpened) {
-            var color = (isOpened === true) ? "green" : "red";
-            s.selectAll(a).attr({fill: color});
-        };
-
-        //*/ overenie funkcnosti
-        setColorValve("#ventil", true);
-        //  setColorValve("#ventil", false);
-        //setColorValve("#ventil", "true");
-        //setColorValve("#ventil", true);
-        //setColorValve("#ventil", "yellow"); 
-        //*/ 
+        var setColorValve = eZmenafarby(s);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        /**funkcia nastavi farby jednotlivych ventilov
-         * parameter boolean udava prepustnost ventilu*/
-        var colorInOut = function (isOpenIn, isOpenOut) {
-            setColorValve("#ventil", isOpenIn);
-            //nastartovanie motora, alebo stupanei hladiny
-            // setColorValve("#ventil", isOpenOut);
-        };
-        //colorInOut(1, 1); 
-        /*/* Priklady
-         // colorInOut(true, true);  /*preteka cez nadrz*/
-        // colorInOut(true, false); /*vteka do nadrze*/
-        // colorInOut(false, true); /*vyteka z nadrze */
-        // colorInOut(false, false); /*nevyteka nic*/
-        // */
-
-
-
-
+        eZmenaFarby2(setColorValve);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /**ANIMACIA nadrze
-         parameter
-         ak bude zadany naplnBool true
-         tank sa bude vypraznovat
-         inak
-         tak sa bude naplnovat
-         Zatial su natvrdo nastavene path cez string
-         
-         ANIMACIA nadrze
-         vyuzivam schopnost animate
-         funkcia na zmenu hodnot suradnic M a L na osi y elementu fillPath 
-         var animateTank = function (a, naplnBool, percento)
-         //zanimovanie po urcite percennto
-         */
-        var animateTank = function (a, naplnBool) {
-            var fillMe = " ";
-            var fp = s.selectAll(a);
-            //naplnenie tanku vodou
-            if (naplnBool === true) {
-                fp.attr({fill: "blue", d: emptyTankStr});
-                fillMe = fullTankStr;
-            }
-            else {
-                //vypraznenie tanku vodou
-                fp.attr({fill: "blue", d: fullTankStr});
-                fillMe = emptyTankStr;
-            }
-            fp.animate({path: fillMe}, 3500);
-        };
-
-        // /* priklad
-        //animateTank("#hladina1", true);
-        // animateTank("#hladina1", false); 
-
+        eAnimaciaTanku(s, emptyTankStr, fullTankStr);
         /*
          animateWaterTank = function(isIn, isOut){
          if(isIn || isOut) {
@@ -143,37 +179,8 @@ window.onload = function () {
 
 
         this.perc = perc;
-        this.animateS = function animateThermometer(perc) {
-            var vyska = 350 * (perc / 100);
-            var py = 557 - vyska;
-            s.selectAll("#empty").animate({height: vyska, y: py, x: "342.882"}, 800);
-
-        };
-        this.neAnimuj = function neAnimuj(perc) {
-            var vyska = 350 * (perc / 100);
-            var py = 557 - vyska;
-            s.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
-        }
-
-        this.setValue = function setValue(par1) {
-            this.perc = par1;
-
-        };
-
-        (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) ? perc = 0 : null;
-
-        var vyska = 600 * ((perc) / 100);
-        var py = (600 - vyska);
-
-       // s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
-
-       // s.append(s);
-
-
-
-
-
-
-
+        eAnimate2.call(this, s);
+        eNeAnimuj.call(this, s);
+        perc = extracted.call(this, perc);
     });
 };
