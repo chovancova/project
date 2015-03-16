@@ -45,10 +45,10 @@ function radialProgress(parent) {
     var  _currentArc= 0, _currentArc2= 0, _currentValue=0;
 
     var _arc = d3.svg.arc()
-        .startAngle (0); //just radians
+        .startAngle(0); //just radians
 
     var _arc2 = d3.svg.arc()
-        .startAngle (0)
+        .startAngle(0)
         .endAngle(0); //just radians
 
 
@@ -75,7 +75,7 @@ function radialProgress(parent) {
                 .on("click",onMouseClick);
 
 
-            _arc.endAngle (360 * (Math.PI / 180));
+            _arc.endAngle(360 * (Math.PI/180));
 
             background.append("rect")
                 .attr("class","background")
@@ -190,11 +190,11 @@ function radialProgress(parent) {
     function measure() {
         _width=_diameter - _margin.right - _margin.left - _margin.top - _margin.bottom;
         _height=_width;
-        _fontSize = _width * 0.2;
+        _fontSize=_width*0.2;
         _arc.outerRadius(_width/2);
-        _arc.innerRadius (_width / 2 * 0.85);
-        _arc2.outerRadius (_width / 2 * 0.85);
-        _arc2.innerRadius (_width / 2 * 0.85 - (_width / 2 * 0.15));
+        _arc.innerRadius(_width/2 * 0.85);
+        _arc2.outerRadius(_width/2 * 0.85);
+        _arc2.innerRadius(_width/2 * 0.85 - (_width/2 * 0.15));
     }
 
 
