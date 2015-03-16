@@ -62,7 +62,7 @@ function ComponetEngine(a, isOn) {
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
 var nadrz, motor, pipe, valve;
 //var schema01Paper = Snap("#svg");
-
+var s;
 function initSchema01() {
     var s = Snap(750, 600);
     Snap.load("stanica2.svg", function (f) {
