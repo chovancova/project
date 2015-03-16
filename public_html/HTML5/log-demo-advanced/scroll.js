@@ -25,35 +25,35 @@ function LogViewer(id) {
     */       
    this.setAutoScroll = function(enabled) {
       this.autoScroll = enabled;
-   }
+   };
 
    /**
     * toggle auto scroll functionality   
     */   
    this.autoScrollToggle = function() {
       this.autoScroll = !this.autoScroll;
-   }
+   };
 
    /**
     * returns true if autoscroll is enabled, false otherwise
     */       
    this.isAutoScrollEnabled = function() {
       return this.autoScroll;
-   }
+   };
    
    /**
     * returns maximum number of lines of this log viewer   
     */   
    this.getMaxLines = function() {
       return this.MAXLINES;
-   }
+   };
    
    /**
     * returns actual line count of this log viewer   
     */   
    this.getLinesCount = function() {
       return this.table.getElementsByTagName("tr").length;
-   }
+   };
 
    /**
     * append single log record into log viewer window
@@ -64,7 +64,7 @@ function LogViewer(id) {
       tableRow = document.createElement("tr");
       style = "log-viewer-line-" + style.toLowerCase();
       tableRow.className = style;
-      if (this.lineVisibilityMask[style] == undefined) {
+      if (this.lineVisibilityMask[style] === undefined) {
          this.lineVisibilityMask[style] = true;
       }
       if (this.lineVisibilityMask[style]) { 
@@ -92,7 +92,7 @@ function LogViewer(id) {
       if (this.autoScroll) {
           this.wrapper.scrollTop = this.wrapper.scrollHeight;
       }
-   }
+   };
    
    /**
     * set visibility of log lines by style tag

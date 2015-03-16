@@ -5,12 +5,14 @@ var fullTankStr = "M90,30L150,30V150V150S120,170,90,150V90V30";
 var emptyTankStr ="M90,147.6L150,147.6V150V150S120,170,90,150V90V30";
 var isIn = false;
 var isOut = false;
+var s;
 ////////////////////////////////////////////////////////
     //var valveIn, valveOut, fillPath;
   function initSchema01(){
       
     /*v parametri musi byt id svg */
-    var s = Snap("#waterTank");
+
+      s = Snap ("#waterTank");
     
     /*ak by bol subor prilozeny, tak je mozne
         Snap.load("waterTank.svg", function (){
@@ -33,7 +35,7 @@ var isOut = false;
         prvy parameter je id ventila
       */
        var setColorValve = function(a, isOpened){
-          var color = (isOpened === true) ? "green" : "red" ;
+          var color = (true === isOpened) ? "green" : "red";
           s.selectAll(a).attr({fill: color});
          };
      
@@ -78,7 +80,7 @@ var isOut = false;
         var fillMe = " ";
         var fp = s.selectAll(a);
         //naplnenie tanku vodou
-       if(naplnBool===true)  {
+          if (true === naplnBool) {
           fp.attr({fill: "blue", d: emptyTankStr});
          fillMe = fullTankStr;
          } 

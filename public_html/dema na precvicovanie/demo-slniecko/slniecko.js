@@ -5,6 +5,10 @@
 
 $(document).ready(function () {
 
+    var cloud_snow;
+    var flakes;
+    var cloud_lightning;
+    var strikeCount;
     var sun = Snap.select("#sun");
     var sunCircle = sun.select("#circle");
     var sunRays = sun.select('#rays');
@@ -28,26 +32,33 @@ $(document).ready(function () {
         );
     }
 ////////////////////////////////////////////////////////////////
-    var cloud_snow = Snap.select('#cloud_snow');
-    var flakes = ['flake-1', 'flake-2', 'flake-3'];
+    cloud_snow = Snap.select ('#cloud_snow');
+    flakes = ['flake-1', 'flake-2', 'flake-3'];
 
     snow();
 
     function snow() {
-        for (var i = 0; i < flakes.length; i++) {
-            var flakeId = flakes[i];
-            var flake = cloud_snow.select('#' + flakeId);
-            var cx = flake.getBBox().cx; //dostanem inicializacne kordinacie
-            var cy = flake.getBBox().cy;
+        var i;
+        var flakeId;
+        var flake;
+        var cx;
+        var cy;
+        for (i = 0; i < flakes.length; i++) {
+            flakeId = flakes[i];
+            flake = cloud_snow.select ('#' + flakeId);
+            cx = flake.getBBox ().cx; //dostanem inicializacne kordinacie
+            cy = flake.getBBox ().cy;
             animateFlake(flake, cx, cy);
         }
     }
 
     function animateFlake(flake, cx, cy)
     {
+        var timing;
+        var deg;
         flake.attr({transform: 't) -200'});/*resetne vlockovu pozicu za oblak*/
-        var timing = getRandomArbitrary(2000, 10000);
-        var deg = getRandomArbitrary(-360, 360);
+        timing = getRandomArbitrary (2000, 10000);
+        deg = getRandomArbitrary (-360, 360);
         flake.stop().animate({
             transform: 't0 200r' + deg + ' ' + cx + ' ' + cy
         }, timing, function () {
@@ -55,20 +66,23 @@ $(document).ready(function () {
         });
     }
 /////////////////////////////////////////////////////////////////////////
-    var cloud_lightning = Snap.select("#cloud_lightning");
-    var strikeCount = 0;
+    cloud_lightning = Snap.select ("#cloud_lightning");
+    strikeCount = 0;
     function strike() {
+        var opacity;
+        var newOpacity;
+        var x;
         var bolt = cloud_lightning.select('#lightning-bolt');
-        if (strikeCount < 4) {
-            var opacity = parseInt(bolt.attr("opacity"));
-            var newOpacity = (opacity === 1) ? 0 : 1;
+        if (4 > strikeCount) {
+            opacity = parseInt (bolt.attr ("opacity"));
+            newOpacity = (1 === opacity) ? 0 : 1;
             bolt.stop().animate({opacity: newOpacity}, 100, strike);
             strikeCount++;
         }
         else {
             strikeCount = 0;
             setTimeout(strike, getRandomArbitrary(1000, 5000));
-            var x = getRandomArbitrary(-200, 200);
+            x = getRandomArbitrary (-200, 200);
             bolt.attr({transform: 't' + x + ',0'});
         }
     }

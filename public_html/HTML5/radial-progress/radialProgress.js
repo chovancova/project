@@ -45,10 +45,10 @@ function radialProgress(parent) {
     var  _currentArc= 0, _currentArc2= 0, _currentValue=0;
 
     var _arc = d3.svg.arc()
-        .startAngle(0 * (Math.PI/180)); //just radians
+        .startAngle(0); //just radians
 
     var _arc2 = d3.svg.arc()
-        .startAngle(0 * (Math.PI/180))
+        .startAngle(0)
         .endAngle(0); //just radians
 
 
@@ -75,7 +75,7 @@ function radialProgress(parent) {
                 .on("click",onMouseClick);
 
 
-            _arc.endAngle(360 * (Math.PI/180))
+            _arc.endAngle(360 * (Math.PI/180));
 
             background.append("rect")
                 .attr("class","background")
@@ -138,7 +138,7 @@ function radialProgress(parent) {
                 path.transition().duration(_duration)
                     .attrTween("d", arcTween);
 
-                if (ratio > 1) {
+                if (1 < ratio) {
                     path2.datum(Math.min(360*(ratio-1),360) * Math.PI/180);
                     path2.transition().delay(_duration).duration(_duration)
                         .attrTween("d", arcTween2);
@@ -153,7 +153,7 @@ function radialProgress(parent) {
         });
 
         function onMouseClick(d) {
-            if (typeof _mouseClick == "function") {
+            if ("function" == typeof _mouseClick) {
                 _mouseClick.call();
             }
         }
@@ -190,11 +190,11 @@ function radialProgress(parent) {
     function measure() {
         _width=_diameter - _margin.right - _margin.left - _margin.top - _margin.bottom;
         _height=_width;
-        _fontSize=_width*.2;
+        _fontSize=_width*0.2;
         _arc.outerRadius(_width/2);
-        _arc.innerRadius(_width/2 * .85);
-        _arc2.outerRadius(_width/2 * .85);
-        _arc2.innerRadius(_width/2 * .85 - (_width/2 * .15));
+        _arc.innerRadius(_width/2 * 0.85);
+        _arc2.outerRadius(_width/2 * 0.85);
+        _arc2.innerRadius(_width/2 * 0.85 - (_width/2 * 0.15));
     }
 
 
@@ -202,74 +202,74 @@ function radialProgress(parent) {
         measure();
         component();
         return component;
-    }
+    };
 
     component.value = function (_) {
-        if (!arguments.length) return _value;
+        if (!arguments.length) {return _value;}
         _value = [_];
         _selection.datum([_value]);
         return component;
-    }
+    };
 
     component.unit = function(_) {
-        if (!arguments.length) return _unit;
+        if (!arguments.length) {return _unit;}
         _unit = _;
         return component;
-    }
+    };
 
     component.width = function(_) {
-        if (!arguments.length) return __width;
+        if (!arguments.length) {return __width;}
         __width = _;
         return component;
-    }
+    };
 
     component.height = function(_) {
-        if (!arguments.length) return __height;
+        if (!arguments.length) {return __height;}
         __height = _;
         return component;
-    }
+    };
 
     component.margin = function(_) {
-        if (!arguments.length) return _margin;
+        if (!arguments.length) {return _margin;}
         _margin = _;
         return component;
     };
 
     component.diameter = function(_) {
-        if (!arguments.length) return _diameter
+        if (!arguments.length) {return _diameter;}
         _diameter =  _;
         return component;
     };
 
     component.minValue = function(_) {
-        if (!arguments.length) return _minValue;
+        if (!arguments.length) {return _minValue;}
         _minValue = _;
         return component;
     };
 
     component.maxValue = function(_) {
-        if (!arguments.length) return _maxValue;
+        if (!arguments.length) {return _maxValue;}
         _maxValue = _;
         return component;
     };
 
     component.label = function(_) {
-        if (!arguments.length) return _label;
+        if (!arguments.length) {return _label;}
         _label = _;
         return component;
     };
 
     component._duration = function(_) {
-        if (!arguments.length) return _duration;
+        if (!arguments.length) {return _duration;}
         _duration = _;
         return component;
     };
 
     component.onClick = function (_) {
-        if (!arguments.length) return _mouseClick;
+        if (!arguments.length) {return _mouseClick;}
         _mouseClick=_;
         return component;
-    }
+    };
 
     return component;
 

@@ -1,14 +1,20 @@
 function componentThermometer(perc) {
+    var vyska;
+    var py;
     var s = Snap("#svg3");
 
     var tepl = Snap.parse('<g id="g4157"> <path id="teplomer" d="m8.6 46.8c-1.7-.3-3.4-1.8-4.3-3.6-.5-1-.5-1.3-.5-2.7s.1-1.7.4-2.5c.2-.5.9-1.4 1.4-1.9l.9-1v-15.8c0-15.3 0-15.8.3-16.4.6-1.2 1.9-2 3.3-2 .8 0 2.61822.776695 2.78856 1.74746.6233 1 .3114-.94746.3114 16.3525v15.8l1.1 1.2c1.5 1.5 1.9 2.5 1.9 4.6 0 1.3 0 1.6-.5 2.6-1.3 2.7-4.1 4.1-7.2 3.6z" stroke="#000" stroke-width="0.4" fill="#ececec"/><g stroke-width=".1" fill="#800000"><path id="vypln-3" d="m9.03745 46.8375c-2-.296204-4.1-2.07342-4.9-4.24558l-.2-.394938v-1.38228c0-1.28355 0-1.38228.1-1.77722-.054366-.946924 1.84674-3.21559 2.86217-4.18724l6.23783-.03794c.812736 1.10018 1.88726 2.1386 2.28726 2.63227.6.88861.612737 1.5929.612737 3.17265 0 1.08608 0 1.18481-.1 1.57975-.2.88861-.8 1.87595-1.5 2.5671-1.4 1.48102-3.5 2.17216-5.6 1.97469z"/><rect id="empty" ry="0" height=".769083" width="6.39798" y="34.2873" x="6.63555"/><rect id="full" ry="0" height="31.705" width="6.39798" display="none" y="3.09922" x="6.68852"/></g></g>');
 
     tepl.select("#teplomer").attr({strokeWidth: 0.6});
 
-    (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) ? perc = 0 : null;
+    if (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) {
+        perc = 0;
+    } else {
+        null;
+    }
 
-    var vyska = 31.7 * ((perc) / 100);
-    var py = (35 - vyska);
+    vyska = 31.7 * ((perc) / 100);
+    py = (35 - vyska);
 
     tepl.select("#empty").animate({height: vyska, y: py, x: 6.68852}, 800);
 

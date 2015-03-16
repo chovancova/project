@@ -14,6 +14,8 @@
                 gwater = "l()#B4D6DB-#D6EDEE:50-#B4D6DB:50-#B4D6DB";
 
             Snap.load("demo.svg", function (f) {
+                var o3, o2, cover, ct1, ct2, middle, pieCoffee, pieTitle, pieType, g, dr, types;
+                var pieShow;
                 var top = f.select("#top"),
                     bot = f.select("#bottom"),
                     tap = f.select("#tap"),
@@ -93,14 +95,16 @@
                     dot.stop();
                     arr.stop();
                 }, function () {
+                    var a;
                     angle = lastAngle;
-                    var a = Snap.snapTo(72, angle, 36);
+                    a = Snap.snapTo (72, angle, 36);
                     chosen(a);
                 });
                 function chosen(a) {
+                    var to;
                     a = (a + 1080) % 360;
                     angle = a;
-                    var to = "r" + [a, knobcx, knobcy];
+                    to = "r" + [a, knobcx, knobcy];
                     dot.animate({
                         transform: to
                     }, 1000, mina.elastic);
@@ -116,7 +120,7 @@
                 }
 
                 grp.path(outline(0, h)).attr("class", "outline");
-                var o3 = (h - 70) / 3,
+                o3 = (h - 70) / 3,
                     o2 = (h - 70) / 2,
                     cover = grp.ellipse(getEll(h - 60)).attr("class", "water"),
                     ct1 = grp.path(cut(10, 10 + o3, 0)).attr({
@@ -126,9 +130,6 @@
                         fill: gwater
                     }),
                     middle = 10 + o3,
-                    pieCoffee,
-                    pieTitle,
-                    pieType,
                     g = grp.g(),
                     dr = grp.path(doors(0)).attr("class", "doors"),
                     types = {
@@ -199,7 +200,8 @@
                         }, 1500, mina.elastic);
                     });
                 }
-                var pieShow = (function () {
+
+                pieShow = (function () {
                     var disc = s.circle(pie.cx, pie.cy, pie.r).attr({
                         fill: "#fff",
                         stroke: "#60544F"
@@ -216,10 +218,10 @@
                             type = pieType;
                         a = 360 * cof / 2;
                         pie.waterBox.attr({
-                            fill: type == "water" ? "#d6edee" : "#fff"
+                            fill: "water" == type ? "#d6edee" : "#fff"
                         });
                         disc.attr({
-                            fill: type == "water" ? "#d6edee" : "#fff"
+                            fill: "water" == type ? "#d6edee" : "#fff"
                         });
                         pie.title.attr({
                             "#text": pieTitle
@@ -228,7 +230,8 @@
                             "#text": "Espresso (" + Math.round(cof * 100) + "%)"
                         });
                         pie.water.attr({
-                            "#text": (type == "water" ? "Hot Water" : "Milk") + " (" + (100 - Math.round(cof * 100)) + "%)"
+                            "#text": ("water" == type ? "Hot Water"
+                                : "Milk") + " (" + (100 - Math.round (cof * 100)) + "%)"
                         });
                         Snap.animate(olda, a, function (val) {
                             coffee.attr({
@@ -236,7 +239,7 @@
                                    "U" + [pie.r / 2, 90 - val, 90 + val]
                             });
                         }, 500, function () {
-                            if (cof == 1) {
+                            if (1 == cof) {
                                 disc.attr({
                                     fill: "#60544F"
                                 });
@@ -272,7 +275,7 @@
                     r: r,
                     tx: end.x,
                     ty: end.y,
-                    big: +(Math.abs(to - from) > 180),
+                        big: +(180 < Math.abs (to - from)),
                     way: +(from > to)
                 });
             }

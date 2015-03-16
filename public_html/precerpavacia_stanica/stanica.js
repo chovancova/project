@@ -1,15 +1,16 @@
-var eZmenafarby = function (s) {
+var eZmenafarby;
+eZmenafarby = function (s) {
     /**
      funkcia nastavi farbu valve a podla bool hodnoty
      prvy parameter je id ventila
      */
     var setColorValve = function (a, isOpened) {
-        var color = (isOpened === true) ? "green" : "red";
-        s.selectAll(a).attr({fill: color});
+        var color = (true === isOpened) ? "green" : "red";
+        s.selectAll (a).attr ({fill: color});
     };
 
     //*/ overenie funkcnosti
-    setColorValve("#ventil", true);
+    setColorValve ("#ventil", true);
     //  setColorValve("#ventil", false);
     //setColorValve("#ventil", "true");
     //setColorValve("#ventil", true);
@@ -52,7 +53,7 @@ var eAnimaciaTanku = function (s, emptyTankStr, fullTankStr) {
         var fillMe = " ";
         var fp = s.selectAll(a);
         //naplnenie tanku vodou
-        if (naplnBool === true) {
+        if (true === naplnBool) {
             fp.attr({fill: "blue", d: emptyTankStr});
             fillMe = fullTankStr;
         }
@@ -83,17 +84,20 @@ var eNeAnimuj = function (s) {
         s.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
     }
 };
-var extracted = function (perc) {
+var extracted;
+extracted = function (perc) {
+    var vyska;
+    var py;
     this.setValue = function setValue(par1) {
 
         this.perc = par1;
 
     };
 
-    (!(perc >= 0 && perc <= 100) || perc === undefined || perc === null) ? perc = 0 : null;
+    (!(0 <= perc && 100 >= perc) || perc === undefined || null === perc) ? this.perc = 0 : null;
 
-    var vyska = 600 * ((perc) / 100);
-    var py = (600 - vyska);
+    vyska = 600 * ((perc) / 100);
+    py = (600 - vyska);
 
     // s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
 
@@ -139,10 +143,12 @@ window.onload = function () {
          
          
          */
+        var motor;
+        var setColorValve;
         s.add(f.selectAll("#stanica"));
 
         //otacajMotor();
-        var motor = Snap.select("#vrtule");
+        motor = Snap.select ("#vrtule");
        /*
         function otacajMotor() {
               motor.attr()(
@@ -155,7 +161,7 @@ window.onload = function () {
         }
 
         otacajMotor();*/
-        var setColorValve = eZmenafarby(s);
+        setColorValve = eZmenafarby (s);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         eZmenaFarby2(setColorValve);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

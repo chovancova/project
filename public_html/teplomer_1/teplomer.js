@@ -11,9 +11,8 @@ function Thermometer( perc ,b_animate) {
                 var vyska =  350*( perc / 100);
         var py = 557-vyska  ;
          paper.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
-    }
-
-this.setValue = function setValue (par1) {
+    };
+    this.setValue = function setValue(par1) {
         this.perc = par1;
       
     };
@@ -25,17 +24,11 @@ this.setValue = function setValue (par1) {
  
        b_animate? animateThermometer( perc ) : neAnimuj(perc);       
   });
-  
-  
-  
-};   
 
 
-
-
-
-  function onPageLoad() {
-   var tepl = Thermometer(50,true);
+}
+function onPageLoad() {
+    var tepl = new Thermometer (50, true);
    
     
 }

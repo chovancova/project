@@ -63,6 +63,6 @@ logLines = [
 '[sk.ipesoft.d2000.d2mc.jx.ui.push.LicensePushResourceHandler] (default task-48) licensePush - onOpen',
 '[sk.ipesoft.d2000.d2mc.jx.ui.push.ConsolePushResourceHandler] (default task-49) consolePush - onOpen',
 '[sk.ipesoft.d2000.d2mc.jx.ui.push.GlobalMessagePushResourceHandler] (default task-50) globalMessagePush - onOpen',
-'[sk.ipesoft.d2000.d2mc.jx.ui.push.JAPIPushResourceHandler] (default task-52) onOpen',
-]
+'[sk.ipesoft.d2000.d2mc.jx.ui.push.JAPIPushResourceHandler] (default task-52) onOpen'
+];
 

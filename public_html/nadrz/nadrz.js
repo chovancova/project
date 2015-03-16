@@ -13,7 +13,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
   
   /*metoda na kreslenie komponentu*/
   this.draw = function(){
-     if(this.fillPercentage > 100){this.fillPercentage = 100;}
+      if (100 < this.fillPercentage) {this.fillPercentage = 100;}
     /*hodnota ktora sa vyplni*/
     var fillYOff = (sizeY*((100-this.fillPercentage)/100));
     
@@ -53,8 +53,8 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
        
         /*podobne ako v Raphael*/
            this.fillPath.attr({
-           strokeWidth: 0, 
-           fill:  "blue",         /*modra "#00f"*/ 
+           strokeWidth: 0,
+               fill: "blue"         /*modra "#00f"*/
          });
            
           
@@ -137,8 +137,9 @@ function ComponentValve(rPaper, x, y, sizeX, sizeY, horizontal, opened){
  
     /* Creates a drawing surface or wraps existing SVG element.
      - DOM (SVGElement) element to be wrapped into Snap structure*/
-    
-    var schema01Paper = new Snap("#svg");
+
+      var schema01Paper;
+      schema01Paper = new Snap ("#svg");
     
     
     var pipeLineStr = "M 0, 130 " +   /*move to -prava rura*/

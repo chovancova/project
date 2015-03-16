@@ -8,6 +8,7 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
 
 
     this.vyska = cislo1 * (this.fillPerc / 100);
+    var vyska;
     this.py = cislo2 - vyska;
 
     this.animateTank = function animateTank() {
@@ -19,13 +20,15 @@ function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
     };
 
     this.setValue = function setValue(hodnota) {
-        if (!(hodnota >= 0 && hodnota <= 100) || hodnota === undefined || hodnota === null)
-            this.fillPerc = 0;
-        else if (hodnota >= 100)
-            this.fillPerc = 100;
-        else
-            this.fillPerc = hodnota;
-    }
+        if (!(0 <= hodnota && 100 >= hodnota) || hodnota === undefined || null === hodnota) {this.fillPerc = 0;}
+        else {
+            if (hodnota < 100) {
+                this.fillPerc = hodnota;
+            } else {
+                this.fillPerc = 100;
+            }
+        }
+    };
 
 }
 
@@ -37,7 +40,7 @@ function ComponentValve(a, isOpen) {
     /*funkcia na nastavenie farby  valve podla bool hodnoty a id ventila*/
 
     this.setColorValve = function setColorValve(a, s, isOpen) {
-        var color = (isOpened === true) ? "green" : "red";
+        var color = (true === isOpened) ? "green" : "red";
         s.select(a).attr({fill: color});
         /*zmena atributu - a je css selector - a menim attribut farby*/
     };
