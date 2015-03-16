@@ -1,16 +1,50 @@
-function Thermometer( perc ,b_animate) {         
-   paper = Snap(315, 750);
-   this.perc = perc;
-     this.animateThermometer = function animateThermometer( perc ) {  
-        var vyska =  350*( perc / 100);
-        var py = 557-vyska  ;
-        paper.selectAll("#empty").animate({height: vyska, y:py, x:"342.882"}, 800);
-        
-};   
+var perc;
+var teplomer = "#empty";
+var paper;
+/**
+ * Zanimuje teplotu teplomera
+ * @parm perc je percento naplnenia teplomera*/
+function animujTeplomer (hodnota) {
+        paper.selectAll (teplomer).animate ({
+        height: getVyska(hodnota),
+        y: getPY(hodnota),
+        x: "342.882"
+    }, 800);
+}
+/**
+ * Nastavi vysku stupnice teplomera na danu hodnotu v percentach*/
+function nastavTeplomer(hodnota){
+    paper.selectAll("#empty").attr({
+        height: getVyska(hodnota),
+        y: getPY(hodnota),
+        x: "342.882"});
+}
+/**
+ * Zmeni hodnotu percenta
+ * */
+function setValue(hodnota) {
+   return this.perc = hodnota;
+}
+
+/**
+ * Vrati hodntou vysky*/
+function getVyska(hodnota){
+    var temp = 350 * (hodnota / 100);
+    return temp;
+}
+/**
+ * Vrati hodntou py*/
+function getPY(hodnota){
+    var temp = (hodnota / 100) * 350;
+    return temp;
+}
+
+function Thermometer( perc ,b_animate) {
+   paper = Snap("#svg3");
+   perc = perc;
+
     this.neAnimuj = function neAnimuj(perc){
-                var vyska =  350*( perc / 100);
-        var py = 557-vyska  ;
-         paper.selectAll("#empty").attr({height: vyska, y: py, x: "342.882"});
+
     };
     this.setValue = function setValue(par1) {
         this.perc = par1;
@@ -21,8 +55,11 @@ function Thermometer( perc ,b_animate) {
         paper.append(f);
         paper.selectAll("#empty").attr({fill:"#f00"});
 
- 
-       b_animate? animateThermometer( perc ) : neAnimuj(perc);       
+          if (!b_animate) {
+              neAnimuj (perc);
+          } else {
+              animateThermometer (perc);
+          }
   });
 
 
