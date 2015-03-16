@@ -67,16 +67,14 @@
                 errors = [];
             current_event = name;
             stop = 0;
-            for (var i = 0, ii = listeners.length; i < ii; i++) {
-                if ("zIndex" in listeners[i]) {
-                    indexed.push (listeners[i].zIndex);
-                    if (listeners[i].zIndex < 0) {
-                        queue[listeners[i].zIndex] = listeners[i];
-                    }
+            for (var i = 0, ii = listeners.length; i < ii; i++) if ("zIndex" in listeners[i]) {
+                indexed.push(listeners[i].zIndex);
+                if (listeners[i].zIndex < 0) {
+                    queue[listeners[i].zIndex] = listeners[i];
                 }
             }
             indexed.sort(numsort);
-            while (0 > indexed[z]) {
+            while (indexed[z] < 0) {
                 l = queue[indexed[z++]];
                 out.push(l.apply(scope, args));
                 if (stop) {
@@ -186,7 +184,7 @@
     \*/
     eve.on = function (name, f) {
 		name = String(name);
-		if ("function" != typeof f) {
+		if (typeof f != "function") {
 			return function () {};
 		}
         var names = name.split(separator),
@@ -196,10 +194,8 @@
             e = e.hasOwnProperty(names[i]) && e[names[i]] || (e[names[i]] = {n: {}});
         }
         e.f = e.f || [];
-        for (i = 0, ii = e.f.length; i < ii; i++) {
-            if (e.f[i] == f) {
-                return fun;
-            }
+        for (i = 0, ii = e.f.length; i < ii; i++) if (e.f[i] == f) {
+            return fun;
         }
         e.f.push(f);
         return function (zIndex) {
@@ -304,15 +300,13 @@
             for (j = 0; j < cur.length; j += splice.length - 2) {
                 splice = [j, 1];
                 e = cur[j].n;
-                if (names[i] == wildcard) {
-                    for (key in e) {
-                        if (e[has] (key)) {
-                            splice.push (e[key]);
-                        }
+                if (names[i] != wildcard) {
+                    if (e[names[i]]) {
+                        splice.push(e[names[i]]);
                     }
                 } else {
-                    if (e[names[i]]) {
-                        splice.push (e[names[i]]);
+                    for (key in e) if (e[has](key)) {
+                        splice.push(e[key]);
                     }
                 }
                 cur.splice.apply(cur, splice);
@@ -323,30 +317,24 @@
             while (e.n) {
                 if (f) {
                     if (e.f) {
-                        for (j = 0, jj = e.f.length; j < jj; j++) {
-                            if (e.f[j] == f) {
-                                e.f.splice (j, 1);
-                                break;
-                            }
+                        for (j = 0, jj = e.f.length; j < jj; j++) if (e.f[j] == f) {
+                            e.f.splice(j, 1);
+                            break;
                         }
                         !e.f.length && delete e.f;
                     }
-                    for (key in e.n) {
-                        if (e.n[has] (key) && e.n[key].f) {
-                            var funcs = e.n[key].f;
-                            for (j = 0, jj = funcs.length; j < jj; j++) if (funcs[j] == f) {
-                                funcs.splice (j, 1);
-                                break;
-                            }
-                            !funcs.length && delete e.n[key].f;
+                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
+                        var funcs = e.n[key].f;
+                        for (j = 0, jj = funcs.length; j < jj; j++) if (funcs[j] == f) {
+                            funcs.splice(j, 1);
+                            break;
                         }
+                        !funcs.length && delete e.n[key].f;
                     }
                 } else {
                     delete e.f;
-                    for (key in e.n) {
-                        if (e.n[has] (key) && e.n[key].f) {
-                            delete e.n[key].f;
-                        }
+                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
+                        delete e.n[key].f;
                     }
                 }
                 e = e.n;
@@ -387,8 +375,7 @@
     eve.toString = function () {
         return "You are running Eve " + version;
     };
-    ("undefined" != typeof module && module.exports) ? (module.exports = eve) : ("undefined" == typeof define
-        ? (glob.eve = eve) : (define ("eve", [], function () { return eve; })));
+    (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define != "undefined" ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
 })(window || this);
 // ┌─────────────────────────────────────────────────────────────────────┐ \\
 // │ "Raphaël 2.1.2" - JavaScript Vector Library                         │ \\
@@ -400,7 +387,7 @@
 
 (function (glob, factory) {
     // AMD support
-    if ("function" === typeof define && define.amd) {
+    if (typeof define === "function" && define.amd) {
         // Define as an anonymous module
         define(["eve"], function( eve ) {
             return factory(glob, eve);
@@ -656,7 +643,7 @@
             return [["M", x, y], ["l", w, 0], ["l", 0, h], ["l", -w, 0], ["z"]];
         },
         ellipsePath = function (x, y, rx, ry) {
-            if (null === ry) {
+            if (ry == null) {
                 ry = rx;
             }
             return [["M", x, y], ["m", 0, -ry], ["a", rx, ry, 0, 1, 1, 0, 2 * ry], ["a", rx, ry, 0, 1, 1, 0, -2 * ry], ["z"]];
@@ -726,13 +713,13 @@
      * Can be “SVG”, “VML” or empty, depending on browser support.
     \*/
     R.type = (g.win.SVGAngle || g.doc.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1") ? "SVG" : "VML");
-    if ("VML" == R.type) {
+    if (R.type == "VML") {
         var d = g.doc.createElement("div"),
             b;
         d.innerHTML = '<v:shape adj="1"/>';
         b = d.firstChild;
         b.style.behavior = "url(#default#VML)";
-        if (!(b && "object" == typeof b.adj)) {
+        if (!(b && typeof b.adj == "object")) {
             return (R.type = E);
         }
         d = null;
@@ -749,7 +736,7 @@
      **
      * `true` if browser supports VML.
     \*/
-    R.svg = !(R.vml = "VML" == R.type);
+    R.svg = !(R.vml = R.type == "VML");
     R._Paper = Paper;
     /*\
      * Raphael.fn
@@ -792,28 +779,26 @@
     \*/
     R.is = function (o, type) {
         type = lowerCase.call(type);
-        if ("finite" == type) {
+        if (type == "finite") {
             return !isnan[has](+o);
         }
-        if ("array" == type) {
+        if (type == "array") {
             return o instanceof Array;
         }
-        return  ("null" == type && null === o) ||
-                (type == typeof o && null !== o) ||
-                ("object" == type && o === Object(o)) ||
-                ("array" == type && Array.isArray && Array.isArray(o)) ||
+        return  (type == "null" && o === null) ||
+                (type == typeof o && o !== null) ||
+                (type == "object" && o === Object(o)) ||
+                (type == "array" && Array.isArray && Array.isArray(o)) ||
                 objectToString.call(o).slice(8, -1).toLowerCase() == type;
     };
 
     function clone(obj) {
-        if ("function" == typeof obj || Object(obj) !== obj) {
+        if (typeof obj == "function" || Object(obj) !== obj) {
             return obj;
         }
         var res = new obj.constructor;
-        for (var key in obj) {
-            if (obj[has] (key)) {
-                res[key] = clone (obj[key]);
-            }
+        for (var key in obj) if (obj[has](key)) {
+            res[key] = clone(obj[key]);
         }
         return res;
     }
@@ -833,7 +818,7 @@
      = (number) angle in degrees.
     \*/
     R.angle = function (x1, y1, x2, y2, x3, y3) {
-        if (null === x3) {
+        if (x3 == null) {
             var x = x1 - x2,
                 y = y1 - y2;
             if (!x && !y) {
@@ -883,10 +868,8 @@
         tolerance = R.is(tolerance, "finite") ? tolerance : 10;
         if (R.is(values, array)) {
             var i = values.length;
-            while (i--) {
-                if (abs (values[i] - value) <= tolerance) {
-                    return values[i];
-                }
+            while (i--) if (abs(values[i] - value) <= tolerance) {
+                return values[i];
             }
         } else {
             values = +values;
@@ -912,8 +895,8 @@
             return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(uuidRegEx, uuidReplacer).toUpperCase();
         };
     })(/[xy]/g, function (c) {
-        var r = math.random () * 16 || 0,
-            v = "x" == c ? r : (r && 3 || 8);
+        var r = math.random() * 16 | 0,
+            v = c == "x" ? r : (r & 3 | 8);
         return v.toString(16);
     });
 
@@ -951,7 +934,7 @@
                 try {
                     bod.style.color = Str(color).replace(trim, E);
                     var value = range.queryCommandValue("ForeColor");
-                    value = ((value && 255) << 16) || (value && 65280) || ((value && 16711680) >>> 16);
+                    value = ((value & 255) << 16) | (value & 65280) | ((value & 16711680) >>> 16);
                     return "#" + ("000000" + value.toString(16)).slice(-6);
                 } catch(e) {
                     return "none";
@@ -979,18 +962,18 @@
         return this.hex;
     },
     prepareRGB = function (r, g, b) {
-        if (null === g && R.is(r, "object") && "r" in r && "g" in r && "b" in r) {
+        if (g == null && R.is(r, "object") && "r" in r && "g" in r && "b" in r) {
             b = r.b;
             g = r.g;
             r = r.r;
         }
-        if (null === g && R.is(r, string)) {
+        if (g == null && R.is(r, string)) {
             var clr = R.getRGB(r);
             r = clr.r;
             g = clr.g;
             b = clr.b;
         }
-        if (1 < r || 1 < g || 1 < b) {
+        if (r > 1 || g > 1 || b > 1) {
             r /= 255;
             g /= 255;
             b /= 255;
@@ -1126,7 +1109,7 @@
             s = h.s;
             h = h.h;
         }
-        if (1 < h || 1 < s || 1 < l) {
+        if (h > 1 || s > 1 || l > 1) {
             h /= 360;
             s /= 100;
             l /= 100;
@@ -1134,7 +1117,7 @@
         h *= 360;
         var R, G, B, X, C;
         h = (h % 360) / 60;
-        C = 2 * s * (.5 > l ? l : 1 - l);
+        C = 2 * s * (l < .5 ? l : 1 - l);
         X = C * (1 - abs(h % 2 - 1));
         R = G = B = l - C / 2;
 
@@ -1169,13 +1152,13 @@
         var H, S, V, C;
         V = mmax(r, g, b);
         C = V - mmin(r, g, b);
-        H = (0 === C ? null :
+        H = (C == 0 ? null :
              V == r ? (g - b) / C :
              V == g ? (b - r) / C + 2 :
                       (r - g) / C + 4
             );
         H = ((H + 360) % 6) * 60 / 360;
-        S = 0 === C ? 0 : C / V;
+        S = C == 0 ? 0 : C / V;
         return {h: H, s: S, b: V, toString: hsbtoString};
     };
     /*\
@@ -1204,14 +1187,14 @@
         M = mmax(r, g, b);
         m = mmin(r, g, b);
         C = M - m;
-        H = (0 === C ? null :
+        H = (C == 0 ? null :
              M == r ? (g - b) / C :
              M == g ? (b - r) / C + 2 :
                       (r - g) / C + 4);
         H = ((H + 360) % 6) * 60 / 360;
         L = (M + m) / 2;
-        S = (0 === C ? 0 :
-             .5 > L ? C / (2 * L) :
+        S = (C == 0 ? 0 :
+             L < .5 ? C / (2 * L) :
                       C / (2 - 2 * L));
         return {h: H, s: S, l: L, toString: hsltoString};
     };
@@ -1219,10 +1202,8 @@
         return this.join(",").replace(p2s, "$1");
     };
     function repush(array, item) {
-        for (var i = 0, ii = array.length; i < ii; i++) {
-            if (array[i] === item) {
-                return array.push (array.splice (i, 1)[0]);
-            }
+        for (var i = 0, ii = array.length; i < ii; i++) if (array[i] === item) {
+            return array.push(array.splice(i, 1)[0]);
         }
     }
     function cacher(f, scope, postprocessor) {
@@ -1235,7 +1216,7 @@
                 repush(count, args);
                 return postprocessor ? postprocessor(cache[args]) : cache[args];
             }
-            1e3 <= count.length && delete cache[count.shift()];
+            count.length >= 1e3 && delete cache[count.shift()];
             count.push(args);
             cache[args] = f[apply](scope, arg);
             return postprocessor ? postprocessor(cache[args]) : cache[args];
@@ -1293,10 +1274,10 @@
         if (!colour || !!((colour = Str(colour)).indexOf("-") + 1)) {
             return {r: -1, g: -1, b: -1, hex: "none", error: 1, toString: clrToString};
         }
-        if ("none" == colour) {
+        if (colour == "none") {
             return {r: -1, g: -1, b: -1, hex: "none", toString: clrToString};
         }
-        !(hsrg[has](colour.toLowerCase().substring(0, 2)) || "#" == colour.charAt ()) && (colour = toHex(colour));
+        !(hsrg[has](colour.toLowerCase().substring(0, 2)) || colour.charAt() == "#") && (colour = toHex(colour));
         var res,
             red,
             green,
@@ -1319,42 +1300,42 @@
             if (rgb[4]) {
                 values = rgb[4][split](commaSpaces);
                 red = toFloat(values[0]);
-                "%" == values[0].slice (-1) && (red *= 2.55);
+                values[0].slice(-1) == "%" && (red *= 2.55);
                 green = toFloat(values[1]);
-                "%" == values[1].slice (-1) && (green *= 2.55);
+                values[1].slice(-1) == "%" && (green *= 2.55);
                 blue = toFloat(values[2]);
-                "%" == values[2].slice (-1) && (blue *= 2.55);
-                "rgba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
-                values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
+                values[2].slice(-1) == "%" && (blue *= 2.55);
+                rgb[1].toLowerCase().slice(0, 4) == "rgba" && (opacity = toFloat(values[3]));
+                values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
             }
             if (rgb[5]) {
                 values = rgb[5][split](commaSpaces);
                 red = toFloat(values[0]);
-                "%" == values[0].slice (-1) && (red *= 2.55);
+                values[0].slice(-1) == "%" && (red *= 2.55);
                 green = toFloat(values[1]);
-                "%" == values[1].slice (-1) && (green *= 2.55);
+                values[1].slice(-1) == "%" && (green *= 2.55);
                 blue = toFloat(values[2]);
-                "%" == values[2].slice (-1) && (blue *= 2.55);
-                ("deg" == values[0].slice (-3) || "\xb0" == values[0].slice (-1)) && (red /= 360);
-                "hsba" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
-                values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
+                values[2].slice(-1) == "%" && (blue *= 2.55);
+                (values[0].slice(-3) == "deg" || values[0].slice(-1) == "\xb0") && (red /= 360);
+                rgb[1].toLowerCase().slice(0, 4) == "hsba" && (opacity = toFloat(values[3]));
+                values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
                 return R.hsb2rgb(red, green, blue, opacity);
             }
             if (rgb[6]) {
                 values = rgb[6][split](commaSpaces);
                 red = toFloat(values[0]);
-                "%" == values[0].slice (-1) && (red *= 2.55);
+                values[0].slice(-1) == "%" && (red *= 2.55);
                 green = toFloat(values[1]);
-                "%" == values[1].slice (-1) && (green *= 2.55);
+                values[1].slice(-1) == "%" && (green *= 2.55);
                 blue = toFloat(values[2]);
-                "%" == values[2].slice (-1) && (blue *= 2.55);
-                ("deg" == values[0].slice (-3) || "\xb0" == values[0].slice (-1)) && (red /= 360);
-                "hsla" == rgb[1].toLowerCase ().slice (0, 4) && (opacity = toFloat(values[3]));
-                values[3] && "%" == values[3].slice (-1) && (opacity /= 100);
+                values[2].slice(-1) == "%" && (blue *= 2.55);
+                (values[0].slice(-3) == "deg" || values[0].slice(-1) == "\xb0") && (red /= 360);
+                rgb[1].toLowerCase().slice(0, 4) == "hsla" && (opacity = toFloat(values[3]));
+                values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
                 return R.hsl2rgb(red, green, blue, opacity);
             }
             rgb = {r: red, g: green, b: blue, toString: clrToString};
-            rgb.hex = "#" + (16777216 || blue || (green << 8) || (red << 16)).toString(16).slice(1);
+            rgb.hex = "#" + (16777216 | blue | (green << 8) | (red << 16)).toString(16).slice(1);
             R.is(opacity, "finite") && (rgb.opacity = opacity);
             return rgb;
         }
@@ -1400,7 +1381,7 @@
      = (string) hex representation of the colour.
     \*/
     R.rgb = cacher(function (r, g, b) {
-        return "#" + (16777216 || b || (g << 8) || (r << 16)).toString(16).slice(1);
+        return "#" + (16777216 | b | (g << 8) | (r << 16)).toString(16).slice(1);
     });
     /*\
      * Raphael.getColor
@@ -1412,13 +1393,13 @@
      = (string) hex representation of the colour.
     \*/
     R.getColor = function (value) {
-        var start = this.getColor.start = this.getColor.start || {h: 0, s: 1, b: value || 0.75},
+        var start = this.getColor.start = this.getColor.start || {h: 0, s: 1, b: value || .75},
             rgb = this.hsb2rgb(start.h, start.s, start.b);
-        start.h += 0.075;
-        if (1 < start.h) {
+        start.h += .075;
+        if (start.h > 1) {
             start.h = 0;
-            start.s -= 0.2;
-            0 >= start.s && (this.getColor.start = {h: 0, s: 1, b: start.b});
+            start.s -= .2;
+            start.s <= 0 && (this.getColor.start = {h: 0, s: 1, b: start.b});
         }
         return rgb.hex;
     };
@@ -1443,15 +1424,13 @@
                         {x: +crp[i + 4], y: +crp[i + 5]}
                     ];
             if (z) {
-                if (i) {
-                    if (iLen - 4 == i) {
-                        p[3] = {x: +crp[0], y: +crp[1]};
-                    } else if (iLen - 2 == i) {
-                        p[2] = {x: +crp[0], y: +crp[1]};
-                        p[3] = {x: +crp[2], y: +crp[3]};
-                    }
-                } else {
+                if (!i) {
                     p[0] = {x: +crp[iLen - 2], y: +crp[iLen - 1]};
+                } else if (iLen - 4 == i) {
+                    p[3] = {x: +crp[0], y: +crp[1]};
+                } else if (iLen - 2 == i) {
+                    p[2] = {x: +crp[0], y: +crp[1]};
+                    p[3] = {x: +crp[2], y: +crp[3]};
                 }
             } else {
                 if (iLen - 4 == i) {
@@ -1504,19 +1483,17 @@
                 c.replace(pathValues, function (a, b) {
                     b && params.push(+b);
                 });
-                if ("m" == name && 2 < params.length) {
+                if (name == "m" && params.length > 2) {
                     data.push([b][concat](params.splice(0, 2)));
                     name = "l";
-                    b = "m" == b ? "l" : "L";
+                    b = b == "m" ? "l" : "L";
                 }
-                if ("r" == name) {
+                if (name == "r") {
                     data.push([b][concat](params));
-                } else {
-                    while (params.length >= paramCounts[name]) {
-                        data.push ([b][concat] (params.splice (0, paramCounts[name])));
-                        if (!paramCounts[name]) {
-                            break;
-                        }
+                } else while (params.length >= paramCounts[name]) {
+                    data.push([b][concat](params.splice(0, paramCounts[name])));
+                    if (!paramCounts[name]) {
+                        break;
                     }
                 }
             });
@@ -1569,11 +1546,9 @@
             };
         }
         setTimeout(function () {
-            for (var key in p) {
-                if (p[has] (key) && key != ps) {
-                    p[key].sleep--;
-                    !p[key].sleep && delete p[key];
-                }
+            for (var key in p) if (p[has](key) && key != ps) {
+                p[key].sleep--;
+                !p[key].sleep && delete p[key];
             }
         });
         return p[ps];
@@ -1737,10 +1712,10 @@
         return t * t2 - 3 * p1 + 3 * p2;
     }
     function bezlen(x1, y1, x2, y2, x3, y3, x4, y4, z) {
-        if (null === z) {
+        if (z == null) {
             z = 1;
         }
-        z = 1 < z ? 1 : 0 > z ? 0 : z;
+        z = z > 1 ? 1 : z < 0 ? 0 : z;
         var z2 = z / 2,
             n = 12,
             Tvalues = [-0.1252,0.1252,-0.3678,0.3678,-0.5873,0.5873,-0.7699,0.7699,-0.9041,0.9041,-0.9816,0.9816],
@@ -1756,14 +1731,14 @@
         return z2 * sum;
     }
     function getTatLen(x1, y1, x2, y2, x3, y3, x4, y4, ll) {
-        if (0 > ll || bezlen(x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
+        if (ll < 0 || bezlen(x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
             return;
         }
         var t = 1,
             step = t / 2,
             t2 = t - step,
             l,
-            e = 0.01;
+            e = .01;
         l = bezlen(x1, y1, x2, y2, x3, y3, x4, y4, t2);
         while (abs(l - ll) > e) {
             step /= 2;
@@ -1840,8 +1815,8 @@
                     di1 = dots1[i + 1],
                     dj = dots2[j],
                     dj1 = dots2[j + 1],
-                    ci = .001 > abs (di1.x - di.x) ? "y" : "x",
-                    cj = .001 > abs (dj1.x - dj.x) ? "y" : "x",
+                    ci = abs(di1.x - di.x) < .001 ? "y" : "x",
+                    cj = abs(dj1.x - dj.x) < .001 ? "y" : "x",
                     is = intersect(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y);
                 if (is) {
                     if (xy[is.x.toFixed(4)] == is.y.toFixed(4)) {
@@ -1850,7 +1825,7 @@
                     xy[is.x.toFixed(4)] = is.y.toFixed(4);
                     var t1 = di.t + abs((is[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t),
                         t2 = dj.t + abs((is[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
-                    if (0 <= t1 && 1.001 >= t1 && 0 <= t2 && 1.001 >= t2) {
+                    if (t1 >= 0 && t1 <= 1.001 && t2 >= 0 && t2 <= 1.001) {
                         if (justCount) {
                             res++;
                         } else {
@@ -1904,11 +1879,11 @@
             res = justCount ? 0 : [];
         for (var i = 0, ii = path1.length; i < ii; i++) {
             var pi = path1[i];
-            if ("M" == pi[0]) {
+            if (pi[0] == "M") {
                 x1 = x1m = pi[1];
                 y1 = y1m = pi[2];
             } else {
-                if ("C" == pi[0]) {
+                if (pi[0] == "C") {
                     bez1 = [x1, y1].concat(pi.slice(1));
                     x1 = bez1[6];
                     y1 = bez1[7];
@@ -1919,11 +1894,11 @@
                 }
                 for (var j = 0, jj = path2.length; j < jj; j++) {
                     var pj = path2[j];
-                    if ("M" == pj[0]) {
+                    if (pj[0] == "M") {
                         x2 = x2m = pj[1];
                         y2 = y2m = pj[2];
                     } else {
-                        if ("C" == pj[0]) {
+                        if (pj[0] == "C") {
                             bez2 = [x2, y2].concat(pj.slice(1));
                             x2 = bez2[6];
                             y2 = bez2[7];
@@ -1966,7 +1941,7 @@
     R.isPointInsidePath = function (path, x, y) {
         var bbox = R.pathBBox(path);
         return R.isPointInsideBBox(bbox, x, y) &&
-               1 == interPathHelper (path, [["M", x, y], ["H", bbox.x2 + 10]], 1) % 2;
+               interPathHelper(path, [["M", x, y], ["H", bbox.x2 + 10]], 1) % 2 == 1;
     };
     R._removedFactory = function (methodname) {
         return function () {
@@ -2010,7 +1985,7 @@
             p;
         for (var i = 0, ii = path.length; i < ii; i++) {
             p = path[i];
-            if ("M" == p[0]) {
+            if (p[0] == "M") {
                 x = p[1];
                 y = p[2];
                 X.push(x);
@@ -2061,7 +2036,7 @@
                 mx = 0,
                 my = 0,
                 start = 0;
-            if ("M" == pathArray[0][0]) {
+            if (pathArray[0][0] == "M") {
                 x = pathArray[0][1];
                 y = pathArray[0][2];
                 mx = x;
@@ -2072,17 +2047,8 @@
             for (var i = start, ii = pathArray.length; i < ii; i++) {
                 var r = res[i] = [],
                     pa = pathArray[i];
-                if (pa[0] == lowerCase.call (pa[0])) {
-                    r = res[i] = [];
-                    if ("m" == pa[0]) {
-                        mx = pa[1] + x;
-                        my = pa[2] + y;
-                    }
-                    for (var k = 0, kk = pa.length; k < kk; k++) {
-                        res[i][k] = pa[k];
-                    }
-                } else {
-                    r[0] = lowerCase.call (pa[0]);
+                if (pa[0] != lowerCase.call(pa[0])) {
+                    r[0] = lowerCase.call(pa[0]);
                     switch (r[0]) {
                         case "a":
                             r[1] = pa[1];
@@ -2090,19 +2056,28 @@
                             r[3] = pa[3];
                             r[4] = pa[4];
                             r[5] = pa[5];
-                            r[6] = +(pa[6] - x).toFixed (3);
-                            r[7] = +(pa[7] - y).toFixed (3);
+                            r[6] = +(pa[6] - x).toFixed(3);
+                            r[7] = +(pa[7] - y).toFixed(3);
                             break;
                         case "v":
-                            r[1] = +(pa[1] - y).toFixed (3);
+                            r[1] = +(pa[1] - y).toFixed(3);
                             break;
                         case "m":
                             mx = pa[1];
                             my = pa[2];
                         default:
                             for (var j = 1, jj = pa.length; j < jj; j++) {
-                                r[j] = +(pa[j] - ((j % 2) ? x : y)).toFixed (3);
+                                r[j] = +(pa[j] - ((j % 2) ? x : y)).toFixed(3);
                             }
+                    }
+                } else {
+                    r = res[i] = [];
+                    if (pa[0] == "m") {
+                        mx = pa[1] + x;
+                        my = pa[2] + y;
+                    }
+                    for (var k = 0, kk = pa.length; k < kk; k++) {
+                        res[i][k] = pa[k];
                     }
                 }
                 var len = res[i].length;
@@ -2143,7 +2118,7 @@
                 mx = 0,
                 my = 0,
                 start = 0;
-            if ("M" == pathArray[0][0]) {
+            if (pathArray[0][0] == "M") {
                 x = +pathArray[0][1];
                 y = +pathArray[0][2];
                 mx = x;
@@ -2151,7 +2126,7 @@
                 start++;
                 res[0] = ["M", x, y];
             }
-            var crz = 3 == pathArray.length && "M" == pathArray[0][0] && "R" == pathArray[1][0].toUpperCase () && "Z" == pathArray[2][0].toUpperCase ();
+            var crz = pathArray.length == 3 && pathArray[0][0] == "M" && pathArray[1][0].toUpperCase() == "R" && pathArray[2][0].toUpperCase() == "Z";
             for (var r, pa, i = start, ii = pathArray.length; i < ii; i++) {
                 res.push(r = []);
                 pa = pathArray[i];
@@ -2190,7 +2165,7 @@
                                 r[j] = +pa[j] + ((j % 2) ? x : y);
                             }
                     }
-                } else if ("R" == pa[0]) {
+                } else if (pa[0] == "R") {
                     dots = [x, y][concat](pa.slice(1));
                     res.pop();
                     res = res[concat](catmullRom2bezier(dots, crz));
@@ -2250,47 +2225,47 @@
                         Y = x * math.sin(rad) + y * math.cos(rad);
                     return {x: X, y: Y};
                 });
-            if (recursive) {
-                f1 = recursive[0];
-                f2 = recursive[1];
-                cx = recursive[2];
-                cy = recursive[3];
-            } else {
-                xy = rotate (x1, y1, -rad);
+            if (!recursive) {
+                xy = rotate(x1, y1, -rad);
                 x1 = xy.x;
                 y1 = xy.y;
-                xy = rotate (x2, y2, -rad);
+                xy = rotate(x2, y2, -rad);
                 x2 = xy.x;
                 y2 = xy.y;
-                var cos = math.cos (PI / 180 * angle),
-                    sin = math.sin (PI / 180 * angle),
-                    x   = (x1 - x2) / 2,
-                    y   = (y1 - y2) / 2;
+                var cos = math.cos(PI / 180 * angle),
+                    sin = math.sin(PI / 180 * angle),
+                    x = (x1 - x2) / 2,
+                    y = (y1 - y2) / 2;
                 var h = (x * x) / (rx * rx) + (y * y) / (ry * ry);
-                if (1 < h) {
-                    h = math.sqrt (h);
+                if (h > 1) {
+                    h = math.sqrt(h);
                     rx = h * rx;
                     ry = h * ry;
                 }
                 var rx2 = rx * rx,
                     ry2 = ry * ry,
-                    k   = (large_arc_flag == sweep_flag ? -1 : 1) *
-                        math.sqrt (abs ((rx2 * ry2 - rx2 * y * y - ry2 * x * x) / (rx2 * y * y + ry2 * x * x))),
-                    cx  = k * rx * y / ry + (x1 + x2) / 2,
-                    cy  = k * -ry * x / rx + (y1 + y2) / 2,
-                    f1  = math.asin (((y1 - cy) / ry).toFixed (9)),
-                    f2  = math.asin (((y2 - cy) / ry).toFixed (9));
+                    k = (large_arc_flag == sweep_flag ? -1 : 1) *
+                        math.sqrt(abs((rx2 * ry2 - rx2 * y * y - ry2 * x * x) / (rx2 * y * y + ry2 * x * x))),
+                    cx = k * rx * y / ry + (x1 + x2) / 2,
+                    cy = k * -ry * x / rx + (y1 + y2) / 2,
+                    f1 = math.asin(((y1 - cy) / ry).toFixed(9)),
+                    f2 = math.asin(((y2 - cy) / ry).toFixed(9));
 
                 f1 = x1 < cx ? PI - f1 : f1;
                 f2 = x2 < cx ? PI - f2 : f2;
-                0 > f1 && (f1 = PI * 2 + f1);
-                0 > f2 && (f2 = PI * 2 + f2);
+                f1 < 0 && (f1 = PI * 2 + f1);
+                f2 < 0 && (f2 = PI * 2 + f2);
                 if (sweep_flag && f1 > f2) {
-                    f1 -= PI * 2;
+                    f1 = f1 - PI * 2;
                 }
                 if (!sweep_flag && f2 > f1) {
-                    f2 -= PI * 2;
+                    f2 = f2 - PI * 2;
                 }
+            } else {
+                f1 = recursive[0];
+                f2 = recursive[1];
+                cx = recursive[2];
+                cy = recursive[3];
             }
             var df = f2 - f1;
             if (abs(df) > _120) {
@@ -2343,14 +2318,14 @@
                 y = [p1y, p2y],
                 x = [p1x, p2x],
                 dot;
-            "1e12" < abs (t1) && (t1 = 0.5);
-            "1e12" < abs (t2) && (t2 = 0.5);
-            if (0 < t1 && 1 > t1) {
+            abs(t1) > "1e12" && (t1 = .5);
+            abs(t2) > "1e12" && (t2 = .5);
+            if (t1 > 0 && t1 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t1);
                 x.push(dot.x);
                 y.push(dot.y);
             }
-            if (0 < t2 && 1 > t2) {
+            if (t2 > 0 && t2 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t2);
                 x.push(dot.x);
                 y.push(dot.y);
@@ -2360,14 +2335,14 @@
             c = p1y - c1y;
             t1 = (-b + math.sqrt(b * b - 4 * a * c)) / 2 / a;
             t2 = (-b - math.sqrt(b * b - 4 * a * c)) / 2 / a;
-            "1e12" < abs (t1) && (t1 = 0.5);
-            "1e12" < abs (t2) && (t2 = 0.5);
-            if (0 < t1 && 1 > t1) {
+            abs(t1) > "1e12" && (t1 = .5);
+            abs(t2) > "1e12" && (t2 = .5);
+            if (t1 > 0 && t1 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t1);
                 x.push(dot.x);
                 y.push(dot.y);
             }
-            if (0 < t2 && 1 > t2) {
+            if (t2 > 0 && t2 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t2);
                 x.push(dot.x);
                 y.push(dot.y);
@@ -2401,7 +2376,7 @@
                             path = ["C"][concat](a2c[apply](0, [d.x, d.y][concat](path.slice(1))));
                             break;
                         case "S":
-                            if ("C" == pcom || "S" == pcom) { // In "S" case we have to take into account, if the previous command is C/S.
+                            if (pcom == "C" || pcom == "S") { // In "S" case we have to take into account, if the previous command is C/S.
                                 nx = d.x * 2 - d.bx;          // And reflect the previous
                                 ny = d.y * 2 - d.by;          // command's control point relative to the current point.
                             }
@@ -2412,7 +2387,7 @@
                             path = ["C", nx, ny][concat](path.slice(1));
                             break;
                         case "T":
-                            if ("Q" == pcom || "T" == pcom) { // In "T" case we have to take into account, if the previous command is Q/T.
+                            if (pcom == "Q" || pcom == "T") { // In "T" case we have to take into account, if the previous command is Q/T.
                                 d.qx = d.x * 2 - d.qx;        // And make a reflection similar
                                 d.qy = d.y * 2 - d.qy;        // to case "S".
                             }
@@ -2443,7 +2418,7 @@
                     return path;
                 },
                 fixArc = function (pp, i) {
-                    if (7 < pp[i].length) {
+                    if (pp[i].length > 7) {
                         pp[i].shift();
                         var pi = pp[i];
                         while (pi.length) {
@@ -2454,7 +2429,7 @@
                     }
                 },
                 fixM = function (path1, path2, a1, a2, i) {
-                    if (path1 && path2 && "M" == path1[i][0] && "M" != path2[i][0]) {
+                    if (path1 && path2 && path1[i][0] == "M" && path2[i][0] != "M") {
                         path2.splice(i, 0, ["M", a2.x, a2.y]);
                         a1.bx = 0;
                         a1.by = 0;
@@ -2608,7 +2583,7 @@
             return mapPath(path, toMatrix(path, transform));
         },
         extractTransform = R._extractTransform = function (el, tstr) {
-            if (null === tstr) {
+            if (tstr == null) {
                 return el._.transform;
             }
             tstr = Str(tstr).replace(/\.{3}|\u2026/g, el._.transform || E);
@@ -2633,7 +2608,7 @@
                         x2,
                         y2,
                         bb;
-                    if ("t" == command && 3 == tlen) {
+                    if (command == "t" && tlen == 3) {
                         if (absolute) {
                             x1 = inver.x(0, 0);
                             y1 = inver.y(0, 0);
@@ -2643,12 +2618,12 @@
                         } else {
                             m.translate(t[1], t[2]);
                         }
-                    } else if ("r" == command) {
-                        if (2 == tlen) {
+                    } else if (command == "r") {
+                        if (tlen == 2) {
                             bb = bb || el.getBBox(1);
                             m.rotate(t[1], bb.x + bb.width / 2, bb.y + bb.height / 2);
                             deg += t[1];
-                        } else if (4 == tlen) {
+                        } else if (tlen == 4) {
                             if (absolute) {
                                 x2 = inver.x(t[2], t[3]);
                                 y2 = inver.y(t[2], t[3]);
@@ -2658,13 +2633,13 @@
                             }
                             deg += t[1];
                         }
-                    } else if ("s" == command) {
-                        if (2 == tlen || 3 == tlen) {
+                    } else if (command == "s") {
+                        if (tlen == 2 || tlen == 3) {
                             bb = bb || el.getBBox(1);
                             m.scale(t[1], t[tlen - 1], bb.x + bb.width / 2, bb.y + bb.height / 2);
                             sx *= t[1];
                             sy *= t[tlen - 1];
-                        } else if (5 == tlen) {
+                        } else if (tlen == 5) {
                             if (absolute) {
                                 x2 = inver.x(t[3], t[4]);
                                 y2 = inver.y(t[3], t[4]);
@@ -2675,7 +2650,7 @@
                             sx *= t[1];
                             sy *= t[2];
                         }
-                    } else if ("m" == command && 7 == tlen) {
+                    } else if (command == "m" && tlen == 7) {
                         m.add(t[1], t[2], t[3], t[4], t[5], t[6]);
                     }
                     _.dirtyT = 1;
@@ -2697,7 +2672,7 @@
             _.dx = dx = m.e;
             _.dy = dy = m.f;
 
-            if (1 == sx && 1 == sy && !deg && _.bbox) {
+            if (sx == 1 && sy == 1 && !deg && _.bbox) {
                 _.bbox.x += +dx;
                 _.bbox.y += +dy;
             } else {
@@ -2709,14 +2684,14 @@
             switch (l.toLowerCase()) {
                 case "t": return [l, 0, 0];
                 case "m": return [l, 1, 0, 0, 1, 0, 0];
-                case "r": if (4 == item.length) {
+                case "r": if (item.length == 4) {
                     return [l, 0, item[2], item[3]];
                 } else {
                     return [l, 0];
                 }
-                case "s": if (5 == item.length) {
+                case "s": if (item.length == 5) {
                     return [l, 1, 1, item[3], item[4]];
-                } else if (3 == item.length) {
+                } else if (item.length == 3) {
                     return [l, 1, 1];
                 } else {
                     return [l, 1];
@@ -2736,8 +2711,8 @@
                 tt1 = t1[i] || getEmpty(t2[i]);
                 tt2 = t2[i] || getEmpty(tt1);
                 if ((tt1[0] != tt2[0]) ||
-                    ("r" == tt1[0].toLowerCase () && (tt1[2] != tt2[2] || tt1[3] != tt2[3])) ||
-                    ("s" == tt1[0].toLowerCase () && (tt1[3] != tt2[3] || tt1[4] != tt2[4]))
+                    (tt1[0].toLowerCase() == "r" && (tt1[2] != tt2[2] || tt1[3] != tt2[3])) ||
+                    (tt1[0].toLowerCase() == "s" && (tt1[3] != tt2[3] || tt1[4] != tt2[4]))
                     ) {
                     return;
                 }
@@ -2755,12 +2730,12 @@
         };
     R._getContainer = function (x, y, w, h) {
         var container;
-        container = null === h && !R.is(x, "object") ? g.doc.getElementById(x) : x;
-        if (null === container) {
+        container = h == null && !R.is(x, "object") ? g.doc.getElementById(x) : x;
+        if (container == null) {
             return;
         }
         if (container.tagName) {
-            if (null === y) {
+            if (y == null) {
                 return {
                     container: container,
                     width: container.style.pixelWidth || container.offsetWidth,
@@ -2827,20 +2802,20 @@
         return new Matrix(a, b, c, d, e, f);
     };
     function Matrix(a, b, c, d, e, f) {
-        if (null == a) {
-            this.a = 1;
-            this.b = 0;
-            this.c = 0;
-            this.d = 1;
-            this.e = 0;
-            this.f = 0;
-        } else {
+        if (a != null) {
             this.a = +a;
             this.b = +b;
             this.c = +c;
             this.d = +d;
             this.e = +e;
             this.f = +f;
+        } else {
+            this.a = 1;
+            this.b = 0;
+            this.c = 0;
+            this.d = 1;
+            this.e = 0;
+            this.f = 0;
         }
     }
     (function (matrixproto) {
@@ -2869,10 +2844,10 @@
                 matrix = [[a.a, a.c, a.e], [a.b, a.d, a.f], [0, 0, 1]];
             }
 
-            for (x = 0; 3 > x; x++) {
-                for (y = 0; 3 > y; y++) {
+            for (x = 0; x < 3; x++) {
+                for (y = 0; y < 3; y++) {
                     res = 0;
-                    for (z = 0; 3 > z; z++) {
+                    for (z = 0; z < 3; z++) {
                         res += m[x][z] * matrix[z][y];
                     }
                     out[x][y] = res;
@@ -2931,7 +2906,7 @@
          - cy (number) #optional
         \*/
         matrixproto.scale = function (x, y, cx, cy) {
-            null === y && (y = x);
+            y == null && (y = x);
             (cx || cy) && this.add(1, 0, 0, 1, cx, cy);
             this.add(x, 0, 0, y, 0, 0);
             (cx || cy) && this.add(1, 0, 0, 1, -cx, -cy);
@@ -3040,9 +3015,9 @@
             // rotation
             var sin = -row[0][1],
                 cos = row[1][1];
-            if (0 > cos) {
+            if (cos < 0) {
                 out.rotate = R.deg(math.acos(cos));
-                if (0 > sin) {
+                if (sin < 0) {
                     out.rotate = 360 - out.rotate;
                 }
             } else {
@@ -3068,7 +3043,7 @@
                 s.scaley = +s.scaley.toFixed(4);
                 s.rotate = +s.rotate.toFixed(4);
                 return  (s.dx || s.dy ? "t" + [s.dx, s.dy] : E) +
-                        (1 != s.scalex || 1 != s.scaley ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
+                        (s.scalex != 1 || s.scaley != 1 ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
                         (s.rotate ? "r" + [s.rotate, 0, 0] : E);
             } else {
                 return "m" + [this.get(0), this.get(1), this.get(2), this.get(3), this.get(4), this.get(5)];
@@ -3078,8 +3053,8 @@
 
     // WebKit rendering bug workaround method
     var version = navigator.userAgent.match(/Version\/(.*?)\s/) || navigator.userAgent.match(/Chrome\/(\d+)/);
-    if (("Apple Computer, Inc." == navigator.vendor) && (version && 4 > version[1] || "iP" == navigator.platform.slice (0, 2)) ||
-        ("Google Inc." == navigator.vendor && version && 8 > version[1])) {
+    if ((navigator.vendor == "Apple Computer, Inc.") && (version && version[1] < 4 || navigator.platform.slice(0, 2) == "iP") ||
+        (navigator.vendor == "Google Inc." && version && version[1] < 8)) {
         /*\
          * Paper.safari
          [ method ]
@@ -3150,7 +3125,7 @@
                     obj.removeEventListener(type, f, false);
 
                     if (supportsTouch && touchMap[type])
-                        {obj.removeEventListener (touchMap[type], f, false);}
+                        obj.removeEventListener(touchMap[type], f, false);
 
                     return true;
                 };
@@ -3502,15 +3477,13 @@
     \*/
     elproto.data = function (key, value) {
         var data = eldata[this.id] = eldata[this.id] || {};
-        if (0 === arguments.length) {
+        if (arguments.length == 0) {
             return data;
         }
-        if (1 == arguments.length) {
+        if (arguments.length == 1) {
             if (R.is(key, "object")) {
-                for (var i in key) {
-                    if (key[has] (i)) {
-                        this.data (i, key[i]);
-                    }
+                for (var i in key) if (key[has](i)) {
+                    this.data(i, key[i]);
                 }
                 return this;
             }
@@ -3532,7 +3505,7 @@
      = (object) @Element
     \*/
     elproto.removeData = function (key) {
-        if (null === key) {
+        if (key == null) {
             eldata[this.id] = {};
         } else {
             eldata[this.id] && delete eldata[this.id][key];
@@ -3661,12 +3634,10 @@
     \*/
     elproto.undrag = function () {
         var i = draggable.length;
-        while (i--) {
-            if (draggable[i].el == this) {
-                this.unmousedown (draggable[i].start);
-                draggable.splice (i, 1);
-                eve.unbind ("raphael.drag.*." + this.id);
-            }
+        while (i--) if (draggable[i].el == this) {
+            this.unmousedown(draggable[i].start);
+            draggable.splice(i, 1);
+            eve.unbind("raphael.drag.*." + this.id);
         }
         !draggable.length && R.unmousemove(dragMove).unmouseup(dragUp);
         drag = [];
@@ -3960,7 +3931,7 @@
         var paper = this,
             svg = paper.canvas,
             target = g.doc.elementFromPoint(x, y);
-        if (g.win.opera && "svg" == target.tagName) {
+        if (g.win.opera && target.tagName == "svg") {
             var so = getOffset(svg),
                 sr = svg.createSVGRect();
             sr.x = x - so.x;
@@ -4045,7 +4016,7 @@
     paperproto.forEach = function (callback, thisArg) {
         var bot = this.bottom;
         while (bot) {
-            if (false === callback.call (thisArg, bot)) {
+            if (callback.call(thisArg, bot) === false) {
                 return this;
             }
             bot = bot.next;
@@ -4179,14 +4150,14 @@
      = (object) @Paper.set of elements that represents glow
     \*/
     elproto.glow = function (glow) {
-        if ("text" == this.type) {
+        if (this.type == "text") {
             return null;
         }
         glow = glow || {};
         var s = {
             width: (glow.width || 10) + (+this.attr("stroke-width") || 1),
             fill: glow.fill || false,
-            opacity: glow.opacity || 0.5,
+            opacity: glow.opacity || .5,
             offsetx: glow.offsetx || 0,
             offsety: glow.offsety || 0,
             color: glow.color || "#000"
@@ -4210,7 +4181,7 @@
     };
     var curveslengths = {},
     getPointAtSegmentLength = function (p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length) {
-        if (null === length) {
+        if (length == null) {
             return bezlen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y);
         } else {
             return R.findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, getTatLen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length));
@@ -4223,7 +4194,7 @@
                 len = 0;
             for (var i = 0, ii = path.length; i < ii; i++) {
                 p = path[i];
-                if ("M" == p[0]) {
+                if (p[0] == "M") {
                     x = +p[1];
                     y = +p[2];
                 } else {
@@ -4307,7 +4278,7 @@
      = (string) pathstring for the segment
     \*/
     R.getSubpath = function (path, from, to) {
-        if (1e-6 > this.getTotalLength (path) - to) {
+        if (this.getTotalLength(path) - to < 1e-6) {
             return getSubpathsAtLength(path, from).end;
         }
         var a = getSubpathsAtLength(path, to, 1);
@@ -4369,7 +4340,7 @@
         var path,
             getPath = R._getPath[this.type];
         
-        if ("text" == this.type || "set" == this.type) {
+        if (this.type == "text" || this.type == "set") {
             return;
         }
 
@@ -4425,16 +4396,16 @@
             return pow(n, 1.7);
         },
         ">": function (n) {
-            return pow(n, 0.48);
+            return pow(n, .48);
         },
         "<>": function (n) {
-            var q = 0.48 - n / 1.04,
-                Q = math.sqrt(0.1734 + q * q),
+            var q = .48 - n / 1.04,
+                Q = math.sqrt(.1734 + q * q),
                 x = Q - q,
-                X = pow(abs(x), 1 / 3) * (0 > x ? -1 : 1),
+                X = pow(abs(x), 1 / 3) * (x < 0 ? -1 : 1),
                 y = -Q - q,
-                Y = pow(abs(y), 1 / 3) * (0 > y ? -1 : 1),
-                t = X + Y + 0.5;
+                Y = pow(abs(y), 1 / 3) * (y < 0 ? -1 : 1),
+                t = X + Y + .5;
             return (1 - t) * 3 * t * t + t * t * t;
         },
         backIn: function (n) {
@@ -4442,7 +4413,7 @@
             return n * n * ((s + 1) * n - s);
         },
         backOut: function (n) {
-            n -= 1;
+            n = n - 1;
             var s = 1.70158;
             return n * n * ((s + 1) * n + s) + 1;
         },
@@ -4450,7 +4421,7 @@
             if (n == !!n) {
                 return n;
             }
-            return pow(2, -10 * n) * math.sin((n - 0.075) * (2 * PI) / 0.3) + 1;
+            return pow(2, -10 * n) * math.sin((n - .075) * (2 * PI) / .3) + 1;
         },
         bounce: function (n) {
             var s = 7.5625,
@@ -4461,14 +4432,14 @@
             } else {
                 if (n < (2 / p)) {
                     n -= (1.5 / p);
-                    l = s * n * n + 0.75;
+                    l = s * n * n + .75;
                 } else {
                     if (n < (2.5 / p)) {
                         n -= (2.25 / p);
-                        l = s * n * n + 0.9375;
+                        l = s * n * n + .9375;
                     } else {
                         n -= (2.625 / p);
-                        l = s * n * n + 0.984375;
+                        l = s * n * n + .984375;
                     }
                 }
             }
@@ -4518,72 +4489,70 @@
                 } else {
                     e.status = (e.prev + (e.percent - e.prev) * (time / ms)) / e.anim.top;
                 }
-                if (0 > time) {
+                if (time < 0) {
                     continue;
                 }
                 if (time < ms) {
                     var pos = easing(time / ms);
-                    for (var attr in from) {
-                        if (from[has] (attr)) {
-                            switch (availableAnimAttrs[attr]) {
-                                case nu:
-                                    now = +from[attr] + pos * ms * diff[attr];
-                                    break;
-                                case "colour":
-                                    now = "rgb(" + [
-                                        upto255 (round (from[attr].r + pos * ms * diff[attr].r)),
-                                        upto255 (round (from[attr].g + pos * ms * diff[attr].g)),
-                                        upto255 (round (from[attr].b + pos * ms * diff[attr].b))
-                                    ].join (",") + ")";
-                                    break;
-                                case "path":
+                    for (var attr in from) if (from[has](attr)) {
+                        switch (availableAnimAttrs[attr]) {
+                            case nu:
+                                now = +from[attr] + pos * ms * diff[attr];
+                                break;
+                            case "colour":
+                                now = "rgb(" + [
+                                    upto255(round(from[attr].r + pos * ms * diff[attr].r)),
+                                    upto255(round(from[attr].g + pos * ms * diff[attr].g)),
+                                    upto255(round(from[attr].b + pos * ms * diff[attr].b))
+                                ].join(",") + ")";
+                                break;
+                            case "path":
+                                now = [];
+                                for (var i = 0, ii = from[attr].length; i < ii; i++) {
+                                    now[i] = [from[attr][i][0]];
+                                    for (var j = 1, jj = from[attr][i].length; j < jj; j++) {
+                                        now[i][j] = +from[attr][i][j] + pos * ms * diff[attr][i][j];
+                                    }
+                                    now[i] = now[i].join(S);
+                                }
+                                now = now.join(S);
+                                break;
+                            case "transform":
+                                if (diff[attr].real) {
                                     now = [];
-                                    for (var i = 0, ii = from[attr].length; i < ii; i++) {
+                                    for (i = 0, ii = from[attr].length; i < ii; i++) {
                                         now[i] = [from[attr][i][0]];
-                                        for (var j = 1, jj = from[attr][i].length; j < jj; j++) {
-                                            now[i][j] = +from[attr][i][j] + pos * ms * diff[attr][i][j];
-                                        }
-                                        now[i] = now[i].join (S);
-                                    }
-                                    now = now.join (S);
-                                    break;
-                                case "transform":
-                                    if (diff[attr].real) {
-                                        now = [];
-                                        for (i = 0, ii = from[attr].length; i < ii; i++) {
-                                            now[i] = [from[attr][i][0]];
-                                            for (j = 1, jj = from[attr][i].length; j < jj; j++) {
-                                                now[i][j] = from[attr][i][j] + pos * ms * diff[attr][i][j];
-                                            }
-                                        }
-                                    } else {
-                                        var get = function (i) {
-                                            return +from[attr][i] + pos * ms * diff[attr][i];
-                                        };
-                                        // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["s", get(0), get(1), 0, 0]];
-                                        now = [["m", get (0), get (1), get (2), get (3), get (4), get (5)]];
-                                    }
-                                    break;
-                                case "csv":
-                                    if (attr == "clip-rect") {
-                                        now = [];
-                                        i = 4;
-                                        while (i--) {
-                                            now[i] = +from[attr][i] + pos * ms * diff[attr][i];
+                                        for (j = 1, jj = from[attr][i].length; j < jj; j++) {
+                                            now[i][j] = from[attr][i][j] + pos * ms * diff[attr][i][j];
                                         }
                                     }
-                                    break;
-                                default:
-                                    var from2 = [][concat] (from[attr]);
+                                } else {
+                                    var get = function (i) {
+                                        return +from[attr][i] + pos * ms * diff[attr][i];
+                                    };
+                                    // now = [["r", get(2), 0, 0], ["t", get(3), get(4)], ["s", get(0), get(1), 0, 0]];
+                                    now = [["m", get(0), get(1), get(2), get(3), get(4), get(5)]];
+                                }
+                                break;
+                            case "csv":
+                                if (attr == "clip-rect") {
                                     now = [];
-                                    i = that.paper.customAttributes[attr].length;
+                                    i = 4;
                                     while (i--) {
-                                        now[i] = +from2[i] + pos * ms * diff[attr][i];
+                                        now[i] = +from[attr][i] + pos * ms * diff[attr][i];
                                     }
-                                    break;
-                            }
-                            set[attr] = now;
+                                }
+                                break;
+                            default:
+                                var from2 = [][concat](from[attr]);
+                                now = [];
+                                i = that.paper.customAttributes[attr].length;
+                                while (i--) {
+                                    now[i] = +from2[i] + pos * ms * diff[attr][i];
+                                }
+                                break;
                         }
+                        set[attr] = now;
                     }
                     that.attr(set);
                     (function (id, that, anim) {
@@ -4601,11 +4570,9 @@
                     })(e.callback, that, e.anim);
                     that.attr(to);
                     animationElements.splice(l--, 1);
-                    if (1 < e.repeat && !e.next) {
-                        for (key in to) {
-                            if (to[has] (key)) {
-                                init[key] = e.totalOrigin[key];
-                            }
+                    if (e.repeat > 1 && !e.next) {
+                        for (key in to) if (to[has](key)) {
+                            init[key] = e.totalOrigin[key];
                         }
                         e.el.attr(init);
                         runAnimation(e.anim, e.el, e.anim.percents[0], null, e.totalOrigin, e.repeat - 1);
@@ -4619,7 +4586,7 @@
             animationElements.length && requestAnimFrame(animation);
         },
         upto255 = function (color) {
-            return 255 < color ? 255 : 0 > color ? 0 : color;
+            return color > 255 ? 255 : color < 0 ? 0 : color;
         };
     /*\
      * Element.animateWith
@@ -4680,16 +4647,16 @@
         }
         function solveCurveX(x, epsilon) {
             var t0, t1, t2, x2, d2, i;
-            for(t2 = x, i = 0; 8 > i; i++) {
+            for(t2 = x, i = 0; i < 8; i++) {
                 x2 = sampleCurveX(t2) - x;
                 if (abs(x2) < epsilon) {
                     return t2;
                 }
                 d2 = (3 * ax * t2 + 2 * bx) * t2 + cx;
-                if (1e-6 > abs (d2)) {
+                if (abs(d2) < 1e-6) {
                     break;
                 }
-                t2 -= x2 / d2;
+                t2 = t2 - x2 / d2;
             }
             t0 = 0;
             t1 = 1;
@@ -4726,11 +4693,9 @@
         this.ms = ms;
         this.times = 1;
         if (anim) {
-            for (var attr in anim) {
-                if (anim[has] (attr)) {
-                    newAnim[toFloat (attr)] = anim[attr];
-                    percents.push (toFloat (attr));
-                }
+            for (var attr in anim) if (anim[has](attr)) {
+                newAnim[toFloat(attr)] = anim[attr];
+                percents.push(toFloat(attr));
             }
             percents.sort(sortByNumber);
         }
@@ -4794,11 +4759,11 @@
             for (i = 0, ii = animationElements.length; i < ii; i++) {
                 var e = animationElements[i];
                 if (e.el.id == element.id && e.anim == anim) {
-                    if (e.percent == percent) {
-                        isInAnim = e;
-                    } else {
-                        animationElements.splice (i, 1);
+                    if (e.percent != percent) {
+                        animationElements.splice(i, 1);
                         isInAnimSet = 1;
+                    } else {
+                        isInAnim = e;
                     }
                     element.attr(e.totalOrigin);
                     break;
@@ -4822,127 +4787,122 @@
         if (!params) {
             return;
         }
-        if (isInAnim) {
-            isInAnim.initstatus = status;
-            isInAnim.start = new Date - isInAnim.ms * status;
-        } else {
-            for (var attr in params) {
-                if (params[has] (attr)) {
-                    if (availableAnimAttrs[has] (attr) || element.paper.customAttributes[has] (attr)) {
-                        from[attr] = element.attr (attr);
-                        (from[attr] == null) && (from[attr] = availableAttrs[attr]);
-                        to[attr] = params[attr];
-                        switch (availableAnimAttrs[attr]) {
-                            case nu:
-                                diff[attr] = (to[attr] - from[attr]) / ms;
-                                break;
-                            case "colour":
-                                from[attr] = R.getRGB (from[attr]);
-                                var toColour = R.getRGB (to[attr]);
-                                diff[attr] = {
-                                    r: (toColour.r - from[attr].r) / ms,
-                                    g: (toColour.g - from[attr].g) / ms,
-                                    b: (toColour.b - from[attr].b) / ms
-                                };
-                                break;
-                            case "path":
-                                var pathes = path2curve (from[attr], to[attr]),
-                                    toPath = pathes[1];
-                                from[attr] = pathes[0];
+        if (!isInAnim) {
+            for (var attr in params) if (params[has](attr)) {
+                if (availableAnimAttrs[has](attr) || element.paper.customAttributes[has](attr)) {
+                    from[attr] = element.attr(attr);
+                    (from[attr] == null) && (from[attr] = availableAttrs[attr]);
+                    to[attr] = params[attr];
+                    switch (availableAnimAttrs[attr]) {
+                        case nu:
+                            diff[attr] = (to[attr] - from[attr]) / ms;
+                            break;
+                        case "colour":
+                            from[attr] = R.getRGB(from[attr]);
+                            var toColour = R.getRGB(to[attr]);
+                            diff[attr] = {
+                                r: (toColour.r - from[attr].r) / ms,
+                                g: (toColour.g - from[attr].g) / ms,
+                                b: (toColour.b - from[attr].b) / ms
+                            };
+                            break;
+                        case "path":
+                            var pathes = path2curve(from[attr], to[attr]),
+                                toPath = pathes[1];
+                            from[attr] = pathes[0];
+                            diff[attr] = [];
+                            for (i = 0, ii = from[attr].length; i < ii; i++) {
+                                diff[attr][i] = [0];
+                                for (var j = 1, jj = from[attr][i].length; j < jj; j++) {
+                                    diff[attr][i][j] = (toPath[i][j] - from[attr][i][j]) / ms;
+                                }
+                            }
+                            break;
+                        case "transform":
+                            var _ = element._,
+                                eq = equaliseTransform(_[attr], to[attr]);
+                            if (eq) {
+                                from[attr] = eq.from;
+                                to[attr] = eq.to;
                                 diff[attr] = [];
+                                diff[attr].real = true;
                                 for (i = 0, ii = from[attr].length; i < ii; i++) {
-                                    diff[attr][i] = [0];
-                                    for (var j = 1, jj = from[attr][i].length; j < jj; j++) {
-                                        diff[attr][i][j] = (toPath[i][j] - from[attr][i][j]) / ms;
+                                    diff[attr][i] = [from[attr][i][0]];
+                                    for (j = 1, jj = from[attr][i].length; j < jj; j++) {
+                                        diff[attr][i][j] = (to[attr][i][j] - from[attr][i][j]) / ms;
                                     }
                                 }
-                                break;
-                            case "transform":
-                                var _  = element._,
-                                    eq = equaliseTransform (_[attr], to[attr]);
-                                if (eq) {
-                                    from[attr] = eq.from;
-                                    to[attr] = eq.to;
-                                    diff[attr] = [];
-                                    diff[attr].real = true;
-                                    for (i = 0, ii = from[attr].length; i < ii; i++) {
-                                        diff[attr][i] = [from[attr][i][0]];
-                                        for (j = 1, jj = from[attr][i].length; j < jj; j++) {
-                                            diff[attr][i][j] = (to[attr][i][j] - from[attr][i][j]) / ms;
+                            } else {
+                                var m = (element.matrix || new Matrix),
+                                    to2 = {
+                                        _: {transform: _.transform},
+                                        getBBox: function () {
+                                            return element.getBBox(1);
                                         }
-                                    }
-                                } else {
-                                    var m   = (element.matrix || new Matrix),
-                                        to2 = {
-                                            _: {transform: _.transform},
-                                            getBBox: function () {
-                                                return element.getBBox (1);
-                                            }
-                                        };
-                                    from[attr] = [
-                                        m.a,
-                                        m.b,
-                                        m.c,
-                                        m.d,
-                                        m.e,
-                                        m.f
-                                    ];
-                                    extractTransform (to2, to[attr]);
-                                    to[attr] = to2._.transform;
-                                    diff[attr] = [
-                                        (to2.matrix.a - m.a) / ms,
-                                        (to2.matrix.b - m.b) / ms,
-                                        (to2.matrix.c - m.c) / ms,
-                                        (to2.matrix.d - m.d) / ms,
-                                        (to2.matrix.e - m.e) / ms,
-                                        (to2.matrix.f - m.f) / ms
-                                    ];
-                                    // from[attr] = [_.sx, _.sy, _.deg, _.dx, _.dy];
-                                    // var to2 = {_:{}, getBBox: function () { return element.getBBox(); }};
-                                    // extractTransform(to2, to[attr]);
-                                    // diff[attr] = [
-                                    //     (to2._.sx - _.sx) / ms,
-                                    //     (to2._.sy - _.sy) / ms,
-                                    //     (to2._.deg - _.deg) / ms,
-                                    //     (to2._.dx - _.dx) / ms,
-                                    //     (to2._.dy - _.dy) / ms
-                                    // ];
-                                }
-                                break;
-                            case "csv":
-                                var values = Str (params[attr])[split] (separator),
-                                    from2  = Str (from[attr])[split] (separator);
-                                if (attr == "clip-rect") {
-                                    from[attr] = from2;
-                                    diff[attr] = [];
-                                    i = from2.length;
-                                    while (i--) {
-                                        diff[attr][i] = (values[i] - from[attr][i]) / ms;
-                                    }
-                                }
-                                to[attr] = values;
-                                break;
-                            default:
-                                values = [][concat] (params[attr]);
-                                from2 = [][concat] (from[attr]);
+                                    };
+                                from[attr] = [
+                                    m.a,
+                                    m.b,
+                                    m.c,
+                                    m.d,
+                                    m.e,
+                                    m.f
+                                ];
+                                extractTransform(to2, to[attr]);
+                                to[attr] = to2._.transform;
+                                diff[attr] = [
+                                    (to2.matrix.a - m.a) / ms,
+                                    (to2.matrix.b - m.b) / ms,
+                                    (to2.matrix.c - m.c) / ms,
+                                    (to2.matrix.d - m.d) / ms,
+                                    (to2.matrix.e - m.e) / ms,
+                                    (to2.matrix.f - m.f) / ms
+                                ];
+                                // from[attr] = [_.sx, _.sy, _.deg, _.dx, _.dy];
+                                // var to2 = {_:{}, getBBox: function () { return element.getBBox(); }};
+                                // extractTransform(to2, to[attr]);
+                                // diff[attr] = [
+                                //     (to2._.sx - _.sx) / ms,
+                                //     (to2._.sy - _.sy) / ms,
+                                //     (to2._.deg - _.deg) / ms,
+                                //     (to2._.dx - _.dx) / ms,
+                                //     (to2._.dy - _.dy) / ms
+                                // ];
+                            }
+                            break;
+                        case "csv":
+                            var values = Str(params[attr])[split](separator),
+                                from2 = Str(from[attr])[split](separator);
+                            if (attr == "clip-rect") {
+                                from[attr] = from2;
                                 diff[attr] = [];
-                                i = element.paper.customAttributes[attr].length;
+                                i = from2.length;
                                 while (i--) {
-                                    diff[attr][i] = ((values[i] || 0) - (from2[i] || 0)) / ms;
+                                    diff[attr][i] = (values[i] - from[attr][i]) / ms;
                                 }
-                                break;
-                        }
+                            }
+                            to[attr] = values;
+                            break;
+                        default:
+                            values = [][concat](params[attr]);
+                            from2 = [][concat](from[attr]);
+                            diff[attr] = [];
+                            i = element.paper.customAttributes[attr].length;
+                            while (i--) {
+                                diff[attr][i] = ((values[i] || 0) - (from2[i] || 0)) / ms;
+                            }
+                            break;
                     }
                 }
             }
-            var easing   = params.easing,
+            var easing = params.easing,
                 easyeasy = R.easing_formulas[easing];
             if (!easyeasy) {
-                easyeasy = Str (easing).match (bezierrg);
-                if (easyeasy && 5 == easyeasy.length) {
+                easyeasy = Str(easing).match(bezierrg);
+                if (easyeasy && easyeasy.length == 5) {
                     var curve = easyeasy;
                     easyeasy = function (t) {
-                        return CubicBezierAtTime (t, +curve[1], +curve[2], +curve[3], +curve[4], ms);
+                        return CubicBezierAtTime(t, +curve[1], +curve[2], +curve[3], +curve[4], ms);
                     };
                 } else {
                     easyeasy = pipe;
@@ -4967,21 +4927,24 @@
                 prev: prev,
                 next: next,
                 repeat: times || anim.times,
-                origin: element.attr (),
+                origin: element.attr(),
                 totalOrigin: totalOrigin
             };
-            animationElements.push (e);
+            animationElements.push(e);
             if (status && !isInAnim && !isInAnimSet) {
                 e.stop = true;
                 e.start = new Date - ms * status;
-                if (1 == animationElements.length) {
-                    return animation ();
+                if (animationElements.length == 1) {
+                    return animation();
                 }
             }
             if (isInAnimSet) {
                 e.start = new Date - e.ms * status;
             }
-            1 == animationElements.length && requestAnimFrame (animation);
+            animationElements.length == 1 && requestAnimFrame(animation);
+        } else {
+            isInAnim.initstatus = status;
+            isInAnim.start = new Date - isInAnim.ms * status;
         }
         eve("raphael.anim.start." + element.id, element, anim);
     }
@@ -5014,18 +4977,16 @@
         var p = {},
             json,
             attr;
-        for (attr in params) {
-            if (params[has] (attr) && toFloat (attr) != attr && toFloat (attr) + "%" != attr) {
-                json = true;
-                p[attr] = params[attr];
-            }
+        for (attr in params) if (params[has](attr) && toFloat(attr) != attr && toFloat(attr) + "%" != attr) {
+            json = true;
+            p[attr] = params[attr];
         }
-        if (json) {
+        if (!json) {
+            return new Animation(params, ms);
+        } else {
             easing && (p.easing = easing);
             callback && (p.callback = callback);
-            return new Animation ({100: p}, ms);
-        } else {
-            return new Animation (params, ms);
+            return new Animation({100: p}, ms);
         }
     };
     /*\
@@ -5072,7 +5033,7 @@
      * On each animation frame event `anim.frame.<id>`, on start `anim.start.<id>` and on end `anim.finish.<id>`.
     \*/
     elproto.setTime = function (anim, value) {
-        if (anim && null !== value) {
+        if (anim && value != null) {
             this.status(anim, mmin(value, anim.ms) / anim.ms);
         }
         return this;
@@ -5103,7 +5064,10 @@
             i = 0,
             len,
             e;
-        if (null == value) {
+        if (value != null) {
+            runAnimation(anim, this, -1, mmin(value, 1));
+            return this;
+        } else {
             len = animationElements.length;
             for (; i < len; i++) {
                 e = animationElements[i];
@@ -5111,7 +5075,7 @@
                     if (anim) {
                         return e.status;
                     }
-                    out.push ({
+                    out.push({
                         anim: e.anim,
                         status: e.status
                     });
@@ -5121,9 +5085,6 @@
                 return 0;
             }
             return out;
-        } else {
-            runAnimation (anim, this, -1, mmin (value, 1));
-            return this;
         }
     };
     /*\
@@ -5139,11 +5100,9 @@
      = (object) original element
     \*/
     elproto.pause = function (anim) {
-        for (var i = 0; i < animationElements.length; i++) {
-            if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
-                if (eve ("raphael.anim.pause." + this.id, this, animationElements[i].anim) !== false) {
-                    animationElements[i].paused = true;
-                }
+        for (var i = 0; i < animationElements.length; i++) if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
+            if (eve("raphael.anim.pause." + this.id, this, animationElements[i].anim) !== false) {
+                animationElements[i].paused = true;
             }
         }
         return this;
@@ -5161,13 +5120,11 @@
      = (object) original element
     \*/
     elproto.resume = function (anim) {
-        for (var i = 0; i < animationElements.length; i++) {
-            if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
-                var e = animationElements[i];
-                if (eve ("raphael.anim.resume." + this.id, this, e.anim) !== false) {
-                    delete e.paused;
-                    this.status (e.anim, e.status);
-                }
+        for (var i = 0; i < animationElements.length; i++) if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
+            var e = animationElements[i];
+            if (eve("raphael.anim.resume." + this.id, this, e.anim) !== false) {
+                delete e.paused;
+                this.status(e.anim, e.status);
             }
         }
         return this;
@@ -5185,20 +5142,16 @@
      = (object) original element
     \*/
     elproto.stop = function (anim) {
-        for (var i = 0; i < animationElements.length; i++) {
-            if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
-                if (eve ("raphael.anim.stop." + this.id, this, animationElements[i].anim) !== false) {
-                    animationElements.splice (i--, 1);
-                }
+        for (var i = 0; i < animationElements.length; i++) if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
+            if (eve("raphael.anim.stop." + this.id, this, animationElements[i].anim) !== false) {
+                animationElements.splice(i--, 1);
             }
         }
         return this;
     };
     function stopAnimation(paper) {
-        for (var i = 0; i < animationElements.length; i++) {
-            if (animationElements[i].el.paper == paper) {
-                animationElements.splice (i--, 1);
-            }
+        for (var i = 0; i < animationElements.length; i++) if (animationElements[i].el.paper == paper) {
+            animationElements.splice(i--, 1);
         }
     }
     eve.on("raphael.remove", stopAnimation);
@@ -5269,23 +5222,21 @@
     \*/
     setproto.forEach = function (callback, thisArg) {
         for (var i = 0, ii = this.items.length; i < ii; i++) {
-            if (false === callback.call (thisArg, this.items[i], i)) {
+            if (callback.call(thisArg, this.items[i], i) === false) {
                 return this;
             }
         }
         return this;
     };
-    for (var method in elproto) {
-        if (elproto[has] (method)) {
-            setproto[method] = (function (methodname) {
-                return function () {
-                    var arg = arguments;
-                    return this.forEach (function (el) {
-                        el[methodname][apply] (el, arg);
-                    });
-                };
-            }) (method);
-        }
+    for (var method in elproto) if (elproto[has](method)) {
+        setproto[method] = (function (methodname) {
+            return function () {
+                var arg = arguments;
+                return this.forEach(function (el) {
+                    el[methodname][apply](el, arg);
+                });
+            };
+        })(method);
     }
     setproto.attr = function (name, value) {
         if (name && R.is(name, array) && R.is(name[0], "object")) {
@@ -5324,7 +5275,7 @@
      = (object) set elements that were deleted
     \*/
     setproto.splice = function (index, count, insertion) {
-        index = 0 > index ? mmax(this.length + index, 0) : index;
+        index = index < 0 ? mmax(this.length + index, 0) : index;
         count = mmax(0, mmin(this.length - index, count));
         var tail = [],
             todel = [],
@@ -5361,11 +5312,9 @@
      = (boolean) `true` if object was found & removed from the set
     \*/
     setproto.exclude = function (el) {
-        for (var i = 0, ii = this.length; i < ii; i++) {
-            if (this[i] == el) {
-                this.splice (i, 1);
-                return true;
-            }
+        for (var i = 0, ii = this.length; i < ii; i++) if (this[i] == el) {
+            this.splice(i, 1);
+            return true;
         }
     };
     setproto.animate = function (params, ms, easing, callback) {
@@ -5402,14 +5351,12 @@
             y = [],
             x2 = [],
             y2 = [];
-        for (var i = this.items.length; i--;) {
-            if (!this.items[i].removed) {
-                var box = this.items[i].getBBox ();
-                x.push (box.x);
-                y.push (box.y);
-                x2.push (box.x + box.width);
-                y2.push (box.y + box.height);
-            }
+        for (var i = this.items.length; i--;) if (!this.items[i].removed) {
+            var box = this.items[i].getBBox();
+            x.push(box.x);
+            y.push(box.y);
+            x2.push(box.x + box.width);
+            y2.push(box.y + box.height);
         }
         x = mmin[apply](0, x);
         y = mmin[apply](0, y);
@@ -5439,7 +5386,7 @@
         var ret = this.paper.set();
         this.forEach(function(shape, index){
             var g = shape.glow(glowConfig);
-            if(null !== g){
+            if(g != null){
                 g.forEach(function(shape2, index2){
                     ret.push(shape2);
                 });
@@ -5498,10 +5445,8 @@
                 glyphs: {}
             },
             family = font.face["font-family"];
-        for (var prop in font.face) {
-            if (font.face[has] (prop)) {
-                fontcopy.face[prop] = font.face[prop];
-            }
+        for (var prop in font.face) if (font.face[has](prop)) {
+            fontcopy.face[prop] = font.face[prop];
         }
         if (this.fonts[family]) {
             this.fonts[family].push(fontcopy);
@@ -5510,20 +5455,18 @@
         }
         if (!font.svg) {
             fontcopy.face["units-per-em"] = toInt(font.face["units-per-em"], 10);
-            for (var glyph in font.glyphs) {
-                if (font.glyphs[has] (glyph)) {
-                    var path = font.glyphs[glyph];
-                    fontcopy.glyphs[glyph] = {
-                        w: path.w,
-                        k: {},
-                        d: path.d && "M" + path.d.replace (/[mlcxtrv]/g, function (command) {
+            for (var glyph in font.glyphs) if (font.glyphs[has](glyph)) {
+                var path = font.glyphs[glyph];
+                fontcopy.glyphs[glyph] = {
+                    w: path.w,
+                    k: {},
+                    d: path.d && "M" + path.d.replace(/[mlcxtrv]/g, function (command) {
                             return {l: "L", c: "C", x: "z", t: "m", r: "l", v: "c"}[command] || "M";
                         }) + "z"
-                    };
-                    if (path.k) {
-                        for (var k in path.k) if (path[has] (k)) {
-                            fontcopy.glyphs[glyph].k[k] = path.k[k];
-                        }
+                };
+                if (path.k) {
+                    for (var k in path.k) if (path[has](k)) {
+                        fontcopy.glyphs[glyph].k[k] = path.k[k];
                     }
                 }
             }
@@ -5556,12 +5499,10 @@
         var font = R.fonts[family];
         if (!font) {
             var name = new RegExp("(^|\\s)" + family.replace(/[^\w\d\s+!~.:_-]/g, E) + "(\\s|$)", "i");
-            for (var fontName in R.fonts) {
-                if (R.fonts[has] (fontName)) {
-                    if (name.test (fontName)) {
-                        font = R.fonts[fontName];
-                        break;
-                    }
+            for (var fontName in R.fonts) if (R.fonts[has](fontName)) {
+                if (name.test(fontName)) {
+                    font = R.fonts[fontName];
+                    break;
                 }
             }
         }
@@ -5613,9 +5554,9 @@
                 top = +bb[0],
                 lineHeight = bb[3] - bb[1],
                 shifty = 0,
-                height = +bb[1] + ("baseline" == origin ? lineHeight + (+font.face.descent) : lineHeight / 2);
+                height = +bb[1] + (origin == "baseline" ? lineHeight + (+font.face.descent) : lineHeight / 2);
             for (var i = 0, ii = letters.length; i < ii; i++) {
-                if ("\n" == letters[i]) {
+                if (letters[i] == "\n") {
                     shift = 0;
                     curr = 0;
                     notfirst = 0;
@@ -5701,7 +5642,7 @@
     R.format = function (token, params) {
         var args = R.is(params, array) ? [0][concat](params) : arguments;
         token && R.is(token, string) && args.length - 1 && (token = token.replace(formatrg, function (str, i) {
-            return null === args[++i] ? E : args[i];
+            return args[++i] == null ? E : args[i];
         }));
         return token || E;
     };
@@ -5739,10 +5680,10 @@
                         if (name in res) {
                             res = res[name];
                         }
-                        "function" == typeof res && isFunc && (res = res());
+                        typeof res == "function" && isFunc && (res = res());
                     }
                 });
-                res = (null === res || res == obj ? all : res) + "";
+                res = (res == null || res == obj ? all : res) + "";
                 return res;
             };
         return function (str, obj) {
@@ -5792,7 +5733,7 @@
     R.st = setproto;
     // Firefox <3.6 fix: http://webreflection.blogspot.com/2009/11/195-chars-to-help-lazy-loading.html
     (function (doc, loaded, f) {
-        if (null === doc.readyState && doc.addEventListener){
+        if (doc.readyState == null && doc.addEventListener){
             doc.addEventListener(loaded, f = function () {
                 doc.removeEventListener(loaded, f, false);
                 doc.readyState = "complete";
@@ -5849,16 +5790,14 @@
     };
     var $ = function (el, attr) {
         if (attr) {
-            if ("string" == typeof el) {
+            if (typeof el == "string") {
                 el = $(el);
             }
-            for (var key in attr) {
-                if (attr[has] (key)) {
-                    if (key.substring (0, 6) == "xlink:") {
-                        el.setAttributeNS (xlink, key.substring (6), Str (attr[key]));
-                    } else {
-                        el.setAttribute (key, Str (attr[key]));
-                    }
+            for (var key in attr) if (attr[has](key)) {
+                if (key.substring(0, 6) == "xlink:") {
+                    el.setAttributeNS(xlink, key.substring(6), Str(attr[key]));
+                } else {
+                    el.setAttribute(key, Str(attr[key]));
                 }
             }
         } else {
@@ -5870,7 +5809,7 @@
     addGradientFill = function (element, gradient) {
         var type = "linear",
             id = element.id + gradient,
-            fx = 0.5, fy = 0.5,
+            fx = .5, fy = .5,
             o = element.node,
             SVG = element.paper,
             s = o.style,
@@ -5881,16 +5820,16 @@
                 if (_fx && _fy) {
                     fx = toFloat(_fx);
                     fy = toFloat(_fy);
-                    var dir = ((.5 < fy) * 2 - 1);
-                    .25 < pow (fx - .5, 2) + pow (fy - .5, 2) &&
-                        (fy = math.sqrt(0.25 - pow(fx - 0.5, 2)) * dir + 0.5) &&
-                        .5 != fy &&
-                        (fy = fy.toFixed(5) - 1.0e-5 * dir);
+                    var dir = ((fy > .5) * 2 - 1);
+                    pow(fx - .5, 2) + pow(fy - .5, 2) > .25 &&
+                        (fy = math.sqrt(.25 - pow(fx - .5, 2)) * dir + .5) &&
+                        fy != .5 &&
+                        (fy = fy.toFixed(5) - 1e-5 * dir);
                 }
                 return E;
             });
             gradient = gradient.split(/\s*\-\s*/);
-            if ("linear" == type) {
+            if (type == "linear") {
                 var angle = gradient.shift();
                 angle = -toFloat(angle);
                 if (isNaN(angle)) {
@@ -5900,11 +5839,11 @@
                     max = 1 / (mmax(abs(vector[2]), abs(vector[3])) || 1);
                 vector[2] *= max;
                 vector[3] *= max;
-                if (0 > vector[2]) {
+                if (vector[2] < 0) {
                     vector[0] = -vector[2];
                     vector[2] = 0;
                 }
-                if (0 > vector[3]) {
+                if (vector[3] < 0) {
                     vector[1] = -vector[3];
                     vector[3] = 0;
                 }
@@ -5923,7 +5862,7 @@
             if (!element.gradient) {
                 el = $(type + "Gradient", {id: id});
                 element.gradient = el;
-                $(el, "radial" == type ? {
+                $(el, type == "radial" ? {
                     fx: fx,
                     fy: fy
                 } : {
@@ -5957,7 +5896,7 @@
         $(o.pattern, {patternTransform: o.matrix.invert() + " translate(" + bbox.x + "," + bbox.y + ")"});
     },
     addArrow = function (o, value, isEnd) {
-        if ("path" == o.type) {
+        if (o.type == "path") {
             var values = Str(value).toLowerCase().split("-"),
                 p = o.paper,
                 se = isEnd ? "end" : "start",
@@ -5990,7 +5929,7 @@
                     case "short": w = 2; break;
                 }
             }
-            if ("open" == type) {
+            if (type == "open") {
                 w += 2;
                 h += 2;
                 t += 2;
@@ -6018,25 +5957,11 @@
             } else {
                 o._.arrows = {};
             }
-            if ("none" == type) {
-                if (isEnd) {
-                    from = o._.arrows.startdx * stroke || 0;
-                    to = R.getTotalLength (attrs.path) - from;
-                } else {
-                    from = 0;
-                    to = R.getTotalLength (attrs.path) - (o._.arrows.enddx * stroke || 0);
-                }
-                o._.arrows[se + "Path"] && $ (node, {d: R.getSubpath (attrs.path, from, to)});
-                delete o._.arrows[se + "Path"];
-                delete o._.arrows[se + "Marker"];
-                delete o._.arrows[se + "dx"];
-                delete o._.arrows[se + "Type"];
-                delete o._.arrows[se + "String"];
-            } else {
-                var pathId   = "raphael-marker-" + type,
+            if (type != "none") {
+                var pathId = "raphael-marker-" + type,
                     markerId = "raphael-marker-" + se + type + w + h;
-                if (!R._g.doc.getElementById (pathId)) {
-                    p.defs.appendChild ($ ($ ("path"), {
+                if (!R._g.doc.getElementById(pathId)) {
+                    p.defs.appendChild($($("path"), {
                         "stroke-linecap": "round",
                         d: markers[type],
                         id: pathId
@@ -6045,10 +5970,10 @@
                 } else {
                     markerCounter[pathId]++;
                 }
-                var marker = R._g.doc.getElementById (markerId),
+                var marker = R._g.doc.getElementById(markerId),
                     use;
                 if (!marker) {
-                    marker = $ ($ ("marker"), {
+                    marker = $($("marker"), {
                         id: markerId,
                         markerHeight: h,
                         markerWidth: w,
@@ -6056,45 +5981,56 @@
                         refX: refX,
                         refY: h / 2
                     });
-                    use = $ ($ ("use"), {
+                    use = $($("use"), {
                         "xlink:href": "#" + pathId,
-                        transform: (isEnd ? "rotate(180 " + w / 2 + " " + h / 2 + ") "
-                            : E) + "scale(" + w / t + "," + h / t + ")",
-                        "stroke-width": (1 / ((w / t + h / t) / 2)).toFixed (4)
+                        transform: (isEnd ? "rotate(180 " + w / 2 + " " + h / 2 + ") " : E) + "scale(" + w / t + "," + h / t + ")",
+                        "stroke-width": (1 / ((w / t + h / t) / 2)).toFixed(4)
                     });
-                    marker.appendChild (use);
-                    p.defs.appendChild (marker);
+                    marker.appendChild(use);
+                    p.defs.appendChild(marker);
                     markerCounter[markerId] = 1;
                 } else {
                     markerCounter[markerId]++;
-                    use = marker.getElementsByTagName ("use")[0];
+                    use = marker.getElementsByTagName("use")[0];
                 }
-                $ (use, attr);
-                var delta = dx * ("diamond" != type && "oval" != type);
+                $(use, attr);
+                var delta = dx * (type != "diamond" && type != "oval");
                 if (isEnd) {
                     from = o._.arrows.startdx * stroke || 0;
-                    to = R.getTotalLength (attrs.path) - delta * stroke;
+                    to = R.getTotalLength(attrs.path) - delta * stroke;
                 } else {
                     from = delta * stroke;
-                    to = R.getTotalLength (attrs.path) - (o._.arrows.enddx * stroke || 0);
+                    to = R.getTotalLength(attrs.path) - (o._.arrows.enddx * stroke || 0);
                 }
                 attr = {};
                 attr["marker-" + se] = "url(#" + markerId + ")";
                 if (to || from) {
-                    attr.d = R.getSubpath (attrs.path, from, to);
+                    attr.d = R.getSubpath(attrs.path, from, to);
                 }
-                $ (node, attr);
+                $(node, attr);
                 o._.arrows[se + "Path"] = pathId;
                 o._.arrows[se + "Marker"] = markerId;
                 o._.arrows[se + "dx"] = delta;
                 o._.arrows[se + "Type"] = type;
                 o._.arrows[se + "String"] = value;
-            }
-            for (attr in markerCounter) {
-                if (markerCounter[has] (attr) && !markerCounter[attr]) {
-                    var item = R._g.doc.getElementById (attr);
-                    item && item.parentNode.removeChild (item);
+            } else {
+                if (isEnd) {
+                    from = o._.arrows.startdx * stroke || 0;
+                    to = R.getTotalLength(attrs.path) - from;
+                } else {
+                    from = 0;
+                    to = R.getTotalLength(attrs.path) - (o._.arrows.enddx * stroke || 0);
                 }
+                o._.arrows[se + "Path"] && $(node, {d: R.getSubpath(attrs.path, from, to)});
+                delete o._.arrows[se + "Path"];
+                delete o._.arrows[se + "Marker"];
+                delete o._.arrows[se + "dx"];
+                delete o._.arrows[se + "Type"];
+                delete o._.arrows[se + "String"];
+            }
+            for (attr in markerCounter) if (markerCounter[has](attr) && !markerCounter[attr]) {
+                var item = R._g.doc.getElementById(attr);
+                item && item.parentNode.removeChild(item);
             }
         }
     },
@@ -6157,14 +6093,14 @@
                     case "href":
                     case "target":
                         var pn = node.parentNode;
-                        if ("a" != pn.tagName.toLowerCase ()) {
+                        if (pn.tagName.toLowerCase() != "a") {
                             var hl = $("a");
                             pn.insertBefore(hl, node);
                             hl.appendChild(node);
                             pn = hl;
                         }
-                        if ("target" == att) {
-                            pn.setAttributeNS(xlink, "show", "blank" == value ? "new" : value);
+                        if (att == "target") {
+                            pn.setAttributeNS(xlink, "show", value == "blank" ? "new" : value);
                         } else {
                             pn.setAttributeNS(xlink, att, value);
                         }
@@ -6183,7 +6119,7 @@
                         break;
                     case "clip-rect":
                         var rect = Str(value).split(separator);
-                        if (4 == rect.length) {
+                        if (rect.length == 4) {
                             o.clip && o.clip.parentNode.parentNode.removeChild(o.clip.parentNode);
                             var el = $("clipPath"),
                                 rc = $("rect");
@@ -6210,7 +6146,7 @@
                         }
                     break;
                     case "path":
-                        if ("path" == o.type) {
+                        if (o.type == "path") {
                             $(node, {d: value ? attrs.path = R._pathToAbsolute(value) : "M0,0"});
                             o._.dirty = 1;
                             if (o._.arrows) {
@@ -6233,7 +6169,7 @@
                             value = -attrs.x - (attrs.width || 0);
                         }
                     case "rx":
-                        if ("rx" == att && "rect" == o.type) {
+                        if (att == "rx" && o.type == "rect") {
                             break;
                         }
                     case "cx":
@@ -6255,7 +6191,7 @@
                             value = -attrs.y - (attrs.height || 0);
                         }
                     case "ry":
-                        if ("ry" == att && "rect" == o.type) {
+                        if (att == "ry" && o.type == "rect") {
                             break;
                         }
                     case "cy":
@@ -6264,7 +6200,7 @@
                         o._.dirty = 1;
                         break;
                     case "r":
-                        if ("rect" == o.type) {
+                        if (o.type == "rect") {
                             $(node, {rx: value, ry: value});
                         } else {
                             node.setAttribute(att, value);
@@ -6272,12 +6208,12 @@
                         o._.dirty = 1;
                         break;
                     case "src":
-                        if ("image" == o.type) {
+                        if (o.type == "image") {
                             node.setAttributeNS(xlink, "href", value);
                         }
                         break;
                     case "stroke-width":
-                        if (1 != o._.sx || 1 != o._.sy) {
+                        if (o._.sx != 1 || o._.sy != 1) {
                             value /= mmax(abs(o._.sx), abs(o._.sy)) || 1;
                         }
                         if (o.paper._vbSize) {
@@ -6321,48 +6257,43 @@
                             break;
                         }
                         var clr = R.getRGB(value);
-                        if (clr.error) {
-                            if (("circle" == o.type || "ellipse" == o.type || "r" != Str (value).charAt ()) && addGradientFill (o, value)) {
-                                if ("opacity" in attrs || "fill-opacity" in attrs) {
-                                    var gradient = R._g.doc.getElementById (node.getAttribute ("fill").replace (/^url\(#|\)$/g, E));
-                                    if (gradient) {
-                                        var stops = gradient.getElementsByTagName ("stop");
-                                        $ (stops[stops.length - 1], {
-                                            "stop-opacity": ("opacity" in attrs ? attrs.opacity
-                                                : 1) * ("fill-opacity" in attrs ? attrs["fill-opacity"] : 1)
-                                        });
-                                    }
-                                }
-                                attrs.gradient = value;
-                                attrs.fill = "none";
-                                break;
-                            }
-                        } else {
+                        if (!clr.error) {
                             delete params.gradient;
                             delete attrs.gradient;
-                            !R.is (attrs.opacity, "undefined") &&
-                            R.is (params.opacity, "undefined") &&
-                            $ (node, {opacity: attrs.opacity});
-                            !R.is (attrs["fill-opacity"], "undefined") &&
-                            R.is (params["fill-opacity"], "undefined") &&
-                            $ (node, {"fill-opacity": attrs["fill-opacity"]});
+                            !R.is(attrs.opacity, "undefined") &&
+                                R.is(params.opacity, "undefined") &&
+                                $(node, {opacity: attrs.opacity});
+                            !R.is(attrs["fill-opacity"], "undefined") &&
+                                R.is(params["fill-opacity"], "undefined") &&
+                                $(node, {"fill-opacity": attrs["fill-opacity"]});
+                        } else if ((o.type == "circle" || o.type == "ellipse" || Str(value).charAt() != "r") && addGradientFill(o, value)) {
+                            if ("opacity" in attrs || "fill-opacity" in attrs) {
+                                var gradient = R._g.doc.getElementById(node.getAttribute("fill").replace(/^url\(#|\)$/g, E));
+                                if (gradient) {
+                                    var stops = gradient.getElementsByTagName("stop");
+                                    $(stops[stops.length - 1], {"stop-opacity": ("opacity" in attrs ? attrs.opacity : 1) * ("fill-opacity" in attrs ? attrs["fill-opacity"] : 1)});
+                                }
+                            }
+                            attrs.gradient = value;
+                            attrs.fill = "none";
+                            break;
                         }
-                        clr[has]("opacity") && $(node, {"fill-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity});
+                        clr[has]("opacity") && $(node, {"fill-opacity": clr.opacity > 1 ? clr.opacity / 100 : clr.opacity});
                     case "stroke":
                         clr = R.getRGB(value);
                         node.setAttribute(att, clr.hex);
-                        "stroke" == att && clr[has]("opacity") && $(node, {"stroke-opacity": 1 < clr.opacity ? clr.opacity / 100 : clr.opacity});
-                        if ("stroke" == att && o._.arrows) {
+                        att == "stroke" && clr[has]("opacity") && $(node, {"stroke-opacity": clr.opacity > 1 ? clr.opacity / 100 : clr.opacity});
+                        if (att == "stroke" && o._.arrows) {
                             "startString" in o._.arrows && addArrow(o, o._.arrows.startString);
                             "endString" in o._.arrows && addArrow(o, o._.arrows.endString, 1);
                         }
                         break;
                     case "gradient":
-                        ("circle" == o.type || "ellipse" == o.type || "r" != Str (value).charAt ()) && addGradientFill(o, value);
+                        (o.type == "circle" || o.type == "ellipse" || Str(value).charAt() != "r") && addGradientFill(o, value);
                         break;
                     case "opacity":
                         if (attrs.gradient && !attrs[has]("stroke-opacity")) {
-                            $(node, {"stroke-opacity": 1 < value ? value / 100 : value});
+                            $(node, {"stroke-opacity": value > 1 ? value / 100 : value});
                         }
                         // fall
                     case "fill-opacity":
@@ -6375,7 +6306,7 @@
                             break;
                         }
                     default:
-                        "font-size" == att && (value = toInt(value, 10) + "px");
+                        att == "font-size" && (value = toInt(value, 10) + "px");
                         var cssrule = att.replace(/(\-.)/g, function (w) {
                             return w.substring(1).toUpperCase();
                         });
@@ -6392,7 +6323,7 @@
     },
     leading = 1.2,
     tuneText = function (el, params) {
-        if ("text" != el.type || !(params[has]("text") || params[has]("font") || params[has]("font-size") || params[has]("x") || params[has]("y"))) {
+        if (el.type != "text" || !(params[has]("text") || params[has]("font") || params[has]("font-size") || params[has]("x") || params[has]("y"))) {
             return;
         }
         var a = el.attrs,
@@ -6416,12 +6347,10 @@
             }
         } else {
             tspans = node.getElementsByTagName("tspan");
-            for (i = 0, ii = tspans.length; i < ii; i++) {
-                if (i) {
-                    $ (tspans[i], {dy: fontSize * leading, x: a.x});
-                } else {
-                    $ (tspans[0], {dy: 0});
-                }
+            for (i = 0, ii = tspans.length; i < ii; i++) if (i) {
+                $(tspans[i], {dy: fontSize * leading, x: a.x});
+            } else {
+                $(tspans[0], {dy: 0});
             }
         }
         $(node, {x: a.x, y: a.y});
@@ -6554,8 +6483,8 @@
             cy = toFloat(deg[2]);
         }
         deg = toFloat(deg[0]);
-        (null === cy) && (cx = cy);
-        if (null === cx || null === cy) {
+        (cy == null) && (cx = cy);
+        if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
             cx = bbox.x + bbox.width / 2;
             cy = bbox.y + bbox.height / 2;
@@ -6589,13 +6518,13 @@
             cy = toFloat(sx[3]);
         }
         sx = toFloat(sx[0]);
-        (null === sy) && (sy = sx);
-        (null === cy) && (cx = cy);
-        if (null === cx || null === cy) {
+        (sy == null) && (sy = sx);
+        (cy == null) && (cx = cy);
+        if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
         }
-        cx = null === cx ? bbox.x + bbox.width / 2 : cx;
-        cy = null === cy ? bbox.y + bbox.height / 2 : cy;
+        cx = cx == null ? bbox.x + bbox.width / 2 : cx;
+        cy = cy == null ? bbox.y + bbox.height / 2 : cy;
         this.transform(this._.transform.concat([["s", sx, sy, cx, cy]]));
         return this;
     };
@@ -6662,7 +6591,7 @@
     \*/
     elproto.transform = function (tstr) {
         var _ = this._;
-        if (null === tstr) {
+        if (tstr == null) {
             return _.transform;
         }
         R._extractTransform(this, tstr);
@@ -6671,7 +6600,7 @@
         this.pattern && updatePosition(this);
         this.node && $(this.node, {transform: this.matrix});
     
-        if (1 != _.sx || 1 != _.sy) {
+        if (_.sx != 1 || _.sy != 1) {
             var sw = this.attrs[has]("stroke-width") ? this.attrs["stroke-width"] : 1;
             this.attr({"stroke-width": sw});
         }
@@ -6717,18 +6646,18 @@
             paper.defs.removeChild(this.gradient);
         }
         R._tear(this, paper);
-        if ("a" == this.node.parentNode.tagName.toLowerCase ()) {
+        if (this.node.parentNode.tagName.toLowerCase() == "a") {
             this.node.parentNode.parentNode.removeChild(this.node.parentNode);
         } else {
             this.node.parentNode.removeChild(this.node);
         }
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = typeof this[i] == "function" ? R._removedFactory(i) : null;
         }
         this.removed = true;
     };
     elproto._getBBox = function () {
-        if ("none" == this.node.style.display) {
+        if (this.node.style.display == "none") {
             this.show();
             var hide = true;
         }
@@ -6828,22 +6757,20 @@
         if (this.removed) {
             return this;
         }
-        if (null === name) {
+        if (name == null) {
             var res = {};
-            for (var a in this.attrs) {
-                if (this.attrs[has] (a)) {
-                    res[a] = this.attrs[a];
-                }
+            for (var a in this.attrs) if (this.attrs[has](a)) {
+                res[a] = this.attrs[a];
             }
-            res.gradient && "none" == res.fill && (res.fill = res.gradient) && delete res.gradient;
+            res.gradient && res.fill == "none" && (res.fill = res.gradient) && delete res.gradient;
             res.transform = this._.transform;
             return res;
         }
-        if (null === value && R.is(name, "string")) {
-            if ("fill" == name && "none" == this.attrs.fill && this.attrs.gradient) {
+        if (value == null && R.is(name, "string")) {
+            if (name == "fill" && this.attrs.fill == "none" && this.attrs.gradient) {
                 return this.attrs.gradient;
             }
-            if ("transform" == name) {
+            if (name == "transform") {
                 return this._.transform;
             }
             var names = name.split(separator),
@@ -6860,29 +6787,27 @@
             }
             return ii - 1 ? out : out[names[0]];
         }
-        if (null === value && R.is(name, "array")) {
+        if (value == null && R.is(name, "array")) {
             out = {};
             for (i = 0, ii = name.length; i < ii; i++) {
                 out[name[i]] = this.attr(name[i]);
             }
             return out;
         }
-        if (null !== value) {
+        if (value != null) {
             var params = {};
             params[name] = value;
-        } else if (null !== name && R.is(name, "object")) {
+        } else if (name != null && R.is(name, "object")) {
             params = name;
         }
         for (var key in params) {
             eve("raphael.attr." + key + "." + this.id, this, params[key]);
         }
-        for (key in this.paper.customAttributes) {
-            if (this.paper.customAttributes[has] (key) && params[has] (key) && R.is (this.paper.customAttributes[key], "function")) {
-                var par = this.paper.customAttributes[key].apply (this, [].concat (params[key]));
-                this.attrs[key] = params[key];
-                for (var subkey in par) if (par[has] (subkey)) {
-                    params[subkey] = par[subkey];
-                }
+        for (key in this.paper.customAttributes) if (this.paper.customAttributes[has](key) && params[has](key) && R.is(this.paper.customAttributes[key], "function")) {
+            var par = this.paper.customAttributes[key].apply(this, [].concat(params[key]));
+            this.attrs[key] = params[key];
+            for (var subkey in par) if (par[has](subkey)) {
+                params[subkey] = par[subkey];
             }
         }
         setFillAndStroke(this, params);
@@ -6899,7 +6824,7 @@
         if (this.removed) {
             return this;
         }
-        if ("a" == this.node.parentNode.tagName.toLowerCase ()) {
+        if (this.node.parentNode.tagName.toLowerCase() == "a") {
             this.node.parentNode.parentNode.appendChild(this.node.parentNode);
         } else {
             this.node.parentNode.appendChild(this.node);
@@ -6920,7 +6845,7 @@
             return this;
         }
         var parent = this.node.parentNode;
-        if ("a" == parent.tagName.toLowerCase ()) {
+        if (parent.tagName.toLowerCase() == "a") {
             parent.parentNode.insertBefore(this.node.parentNode, this.node.parentNode.parentNode.firstChild); 
         } else if (parent.firstChild != this.node) {
             parent.insertBefore(this.node, this.node.parentNode.firstChild);
@@ -6968,23 +6893,23 @@
     elproto.blur = function (size) {
         // Experimental. No Safari support. Use it on your own risk.
         var t = this;
-        if (0 === +size) {
+        if (+size !== 0) {
+            var fltr = $("filter"),
+                blur = $("feGaussianBlur");
+            t.attrs.blur = size;
+            fltr.id = R.createUUID();
+            $(blur, {stdDeviation: +size || 1.5});
+            fltr.appendChild(blur);
+            t.paper.defs.appendChild(fltr);
+            t._blur = fltr;
+            $(t.node, {filter: "url(#" + fltr.id + ")"});
+        } else {
             if (t._blur) {
-                t._blur.parentNode.removeChild (t._blur);
+                t._blur.parentNode.removeChild(t._blur);
                 delete t._blur;
                 delete t.attrs.blur;
             }
-            t.node.removeAttribute ("filter");
-        } else {
-            var fltr = $ ("filter"),
-                blur = $ ("feGaussianBlur");
-            t.attrs.blur = size;
-            fltr.id = R.createUUID ();
-            $ (blur, {stdDeviation: +size || 1.5});
-            fltr.appendChild (blur);
-            t.paper.defs.appendChild (fltr);
-            t._blur = fltr;
-            $ (t.node, {filter: "url(#" + fltr.id + ")"});
+            t.node.removeAttribute("filter");
         }
         return t;
     };
@@ -7075,7 +7000,7 @@
             width: width,
             xmlns: "http://www.w3.org/2000/svg"
         });
-        if (1 == container) {
+        if (container == 1) {
             cnvs.style.cssText = css + "position:absolute;left:" + x + "px;top:" + y + "px";
             R._g.doc.body.appendChild(cnvs);
             isFloating = 1;
@@ -7104,7 +7029,7 @@
             aspectRatio = fit ? "xMidYMid meet" : "xMinYMin",
             vb,
             sw;
-        if (null === x) {
+        if (x == null) {
             if (this._vbSize) {
                 size = 1;
             }
@@ -7187,21 +7112,19 @@
         eve("raphael.remove", this);
         this.canvas.parentNode && this.canvas.parentNode.removeChild(this.canvas);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = typeof this[i] == "function" ? R._removedFactory(i) : null;
         }
     };
     var setproto = R.st;
-    for (var method in elproto) {
-        if (elproto[has] (method) && !setproto[has] (method)) {
-            setproto[method] = (function (methodname) {
-                return function () {
-                    var arg = arguments;
-                    return this.forEach (function (el) {
-                        el[methodname].apply (el, arg);
-                    });
-                };
-            }) (method);
-        }
+    for (var method in elproto) if (elproto[has](method) && !setproto[has](method)) {
+        setproto[method] = (function (methodname) {
+            return function () {
+                var arg = arguments;
+                return this.forEach(function (el) {
+                    el[methodname].apply(el, arg);
+                });
+            };
+        })(method);
     }
 })();
 
@@ -7249,11 +7172,11 @@
             if (command == R._pathToAbsolute && !Str(path).match(total)) {
                 var res = Str(path).replace(bites, function (all, command, args) {
                     var vals = [],
-                        isMove = "m" == command.toLowerCase (),
+                        isMove = command.toLowerCase() == "m",
                         res = map[command];
                     args.replace(val, function (value) {
-                        if (isMove && 2 == vals.length) {
-                            res += vals + map["m" == command ? "l" : "L"];
+                        if (isMove && vals.length == 2) {
+                            res += vals + map[command == "m" ? "l" : "L"];
                             vals = [];
                         }
                         vals.push(round(value * zoom));
@@ -7267,9 +7190,9 @@
             for (var i = 0, ii = pa.length; i < ii; i++) {
                 p = pa[i];
                 r = pa[i][0].toLowerCase();
-                "z" == r && (r = "x");
+                r == "z" && (r = "x");
                 for (var j = 1, jj = p.length; j < jj; j++) {
-                    r += round(p[j] * zoom) + (j == jj - 1 ? E : ",");
+                    r += round(p[j] * zoom) + (j != jj - 1 ? "," : E);
                 }
                 res.push(r);
             }
@@ -7277,7 +7200,7 @@
         },
         compensation = function (deg, dx, dy) {
             var m = R.matrix();
-            m.rotate(-deg, 0.5, 0.5);
+            m.rotate(-deg, .5, .5);
             return {
                 dx: m.x(dx, dy),
                 dy: m.y(dx, dy)
@@ -7299,14 +7222,14 @@
                 return;
             }
             o.coordsize = abs(kx) + S + abs(ky);
-            s.rotation = deg * (0 > sx * sy ? -1 : 1);
+            s.rotation = deg * (sx * sy < 0 ? -1 : 1);
             if (deg) {
                 var c = compensation(deg, dx, dy);
                 dx = c.dx;
                 dy = c.dy;
             }
-            0 > sx && (flip += "x");
-            0 > sy && (flip += " y") && (y = -1);
+            sx < 0 && (flip += "x");
+            sy < 0 && (flip += " y") && (y = -1);
             s.flip = flip;
             o.coordorigin = (dx * -kx) + S + (dy * -ky);
             if (fillpos || _.fillsize) {
@@ -7367,10 +7290,8 @@
             res = o;
 
 
-        for (var par in params) {
-            if (params[has] (par)) {
-                a[par] = params[par];
-            }
+        for (var par in params) if (params[has](par)) {
+            a[par] = params[par];
         }
         if (newpath) {
             a.path = R._getPath[o.type](o);
@@ -7381,9 +7302,9 @@
         params.target && (node.target = params.target);
         params.cursor && (s.cursor = params.cursor);
         "blur" in params && o.blur(params.blur);
-        if (params.path && "path" == o.type || newpath) {
+        if (params.path && o.type == "path" || newpath) {
             node.path = path2vml(~Str(a.path).toLowerCase().indexOf("r") ? R._pathToAbsolute(a.path) : a.path);
-            if ("image" == o.type) {
+            if (o.type == "image") {
                 o._.fillpos = [a.x, a.y];
                 o._.fillsize = [a.width, a.height];
                 setCoords(o, 1, 1, 0, 0, 0);
@@ -7400,7 +7321,7 @@
         }
         if ("clip-rect" in params) {
             var rect = Str(params["clip-rect"]).split(separator);
-            if (4 == rect.length) {
+            if (rect.length == 4) {
                 rect[2] = +rect[2] + (+rect[0]);
                 rect[3] = +rect[3] + (+rect[1]);
                 var div = node.clipRect || R._g.doc.createElement("div"),
@@ -7435,27 +7356,27 @@
         if ("arrow-end" in params) {
             addArrow(res, params["arrow-end"], 1);
         }
-        if (null !== params.opacity ||
-            null !== params["stroke-width"] ||
-            null !== params.fill ||
-            null !== params.src ||
-            null !== params.stroke ||
-            null !== params["stroke-width"] ||
-            null !== params["stroke-opacity"] ||
-            null !== params["fill-opacity"] ||
-            null !== params["stroke-dasharray"] ||
-            null !== params["stroke-miterlimit"] ||
-            null !== params["stroke-linejoin"] ||
-            null !== params["stroke-linecap"]) {
+        if (params.opacity != null || 
+            params["stroke-width"] != null ||
+            params.fill != null ||
+            params.src != null ||
+            params.stroke != null ||
+            params["stroke-width"] != null ||
+            params["stroke-opacity"] != null ||
+            params["fill-opacity"] != null ||
+            params["stroke-dasharray"] != null ||
+            params["stroke-miterlimit"] != null ||
+            params["stroke-linejoin"] != null ||
+            params["stroke-linecap"] != null) {
             var fill = node.getElementsByTagName(fillString),
                 newfill = false;
             fill = fill && fill[0];
             !fill && (newfill = fill = createNode(fillString));
-            if ("image" == o.type && params.src) {
+            if (o.type == "image" && params.src) {
                 fill.src = params.src;
             }
             params.fill && (fill.on = true);
-            if (null === fill.on || "none" == params.fill || null === params.fill) {
+            if (fill.on == null || params.fill == "none" || params.fill === null) {
                 fill.on = false;
             }
             if (fill.on && params.fill) {
@@ -7476,7 +7397,7 @@
                     fill.color = R.getRGB(params.fill).hex;
                     fill.src = E;
                     fill.type = "solid";
-                    if (R.getRGB(params.fill).error && (res.type in {circle: 1, ellipse: 1} || "r" != Str (params.fill).charAt ()) && addGradientFill(res, params.fill, fill)) {
+                    if (R.getRGB(params.fill).error && (res.type in {circle: 1, ellipse: 1} || Str(params.fill).charAt() != "r") && addGradientFill(res, params.fill, fill)) {
                         a.fill = "none";
                         a.gradient = params.fill;
                         fill.rotate = false;
@@ -7495,29 +7416,29 @@
             var stroke = (node.getElementsByTagName("stroke") && node.getElementsByTagName("stroke")[0]),
             newstroke = false;
             !stroke && (newstroke = stroke = createNode("stroke"));
-            if ((params.stroke && "none" != params.stroke) ||
+            if ((params.stroke && params.stroke != "none") ||
                 params["stroke-width"] ||
-                null !== params["stroke-opacity"] ||
+                params["stroke-opacity"] != null ||
                 params["stroke-dasharray"] ||
                 params["stroke-miterlimit"] ||
                 params["stroke-linejoin"] ||
                 params["stroke-linecap"]) {
                 stroke.on = true;
             }
-            ("none" == params.stroke || null === params.stroke || null === stroke.on || 0 === params.stroke || 0 === params["stroke-width"]) && (stroke.on = false);
+            (params.stroke == "none" || params.stroke === null || stroke.on == null || params.stroke == 0 || params["stroke-width"] == 0) && (stroke.on = false);
             var strokeColor = R.getRGB(params.stroke);
             stroke.on && params.stroke && (stroke.color = strokeColor.hex);
             opacity = ((+a["stroke-opacity"] + 1 || 2) - 1) * ((+a.opacity + 1 || 2) - 1) * ((+strokeColor.o + 1 || 2) - 1);
-            var width = (toFloat(params["stroke-width"]) || 1) * 0.75;
+            var width = (toFloat(params["stroke-width"]) || 1) * .75;
             opacity = mmin(mmax(opacity, 0), 1);
-            null === params["stroke-width"] && (width = a["stroke-width"]);
+            params["stroke-width"] == null && (width = a["stroke-width"]);
             params["stroke-width"] && (stroke.weight = width);
-            width && 1 > width && (opacity *= width) && (stroke.weight = 1);
+            width && width < 1 && (opacity *= width) && (stroke.weight = 1);
             stroke.opacity = opacity;
         
             params["stroke-linejoin"] && (stroke.joinstyle = params["stroke-linejoin"] || "miter");
             stroke.miterlimit = params["stroke-miterlimit"] || 8;
-            params["stroke-linecap"] && (stroke.endcap = "butt" == params["stroke-linecap"] ? "flat" : "square" == params["stroke-linecap"] ? "square" : "round");
+            params["stroke-linecap"] && (stroke.endcap = params["stroke-linecap"] == "butt" ? "flat" : params["stroke-linecap"] == "square" ? "square" : "round");
             if ("stroke-dasharray" in params) {
                 var dasharray = {
                     "-": "shortdash",
@@ -7535,7 +7456,7 @@
             }
             newstroke && node.appendChild(stroke);
         }
-        if ("text" == res.type) {
+        if (res.type == "text") {
             res.paper.canvas.style.display = E;
             var span = res.paper.span,
                 m = 100,
@@ -7557,11 +7478,9 @@
 
             ("x" in params || "y" in params) && (res.path.v = R.format("m{0},{1}l{2},{1}", round(a.x * zoom), round(a.y * zoom), round(a.x * zoom) + 1));
             var dirtyattrs = ["x", "y", "text", "font", "font-family", "font-weight", "font-style", "font-size"];
-            for (var d = 0, dd = dirtyattrs.length; d < dd; d++) {
-                if (dirtyattrs[d] in params) {
-                    res._.dirty = 1;
-                    break;
-                }
+            for (var d = 0, dd = dirtyattrs.length; d < dd; d++) if (dirtyattrs[d] in params) {
+                res._.dirty = 1;
+                break;
             }
         
             // text-anchor emulation
@@ -7597,13 +7516,13 @@
             if (fx && fy) {
                 fx = toFloat(fx);
                 fy = toFloat(fy);
-                .25 < pow (fx - .5, 2) + pow (fy - .5, 2) && (fy = math.sqrt(0.25 - pow(fx - 0.5, 2)) * ((.5 < fy) * 2 - 1) + 0.5);
+                pow(fx - .5, 2) + pow(fy - .5, 2) > .25 && (fy = math.sqrt(.25 - pow(fx - .5, 2)) * ((fy > .5) * 2 - 1) + .5);
                 fxfy = fx + S + fy;
             }
             return E;
         });
         gradient = gradient.split(/\s*\-\s*/);
-        if ("linear" == type) {
+        if (type == "linear") {
             var angle = gradient.shift();
             angle = -toFloat(angle);
             if (isNaN(angle)) {
@@ -7626,7 +7545,7 @@
                 dots[i].offset && clrs.push(dots[i].offset + S + dots[i].color);
             }
             fill.colors = clrs.length ? clrs.join() : "0% " + fill.color;
-            if ("radial" == type) {
+            if (type == "radial") {
                 fill.type = "gradientTitle";
                 fill.focus = "100%";
                 fill.focussize = "0 0";
@@ -7672,7 +7591,7 @@
     Element.prototype = elproto;
     elproto.constructor = Element;
     elproto.transform = function (tstr) {
-        if (null === tstr) {
+        if (tstr == null) {
             return this._.transform;
         }
         var vbs = this.paper._viewBoxShift,
@@ -7689,7 +7608,7 @@
             isGrad = ~Str(this.attrs.fill).indexOf("-"),
             isPatt = !Str(this.attrs.fill).indexOf("url(");
         matrix.translate(1, 1);
-        if (isPatt || isGrad || "image" == this.type) {
+        if (isPatt || isGrad || this.type == "image") {
             skew.matrix = "1 0 0 1";
             skew.offset = "0 0";
             split = matrix.split();
@@ -7717,7 +7636,7 @@
         if (this.removed) {
             return this;
         }
-        if (null === deg) {
+        if (deg == null) {
             return;
         }
         deg = Str(deg).split(separator);
@@ -7726,8 +7645,8 @@
             cy = toFloat(deg[2]);
         }
         deg = toFloat(deg[0]);
-        (null === cy) && (cx = cy);
-        if (null === cx || null === cy) {
+        (cy == null) && (cx = cy);
+        if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
             cx = bbox.x + bbox.width / 2;
             cy = bbox.y + bbox.height / 2;
@@ -7766,13 +7685,13 @@
             isNaN(cy) && (cy = null);
         }
         sx = toFloat(sx[0]);
-        (null === sy) && (sy = sx);
-        (null === cy) && (cx = cy);
-        if (null === cx || null === cy) {
+        (sy == null) && (sy = sx);
+        (cy == null) && (cx = cy);
+        if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
         }
-        cx = null === cx ? bbox.x + bbox.width / 2 : cx;
-        cy = null === cy ? bbox.y + bbox.height / 2 : cy;
+        cx = cx == null ? bbox.x + bbox.width / 2 : cx;
+        cy = cy == null ? bbox.y + bbox.height / 2 : cy;
     
         this.transform(this._.transform.concat([["s", sx, sy, cx, cy]]));
         this._.dirtyT = 1;
@@ -7807,7 +7726,7 @@
         this.node.parentNode.removeChild(this.node);
         this.shape && this.shape.parentNode.removeChild(this.shape);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = typeof this[i] == "function" ? R._removedFactory(i) : null;
         }
         this.removed = true;
     };
@@ -7815,19 +7734,17 @@
         if (this.removed) {
             return this;
         }
-        if (null === name) {
+        if (name == null) {
             var res = {};
-            for (var a in this.attrs) {
-                if (this.attrs[has] (a)) {
-                    res[a] = this.attrs[a];
-                }
+            for (var a in this.attrs) if (this.attrs[has](a)) {
+                res[a] = this.attrs[a];
             }
-            res.gradient && "none" == res.fill && (res.fill = res.gradient) && delete res.gradient;
+            res.gradient && res.fill == "none" && (res.fill = res.gradient) && delete res.gradient;
             res.transform = this._.transform;
             return res;
         }
-        if (null === value && R.is(name, "string")) {
-            if (name == fillString && "none" == this.attrs.fill && this.attrs.gradient) {
+        if (value == null && R.is(name, "string")) {
+            if (name == fillString && this.attrs.fill == "none" && this.attrs.gradient) {
                 return this.attrs.gradient;
             }
             var names = name.split(separator),
@@ -7844,7 +7761,7 @@
             }
             return ii - 1 ? out : out[names[0]];
         }
-        if (this.attrs && null === value && R.is(name, "array")) {
+        if (this.attrs && value == null && R.is(name, "array")) {
             out = {};
             for (i = 0, ii = name.length; i < ii; i++) {
                 out[name[i]] = this.attr(name[i]);
@@ -7852,26 +7769,24 @@
             return out;
         }
         var params;
-        if (null !== value) {
+        if (value != null) {
             params = {};
             params[name] = value;
         }
-        null === value && R.is(name, "object") && (params = name);
+        value == null && R.is(name, "object") && (params = name);
         for (var key in params) {
             eve("raphael.attr." + key + "." + this.id, this, params[key]);
         }
         if (params) {
-            for (key in this.paper.customAttributes) {
-                if (this.paper.customAttributes[has] (key) && params[has] (key) && R.is (this.paper.customAttributes[key], "function")) {
-                    var par = this.paper.customAttributes[key].apply (this, [].concat (params[key]));
-                    this.attrs[key] = params[key];
-                    for (var subkey in par) if (par[has] (subkey)) {
-                        params[subkey] = par[subkey];
-                    }
+            for (key in this.paper.customAttributes) if (this.paper.customAttributes[has](key) && params[has](key) && R.is(this.paper.customAttributes[key], "function")) {
+                var par = this.paper.customAttributes[key].apply(this, [].concat(params[key]));
+                this.attrs[key] = params[key];
+                for (var subkey in par) if (par[has](subkey)) {
+                    params[subkey] = par[subkey];
                 }
             }
             // this.paper.canvas.style.display = "none";
-            if (params.text && "text" == this.type) {
+            if (params.text && this.type == "text") {
                 this.textpath.string = params.text;
             }
             setFillAndStroke(this, params);
@@ -7924,14 +7839,14 @@
         var s = this.node.runtimeStyle,
             f = s.filter;
         f = f.replace(blurregexp, E);
-        if (0 === +size) {
+        if (+size !== 0) {
+            this.attrs.blur = size;
+            s.filter = f + S + ms + ".Blur(pixelradius=" + (+size || 1.5) + ")";
+            s.margin = R.format("-{0}px 0 0 -{0}px", round(+size || 1.5));
+        } else {
             s.filter = f;
             s.margin = 0;
             delete this.attrs.blur;
-        } else {
-            this.attrs.blur = size;
-            s.filter = f + S + ms + ".Blur(pixelradius=" + (+size || 1.5) + ")";
-            s.margin = R.format ("-{0}px 0 0 -{0}px", round (+size || 1.5));
         }
         return this;
     };
@@ -8142,13 +8057,13 @@
         res.height = height;
         width == +width && (width += "px");
         height == +height && (height += "px");
-        res.coordsize = zoom * 1.0e3 + S + zoom * 1.0e3;
+        res.coordsize = zoom * 1e3 + S + zoom * 1e3;
         res.coordorigin = "0 0";
         res.span = R._g.doc.createElement("span");
         res.span.style.cssText = "position:absolute;left:-9999em;top:-9999em;padding:0;margin:0;line-height:1;";
         c.appendChild(res.span);
         cs.cssText = R.format("top:0;left:0;width:{0};height:{1};display:inline-block;position:relative;clip:rect(0 {0} {1} 0);overflow:hidden", width, height);
-        if (1 == container) {
+        if (container == 1) {
             R._g.doc.body.appendChild(c);
             cs.left = x + "px";
             cs.top = y + "px";
@@ -8175,23 +8090,21 @@
         R.eve("raphael.remove", this);
         this.canvas.parentNode.removeChild(this.canvas);
         for (var i in this) {
-            this[i] = "function" == typeof this[i] ? R._removedFactory(i) : null;
+            this[i] = typeof this[i] == "function" ? R._removedFactory(i) : null;
         }
         return true;
     };
 
     var setproto = R.st;
-    for (var method in elproto) {
-        if (elproto[has] (method) && !setproto[has] (method)) {
-            setproto[method] = (function (methodname) {
-                return function () {
-                    var arg = arguments;
-                    return this.forEach (function (el) {
-                        el[methodname].apply (el, arg);
-                    });
-                };
-            }) (method);
-        }
+    for (var method in elproto) if (elproto[has](method) && !setproto[has](method)) {
+        setproto[method] = (function (methodname) {
+            return function () {
+                var arg = arguments;
+                return this.forEach(function (el) {
+                    el[methodname].apply(el, arg);
+                });
+            };
+        })(method);
     }
 })();
 

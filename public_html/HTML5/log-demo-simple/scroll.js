@@ -12,7 +12,7 @@ function appendRandomLog() {
    possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
    chars = Math.floor((Math.random() * 100));
    for( var i=0; i < chars; i++ ) {
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
+      text = text + possible.charAt(Math.floor(Math.random() * possible.length));
    }
    appendLinesText(text);
 }
