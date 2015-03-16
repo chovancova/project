@@ -38,13 +38,13 @@ function ComponentValve(a, isOpen) {
      */
 
     /*funkcia na nastavenie farby  valve podla bool hodnoty a id ventila*/
-
-    this.setColorValve = function setColorValve(a, s, isOpen) {
+/*
+    this.setColorValve = function setColorValve(a, isOpen) {
         var color = (true === isOpened) ? "green" : "red";
         s.select(a).attr({fill: color});
-        /*zmena atributu - a je css selector - a menim attribut farby*/
+        //zmena atributu - a je css selector - a menim attribut farby//
     };
-
+*/
 
 }
 
@@ -63,19 +63,42 @@ function ComponetEngine(a, isOn) {
 
 
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
-var nadrz, motor, pipe, valve;
+var nadrz;
+var motor;
+var pipe;
+var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var schema01Paper = Snap("#svg");
 var s;
-var setColorValve = function setColorValve(a, isOpened) {
-    var color = (true === isOpened) ? "green" : "red";
-    s.selectAll(a).attr({fill: color});
-};
+var colorValve = "yellow";
+/**
+ nastavi farbu valve a podla bool hodnoty
+ prvy parameter je id ventila zo svg - css selektor
+ druhy je hodnota 0, alebo 1 podla toho ci ma byt cerveny alebo zeleny
+ ////mozne je tuto metodu prerobit, aby tam nebol id zo svg
+ //ako aj to - aby bola nastavitelna farba - podla toho aku zadam
+ //alebo aby to len fungovalo ako true/false - pripadne, ze tuto funkciu bude volat dalsia...
+ // overenie funkcnosti
+ //setColorValve (valve, true);
+ // setColorValve(valve, false);
+ //setColorValve(valve, "true");
+ //setColorValve(valve, true);
+ //setColorValve(valve, 0);
+ //setColorValve(valve, 1);
+ //setColorValve(valve, "yellow"); //nahlasi chybu
+ */
+function setColorValve(isOpened) {
+    colorValve = (!isOpened) ? "green" : "red";
+     s.selectAll (valve).attr ({fill: colorValve});
+    return "farba ventila sa zmenila ";
+}
+
+
 function initSchema01() {
     s = Snap("#svgStanica");
     Snap.load("stanica2.svg", function (f) {
 
          s.add(f.selectAll("#stanica"));
-        setColorValve ( '#ventil', true);
+
     });
 
     /*
@@ -90,7 +113,7 @@ function updateSchema01(hodnota1, hodnota2, hodnota3) {
      * napr valveIn.setOpened(isOpened);
      */
     alert("hodnota1: " + hodnota1 + "-------hodnota2: " + hodnota2 + " -----hodnota3: " + hodnota3);
-    initSchema01();
+
 }
 
 function onPageLoad() {
@@ -100,32 +123,20 @@ function onPageLoad() {
 //na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
 function toggleDemoStart() {
     var button = document.getElementById("demo");
-    onPageLoad();
-    /*
-     * volanie funkcie updateSchema01 s roznymi parametrami a podmienkami if...
-     */
+    // overenie funkcnosti
+    //setColorValve (valve, true);
+    // setColorValve(valve, false);
+    //setColorValve(valve, "true");
+    //setColorValve(valve, true);
+    //setColorValve(valve, 0); //hodi cervenu farbu
+    //setColorValve(valve, 1);//hodi zelenu farbu
+    //setColorValve(valve, "yellow"); //da na zeleno??? / vyhodnoti to ako chybu(potom uz nemeni farby) - da sa to riesit v if ===
+    //setColorValve (true);
+     setColorValve( false);
+    //setColorValve( "true");
+    //setColorValve(true);
+    //setColorValve(0); //hodi cervenu farbu
+    //setColorValve( 1);//hodi zelenu farbu
+    //setColorValve( "yellow"); //da na zeleno??? / vyhodnoti to ako chybu(potom uz nemeni farby) - da sa to riesit v if ===
+   }
 
-    /*kon3truktorom si vytvorim napr. nadrz s danymi hodnotoami a nastavim si hodnoty update schemy*/
-
-}
-
-var eZmenafarby;
-eZmenafarby = function (s, a, isOpened) {
-    /**
-     funkcia nastavi farbu valve a podla bool hodnoty
-     prvy parameter je id ventila
-     */
-    var setColorValve = function (a, isOpened) {
-        var color = (true === isOpened) ? "green" : "red";
-        s.selectAll (a).attr ({fill: color});
-    };
-
-    //*/ overenie funkcnosti
-    setColorValve ("#ventil", true);
-    //  setColorValve("#ventil", false);
-    //setColorValve("#ventil", "true");
-    //setColorValve("#ventil", true);
-    //setColorValve("#ventil", "yellow");
-    //*/
-    return setColorValve;
-};

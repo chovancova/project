@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="893e0e69-50fc-46cd-8268-efca91cfd0c2" name="Default" comment="opravovane cez inspektora js">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/index.html" afterPath="$PROJECT_DIR$/precerpavacia_stanica/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" afterPath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a04b58d1-9905-4bb6-9340-06ce3228c3af" name="Rejected commit: Default" comment="opravovane cez inspektora js" />
     <ignored path="public_html.iws" />
@@ -28,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4068376" vertical-offset="0" max-vertical-offset="585">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="8" />
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
+              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="precerp_stanica.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5641026" vertical-offset="1178" max-vertical-offset="2516">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -653,14 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1826923" vertical-offset="1042" max-vertical-offset="2312">
-          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/stanica2.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4488">
@@ -703,8 +705,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4068376" vertical-offset="0" max-vertical-offset="585">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="8" />
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5641026" vertical-offset="1178" max-vertical-offset="2516">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding />
         </state>
       </provider>
