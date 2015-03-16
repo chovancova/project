@@ -1,9 +1,10 @@
-window.onload = function (boolVentil, boolCerpadla, intHladiny) {
-    var s = Snap(750, 600),
-            openVentil = 0,
-            openMotor = 0,
-            perc = 60,
-            fullTankStr, emptyTankStr;
+window.onload = function () {
+    var s = Snap(750, 600);
+    var openVentil = 0;
+    var openMotor = 0;
+    var perc = 60;
+    var fullTankStr;
+    var emptyTankStr;
     /*d path fullTankStr a emptyTankStr
      zmena iba v  M90,147.6 na M90,30 a L150,147.6 na L150,30 
      rozdiel y osi je vyska vyplne
