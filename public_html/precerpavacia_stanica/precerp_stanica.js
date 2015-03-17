@@ -1,3 +1,33 @@
+var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
+var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
+
+var motor1 = "#motor1";
+var vrtulky = "#circle3098";
+
+var ventil = "#ventil";
+
+var hladina1 = "#hladina1";
+/*//zatial nefunkcne - hladam v svg ich prave id
+var rura1 = "#rura1";
+var voda1 = "#voda1";
+var rura2 = "#rura2";
+var voda2 = "#voda2";
+var rura3 = "#rura3";
+var voda3 = "#voda3";
+var voda4 = "#voda4";
+var rura4 = "#rura4";
+*/
+ //var schema01Paper = Snap("#svg");
+var paper; /**meno canvasu, na ktory budem kreslit svg*/
+
+function initSchema01() {
+    paper = Snap("#svgStanica");
+    Snap.load("stanica2.svg", function (f) {
+         paper.add(f.selectAll("#stanica"));
+        console.log("bola nacitana stanica do svgStanica");
+    });
+}
+
 /**
  Funkcia setColorValve nastavi farbu ventila.
 
@@ -10,22 +40,6 @@ function setColorValve(isOpened) {
     return  console.log("farba ventila sa zmenila " + colorValve);
 }
 
-/**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
-var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
-var motor;
-var pipe;
-var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
-//var schema01Paper = Snap("#svg");
-var paper;
-
-
-function initSchema01() {
-    paper = Snap("#svgStanica");
-    Snap.load("stanica2.svg", function (f) {
-         paper.add(f.selectAll("#stanica"));
-        console.log("bola nacitana stanica do svgStanica");
-    });
-}
 
 /**- je otvoreny/zatvoreny ventil
  - stav hladiny v nadrzi v percentach(dajme tomu)
@@ -68,7 +82,7 @@ hladina2
             //x: cislo1
         }, rychlostVMs);
 
-    console.log("animacia tanku " + fillPerc);
+    return console.log("animacia tanku " + fillPerc);
 }
 
 

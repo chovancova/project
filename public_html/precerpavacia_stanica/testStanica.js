@@ -11,6 +11,7 @@ var spustiTestValve = function () {
     setColorValve ("true");
     setColorValve ("yellow");
     setColorValve(0);
+   return console.log("testy prebehli.. .");
 };
 
 function spustiTestzmenaFarby(){
@@ -21,15 +22,30 @@ function spustiTestzmenaFarby(){
 na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
  */
 function spustiTesty() {
-    var button = document.getElementById("demo");
     spustiTestValve ();
     spustiTestzmenaFarby();
+    spustiTestFunkcnostiPrvkovSVG();
+    return console.log("testy boli spustene");
 }
-
-
-
 
 function TestzmenaFarby(a, farba){
     paper.select(a).attr({fill: farba});
-    console.log("bola zmenena farba " + farba + " elementu "+ a);
+    return console.log("bola zmenena farba na: " + farba + " elementu: "+ a);
+}
+
+
+function spustiTestFunkcnostiPrvkovSVG(){
+    TestzmenaFarby(nadrz, "pink" );    //ok
+    TestzmenaFarby(valve, "pink" );    //ok
+   // TestzmenaFarby(rura1, "black" ); ///chyba
+   //// TestzmenaFarby(rura2, "black" );    //chyba
+    //TestzmenaFarby(rura3, "black" );   //chyba
+    //TestzmenaFarby(rura4, "black" );    //chyba
+    //TestzmenaFarby(voda1, "black" );   //chyba
+    //TestzmenaFarby(voda2, "black" );  //chyba
+    //TestzmenaFarby(voda3, "black" );  //chyba
+    //TestzmenaFarby(voda4, "black" );  //chyba
+    TestzmenaFarby(hladina1, "pink" );     //ok
+    TestzmenaFarby(vrtulky, "white" );    //chyba
+    //TestzmenaFarby(motor1, "black" );  //chyba
 }
