@@ -11,10 +11,28 @@
 
     </head>
     <body onload="onPageLoad();">
-        <svg id ="svg3"viewBox="0 0 750 320" width="10%" height="10%"></svg>
-    <h2>Teplomer</h2>
-    <p>
-        overenie funkcnosti: setTempValues(50, 70, 10);
-    </p>
+    <h1>Thermometer</h1>
+        <svg id ="svg3"viewBox="0 0 320 750" width="10%" height="10%"></svg>
+           <div>
+               <h2>Thermometer - Spusti testy</h2>
+            <ul>
+                <li>zadaj v konzole:
+                    <ul>Vytvorenie Thermometer
+                        <li>Thermometer(percento, booleanMamAnimovat); // bool sa moze vynechat</li>
+                        Pouzitie tychto funkcii na ovladanie daneho teplomeru...
+                        <li>animujTeplomer (percento); //zanimuje rychlostou 800 ms
+                        <li>nastavTeplomer(percento);  //iba cisto nastavi na danu hodnotu, bez animacie
+
+                        <p>
+                            Pre zjednodusenie je mozne pouzit funkciu getRandomCislo();
+                                <li>    nastavTeplomer(getRandomCislo()); </li>
+                                <li>    animujTeplomer(getRandomCislo());</li>
+
+
+                        </p>
+                    </ul>
+                <li> stlacenim tlacidla "Testuj" sa spustia automaticky testy - vid console.log </li>
+            </ul>
+            <button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
     </body>
 </html>
