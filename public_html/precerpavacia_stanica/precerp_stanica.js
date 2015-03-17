@@ -95,6 +95,7 @@ var animateComponentTank = function animateComponentTank(fillPerc) {
 };
 
 /**pozriet si demo - tam je rotujuci text /... http://raphaeljs.com/text-rotation.html
+ * http://raphaeljs.com/polar-clock.html
  * z kodu vyuzijem nieco taketo: txt[0].attr({transform: "r" + rot});
  * ale to bude paper.select(vrtulka2).attr({transform: "r"});
 // pracujem s

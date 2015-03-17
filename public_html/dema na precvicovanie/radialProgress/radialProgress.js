@@ -1,5 +1,11 @@
 /**
  * Created by chova_000 on 17-Mar-15.
+ *
+ *http://codepen.io/somethingkindawierd/pen/nkEfw
+ * http://raphaeljs.com/polar-clock.html
+ *
+ *
+ *
  */
 var clamp = function (n, min, max) {
     return Math.max(min, Math.min(max, n));
