@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="893e0e69-50fc-46cd-8268-efca91cfd0c2" name="Default" comment="opravovane cez inspektora js">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/precerpavacia_stanica/exec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teplomer_1/exec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teplomer_1/testTeplomer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/index.html" afterPath="$PROJECT_DIR$/precerpavacia_stanica/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teplomer_1/index.html" afterPath="$PROJECT_DIR$/teplomer_1/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" afterPath="$PROJECT_DIR$/precerpavacia_stanica/precerp_stanica.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teplomer/teplomer.js" afterPath="$PROJECT_DIR$/teplomer/teplomer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teplomer_1/teplomer.js" afterPath="$PROJECT_DIR$/teplomer_1/teplomer.js" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\svg\teplomer_1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\svg\teplomer_2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\svg\teplomer_2o.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\svg\thermometer.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\svg\thermometer_o.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Github\project\public_html\teplomer\teplomer.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a04b58d1-9905-4bb6-9340-06ce3228c3af" name="Rejected commit: Default" comment="opravovane cez inspektora js" />
@@ -121,21 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teplomer/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="374">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teplomer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/teplomer/teplomer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="612">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.59599334" vertical-offset="0" max-vertical-offset="599">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,7 +162,6 @@
         <option value="$PROJECT_DIR$/nadrz2/index.html" />
         <option value="$PROJECT_DIR$/teplomer/index.html" />
         <option value="$PROJECT_DIR$/dema na precvicovanie/demo-kavovar/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/dema na precvicovanie/index.html" />
         <option value="$PROJECT_DIR$/nadrz/index.html" />
         <option value="$PROJECT_DIR$/nadrz/nadrz.js" />
@@ -186,6 +175,7 @@
         <option value="$PROJECT_DIR$/teplomer_1/index.html" />
         <option value="$PROJECT_DIR$/teplomer_1/teplomer.js" />
         <option value="$PROJECT_DIR$/teplomer/teplomer.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -329,38 +319,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="teplomer_1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teplomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teplomer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -866,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36956522" vertical-offset="0" max-vertical-offset="598">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nadrz/nadrz.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="3400">
@@ -1008,18 +958,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teplomer/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="374">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teplomer/teplomer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="612">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.59599334" vertical-offset="0" max-vertical-offset="599">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
