@@ -99,9 +99,9 @@ extracted = function (perc) {
     vyska = 600 * ((perc) / 100);
     py = (600 - vyska);
 
-    // s.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
+    // paper.select("#hladina2").animate({height: vyska, y: py, x: 6}, 800);
 
-    // s.append(s);
+    // paper.append(paper);
     return perc;
 };
 

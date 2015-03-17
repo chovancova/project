@@ -13,7 +13,7 @@ https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js
         <script type="text/javascript" src="exec.js"></script>
  </head>
    <body onload="onPageLoad();">
-
+<h1>Precerpavacia stanica</h1>
    <svg  id ="svgStanica"  viewBox="0 0 750 600" width="40%" height="40%"  ></svg>
    <!--je to responzivne... viewBox
    The viewBox attribute allows to specify that a given set of graphics stretch to fit a particular container element.
@@ -23,11 +23,16 @@ be mapped to the bounds of the viewport established by the given element, taking
 attribute preserveAspectRatio.-->
    <div>
        <h2>Spusti testy</h2>
+       <button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
        <ul>
        <li>zadaj v konzole: setColorValve (boolean);
            <li> stlacenim tlacidla "Testuj" sa spustia automaticky testy - vid console.log
+<p>
+           este nie uplne funkcne, ale pracujem na tom:</p>
+           <li> animateComponentTank(fillPerc);
+           <li> TestzmenaFarby(nadrz, farba) napr. TestzmenaFarby(valve, "yellow"); TestzmenaFarby(nadz, "black");
 
            </ul>
-       <button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
+
     </body>
 </html>

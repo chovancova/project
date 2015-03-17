@@ -5,7 +5,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
   this.y = y;
   this.sizeX = sizeX;
   this.sizeY = sizeY;
-  this.fillPercentage = fillPercentage; /*napln nadrz vodou s urcitym percentom*/
+  this.fillPercentage = fillPercentage; /*napln nadrz vodou paper urcitym percentom*/
   
   this.backgroundPath = undefined; 
   this.fillPath = undefined;       

@@ -6,23 +6,24 @@
  */
 function setColorValve(isOpened) {
     colorValve = (!isOpened) ? "green" : "red";
-    s.selectAll (valve).attr ({fill: colorValve});
+    paper.selectAll (valve).attr ({fill: colorValve});
     return  console.log("farba ventila sa zmenila " + colorValve);
 }
 
 /**kvazi objekty v javascripte / inicializovane cez konstruktor prikazom new */
-var nadrz = "#hladina1";/*toto je modra hladina nadrze*/
+var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
 var motor;
 var pipe;
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var schema01Paper = Snap("#svg");
-var s;
+var paper;
 
 
 function initSchema01() {
-    s = Snap("#svgStanica");
+    paper = Snap("#svgStanica");
     Snap.load("stanica2.svg", function (f) {
-         s.add(f.selectAll("#stanica"));
+         paper.add(f.selectAll("#stanica"));
+        console.log("bola nacitana stanica do svgStanica");
     });
 }
 
@@ -43,21 +44,33 @@ function updateSchema01(boolVentil, boolMotor, intHladina) {
 
 function animateComponentTank(fillPerc) {
     var rychlostVMs = 800;
-    var cislo1= 0;
-    var cislo2 = 0;///zistit suradnice x, y
+    var cislo1= 2500;
+    var cislo2 = 1300;///zistit suradnice x, y
     var percento = fillPerc;
+    /* y="1912.7173"
+     x="2507.533"
+     height="16.300568"
+     width="796.5788"
 
-    this.vyska = cislo1 * (fillPerc / 100);
-    this.py = cislo2 - cislo1 * (fillPerc / 100);
+hladina2
+     y="1316.219"
+     x="2512.7222"
+     height="609.77795"
+     width="796.5788"
+     id="hladina2"*/
 
-    this.animateTank = function animateTank() {
-        s.select(nadrz).animate({
-            height: (cislo1 * (fillPerc / 100)),
-            y: cislo2 - cislo1 * (fillPerc / 100),
+   var vyska = cislo1 * (fillPerc / 100);
+   var py = cislo2 - cislo1 * (fillPerc / 100);
+
+     paper.select(nadrz).animate({
+            height: vyska,
+            y: py,
             x: cislo1
         }, rychlostVMs);
-    };
+
+    console.log("animacia tanku " + fillPerc);
 }
+
 
 function ComponentValve(a, isOpen) {
     /*
@@ -68,7 +81,7 @@ function ComponentValve(a, isOpen) {
     /*
      this.setColorValve = function setColorValve(a, isOpen) {
      var color = (true === isOpened) ? "green" : "red";
-     s.select(a).attr({fill: color});
+     paper.select(a).attr({fill: color});
      //zmena atributu - a je css selector - a menim attribut farby//
      };
      */

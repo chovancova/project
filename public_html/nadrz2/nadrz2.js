@@ -23,9 +23,9 @@ var s;
       /*  
       inicializacia jednotlivych elementov z svg podla id
       /*
-      valveIn = s.selectAll("#valveIn") ;
-      valveOut = s.selectAll("#valveOut");
-      fillPath = s.selectAll("#fillPath");
+      valveIn = paper.selectAll("#valveIn") ;
+      valveOut = paper.selectAll("#valveOut");
+      fillPath = paper.selectAll("#fillPath");
        */  
       /*v tejto metode pristupujem k nim cez svg id*/
       /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
