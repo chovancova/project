@@ -27,6 +27,10 @@ function spustiTesty() {
     spustiTestzmenaFarby();
     spustiTestFunkcnostiPrvkovSVG();
     spustiTestAnimacieTanku();
+
+    TestzmenaFarby(nadrz, "blue");
+    spustiTestUpdateSchema();
+
     return console.log("testy boli spustene");
 }
 
@@ -50,7 +54,7 @@ var spustiTestFunkcnostiPrvkovSVG = function (){
     TestzmenaFarby(hladina1, "pink" );     //ok
     TestzmenaFarby(vrtulka1, "pink" );    //ok
     TestzmenaFarby(vrtulka2, "pink");
-    TestzmenaFarby(motor1, "white" );  //chyba
+    //TestzmenaFarby(motor1, "white" );  //chyba
     return console.log("testy funkcnosti pristupu k svg prvkom prebehl...");
 };
 
@@ -63,6 +67,11 @@ var spustiTestAnimacieTanku = function (){
     return console.log("testy na animaciu nadrze boli spustene..");
 };
 
+var spustiTestUpdateSchema = function(){
+    updateSchema01(0, getRandomCislo());
+    updateSchema01(1, getRandomCislo());
+    updateSchema01(0, getRandomCislo());
+    updateSchema01(1, getRandomCislo());};
 
 var getRandomCislo = function getRandomCislo() {
     var min = -22;

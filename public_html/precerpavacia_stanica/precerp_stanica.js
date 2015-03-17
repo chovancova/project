@@ -48,86 +48,67 @@ function setColorValve(isOpened) {
  - je zapnuty/vypnuty motor
  - zaminovat tok vody cez rurky  - funkcia - preteka voda hore, dole (prechodRurami(1, 0);) alebo to bude nastavene logicky - ak bude zapnuty motor, tak preteka horna, ak bude otvoreny ventil tak bude pretekat dolnou.. .
  napr. updateSchema(1, 10, 1, 1, 1); updateSchema(1, 15, 0, 1, 0); alebo update(1, 20, 0,);... */
-function updateSchema01(boolVentil, boolMotor, intHladina) {
+var updateSchema01 = function updateSchema01(boolVentil, intHladina, boolMotor) {
     /*
      * volam z atributu funkciu 
      * napr valveIn.setOpened(isOpened);
      */
-    alert("hodnota1: " + hodnota1 + "-------hodnota2: " + hodnota2 + " -----hodnota3: " + hodnota3);
-}
+    setColorValve(boolVentil);
+    animateComponentTank(intHladina);
+ return console.log("update prebehol... ");
+};
 
 
+/**
+ *   /* Sposob vypoctu:
+ hladina plna
+ y="1912.7173"   //600
+ x="2507.533" //nemeni sa
+ height="16.300568" //+600
+ width="796.5788"  //nemeni sa
 
-function animateComponentTank(fillPerc) {
+ hladina2 / prazdna
+ y="1316.219"
+ x="2512.7222"
+ height="609.77795"
+ width="796.5788"
+ id="hladina2"*/
+
+/**
+ * ked je prazdny - y 1316
+ * ked je plny    - y 1912
+ * rozdiel je okolo 600 - tak to to potrebujem prepocitat do percent
+ * chcem napriklad 50% co je 0.5*600 a teda sa posuniem na 1316 + to cislo alebo 1912 - to cislo
+ * */
+var animateComponentTank = function animateComponentTank(fillPerc) {
     var rychlostVMs = 800;
-    var cislo1= 1316; //600, 800???
-    var cislo2 = 1912;///zistit suradnice x, y
-    var percento = fillPerc;
-   // if (fillPerc < 0) {fillPerc = 0;} else if (fillPerc == NaN) {fillPerc = 0;}
-    /* y="1912.7173"
-     x="2507.533"
-     height="16.300568"
-     width="796.5788"
+    var perHeight= 600*(fillPerc/100); //prepocitana vyska v percentach
+    var perY = 1912 - 600*(fillPerc/100); //prepocitana suradnica Y odcitanim vysky
 
-hladina2
-     y="1316.219"
-     x="2512.7222"
-     height="609.77795"
-     width="796.5788"
-     id="hladina2"*/
-
-    /**
-     * ked je prazdny - y 1316
-     * ked je plny    - y 1912
-     * rozdiel je okolo 600 - tak to to potrebujem prepocitat do percent
-     * chcem napriklad 50% co je 0.5*600 a teda sa posuniem na 1316 + to cislo alebo 1912 - to cislo
-     * */
     paper.select(nadrz).animate({
-        height: 600*(fillPerc/100),
-        y: 1912 - 600*(fillPerc/100),   //,
+        height: perHeight,
+        y: perY ,   //,
         //x: cislo1
     }, rychlostVMs);
-
-
- /** povodne
-  *
-   var vyska = cislo1 * (fillPerc / 100);
-   var py = cislo2 - cislo1 * (fillPerc / 100);
-
-     paper.select(nadrz).animate({
-            height: vyska,
-            y: cislo2 - py,   //,
-            //x: cislo1
-        }, rychlostVMs);
-*/
     return console.log("animacia tanku " + fillPerc);
-}
+   // if (fillPerc < 0) {fillPerc = 0;} else if (fillPerc == NaN) {fillPerc = 0;}
+};
+
+/**pozriet si demo - tam je rotujuci text /... http://raphaeljs.com/text-rotation.html
+ * z kodu vyuzijem nieco taketo: txt[0].attr({transform: "r" + rot});
+ * ale to bude paper.select(vrtulka2).attr({transform: "r"});
+// pracujem s
+// var vrtulka2 = "#rect3094"  //horizontalna cepel vrtulky
+//var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky*/
+var rotateEngine = function(){
+    //paper.select(vrtulka2).attr({transform: 90});
+
+};
 
 
-function ComponentValve(a, isOpen) {
-    /*
-     * nacitanie valve zo svg, podla id a /
-     */
-
-    /*funkcia na nastavenie farby  valve podla bool hodnoty a id ventila*/
-    /*
-     this.setColorValve = function setColorValve(a, isOpen) {
-     var color = (true === isOpened) ? "green" : "red";
-     paper.select(a).attr({fill: color});
-     //zmena atributu - a je css selector - a menim attribut farby//
-     };
-     */
-
-}
-
-function ComponetPipe(a) {
-
-}
-
-function ComponetEngine(a, isOn) {
-
-
-}
+function ComponentValve(a, isOpen) {}
+function ComponetPipe(a) {}
+function ComponetEngine(a, isOn) {}
 
 
 
