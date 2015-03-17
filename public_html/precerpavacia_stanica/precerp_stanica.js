@@ -1,3 +1,17 @@
+/**
+ Funkcia setColorValve nastavi farbu ventila.
+
+ @param isOpened Ak je isOpened true, tak farba bude nastavena nacerveno, inak nazeleno.
+ @return string činností
+ */
+function setColorValve(isOpened) {
+    colorValve = (!isOpened) ? "green" : "red";
+    s.selectAll (valve).attr ({fill: colorValve});
+    return  console.log("farba ventila sa zmenila " + colorValve);
+}
+
+
+
 function ComponentTank(a, s, fillPerc, cislo1, cislo2, rychlostVMs) {
     /*
      * nacitanie valve zo svg, podla id a / 
@@ -93,16 +107,6 @@ function updateSchema01(hodnota1, hodnota2, hodnota3) {
 
 
 
-/**
- Funkcia setColorValve nastavi farbu ventila.
 
-    @param isOpened Ak je isOpened true, tak farba bude nastavena nacerveno, inak nazeleno.
-    @return string činností
- */
-function setColorValve(isOpened) {
-    colorValve = (!isOpened) ? "green" : "red";
-    s.selectAll (valve).attr ({fill: colorValve});
-    return  console.log("farba ventila sa zmenila " + colorValve);
-}
 
 
