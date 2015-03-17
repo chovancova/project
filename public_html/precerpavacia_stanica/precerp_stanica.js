@@ -44,8 +44,8 @@ function updateSchema01(boolVentil, boolMotor, intHladina) {
 
 function animateComponentTank(fillPerc) {
     var rychlostVMs = 800;
-    var cislo1= 2500;
-    var cislo2 = 1300;///zistit suradnice x, y
+    var cislo1= 600;
+    var cislo2 = 800;///zistit suradnice x, y
     var percento = fillPerc;
     /* y="1912.7173"
      x="2507.533"
@@ -64,8 +64,8 @@ hladina2
 
      paper.select(nadrz).animate({
             height: vyska,
-            y: py,
-            x: cislo1
+            y: cislo2 - py,   //,
+            //x: cislo1
         }, rychlostVMs);
 
     console.log("animacia tanku " + fillPerc);
