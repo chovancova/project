@@ -18,3 +18,4 @@
 </ol>
 
 koncept práce: https://docs.google.com/document/d/1OAneSuBY0WMFwy_0b815vG-HkNIc1a1xhGWQDdeDthc/edit?usp=sharing
+web page: http://vaii.fri.uniza.sk/~chovancova26/
