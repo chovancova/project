@@ -1,5 +1,8 @@
 var teplomer = "#empty";/**toto je css selektor z svg - tuto cast budem animovat z neho*/
 var paper;
+var hodnotaX = "342.882"; /*tato hodnota sa da ziskat aj attr... **/
+var pomocneCisloX = 350;
+var pomocneCisloY = 557;
 /**
  * Zanimuje teplotu teplomera
  * @parm perc je percento naplnenia teplomera
@@ -8,7 +11,7 @@ function animujTeplomer (hodnota) {
         paper.selectAll (teplomer).animate ({
         height: getVyska(hodnota),
         y: getPY(hodnota),
-        x: "342.882"
+        x: hodnotaX
     }, 800);
    return console.log("zanimovane na " + hodnota + "%");
 }
@@ -18,7 +21,7 @@ function nastavTeplomer(hodnota){
     paper.selectAll(teplomer).attr({
         height: getVyska(hodnota),
         y: getPY(hodnota),
-        x: "342.882"});
+        x: hodnotaX});
    return console.log("nastavene na " + hodnota + "%");
 }
 
@@ -26,7 +29,7 @@ function nastavTeplomer(hodnota){
  * Vrati hodntou vysky*/
 function getVyska(hodnota){
     if (hodnota < 0) {hodnota = 0;} else if (hodnota == NaN) {hodnota = 0;}
-    var temp = 350 * (hodnota / 100);
+    var temp = pomocneCisloX * (hodnota / 100);
     return temp;
 }
 /**
@@ -34,8 +37,13 @@ function getVyska(hodnota){
 function getPY(hodnota){
     if(hodnota < 0) hodnota = 0;
 
-    var temp = 557 - (hodnota / 100) * 350;
+    var temp = pomocneCisloY - (hodnota / 100) * pomocneCisloX;
     return temp;
+}
+
+function zmenaFarby(farba){
+    paper.selectAll(teplomer).attr({fill: farba});
+    console.log("bola zmenena farba elementu");
 }
 
 /**
@@ -58,34 +66,14 @@ function getPY(hodnota){
     //tepl2.animujTeplomer(10);
  *
  * */
-function Thermometer( perc ,b_animate) {
+function Thermometer(percento) {
    paper = new Snap("#svg3"); /*ak by tu nebolo #svg3, tak sa to zakazdym vytvori novy.. */
     // paper= Snap(750, 500);
         Snap.load("svg/thermometer_o.svg", function(f){
         paper.append(f);
-        //paper.selectAll("#empty").attr({fill:"#f00"});
 
-            nastavTeplomer(perc);
-
+            console.log("bol vytvoreny teplomer");
+            nastavTeplomer(percento);
   });
 }
-/**
- * funkcia vytvori SVG komponet teplomer pri nacitany html*/
-function onPageLoad() {
-    var tepl = new Thermometer (33);
-}
 
-function spustiTesty(){
-     //var thermometer1 = new Thermometer(10,false);
-   // nastavTeplomer(getRandomCislo());
-    animujTeplomer(getRandomCislo());
-
-}
-
-function getRandomCislo() {
-    var min = -22;
-    var max = 110;
-    var temp = Math.random() * (max - min) + min;
-   // console.log("nahodne cislo je: " + temp);
-    return temp;
-}

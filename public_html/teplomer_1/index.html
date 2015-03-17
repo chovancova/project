@@ -8,6 +8,8 @@
         <script type="text/javascript"
                 src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
         <script type="text/javascript" src="teplomer.js"></script>
+        <script type="text/javascript" src="exec.js"></script>
+        <script type="text/javascript" src="testTeplomer.js"></script>
 
     </head>
     <body onload="onPageLoad();">
@@ -18,7 +20,7 @@
             <ul>
                 <li>zadaj v konzole:
                     <ul>Vytvorenie Thermometer
-                        <li>Thermometer(percento, booleanMamAnimovat); // bool sa moze vynechat</li>
+                        <li>Thermometer(percento); // vytvorenie SVG teplomer</li>
                         Pouzitie tychto funkcii na ovladanie daneho teplomeru...
                         <li>animujTeplomer (percento); //zanimuje rychlostou 800 ms
                         <li>nastavTeplomer(percento);  //iba cisto nastavi na danu hodnotu, bez animacie
@@ -27,11 +29,11 @@
                             Pre zjednodusenie je mozne pouzit funkciu getRandomCislo();
                                 <li>    nastavTeplomer(getRandomCislo()); </li>
                                 <li>    animujTeplomer(getRandomCislo());</li>
-
-
                         </p>
+                        Vytvorila som i zmenaFarby("#000"); na zmenu farby elementu
+                        => da sa menit ktorykolvek element z svg
                     </ul>
-                <li> stlacenim tlacidla "Testuj" sa spustia automaticky testy - vid console.log </li>
+                <li> stlacenim tlacidla "Testuj" sa spustia automaticky test animuj s nahodnou hodnotou - vid console.log </li>
             </ul>
             <button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
     </body>

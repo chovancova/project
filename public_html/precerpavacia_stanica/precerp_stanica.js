@@ -90,9 +90,7 @@ function updateSchema01(hodnota1, hodnota2, hodnota3) {
 
 }
 
-function onPageLoad() {
-    initSchema01();
-}
+
 
 
 /**
