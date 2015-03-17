@@ -1,8 +1,10 @@
 var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 
-var motor1 = "#motor1";
-var vrtulky = "#circle3098";
+var motor1 = "#Layer_3";
+var vrtulka2 = "#rect3094"  //horizontalna cepel vrtulky
+var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky
+
 
 var ventil = "#ventil";
 
@@ -58,9 +60,10 @@ function updateSchema01(boolVentil, boolMotor, intHladina) {
 
 function animateComponentTank(fillPerc) {
     var rychlostVMs = 800;
-    var cislo1= 600;
-    var cislo2 = 800;///zistit suradnice x, y
+    var cislo1= 1316; //600, 800???
+    var cislo2 = 1912;///zistit suradnice x, y
     var percento = fillPerc;
+   // if (fillPerc < 0) {fillPerc = 0;} else if (fillPerc == NaN) {fillPerc = 0;}
     /* y="1912.7173"
      x="2507.533"
      height="16.300568"
@@ -73,6 +76,21 @@ hladina2
      width="796.5788"
      id="hladina2"*/
 
+    /**
+     * ked je prazdny - y 1316
+     * ked je plny    - y 1912
+     * rozdiel je okolo 600 - tak to to potrebujem prepocitat do percent
+     * chcem napriklad 50% co je 0.5*600 a teda sa posuniem na 1316 + to cislo alebo 1912 - to cislo
+     * */
+    paper.select(nadrz).animate({
+        height: 600*(fillPerc/100),
+        y: 1912 - 600*(fillPerc/100),   //,
+        //x: cislo1
+    }, rychlostVMs);
+
+
+ /** povodne
+  *
    var vyska = cislo1 * (fillPerc / 100);
    var py = cislo2 - cislo1 * (fillPerc / 100);
 
@@ -81,7 +99,7 @@ hladina2
             y: cislo2 - py,   //,
             //x: cislo1
         }, rychlostVMs);
-
+*/
     return console.log("animacia tanku " + fillPerc);
 }
 
