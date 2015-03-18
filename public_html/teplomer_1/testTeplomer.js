@@ -1,7 +1,7 @@
 /**
  * Created by chova_000 on 17-Mar-15.
  */
-function spustiTesty(){
+function spustiTesty() {
     //var thermometer1 = new Thermometer(10,false);
     // nastavTeplomer(getRandomCislo());
     animujTeplomer(getRandomCislo());

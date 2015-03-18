@@ -6,11 +6,11 @@ eZmenafarby = function (s) {
      */
     var setColorValve = function (a, isOpened) {
         var color = (true === isOpened) ? "green" : "red";
-        s.selectAll (a).attr ({fill: color});
+        s.selectAll(a).attr({fill: color});
     };
 
     //*/ overenie funkcnosti
-    setColorValve ("#ventil", true);
+    setColorValve("#ventil", true);
     //  setColorValve("#ventil", false);
     //setColorValve("#ventil", "true");
     //setColorValve("#ventil", true);
@@ -28,7 +28,7 @@ var eZmenaFarby2 = function (setColorValve) {
     };
     //colorInOut(1, 1);
     /*/* Priklady
-          // colorInOut(true, true);  /*preteka cez nadrz*/
+     // colorInOut(true, true);  /*preteka cez nadrz*/
     // colorInOut(true, false); /*vteka do nadrze*/
     // colorInOut(false, true); /*vyteka z nadrze */
     // colorInOut(false, false); /*nevyteka nic*/
@@ -42,7 +42,7 @@ var eAnimaciaTanku = function (s, emptyTankStr, fullTankStr) {
      inak
      tak sa bude naplnovat
      Zatial su natvrdo nastavene path cez string
-
+     
      ANIMACIA nadrze
      vyuzivam schopnost animate
      funkcia na zmenu hodnot suradnic M a L na osi y elementu fillPath
@@ -148,20 +148,20 @@ window.onload = function () {
         s.add(f.selectAll("#stanica"));
 
         //otacajMotor();
-        motor = Snap.select ("#vrtule");
-       /*
-        function otacajMotor() {
-              motor.attr()(
-             {transform: 'r88'}, 
-             1000, 
-             function(){
-             motor.attr({transform: 'rotate(0 256 256)'});
-             otacajMotor();
-             });
-        }
-
-        otacajMotor();*/
-        setColorValve = eZmenafarby (s);
+        motor = Snap.select("#vrtule");
+        /*
+         function otacajMotor() {
+         motor.attr()(
+         {transform: 'r88'}, 
+         1000, 
+         function(){
+         motor.attr({transform: 'rotate(0 256 256)'});
+         otacajMotor();
+         });
+         }
+         
+         otacajMotor();*/
+        setColorValve = eZmenafarby(s);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         eZmenaFarby2(setColorValve);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

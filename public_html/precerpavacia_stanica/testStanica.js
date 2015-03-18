@@ -5,25 +5,25 @@
 /**
  * testuje ci setColorValve nastavila farbu*/
 var spustiTestValve = function () {
-    setColorValve (true);
-    setColorValve (1);
-    setColorValve (false);
-    setColorValve ("true");
-    setColorValve ("yellow");
+    setColorValve(true);
+    setColorValve(1);
+    setColorValve(false);
+    setColorValve("true");
+    setColorValve("yellow");
     setColorValve(0);
-   return console.log("testy prebehli.. .");
+    return console.log("testy prebehli.. .");
 };
 
-var spustiTestzmenaFarby = function (){
+var spustiTestzmenaFarby = function () {
     TestzmenaFarby(valve, "yellow");
     TestzmenaFarby(nadrz, 'yellow');
     return console.log("testy na zmenu farby prebehlo ....");
 };
 /**
-na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
+ na overenie funkcnosti / bud cez prikazovy riadok javascriptu alebo tlacidlami
  */
 function spustiTesty() {
-    spustiTestValve ();
+    spustiTestValve();
     spustiTestzmenaFarby();
     spustiTestFunkcnostiPrvkovSVG();
     spustiTestAnimacieTanku();
@@ -34,31 +34,31 @@ function spustiTesty() {
     return console.log("testy boli spustene");
 }
 
-var TestzmenaFarby = function (a, farba){
+var TestzmenaFarby = function (a, farba) {
     paper.select(a).attr({fill: farba});
-    return console.log("bola zmenena farba na: " + farba + " elementu: "+ a);
+    return console.log("bola zmenena farba na: " + farba + " elementu: " + a);
 };
 
 
-var spustiTestFunkcnostiPrvkovSVG = function (){
-    TestzmenaFarby(nadrz, "pink" );    //ok
-    TestzmenaFarby(valve, "pink" );    //ok
-   // TestzmenaFarby(rura1, "black" ); ///chyba
-   //// TestzmenaFarby(rura2, "black" );    //chyba
+var spustiTestFunkcnostiPrvkovSVG = function () {
+    TestzmenaFarby(nadrz, "pink");    //ok
+    TestzmenaFarby(valve, "pink");    //ok
+    // TestzmenaFarby(rura1, "black" ); ///chyba
+    //// TestzmenaFarby(rura2, "black" );    //chyba
     //TestzmenaFarby(rura3, "black" );   //chyba
     //TestzmenaFarby(rura4, "black" );    //chyba
     //TestzmenaFarby(voda1, "black" );   //chyba
     //TestzmenaFarby(voda2, "black" );  //chyba
     //TestzmenaFarby(voda3, "black" );  //chyba
     //TestzmenaFarby(voda4, "black" );  //chyba
-    TestzmenaFarby(hladina1, "pink" );     //ok
-    TestzmenaFarby(vrtulka1, "pink" );    //ok
+    TestzmenaFarby(hladina1, "pink");     //ok
+    TestzmenaFarby(vrtulka1, "pink");    //ok
     TestzmenaFarby(vrtulka2, "pink");
     //TestzmenaFarby(motor1, "white" );  //chyba
     return console.log("testy funkcnosti pristupu k svg prvkom prebehl...");
 };
 
-var spustiTestAnimacieTanku = function (){
+var spustiTestAnimacieTanku = function () {
     animateComponentTank(getRandomCislo());
     animateComponentTank(getRandomCislo());
     animateComponentTank(getRandomCislo());
@@ -67,11 +67,12 @@ var spustiTestAnimacieTanku = function (){
     return console.log("testy na animaciu nadrze boli spustene..");
 };
 
-var spustiTestUpdateSchema = function(){
+var spustiTestUpdateSchema = function () {
     updateSchema01(0, getRandomCislo());
     updateSchema01(1, getRandomCislo());
     updateSchema01(0, getRandomCislo());
-    updateSchema01(1, getRandomCislo());};
+    updateSchema01(1, getRandomCislo());
+};
 
 var getRandomCislo = function getRandomCislo() {
     var min = -22;
