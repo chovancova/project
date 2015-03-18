@@ -1,0 +1,9 @@
+       <svg  id ="waterTank"  width = "240" height = "180" >
+        <path id = "pipeLine" stroke-width="6" d="M0,130H90M130,130H230" stroke="#444" fill="none" style=""></path>
+        <path id="valveIn" stroke-width="2"  d="M40,120L60,140L60,120L40,140L40,120Z" stroke="black" fill="red" style=""></path>
+        <path id="valveOut" stroke-width="2" d="M180,120L200,140L200,120L180,140L180,120Z" stroke="black" fill="red" style=""></path>
+        <path id ="backgroundPath" stroke-width="0" d="M90,30S120,10,150,30V150V150S120,170,90,150V90V30" stroke="black" fill="silver" style=""></path>
+        <path id="fillPath" stroke-width="0" visibility="visible" d="M90,147.6L150,147.6V150V150S120,170,90,150V90V30" stroke="black" fill="blue" style=""></path>
+        <path id="outlinePath" fill-opacity="0" stroke-width="2" d="M90,30S120,10,150,30V150V150S120,170,90,150V90V30" stroke="black" fill="none" style="fill-opacity: 0;"></path>
+
+        </svg>

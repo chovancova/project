@@ -27,6 +27,7 @@ function initSchema01() {
     Snap.load("stanica2.svg", function (f) {
          paper.add(f.selectAll("#stanica"));
         console.log("bola nacitana stanica do svgStanica");
+
     });
 }
 
@@ -79,10 +80,12 @@ var updateSchema01 = function updateSchema01(boolVentil, intHladina, boolMotor) 
  * ked je plny    - y 1912
  * rozdiel je okolo 600 - tak to to potrebujem prepocitat do percent
  * chcem napriklad 50% co je 0.5*600 a teda sa posuniem na 1316 + to cislo alebo 1912 - to cislo
+ *   var pppp = paper.select(nadrz).getBBox ().cy;
+ console.log(pppp); //dostanem inicializacne kordinacie  1621.1079750000001
  * */
 var animateComponentTank = function animateComponentTank(fillPerc) {
     var rychlostVMs = 800;
-    var perHeight= 600*(fillPerc/100); //prepocitana vyska v percentach
+       var perHeight= 600*(fillPerc/100); //prepocitana vyska v percentach
     var perY = 1912 - 600*(fillPerc/100); //prepocitana suradnica Y odcitanim vysky
 
     paper.select(nadrz).animate({

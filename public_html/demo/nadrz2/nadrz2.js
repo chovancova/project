@@ -20,7 +20,7 @@ var s;
     */
    Snap.load("", function (f){
      //g.append(selectAll("g'));
-      /*  
+      /*
       inicializacia jednotlivych elementov z svg podla id
       /*
       valveIn = paper.selectAll("#valveIn") ;
@@ -29,7 +29,7 @@ var s;
        */  
       /*v tejto metode pristupujem k nim cez svg id*/
       /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-     
+
       /**
         funkcia nastavi farbu valve a podla bool hodnoty
         prvy parameter je id ventila

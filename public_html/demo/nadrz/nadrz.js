@@ -55,7 +55,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
        {  this.backgroundPath = rPaper.path(backgroundPathStr);
          this.fillPath       = rPaper.path(fillPathStr);
          this.outlinePath    = rPaper.path(outlinePathStr);
-       
+
         /*podobne ako v Raphael*/
            this.fillPath.attr({
            strokeWidth: 0,
