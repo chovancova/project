@@ -1,17 +1,14 @@
 /**
  * Created by chova_000 on 16-Mar-15.
  */
+var min = -22;
+var max = 110;
 
-/**
- * testuje ci setColorValve nastavila farbu*/
-var spustiTestValve = function () {
-    setColorValve(true);
-    setColorValve(1);
-    setColorValve(false);
-    setColorValve("true");
-    setColorValve("yellow");
-    setColorValve(0);
-    return console.log("testy prebehli.. .");
+
+var getRandomCislo = function getRandomCislo() {
+     var temp = Math.random() * (max - min) + min;
+    // console.log("nahodne cislo je: " + temp);
+    return temp;
 };
 
 var spustiTestzmenaFarby = function () {
@@ -33,6 +30,15 @@ function spustiTesty() {
 
     return console.log("testy boli spustene");
 }
+/**
+var vrtulkyhh;
+var testNaGroup = function testNaGroup(){
+    vrtulkyhh = paper.group(paper.select(vrtulka1),paper.select(vrtulka2));
+    vrtulkyhh.attr({
+        fill: "blue"
+    });
+}
+*/
 
 var TestzmenaFarby = function (a, farba) {
     paper.select(a).attr({fill: farba});
@@ -74,10 +80,14 @@ var spustiTestUpdateSchema = function () {
     updateSchema01(1, getRandomCislo());
 };
 
-var getRandomCislo = function getRandomCislo() {
-    var min = -22;
-    var max = 110;
-    var temp = Math.random() * (max - min) + min;
-    // console.log("nahodne cislo je: " + temp);
-    return temp;
+/**
+ * testuje ci setColorValve nastavila farbu*/
+var spustiTestValve = function () {
+    setColorValve(true);
+    setColorValve(1);
+    setColorValve(false);
+    setColorValve("true");
+    setColorValve("yellow");
+    setColorValve(0);
+    return console.log("testy prebehli.. .");
 };

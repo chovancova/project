@@ -1,8 +1,9 @@
 var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var motor1 = "#Layer_3";
-var vrtulka2 = "#rect3094"  //horizontalna cepel vrtulky
+var vrtulka2 = "#rect3094" ; //horizontalna cepel vrtulky
 var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky
+
 var ventil = "#ventil";
 var hladina1 = "#hladina1";
 /*//zatial nefunkcne - hladam v svg ich prave id
@@ -23,6 +24,7 @@ function initSchema01() {
     Snap.load("stanica2.svg", function (f) {
         paper.add(f.selectAll("#stanica"));
         console.log("bola nacitana stanica do svgStanica");
+
 
     });
 }
