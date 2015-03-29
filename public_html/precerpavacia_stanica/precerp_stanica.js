@@ -163,7 +163,7 @@ function rotateEngine() {
 }
 
 function testRotateEngine(){
- var rot = getRandomCislo();
+ var rot = getRandomCislo()*3.5;
 
         paper.select(vrtulka1).attr({transform: "r" + rot});
         paper.select(vrtulka2).attr({transform: "r" + rot});

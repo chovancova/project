@@ -24,13 +24,16 @@ https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js
      attribute preserveAspectRatio.-->
         <div>
             <h2>Spusti testy</h2>
-            <div><button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
-            <button id="demo2" type="button" onclick="animateComponentTank(getRandomCislo());">Testuj animaciu tanku s nahodnou hodnotou</button></div>
-        <button id="demo3" type="button" onclick="testRotateEngine();">Testuj animaciu vrtuliek s nahodnou hodnotou</button></div>
+            <div><button id="demo" type="button" onclick="spustiTesty();">Vsetky testy</button></div>
+           <button id="demo2" type="button" onclick="animateComponentTank(getRandomCislo());">Nadrz</button></div>
+       <button id="demo3" type="button" onclick="testRotateEngine();">Vrtulky</button></div>
         <ul>
+
+            <li> stlacenim tlacidla<b>"Testuj"</b>  sa spustia automaticky testy - vid console.log
+           <li> Testuj animaciu tanku s nahodnou hodnotou  <b>Nadrz</b>
+           <li>Testuj animaciu vrtuliek s nahodnou hodnotou  <b>Vrtulky</b></li>
+            <p>dalsie testy: </p>
             <li>zadaj v konzole: <b>setColorValve (boolean);</b>
-            <li> stlacenim tlacidla "Testuj" sa spustia automaticky testy - vid console.log
-                <p>dalsie testy: </p>
             <li> <b>animateComponentTank(fillPerc); - funkcneee</b>
                 funguje to aj s random cislami animateComponentTank(getRandomCislo());
             <li> <b>TestzmenaFarby(nadrz, farba)</b> napr. TestzmenaFarby(valve, "yellow"); TestzmenaFarby(nadz, "black");
