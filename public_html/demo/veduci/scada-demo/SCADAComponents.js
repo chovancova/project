@@ -30,7 +30,7 @@ function ComponentTank(rPaper, x, y, sizeX, sizeY, fillPercentage) {
            fillYOff = (sizeY*((100-this.fillPercentage)/100));
            this.fillPath.animate( { path: ("M" + x + "," + (y+fillYOff) + "L" + (x+sizeX) + "," + (y+fillYOff) + "V" + (x+sizeX) + "," + (y+sizeY) + "S" + (x+(sizeX/2)) + "," + (y+sizeY+20) + "," + x + "," + (y+sizeY) + "V" + x + "," + y) }, 800);
        }
-    }
+    };
     
     this.setFillPercentage = function (fillPercentage) {
        this.fillPercentage = fillPercentage;
@@ -58,7 +58,7 @@ function ComponentValve(rPaper, x, y, sizeX, sizeY, horizontal, opened) {
          this.pathValve.attr("fill", "#e8051a");
        }
        this.pathValve.attr("stroke-width", "2");
-    }
+    };
     
     this.setOpened = function(opened) {
        this.opened = opened; 

@@ -18,7 +18,8 @@ var hladina1 = "#hladina1";
  */
 //var schema01Paper = Snap("#svg");
 var paper = ""; /**meno canvasu, na ktory budem kreslit svg, ale inicializujem v initSchema01*/
-/*konstruktor*/
+/*konstruktor
+* http://www.w3schools.com/js/js_function_invocation.asp*/
 function initSchema01() {
     paper = Snap("#svgStanica");
     Snap.load("stanica2.svg", function (f) {
@@ -27,7 +28,7 @@ function initSchema01() {
 
 
     });
-};
+}
 
 /**
  Funkcia setColorValve nastavi farbu ventila.
@@ -36,7 +37,7 @@ function initSchema01() {
  @return string činností
  */
 function setColorValve(isOpened) {
-    colorValve = (!isOpened) ? "green" : "red";
+    var colorValve = (!isOpened) ? "green" : "red";
     paper.selectAll(valve).attr({fill: colorValve});
     return  console.log("farba ventila sa zmenila " + colorValve);
 }

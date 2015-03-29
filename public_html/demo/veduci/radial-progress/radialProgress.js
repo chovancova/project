@@ -75,7 +75,7 @@ function radialProgress(parent) {
                 .on("click",onMouseClick);
 
 
-            _arc.endAngle(360 * (Math.PI/180))
+            _arc.endAngle(360 * (Math.PI/180));
 
             background.append("rect")
                 .attr("class","background")
@@ -202,32 +202,32 @@ function radialProgress(parent) {
         measure();
         component();
         return component;
-    }
+    };
 
     component.value = function (_) {
         if (!arguments.length) return _value;
         _value = [_];
         _selection.datum([_value]);
         return component;
-    }
+    };
 
     component.unit = function(_) {
         if (!arguments.length) return _unit;
         _unit = _;
         return component;
-    }
+    };
 
     component.width = function(_) {
         if (!arguments.length) return __width;
         __width = _;
         return component;
-    }
+    };
 
     component.height = function(_) {
         if (!arguments.length) return __height;
         __height = _;
         return component;
-    }
+    };
 
     component.margin = function(_) {
         if (!arguments.length) return _margin;
@@ -236,7 +236,7 @@ function radialProgress(parent) {
     };
 
     component.diameter = function(_) {
-        if (!arguments.length) return _diameter
+        if (!arguments.length) return _diameter;
         _diameter =  _;
         return component;
     };
@@ -269,7 +269,7 @@ function radialProgress(parent) {
         if (!arguments.length) return _mouseClick;
         _mouseClick=_;
         return component;
-    }
+    };
 
     return component;
 
