@@ -18,12 +18,12 @@
 </ol>
 
 koncept práce: https://docs.google.com/document/d/1OAneSuBY0WMFwy_0b815vG-HkNIc1a1xhGWQDdeDthc/edit?usp=sharing
-</br>
+<br>
 web page: http://vaii.fri.uniza.sk/~chovancova26/
-</br>
+<br>
 
 <b>git clone https://git.overleaf.com/1485579hvkrdk OVERLEAFpisomnaCast</b>
-</br>
+<br>
 https://www.overleaf.com/1485579hvkrdk
 na tomto linku budem pisat a vkladat casti / ktore budu potom officialne finall... 
 taktiez tam pridam kapitoly z wordu
