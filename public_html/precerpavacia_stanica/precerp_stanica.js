@@ -1,12 +1,12 @@
 var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var motor1 = "#Layer_3";
-var vrtulka2 = "#rect3094" ; //horizontalna cepel vrtulky
+var vrtulka2 = "#rect3094"; //horizontalna cepel vrtulky
 var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky
 
 var ventil = "#ventil";
 var hladina1 = "#hladina1";
-/*//zatial nefunkcne - hladam v svg ich prave id
+/*//
  var rura1 = "#rura1";
  var voda1 = "#voda1";
  var rura2 = "#rura2";
@@ -17,7 +17,7 @@ var hladina1 = "#hladina1";
  var rura4 = "#rura4";
  */
 //var schema01Paper = Snap("#svg");
-var paper; /**meno canvasu, na ktory budem kreslit svg*/
+var paper = ""; /**meno canvasu, na ktory budem kreslit svg, ale inicializujem v initSchema01*/
 
 function initSchema01() {
     paper = Snap("#svgStanica");
@@ -102,7 +102,7 @@ var animateComponentTank = function animateComponentTank(fillPerc) {
  // pracujem s
  // var vrtulka2 = "#rect3094"  //horizontalna cepel vrtulky
  //var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky*/
-var rotateEngine = function () {
+var rotateEngine = function rotateEngine(isOn) {
     //paper.select(vrtulka2).attr({transform: 90});
 
 };
