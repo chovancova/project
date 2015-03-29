@@ -18,7 +18,7 @@ var hladina1 = "#hladina1";
  */
 //var schema01Paper = Snap("#svg");
 var paper = ""; /**meno canvasu, na ktory budem kreslit svg, ale inicializujem v initSchema01*/
-
+/*konstruktor*/
 function initSchema01() {
     paper = Snap("#svgStanica");
     Snap.load("stanica2.svg", function (f) {
@@ -27,7 +27,7 @@ function initSchema01() {
 
 
     });
-}
+};
 
 /**
  Funkcia setColorValve nastavi farbu ventila.
@@ -47,7 +47,7 @@ function setColorValve(isOpened) {
  - je zapnuty/vypnuty motor
  - zaminovat tok vody cez rurky  - funkcia - preteka voda hore, dole (prechodRurami(1, 0);) alebo to bude nastavene logicky - ak bude zapnuty motor, tak preteka horna, ak bude otvoreny ventil tak bude pretekat dolnou.. .
  napr. updateSchema(1, 10, 1, 1, 1); updateSchema(1, 15, 0, 1, 0); alebo update(1, 20, 0,);... */
-var updateSchema01 = function updateSchema01(boolVentil, intHladina, boolMotor) {
+function updateSchema01(boolVentil, intHladina, boolMotor) {
     /*
      * volam z atributu funkciu 
      * napr valveIn.setOpened(isOpened);
@@ -55,7 +55,7 @@ var updateSchema01 = function updateSchema01(boolVentil, intHladina, boolMotor) 
     setColorValve(boolVentil);
     animateComponentTank(intHladina);
     return console.log("update prebehol... ");
-};
+}
 
 
 /**
@@ -80,8 +80,23 @@ var updateSchema01 = function updateSchema01(boolVentil, intHladina, boolMotor) 
  * chcem napriklad 50% co je 0.5*600 a teda sa posuniem na 1316 + to cislo alebo 1912 - to cislo
  *   var pppp = paper.select(nadrz).getBBox ().cy;
  console.log(pppp); //dostanem inicializacne kordinacie  1621.1079750000001
+ plna nadrz...
+ paper.select(nadrz).getBBox ().height
+ 600
+ paper.select(nadrz).getBBox ().x
+ 2512.7222
+ paper.select(nadrz).getBBox ().y
+ 1312
+ paper.select(nadrz).getBBox ().cx
+ 2911.0116000000003
+ paper.select(nadrz).getBBox ().cy
+ 1612
+
  * */
-var animateComponentTank = function animateComponentTank(fillPerc) {
+function animateComponentTank(fillPerc) {
+   if (fillPerc === undefined || fillPerc < 0) {
+        fillPerc = 0;
+    }
     var rychlostVMs = 800;
     var perHeight = 600 * (fillPerc / 100); //prepocitana vyska v percentach
     var perY = 1912 - 600 * (fillPerc / 100); //prepocitana suradnica Y odcitanim vysky
@@ -93,19 +108,77 @@ var animateComponentTank = function animateComponentTank(fillPerc) {
     }, rychlostVMs);
     return console.log("animacia tanku " + fillPerc);
     // if (fillPerc < 0) {fillPerc = 0;} else if (fillPerc == NaN) {fillPerc = 0;}
-};
+}
+
+
 
 /**pozriet si demo - tam je rotujuci text /... http://raphaeljs.com/text-rotation.html
  * http://raphaeljs.com/polar-clock.html
  * z kodu vyuzijem nieco taketo: txt[0].attr({transform: "r" + rot});
  * ale to bude paper.select(vrtulka2).attr({transform: "r"});
+ * //transform mi nepojde pretoze ho nemam definovany v svg  ako maticu a ono sa to podotom budedat
+ *
  // pracujem s
  // var vrtulka2 = "#rect3094"  //horizontalna cepel vrtulky
  //var vrtulka1 = "#rect3092"; //vertikalna cepel vrtulky*/
-var rotateEngine = function rotateEngine(isOn) {
-    //paper.select(vrtulka2).attr({transform: 90});
+/**vrtula 1
+ * <rect
+ style="fill:#fecb06"
+ id="rect3092"
+ height="152.992"
+ width="17.273001"
+ y="1024.35"
+ x="2682.397" />
+ vrtula 2
+ <rect
+ style="fill:#ffcc04"
+ id="rect3094"
+ height="17.273001"
+ width="152.992"
+ y="1092.209"
+ x="2614.5381" />**/
 
-};
+function rotateEngine() {
+   var ppheight= 17,
+    ppwidth= 152.992,
+    ppy=1092.209,
+    ppx=2614.5381;
+    paper.select(vrtulka2).animate({
+        fill: "red",
+       // height: ppheight,
+       // width: 152.992,
+      //  y: 1092.209,
+    //    x:2614.5381
+        //transform: 50
+    }, 800);
+
+    paper.select(vrtulka1).animate({
+        fill: "blue",
+       // height: ppheight,
+       // width: 152.992,
+        //  y: 1092.209,
+        //    x:2614.5381
+    }, 800);
+    return console.log("vykonalo sa..");
+}
+
+function testRotateEngine(){
+ var rot = getRandomCislo();
+   // var mouse = null, rot = 0;
+   // document.onmousemove = function (e) {
+   ///     e = e || window.event;
+   //     if (mouse == null) {
+   //         mouse = e.clientX;
+   //         return;
+   //     }
+    //    rot += e.clientX - mouse;
+        paper.select(vrtulka1).attr({transform: "r" + rot});
+        paper.select(vrtulka2).attr({transform: "r" + rot});
+
+    //    mouse = e.pageX;
+  //  };
+console.log("rotacia vrtuliek o " + rot);
+}
 
 
 function ComponentValve(a, isOpen) {

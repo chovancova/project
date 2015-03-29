@@ -24,7 +24,7 @@ function spustiTesty() {
     spustiTestzmenaFarby();
     spustiTestFunkcnostiPrvkovSVG();
     spustiTestAnimacieTanku();
-
+    testRotateEngine();
     TestzmenaFarby(nadrz, "blue");
     spustiTestUpdateSchema();
 
