@@ -22,8 +22,9 @@ koncept práce: https://docs.google.com/document/d/1OAneSuBY0WMFwy_0b815vG-HkNIc
 web page: http://vaii.fri.uniza.sk/~chovancova26/
 <br>
 
-<b>git clone https://git.overleaf.com/1485579hvkrdk OVERLEAFpisomnaCast</b>
+
 <br>
 https://www.overleaf.com/1485579hvkrdk
+<br>
 na tomto linku budem pisat a vkladat casti / ktore budu potom officialne finall... 
-taktiez tam pridam kapitoly z wordu
+taktiez tam pridam kapitoly z wordu<br>git clone https://git.overleaf.com/1485579hvkrdk OVERLEAFpisomnaCast
