@@ -164,19 +164,10 @@ function rotateEngine() {
 
 function testRotateEngine(){
  var rot = getRandomCislo();
-   // var mouse = null, rot = 0;
-   // document.onmousemove = function (e) {
-   ///     e = e || window.event;
-   //     if (mouse == null) {
-   //         mouse = e.clientX;
-   //         return;
-   //     }
-    //    rot += e.clientX - mouse;
+
         paper.select(vrtulka1).attr({transform: "r" + rot});
         paper.select(vrtulka2).attr({transform: "r" + rot});
 
-    //    mouse = e.pageX;
-  //  };
 console.log("rotacia vrtuliek o " + rot);
 }
 
