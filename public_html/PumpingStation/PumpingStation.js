@@ -2,7 +2,6 @@ var Tank = {
     idTank: "#hladina",
     tank: function(){
        return  paper.select(this.idTank)},
-
     animateComponentTank: function(fillPerc) {
         if (fillPerc === undefined || fillPerc < 0) {
             fillPerc = 0;
@@ -10,15 +9,14 @@ var Tank = {
         var speed = 800;
         var perHeight = 600 * (fillPerc / 100);
         var perY = 1912 - 600 * (fillPerc / 100);
-
-        tank().animate({
+        this.tank().animate({
             height: perHeight,
             y: perY
         }, speed);
         return console.log("animacia tanku " + fillPerc);
     },
     changeColor: function (color) {
-        paper.select(this.idTank).attr({fill: color});
+       this.tank().attr({fill: color});
         return console.log("bola zmenena farba na: " + color + " elementu: " + this.idNadrz);
     }
 };
@@ -26,91 +24,72 @@ var Tank = {
 
 var Valve = {
     idValve: "#ventil",
+    valve: function (){ return paper.select(this.idValve);},
     colorValve: "red",
     changeIsOpen: function (isOpened) {
-        var colorValve = (isOpened) ? "green" : "red";
-        paper.selectAll(valve).attr({fill: colorValve});
-        return  console.log("farba ventila sa zmenila " + colorValve);
+        isOpened = (isOpened) ? 0 : 1;
+        this.colorValve = (isOpened) ?   "red" : "green";
+        this.setColorValve(this.colorValve);
+        return  console.log("farba ventila sa zmenila " + this.colorValve);
         },
-    setColorValve: function (colorValve) {
-        this.colorValve = colorValve;
-        paper.selectAll(valve).attr({fill: colorValve});
-        return  console.log("farba ventila sa zmenila " + colorValve);
+    setColorValve: function (colorV) {
+        this.colorValve = colorV;
+       this.valve().attr({fill: this.colorValve});
+        return  console.log("farba ventila sa zmenila " + this.colorValve);
+    },
+    openOff: true,
+    changeValve: function(){
+        this.openOff = (this.openOff) ? 0 : 1;
+        this.changeIsOpen(this.openOff);
+        return "ooook";
     }
 };
 
 var Engine = {
     isRotate: false,
+    rot: 0,
 
-    propellor1: function(){
+        propellor1: function(){
         return paper.select("#rect3094")},
 
     propellor2: function(){
         return paper.select("#rect3092")},
 
-    propellor: function(){
-        return paper.group(this.propellor1, this.propellor2);},
+    rotate: function(rot){
+        this.propellor1().attr({transform: "r" + rot});
+        this.propellor2().attr({transform: "r" + rot});
+        console.log("rotacia vrtuliek o " + rot);
+        },
 
-    TestRotateEngine: function(){
-    var rot = getRandomCislo()*3.5;
-    this.propellor1.attr({transform: "r" + rot});
-   this.propellor2.attr({transform: "r" + rot});
-    console.log("rotacia vrtuliek o " + rot);
-},
-    testNaGroup : function testNaGroup(){
-        propellor.attr({
-            fill: "blue"
+    setColor : function (color){
+         this.propellor1().attr({
+            fill: color
         });
-    }
-};
+        this.propellor2().attr({
+            fill: color
+        });
+        return "ok";
+    },
+  };
 
-
-var valve = "#ventil";
-
-var ventil = "#ventil";
-var nadrz = "#hladina2";
 
 var paper = "";
-function initSchema01() {
-    paper = Snap("#svgStanica");
-    Snap.load("PumpingStation.svg", function (f) {
-        paper.add(f.selectAll("#stanica"));
-        console.log("bola nacitana stanica do svgStanica");
+
+var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
+    paper = Snap(nameHTMLidSVG);
+    Snap.load(nazovFileSVG, function (f) {
+       paper.append(f);
+       console.log("bola nacitana stanica do svgStanica");
     });
 }
 
-function setColorValve(isOpened) {
-    var colorValve = (!isOpened) ? "green" : "red";
-    paper.selectAll(valve).attr({fill: colorValve});
-    return  console.log("farba ventila sa zmenila " + colorValve);
-}
 
-function updateSchema01(boolVentil, intHladina, boolMotor) {
-    setColorValve(boolVentil);
-    animateComponentTank(intHladina);
+
+function updateSchema01(boolVentil, intHladina, rot) {
+    Valve.changeIsOpen(boolVentil);
+    Tank.animateComponentTank(intHladina);
+    Engine.rotate(++rot*10);
     return console.log("update prebehol... ");
 }
 
-function animateComponentTank(fillPerc) {
-   if (fillPerc === undefined || fillPerc < 0) {
-        fillPerc = 0;
-    }
-    var rychlostVMs = 800;
-    var perHeight = 600 * (fillPerc / 100);
-    var perY = 1912 - 600 * (fillPerc / 100);
 
-    paper.select(nadrz).animate({
-        height: perHeight,
-        y: perY
-    }, rychlostVMs);
-    return console.log("animacia tanku " + fillPerc);
- }
-
-function testRotateEngine(){
- var rot = getRandomCislo()*3.5;
-
-        paper.select(vrtulka1).attr({transform: "r" + rot});
-        paper.select(vrtulka2).attr({transform: "r" + rot});
-
-console.log("rotacia vrtuliek o " + rot);
-}
