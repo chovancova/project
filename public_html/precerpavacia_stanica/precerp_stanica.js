@@ -22,7 +22,7 @@ var paper = ""; /**meno canvasu, na ktory budem kreslit svg, ale inicializujem v
 * http://www.w3schools.com/js/js_function_invocation.asp*/
 function initSchema01() {
     paper = Snap("#svgStanica");
-    Snap.load("stanica2.svg", function (f) {
+    Snap.load("stanica2_1.svg", function (f) {
         paper.add(f.selectAll("#stanica"));
         console.log("bola nacitana stanica do svgStanica");
 

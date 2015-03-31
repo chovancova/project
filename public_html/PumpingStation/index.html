@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js
+-->
+<html>
+    <head>
+        <title>Precerpavacia stanica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+        <script type="text/javascript" src="PumpingStation.js"></script>
+        <script type="text/javascript" src="TestPumpingStation.js"></script>
+        <script type="text/javascript" src="exec.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body onload="onPageLoad();">
+        <h2>Pumping station</h2>
+        <svg  id ="svgStanica"  viewBox="0 0 750 600" width="40%" height="40%"  ></svg>
+        <!--je to responzivne... viewBox
+        The viewBox attribute allows to specify that a given set of graphics stretch to fit a particular container element.
+     The value of the viewBox attribute is a list of four numbers min-x, min-y, width and height,
+     separated by whitespace and/or a comma, which specify a rectangle in user space which should
+     be mapped to the bounds of the viewport established by the given element, taking into account
+     attribute preserveAspectRatio.-->
+        <div>
+            <h2>Run tests</h2>
+            <div><button id="demo" type="button" onclick="spustiTesty();">Vsetky testy</button></div>
+         <div>  <button id="demo2" type="button" onclick="animateComponentTank(getRandomCislo());">Nadrz</button></div>
+      <div> <button id="demo3" type="button" onclick="testRotateEngine();">Vrtulky</button></div>
+      </div>
+        <h2>Guide</h2>
+        <ul>
+
+            <li> stlacenim tlacidla<b>"Testuj"</b>  sa spustia automaticky testy - vid console.log
+           <li> Testuj animaciu tanku s nahodnou hodnotou  <b>Nadrz</b>
+           <li>Testuj animaciu vrtuliek s nahodnou hodnotou  <b>Vrtulky</b></li>
+            <p>dalsie testy: </p>
+            <li>zadaj v konzole: <b>setColorValve (boolean);</b>
+            <li> <b>animateComponentTank(fillPerc); - funkcneee</b>
+                funguje to aj s random cislami animateComponentTank(getRandomCislo());
+            <li> <b>TestzmenaFarby(nadrz, farba)</b> napr. TestzmenaFarby(valve, "yellow"); TestzmenaFarby(nadz, "black");
+            <li> Pridany test na zistenie ci sa da ovladat jednotlive casti svg - <b>spustiTestFunkcnostiPrvkovSVG()</b>
+            <li><b>updateSchema01(boolVentil, intHladina);</b> Pouzitie: updateSchema01(0, getRandomCislo());</li>
+            <li>testRotateEngine() - otoci nahodne vrtulky.... </li>
+        </ul>
+
+    </body>
+</html>
