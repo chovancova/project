@@ -1,6 +1,8 @@
 /**
- * Created by chova_000 on 17-Mar-15.
+ *nameHTMLidSVG - v pripade, ze je prazdny sa vytvori novy
+ * napr. "#svgStanica" si nastavim viewbox / s pozadovanymi rozmermi..
  */
 function onPageLoad() {
-    initSchema01();
+   PumpingStation("PumpingStation.svg", "#svgStanica" );
+//"#svgStanica"
    }
