@@ -1,4 +1,4 @@
-var nadrz = "#hladina2";/*toto je modra hladina nadrze*/
+var nadrz = "#hladina";/*toto je modra hladina nadrze*/
 var valve = "#ventil"; /*zo svg - css selector - pouzity pri zmene farby*/
 //var motor1 = "#Layer_3";
 var vrtulka2 = "#rect3094"; //horizontalna cepel vrtulky

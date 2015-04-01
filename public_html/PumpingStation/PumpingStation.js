@@ -75,7 +75,7 @@ var Engine = {
             fill: color
         });
         return "ok";
-    },
+    }
   };
 
 
