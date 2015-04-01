@@ -8,7 +8,6 @@ var PumpingStation = function(nazovFileSVG, idDOMsvgElement) {
     });
 };
 
-
 var Tank = {
     idTank: "#hladina",
     tank: function(){
@@ -18,16 +17,12 @@ var Tank = {
             fillPerc = 0;
         }
         var perHeight = 600 * (fillPerc / 100);
-        var perY = 1912 - 600 * (fillPerc / 100);
+        var perY = 1912 - perHeight;
         this.tank().animate({
             height: perHeight,
             y: perY
         }, 800);
         return console.log("animacia tanku " + fillPerc);
-    },
-    changeColor: function (color) {
-       this.tank().attr({fill: color});
-        return console.log("bola zmenena farba na: " + color + " elementu: " + this.idNadrz);
     }
 };
 
