@@ -1,18 +1,28 @@
+//var paper = "";
+
+var PumpingStation = function(nazovFileSVG, idDOMsvgElement) {
+    paper = Snap(idDOMsvgElement);
+    Snap.load(nazovFileSVG, function (f) {
+        paper.append(f);
+        console.log("bola nacitana stanica do svgStanica");
+    });
+};
+
+
 var Tank = {
     idTank: "#hladina",
     tank: function(){
-       return  paper.select(this.idTank)},
+       return  paper.select(this.idTank);},
     animateComponentTank: function(fillPerc) {
         if (fillPerc === undefined || fillPerc < 0) {
             fillPerc = 0;
         }
-        var speed = 800;
         var perHeight = 600 * (fillPerc / 100);
         var perY = 1912 - 600 * (fillPerc / 100);
         this.tank().animate({
             height: perHeight,
             y: perY
-        }, speed);
+        }, 800);
         return console.log("animacia tanku " + fillPerc);
     },
     changeColor: function (color) {
@@ -50,10 +60,10 @@ var Engine = {
     rot: 0,
 
         propellor1: function(){
-        return paper.select("#rect3094")},
+        return paper.select("#rect3094");},
 
     propellor2: function(){
-        return paper.select("#rect3092")},
+        return paper.select("#rect3092");},
 
     rotate: function(rot){
         this.propellor1().attr({transform: "r" + rot});
@@ -71,25 +81,5 @@ var Engine = {
         return "ok";
     },
   };
-
-
-var paper = "";
-
-var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
-    paper = Snap(nameHTMLidSVG);
-    Snap.load(nazovFileSVG, function (f) {
-       paper.append(f);
-       console.log("bola nacitana stanica do svgStanica");
-    });
-}
-
-
-
-function updateSchema01(boolVentil, intHladina, rot) {
-    Valve.changeIsOpen(boolVentil);
-    Tank.animateComponentTank(intHladina);
-    Engine.rotate(++rot*10);
-    return console.log("update prebehol... ");
-}
 
 

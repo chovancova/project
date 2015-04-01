@@ -36,9 +36,9 @@
    inkscape:window-height="745"
    id="namedview3103"
    showgrid="false"
-   inkscape:zoom="0.58125"
-   inkscape:cx="117.13936"
-   inkscape:cy="239.03325"
+   inkscape:zoom="0.87"
+   inkscape:cx="235.1781"
+   inkscape:cy="298.85541"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -286,8 +286,7 @@
    id="ventil"
    d="M 2073.867,1504.246 H 1969.23 v -31.418 c 0,0 0.238,-2.986 2.655,-5.404 2.418,-2.417 6.968,-2.198 6.968,-2.198 h 83.613 l 1.423,8.455 9.978,3.129 v 27.436 z"
    stroke-miterlimit="10"><desc
-     id="desc3111">ventil</desc><title
-     id="title3109">ventil</title></path>
+     id="desc3111">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc></path>
 </g><rect
      inkscape:label="#hladina1"
      y="1912.7173"
@@ -299,11 +298,11 @@
        id="desc3119">hladina1</desc><title
        id="title3117">hladina1</title></rect><rect
      inkscape:label="#hladina"
-     y="1890.7667"
-     x="2511.1992"
-     height="36.753223"
-     width="799.62463"
+     y="1320.1689"
+     x="2507.8459"
+     height="605.83868"
+     width="797.04492"
      id="hladina"
-     style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:1.83181345px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
+     style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:7.42523718px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
        id="desc3119-4">hladina</desc><title
        id="title3117-0">hladina</title></rect></g></svg>
