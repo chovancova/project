@@ -12,6 +12,7 @@ var Tank = {
     idTank: "#hladina",
     tank: function(){
        return  paper.select(this.idTank);},
+
     animateComponentTank: function(fillPerc) {
         if (fillPerc === undefined || fillPerc < 0) {
             fillPerc = 0;
@@ -34,7 +35,7 @@ var Valve = {
     changeIsOpen: function (isOpened) {
         isOpened = (isOpened) ? 0 : 1;
         this.colorValve = (isOpened) ?   "red" : "green";
-        this.setColorValve(this.colorValve);
+        this.valve().attr({fill: this.colorValve});
         return  console.log("farba ventila sa zmenila " + this.colorValve);
         },
     setColorValve: function (colorV) {
