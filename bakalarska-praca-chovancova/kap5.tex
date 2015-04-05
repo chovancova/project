@@ -1,0 +1,95 @@
+\chapter{js}
+
+Keď už máme nakreslený komponent pomocou Inkscape, tak postupujem dalej. TODO
+
+Pridáme do HTML  
+\begin{lstlisting}
+<svg  
+	id="svgStanica"  
+	viewBox="0 0 750 600" 
+	width="40%" 
+	height="40%" 
+	>
+</svg>
+\end{lstlisting}
+
+
+id / toto pouzijeme pri vykresleni 
+viewBox - je atribút, ktorý povoľuje špecifikovať danú množinu grafick.. aby to fit a vošlo do kontajnera elementu. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
+Width a height je šírka a výška - a je možné ich uviesť aj relatívne v percentách, alebo absolútne v pixeloch. 
+
+\begin{lstlisting}
+
+
+<body onload="onPageLoad();">
+
+function onPageLoad() {
+	PumpingStation("PumpingStation.svg", "#svgStanica" );
+}
+\end{lstlisting}
+Parametre pre PumpingStation je nazov svg suboru, a tag v html.
+\begin{lstlisting}
+var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) \{
+	paper = Snap(nameHTMLidSVG);
+	Snap.load(nazovFileSVG, function (f) \{
+		paper.append(f);
+\});
+\};
+\end{lstlisting}
+paper - bude globalna premenna. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. 
+
+Pomocou load nacitam svg subor, ktory som vytvorila a pomocou append ho zobrazim na danu plochu. 
+
+\subsection{Tank}
+Zanimovanie stupania a klesania hladiny nadrze. 
+\begin{lstlisting}
+var Tank = {
+	idTank: "#hladina",
+	tank: function(){
+		return  paper.select(this.idTank);},
+	animateComponentTank: function(fillPerc) {
+		if (fillPerc === undefined || fillPerc < 0) {
+			fillPerc = 0;
+		}
+		var perHeight = 600 * (fillPerc / 100);
+		var perY = 1912 - perHeight;
+		this.tank().animate  (	{
+			height: perHeight,
+			y: perY
+		}, 800);
+		return console.log("animacia tanku " + fillPerc);
+	}
+};
+\end{lstlisting}
+Vytvorila som objekt Tank medzi jeho atributy patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie dany objekt, ktory chcem ovladat. Pomocou Tank.tank() mozem volat funkcie z Snap kniznice. n 
+
+Zanimovanie tanku je realizovane v funkcii animateComponentTank - kde parametrom je v percentách udane o koľko sa ma zdvihnut hladina nadrze. 
+Využívam funkciu animate. Kde v prvom parametri - mením výšku a os y. Hodnotu perHeight je výška 600, ktoru vynásobím percentom o ktore sa ma posunut. PerY je hodnota, o ktoru sa posunei po y-osi. Je vypocitana ako 1912 co je y prázdnej nádrže a je od nej odpocitana hodnota vysky. 
+Dalsi parameter pri funkcii animate() je rýchlosť animácie vyjadrená v milisekundach. 
+
+\subsection{Ventil}
+
+\begin{lstlisting}
+var Valve = {
+	idValve: "#ventil",
+	valve: function (){ return paper.select(this.idValve);},
+	colorValve: "red",
+	changeIsOpen: function (isOpened) {
+		isOpened = (isOpened) ? 0 : 1;
+		this.colorValve = (isOpened) ?   "red" : "green";
+		this.valve().attr({fill: this.colorValve});
+		return;);
+	}
+}
+\end{lstlisting}
+
+Farba sa dá zmeniť aj príkazom 
+
+\begin{verbatim}
+Valve.valve().attr({fill: “green”});.
+\end{verbatim}
+
+Názov farby môže byť uvedený slovne, alebo ako RGB. 
+
+Zmena farby Valve - \begin{verbatim} this.valve().attr  ({fill: this.colorValve}); \end{verbatim}
+

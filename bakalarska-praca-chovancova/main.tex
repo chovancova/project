@@ -28,6 +28,38 @@
 \addtolength{\textheight}{2.cm}
 \newlength{\verbcorr}
 \setlength{\verbcorr}{0ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{green}{rgb}{0,0.6,0}
+\definecolor{blue}{rgb}{0.5,0.5,0.5}
+\definecolor{purple}{rgb}{0.58,0,0.82}
+\definecolor{orange}{RGB}{255,127,0}
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+%	frame=L,
+%	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{green},
+}
+
+\lstdefinestyle{customasm}{
+	belowcaptionskip=1\baselineskip,
+	frame=L,
+	xleftmargin=\parindent,
+	language=[x86masm]Assembler,
+	basicstyle=\footnotesize\ttfamily,
+	commentstyle=\itshape\color{purple!40!black},
+}
+
+\lstset{escapechar=@,style=customc}
 
 
 
@@ -68,7 +100,7 @@
 %%%%%%%%%%%%%%%%%% literatura
 
 
-
+\include{lit}	%  Literatura
 
 %  zoznam obrázkov
 \listoffigures
