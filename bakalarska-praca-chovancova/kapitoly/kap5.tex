@@ -1,8 +1,9 @@
-\chapter{Implementácia komponentov}
+%\chapter{Implementácia komponentov}
+\chapter{Návod na prácu s Snap.svg.js}
 
-Keď už máme nakreslený komponent pomocou Inkscape, tak postupujem ďalej. TODO
-
-Pridáme do HTML  
+\section{HTML súbor}
+Do HTML súboru index.html pridáme párový tag $<$svg$>$. Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
+\subsection{Kód}
 \begin{lstlisting}
 <svg  
 	id="svgStanica"  
@@ -13,16 +14,31 @@ Pridáme do HTML
 </svg>
 \end{lstlisting}
 
+\subsection{Vysvetlenie}
+\begin{itemize}
+\item  \textbf{id} - jedinečný identifikátor, cez ktorý meníme vlastnosti.
+\item 	\textbf{viewBox} - je virtuálne okno, ktorým sa užívateľ uvidí svg obrázok. Je atribút, ktorý povoľuje špecifikovať danú množinu grafických komponentov, aby sa zobrazili v daných súradniciach x, y a šírke, výške. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
+\item 	\textbf{width} a \textbf{height} je šírka a výška. Hodnoty atribútov je možné uviesť relatívne v percentách, alebo absolútne v pixloch. 
+\end{itemize}
 
-id / toto použijeme pri vykreslení 
-viewBox - je atribút, ktorý povoľuje špecifikovať danú množinu grafických. aby to fit a vošlo do kontajnera elementu. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
-Width a height je šírka a výška - a je možné ich uviesť aj relatívne v percentách, alebo absolútne v pixloch 
+Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spustením funkcií. To zabezpečíme pridaním  onload do tagu $<$body$>$. 
+\begin{lstlisting}
+	<body onload="onPageLoad();">
+\end{lstlisting}
+
+A ešte jedna vec pri HTML súbore - TODO. 
+\begin{lstlisting}
+  <script type="text/javascript" src="../js/snap.svg-min.js"></script>
+  
+  <script type="text/javascript" src="PumpingStation.js"></script>
+\end{lstlisting}
+
+
+\subsection{PumpingStation.js}
+
+V súbore PumpingStation.js sú funkcie na animovanie.. 
 
 \begin{lstlisting}
-
-
-<body onload="onPageLoad();">
-
 function onPageLoad() {
 	PumpingStation("PumpingStation.svg", "#svgStanica" );
 }
