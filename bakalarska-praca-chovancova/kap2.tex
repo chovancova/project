@@ -1,21 +1,57 @@
-\chapter{Analýza požiadaviek}
+\chapter{Základné pojmy}
 
-Editory, ktoré umožnujú tvorbu grafických komponentov: 
+SCADA - Supervisory Control and Data Acquisition.  
 
-\begin{itemize}
-\item Adobe Illustrator, 
-\item CorelDraw, 
-\item Inkscape.
-\end{itemize}
+SVG - Scalable Vector Graphics -  je aplikácia XML, ktorá umožnuje reprezentáciu grafických informácii v kompaktnom, prenostiteľnom tvare. 
 
-Nástroj, ktorý najviac vyhovuje mojim požiadavkam je Inkscape. 
+XML - EXtensible Markup Language - je to nástroj na uskladňovanie informácie nezávislé od softvéru a hardvéru.
+RGB - Red Green Blue
+
+HTML -  Hyper Text Markup Language - markup jazyk na popis webových dokumentov a stránok.
+
+IPESOFT D2000® je objektovo orientovaný SCADA (Supervisory Control And Data Acquisition) systém, ako aj platforma pre tvorbu komplexných MES (Manufacturing Execution System) aplikácií. V súhrne svojich vlastností predstavuje optimalizovaný nástroj triedy RAD (Rapid Application Development) pre informačné systémy pracujúce súčasne s údajmi technického charakteru v reálnom čase, technickými a obchodnými údajmi vo forme časových radov a obchodnými údajmi vo forme databázových tabuliek.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Na internete sa nachádzajú tieto JavaScriptové knižnice na tvorbu grafických komponentov: 
-\begin{itemize}
-\item D3.js (Data Driven Document), 
-\item Raphael.js, 
-\item Snap.svg.js,  
-\item Svg.js. 
-\end{itemize}
-Rozhodla som sa použiť knižnicu Snap.svg.js hlavne pretože dokáže načítať a ovládať SVG komponenty.
+What is SVG?
+\begin{enumerate}
+\item	SVG stands for Scalable Vector Graphics
+\item	SVG is used to define graphics for the Web
+\item	SVG is a W3C recommendation
+\end{enumerate}
+The HTML <svg> Element
+The HTML <svg> element (introduced in HTML5) is a container for SVG graphics.
+SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+Browser Support
+The numbers in the table specify the first browser version that fully supports the <svg> element.
+Element					
+<svg>	4.0	9.0	3.0	3.2	10.1
+Differences Between SVG and Canvas
+SVG is a language for describing 2D graphics in XML.
+Canvas draws 2D graphics, on the fly (with a JavaScript).
+SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element.
+In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.
+Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.
+
+
+Comparison of Canvas and SVG
+The table below shows some important differences between Canvas and SVG:
+Canvas
+
+\begin{enumerate}
+\item	Resolution dependent
+\item	No support for event handlers
+\item	Poor text rendering capabilities
+\item	You can save the resulting image as .png or .jpg
+\item	Well suited for graphic-intensive games
+\end{enumerate}	
+SVG
+
+\begin{enumerate}
+\item	Resolution independent
+\item	Support for event handlers
+\item	Best suited for applications with large rendering areas (Google Maps)
+\item	Slow rendering if complex (anything that uses the DOM a lot will be slow)
+\item	Not suited for game applications
+\end{enumerate}
