@@ -5,16 +5,15 @@
 Do HTML súboru index.html pridáme párový tag $<$svg$>$. Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
 \subsection{Kód}
 \begin{lstlisting}
-<svg  
-	id="svgStanica"  
+<svg 
+	id="svgStanica" 
 	viewBox="0 0 750 600" 
 	width="40%" 
-	height="40%" 
-	>
+	height="40%"> 
 </svg>
 \end{lstlisting}
 
-\subsection{Vysvetlenie}
+\subsection{Vysvetlenie kódu}
 \begin{itemize}
 \item  \textbf{id} - jedinečný identifikátor, cez ktorý meníme vlastnosti.
 \item 	\textbf{viewBox} - je virtuálne okno, ktorým sa užívateľ uvidí svg obrázok. Je atribút, ktorý povoľuje špecifikovať danú množinu grafických komponentov, aby sa zobrazili v daných súradniciach x, y a šírke, výške. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
@@ -29,30 +28,37 @@ Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spu
 A ešte jedna vec pri HTML súbore - TODO. 
 \begin{lstlisting}
   <script type="text/javascript" src="../js/snap.svg-min.js"></script>
-  
   <script type="text/javascript" src="PumpingStation.js"></script>
 \end{lstlisting}
 
 
-\subsection{PumpingStation.js}
+\section{PumpingStation.js}
 
-V súbore PumpingStation.js sú funkcie na animovanie.. 
+V súbore PumpingStation.js sú funkcie na animovanie.. TODO
+\subsection{onPageLoad()}
+Táto funkcia sa spustí pri načítaní tela HTML súboru index.html. Funkcia spustí funkciu PumpingStation(). Prvý parameter je udaný konkrétny svg súbor, ktorý chcem načítať. Druhý parameter je id tagu svg, ktorý je v html. TODO
 
 \begin{lstlisting}
 function onPageLoad() {
 	PumpingStation("PumpingStation.svg", "#svgStanica" );
 }
 \end{lstlisting}
-Parametre pre PumpingStation je názov svg súboru, a tag v html.
+
+\subsection{PumpingStation(par1, par2)}
+
+Funkcia inicializuje daný svg súbor, a vykreslí ho. 
+Parametre pre PumpingStation je názov svg súboru, a id, ktoré sa nachádza v tagu $<$svg$>$ html súbore.
+
 \begin{lstlisting}
-var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) \{
+var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
 	paper = Snap(nameHTMLidSVG);
-	Snap.load(nazovFileSVG, function (f) \{
+	Snap.load(nazovFileSVG, function (f) {
 		paper.append(f);
-\});
-\};
+	});
+};
 \end{lstlisting}
-paper - bude globálna premenná. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. 
+
+\textbf{paper} - bude globálna premenná. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. Napríklad Snap(600, 800), alebo Snap("\#svgStanica"), resp Snap(). 
 
 Pomocou load načítam vytvorený svg súbor. Na plochu ho zobrazím pomocou príkazu append. 
 

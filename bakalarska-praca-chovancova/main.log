@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 01:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 01:33
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -858,7 +858,7 @@ LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 124
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )
-<obrazky/jednoduchyKruh.png, id=183, 131.74219pt x 128.73094pt>
+<obrazky/jednoduchyKruh.png, id=187, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
@@ -895,19 +895,19 @@ Kapitola 3.
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.tex
 Kapitola 4.
-<obrazky/obr1.png, id=255, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=259, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 8.
 (pdftex.def)             Requested size: 355.65944pt x 199.95944pt.
 
-<obrazky/obr2.png, id=256, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=260, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 20.
 (pdftex.def)             Requested size: 355.65944pt x 199.95944pt.
 
-<obrazky/obr3.png, id=257, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=261, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 30.
@@ -918,19 +918,19 @@ Package pdftex.def Info: obrazky/obr3.png used on input line 30.
 
 
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr4.png, id=263, 263.48438pt x 448.67625pt>
+<obrazky/obr4.png, id=267, 263.48438pt x 448.67625pt>
 File: obrazky/obr4.png Graphic file (type png)
  <use obrazky/obr4.png>
 Package pdftex.def Info: obrazky/obr4.png used on input line 43.
 (pdftex.def)             Requested size: 263.48372pt x 448.67516pt.
 
-<obrazky/obr5.png, id=264, 500.62032pt x 463.7325pt>
+<obrazky/obr5.png, id=268, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
  <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 53.
 (pdftex.def)             Requested size: 284.52756pt x 263.57314pt.
 
-<obrazky/obr6.png, id=265, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=269, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 74.
@@ -1023,10 +1023,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
 ### simple group (level 1) entered at line 90 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13951 strings out of 493921
- 192189 string characters out of 3144865
- 316645 words of memory out of 3000000
- 16707 multiletter control sequences out of 15000+200000
+ 13953 strings out of 493921
+ 192217 string characters out of 3144865
+ 327645 words of memory out of 3000000
+ 16709 multiletter control sequences out of 15000+200000
  31990 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,10n,56p,821b,2274s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1039,9 +1039,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on main.pdf (38 pages, 403166 bytes).
+Output written on main.pdf (38 pages, 404398 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
+ 533 PDF objects out of 1000 (max. 8388607)
  222 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
