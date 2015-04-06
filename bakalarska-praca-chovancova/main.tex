@@ -17,7 +17,6 @@
 \usepackage{comment}
 
 
-
 \renewcommand{\baselinestretch}{1.5}  % pre zvascenie riadkovania
 
 \addtolength{\oddsidemargin}{-.5cm}
@@ -62,6 +61,18 @@
 \lstset{escapechar=@,style=customc}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%=====
+%\makeglossaries
+
+%\newglossaryentry{apc}{%
+%	name={APC},%
+%	description={antigeen-presenterende cel}%
+%}
+
+%\usepackage[printonlyused]{acronym}
+\usepackage{acronym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=11111
+
 
 \begin{document}
 \selectlanguage{slovak}
@@ -79,8 +90,30 @@
 {\setlength{\parskip}{1pt plus 1pt}
 
 \markboth{}{}
-
+\pagenumbering{roman}
+	
+% table of contents
 \tableofcontents
+% list of images
+\listoffigures
+
+% list of tables
+\listoftables
+
+% list of listings
+\lstlistoflistings
+     
+         
+         
+   % end roman page numbering
+
+
+
+\pagenumbering{arabic}
+\thispagestyle{empty}
+\clearpage
+
+
 
 
 \markboth{}{}
@@ -103,10 +136,18 @@
 %%%%%%%%%%%%%%%%%% literatura
 
 
-\include{lit}	%  Literatura
 
-%  zoznam obrázkov
-\listoffigures
+\include{lit}	%  Literatura
+%%%%% \MakeBibliography 
+
+
+\appendix
+
+
+\include{skratky}
+
+
+
 
 
 \end{document}

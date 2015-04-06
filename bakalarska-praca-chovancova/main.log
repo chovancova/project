@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  6 APR 2015 10:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  6 APR 2015 15:09
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -40,7 +40,7 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\slovak.ldf"
+(C:\Github\project\bakalarska-praca-chovancova\slovak.ldf
 Language: slovak 2008/07/06 v3.1a Slovak support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
@@ -54,13 +54,13 @@ Package babel Info: Making ' an active character on input line 129.
 \cs@wordlen=\count89
 Package babel Info: Making - an active character on input line 294.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
-Language: english 2005/03/30 v3.3o English support from the babel system
+(C:\Users\chova_000\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-english\english.
+ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
@@ -658,6 +658,22 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+Package: acronym 2014/09/29 v1.40 Support for acronyms (Tobias Oetiker)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+\@xs@message=\write4
+\integerpart=\count121
+\decimalpart=\count122
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks25
+)
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\title.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kap1.aux)
@@ -671,26 +687,27 @@ File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 (C:\Github\project\bakalarska-praca-chovancova\kap8.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kap9.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kap10.aux)
-(C:\Github\project\bakalarska-praca-chovancova\lit.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for IL2+ptm on input line 66.
+(C:\Github\project\bakalarska-praca-chovancova\lit.aux)
+(C:\Github\project\bakalarska-praca-chovancova\skratky.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Try loading font information for IL2+ptm on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\cspsfonts\il2ptm.fd"
 File: il2ptm.fd 1998/01/31 CS Times
@@ -701,32 +718,32 @@ LaTeX Font Info:    Created by CsPsFont utility v.1.0e (C) Z. Wagner, 1998/01/3
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
+\scratchcounter=\count123
 \scratchdimen=\dimen128
 \scratchbox=\box31
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count124
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count126
 \MPscratchDim=\dimen129
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks27
 )
-\c@lstlisting=\count127
+\c@lstlisting=\count129
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 77.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count128
+\c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
 (C:\Github\project\bakalarska-praca-chovancova\title.tex
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 46
@@ -767,9 +784,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warning (ext4): des
-tination with the same identifier (name{page.1}) has been already used, duplica
-te ignored
+{C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX w
+arning (ext4): destination with the same identifier (name{page.1}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
 l.83 \end{abstract}
@@ -782,80 +799,102 @@ l.116 \end{abstract}
 ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 \include{title}
+l.84 \include{title}
                     	% Titulna strana, Abstrakt, Prehlasenie [1]
-(C:\Github\project\bakalarska-praca-chovancova\main.toc [2
+(C:\Github\project\bakalarska-praca-chovancova\main.toc [1
 
 
 ])
-\tf@toc=\write4
+\tf@toc=\write5
 
 
 LaTeX Font Warning: Font shape `IL2/ptm/m/sl' in size <12> not available
-(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 88.
+(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 98.
 
-[3] (C:\Github\project\bakalarska-praca-chovancova\kap1.tex [4
+[2] (C:\Github\project\bakalarska-praca-chovancova\main.lof)
+\tf@lof=\write6
+ [3
+
+]
+(C:\Github\project\bakalarska-praca-chovancova\main.lot)
+\tf@lot=\write7
+ [4
+
+]
+(C:\Github\project\bakalarska-praca-chovancova\main.lol)
+\tf@lol=\write8
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.114 \clearpage
+                 [1
+
+] (C:\Github\project\bakalarska-praca-chovancova\kap1.tex
+[2
 
 
 
-]) [5]
-(C:\Github\project\bakalarska-praca-chovancova\kap2.tex
+
+]) [3] (C:\Github\project\bakalarska-praca-chovancova\kap2.tex
 Kapitola 1.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 12.
+Package acronym Info: Label `acro:SVG' newly defined as it shall be overridden
+although it is yet undefined on input line 12.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 15.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
- [6
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+ [4
 
 
 
-]) [7]
+]) [5]
 (C:\Github\project\bakalarska-praca-chovancova\kap3.tex
 Kapitola 2.
-[8
+[6
 
 
 
-] [9] [10]) [11] (C:\Github\project\bakalarska-praca-chovancova\kap3a.tex
+] [7] [8]) [9] (C:\Github\project\bakalarska-praca-chovancova\kap3a.tex
 Kapitola 3.
-) [12
+) [10
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kap4.tex
 Kapitola 4.
-<obrazky/obr1.png, id=123, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=159, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 8.
 (pdftex.def)             Requested size: 355.65944pt x 199.95944pt.
 
-<obrazky/obr2.png, id=125, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=161, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 20.
 (pdftex.def)             Requested size: 355.65944pt x 199.95944pt.
 
-<obrazky/obr3.png, id=126, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=162, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 30.
 (pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
 
-[13
+[11
 
 
 
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr4.png, id=133, 263.48438pt x 448.67625pt>
+<obrazky/obr4.png, id=169, 263.48438pt x 448.67625pt>
 File: obrazky/obr4.png Graphic file (type png)
  <use obrazky/obr4.png>
 Package pdftex.def Info: obrazky/obr4.png used on input line 43.
 (pdftex.def)             Requested size: 263.48372pt x 448.67516pt.
 
-<obrazky/obr5.png, id=134, 500.62032pt x 463.7325pt>
+<obrazky/obr5.png, id=170, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
  <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 53.
@@ -866,7 +905,7 @@ LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 60.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )
-<obrazky/obr6.png, id=135, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=171, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 74.
@@ -877,61 +916,62 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [14 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>]
+) [12 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>]
 LaTeX Font Info:    Font shape `IL2/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `IL2/cmtt/m/n' tried instead on input line 83.
- [15 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png>]) [16] [1
-7 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr4.png>] [18 <C:/Git
+ [13 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png>]) [14] [1
+5 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr4.png>] [16 <C:/Git
 hub/project/bakalarska-praca-chovancova/obrazky/obr5.png> <C:/Github/project/ba
 kalarska-praca-chovancova/obrazky/obr6.png>]
 (C:\Github\project\bakalarska-praca-chovancova\kap5.tex
 Kapitola 5.
-[19
+[17
 
 
 
-] [20]) [21] (C:\Github\project\bakalarska-praca-chovancova\kap6.tex
+] [18]) [19] (C:\Github\project\bakalarska-praca-chovancova\kap6.tex
 Kapitola 6.
-) [22
+) [20
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kap7.tex
 Kapitola 7.
-) [23
+) [21
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kap8.tex
 Kapitola 8.
-) [24
+) [22
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kap9.tex
 Kapitola 9.
-) [25
+) [23
 
 
 
-] (C:\Github\project\bakalarska-praca-chovancova\kap10.tex) [26
-
-
-
-]
-(C:\Github\project\bakalarska-praca-chovancova\lit.tex) [27
+] (C:\Github\project\bakalarska-praca-chovancova\kap10.tex) [24
 
 
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\main.lof)
-\tf@lof=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
- [28
+(C:\Github\project\bakalarska-praca-chovancova\lit.tex [25
 
+
+
+]) [26]
+(C:\Github\project\bakalarska-praca-chovancova\skratky.tex [27
+
+
+
+]) [28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\title.aux)
@@ -946,23 +986,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 (C:\Github\project\bakalarska-praca-chovancova\kap8.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kap9.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kap10.aux)
-(C:\Github\project\bakalarska-praca-chovancova\lit.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 112.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
+(C:\Github\project\bakalarska-praca-chovancova\lit.aux)
+(C:\Github\project\bakalarska-praca-chovancova\skratky.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 79 ({)
+### simple group (level 1) entered at line 90 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13320 strings out of 493921
- 182579 string characters out of 3144865
- 317379 words of memory out of 3000000
- 16169 multiletter control sequences out of 15000+200000
+ 13829 strings out of 493921
+ 190005 string characters out of 3144865
+ 326704 words of memory out of 3000000
+ 16630 multiletter control sequences out of 15000+200000
  28418 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,7n,56p,734b,2230s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,7n,56p,734b,2270s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.
 enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt10.pfb><C:/Progr
@@ -970,9 +1011,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 356588 bytes).
+Output written on main.pdf (36 pages, 365055 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 168 named destinations out of 1000 (max. 500000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,6 @@
 \chapter{Implementácia komponentov}
 
-Keď už máme nakreslený komponent pomocou Inkscape, tak postupujem dalej. TODO
+Keď už máme nakreslený komponent pomocou Inkscape, tak postupujem ďalej. TODO
 
 Pridáme do HTML  
 \begin{lstlisting}
@@ -14,9 +14,9 @@ Pridáme do HTML
 \end{lstlisting}
 
 
-id / toto pouzijeme pri vykresleni 
-viewBox - je atribút, ktorý povoľuje špecifikovať danú množinu grafick.. aby to fit a vošlo do kontajnera elementu. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
-Width a height je šírka a výška - a je možné ich uviesť aj relatívne v percentách, alebo absolútne v pixeloch. 
+id / toto použijeme pri vykreslení 
+viewBox - je atribút, ktorý povoľuje špecifikovať danú množinu grafických. aby to fit a vošlo do kontajnera elementu. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
+Width a height je šírka a výška - a je možné ich uviesť aj relatívne v percentách, alebo absolútne v pixloch 
 
 \begin{lstlisting}
 
@@ -27,7 +27,7 @@ function onPageLoad() {
 	PumpingStation("PumpingStation.svg", "#svgStanica" );
 }
 \end{lstlisting}
-Parametre pre PumpingStation je nazov svg suboru, a tag v html.
+Parametre pre PumpingStation je názov svg súboru, a tag v html.
 \begin{lstlisting}
 var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) \{
 	paper = Snap(nameHTMLidSVG);
@@ -36,9 +36,9 @@ var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) \{
 \});
 \};
 \end{lstlisting}
-paper - bude globalna premenna. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. 
+paper - bude globálna premenná. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. 
 
-Pomocou load nacitam svg subor, ktory som vytvorila a pomocou append ho zobrazim na danu plochu. 
+Pomocou load načítam vytvorený svg súbor. Na plochu ho zobrazím pomocou príkazu append. 
 
 \subsection{Tank}
 Zanimovanie stupania a klesania hladiny nadrze. 
@@ -61,11 +61,12 @@ var Tank = {
 	}
 };
 \end{lstlisting}
-Vytvorila som objekt Tank medzi jeho atributy patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie dany objekt, ktory chcem ovladat. Pomocou Tank.tank() mozem volat funkcie z Snap kniznice. n 
 
-Zanimovanie tanku je realizovane v funkcii animateComponentTank - kde parametrom je v percentách udane o koľko sa ma zdvihnut hladina nadrze. 
-Využívam funkciu animate. Kde v prvom parametri - mením výšku a os y. Hodnotu perHeight je výška 600, ktoru vynásobím percentom o ktore sa ma posunut. PerY je hodnota, o ktoru sa posunei po y-osi. Je vypocitana ako 1912 co je y prázdnej nádrže a je od nej odpocitana hodnota vysky. 
-Dalsi parameter pri funkcii animate() je rýchlosť animácie vyjadrená v milisekundach. 
+Vytvorila som objekt Tank medzi jeho atribúty patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie daný objekt, ktorý chcem ovládať. Pomocou Tank.tank() môžem volať funkcie z Snap knižnice. n 
+
+Zanimovanie tanku je realizované v funkcii animateComponentTank - kde parametrom je v percentách udané o koľko sa ma zdvihnúť hladina nadrze. 
+Využívam funkciu animate. Kde v prvom parametri - mením výšku a os y. Hodnotu perHeight je výška 600, ktorú vynásobím percentom o ktoré sa ma posunúť. PerY je hodnota, o ktorú sa posuniem po y-osi. Je vypočitaná ako 1912 co je y prázdnej nádrže a je od nej odpočítaná hodnota výšky. 
+Ďalší parameter pri funkcii animate() je rýchlosť animácie vyjadrená v milisekundách.
 
 \subsection{Ventil}
 
