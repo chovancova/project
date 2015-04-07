@@ -60,7 +60,7 @@ var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
 
 \textbf{paper} - bude globálna premenná. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. Napríklad Snap(600, 800), alebo Snap("\#svgStanica"), resp Snap(). 
 
-Pomocou load načítam vytvorený svg súbor. Na plochu ho zobrazím pomocou príkazu append. 
+\textbf{load} - volám funkciu z knižnice Snap. Cez ňu načítam  svg súbor. Ako parametre funkcie je názov súboru svg, prípadne môže byť prázdny, ak nenačítavam súbor, ale beriem ho priamo z html súboru. Druhý parameter je funkcia, v ktorej volám funkciu na zobrazenie obsahu svg súboru do daného tagu svg s  id, ktorý bol daný pri funkcii paper.  Na plochu ho zobrazím pomocou príkazu append. TODO
 
 \subsection{Tank}
 Zanimovanie stupania a klesania hladiny nadrze. 

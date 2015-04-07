@@ -4,7 +4,84 @@ CSS selektory ...
 
 a podrobnejší popis tejto knižnice.. .
 
-mapovacia tabuľka.. .
+mapovacia tabuľka.. . (pár kľúč-hodnota atribútov)
+Possible parameters
+
+Please refer to the SVG specification for an explanation of these parameters.
+
+arrow-endstringarrowhead on the end of the path. The format for string is <type>[-<width>[-<length>]]. Possible types: classic, block, open, oval, diamond, none, width: wide, narrow, midium, length: long, short, midium.
+clip-rectstringcomma or space separated values: x, y, width and height
+cursorstringCSS type of the cursor
+cxnumberthe x-axis coordinate of the center of the circle, or ellipse
+cynumberthe y-axis coordinate of the center of the circle, or ellipse
+fillstringcolour, gradient or image
+fill-opacitynumber 
+fontstring 
+font-familystring 
+font-sizenumberfont size in pixels
+font-weightstring 
+heightnumber 
+hrefstringURL, if specified element behaves as hyperlink
+opacitynumber 
+pathstringSVG path string format
+rnumberradius of the circle, ellipse or rounded corner on the rect
+rxnumberhorisontal radius of the ellipse
+rynumbervertical radius of the ellipse
+srcstringimage URL, only works for Element.image element
+strokestringstroke colour
+stroke-dasharraystring[“”, “-”, “.”, “-.”, “-..”, “. ”, “- ”, “--”, “- .”, “--.”, “--..”]
+stroke-linecapstring[“butt”, “square”, “round”]
+stroke-linejoinstring[“bevel”, “round”, “miter”]
+stroke-miterlimitnumber 
+stroke-opacitynumber 
+stroke-widthnumberstroke width in pixels, default is '1'
+targetstringused with href
+textstringcontents of the text element. Use \n for multiline text
+text-anchorstring[“start”, “middle”, “end”], default is “middle”
+titlestringwill create tooltip with a given text
+transformstringsee Element.transform
+widthnumber 
+xnumber 
+ynumber
+
+\begin{table}
+	\begin{tabular}{|c|c|c|}
+		\hline \rule[-2ex]{0pt}{5.5ex}key  & value & priklad \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} fill & string farby, RGB & "\#fc0"  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} stroke & string farby, RGB  &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex}strokeWidth  & 2, // CamelCase &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} "fill-opacity" & 0.5 V ROZSAHU 0-1 &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} width &  &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex}  &  &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex}  &  &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex}  &  &  \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex}  &  &  \\ 
+		\hline 
+	\end{tabular} 
+	\caption{Mapovacia tabulka kluc/hodnota}
+	\label{key}
+\end{table}}
 
 z dokumentácie Snap.svg vybrat zopár príkazov, funkcií - príkladov...
 
+
+\section{Element.attr(...)}
+Vráti alebo nastaví dané atribúty elementu.
+
+Parametre:
+\begin{itemize}
+	\item objekt - obsahuje pár kľúč-hodnota atribútov, ktoré chcem nastaviť.
+	\item string - názov atribútu
+\end{itemize}
+Vráti buď súčasný element alebo stringovú hodnotu atribútu.
+Použitie:
+\begin{lstlisting}
+	el.attr({
+	fill: "#fc0",
+	stroke: "#000",
+	strokeWidth: 2, // CamelCase...
+	"fill-opacity": 0.5, // or dash-separated names
+	width: "*=2" // prefixed values
+});
+console.log(el.attr("fill")); // #fc0
+\end{lstlisting}

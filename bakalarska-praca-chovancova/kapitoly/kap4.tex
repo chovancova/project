@@ -1,29 +1,31 @@
-\chapter{Návod na vytvorenie grafického komponentu v Inkscape}
+\chapter{Grafický komponent v Inkscape}
 
-Vytvorenie SVG v programe Inkscape .
+\section{Vytvorenie SVG v programe Inkscape}
 
+Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z rúriek, ventila, nádrže, hladiny vody, motora, vrtuliek. Ako je možné vidieť na obrázku \ref{picture1}.  
 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics [width=12.5cm] {obrazky/obr1.png}
-		\caption{obrázok 1}
+		\includegraphics [width=15cm] {obrazky/obr1.png}
+		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
 		\label{picture1}
 	\end{center}
 \end{figure}
 
-Nakreslenie jednotlivých častí komponentov pomocou bočného panela. 
 
-Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé ID SVG Klikneme pravým tlačidlom na daný komponent, časť, a potom na Objekt Properties.
+\section{Zistenie id SVG}
+
+Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. Sú v SVG označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics [width=12.5cm] {obrazky/obr2.png}
-		\caption{obrázok 2}
+		\includegraphics [width=15cm] {obrazky/obr2.png}
+		\caption{Zobrazenie menu pre daný objekt v Inkscape}
 		\label{picture2}
 	\end{center}
 \end{figure}
 
-Zobrazí sa nám nasledovné okno obrázok č.x. 
+Po stlačení sa nám zobrazí nasledovné okno viď obrázok \ref{picture3}. 
 
 \begin{figure}[ht]
 	\begin{center}
@@ -34,65 +36,47 @@ Zobrazí sa nám nasledovné okno obrázok č.x.
 \end{figure}
 
 
-Z obrázka možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné zmeniť tlačidlom Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. Toto nám umožni potom neskôr ako CSS selektor, cez ktorý budeme môcť ovládať danú časť. Spravidla hodnoty ID a Label sú rovnaké, a líšia sa iba v \#. ID je unikátny názov pre danú vetvu SVG 
+Z obrázka možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. Toto nám umožni potom neskôr ako CSS selektor, cez ktorý budeme môcť ovládať danú časť. Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
 
-Alebo ďalší spôsob zistenia ID SVG je priamo nájsť tú hodnotu v nazovSuboru.SVG Je to označené ako ID="ventil" .
+Alebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť tú hodnotu v PumpingStation.svg. Je to označené ako id="ventil".
 
-\begin{figure}[ht]
+V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí na Interactivity sa zobrazia ďalšie kolónky, kde je možné zadať akciu, ktorá má nastať.  
+
+%\begin{figure}[ht]
+%	\begin{center}
+%		\includegraphics[height=7cm]  {obrazky/obr4.png}
+%		\caption{obrázok 4}
+%		\label{picture4}
+%	\end{center}
+%\end{figure}
+
+\section{Zistenie atribútov SVG}
+
+\subsection{Prázdna nádrž}
+Prázdna nádrž je zobrazená na obrázku \ref{picture6}
+Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastavenú na 9,64px. Šírka a súradnica x je rovnaká ako pri plnej nádrži. Súradnice osi y, x sú 1916,36 a 2507,84. Pri plnej nádrži sa zmení výška a os y. Pre animáciu zdvihnutia hladiny nádrže bude potrebné si zapamätať tieto súradnice. 
+\begin{figure}[h]
 	\begin{center}
-		\includegraphics  {obrazky/obr4.png}
-		\caption{obrázok 4}
-		\label{picture4}
-	\end{center}
-\end{figure}
-
-Plná nádrž ma nasledovne parametre:
-
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics [width=10cm]  {obrazky/obr5.png}
-		\caption{obrázok 5}
-		\label{picture5}
-	\end{center}
-\end{figure}
-
-V SVG súbore je to 
-\begin{verbatim}
-
-Inkscape:label="\#hladina"
-y="1320.1689"
-x="2507.8459"
-height="605.83868"
-width="797.04492"
-id="hladina"
-\end{verbatim}
-
-
-Prázdna nádrž
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics [width=10cm]  {obrazky/obr6.png}
-		\caption{obrázok 6}
+		\includegraphics [height=6.5cm]  {obrazky/obr6.png}
+		\caption{Prázdna nádrž prečerpávacej stanice}
 		\label{picture6}
 	\end{center}
 \end{figure}
 
-v SVG to je nasledovne 
-\begin{lstlisting}[language=html]
-<rect
-inkscape:label="\#hladina"
-y="1916.3605"
-x="2507.8459"
-height="9.6471272"
-width="797.04492"
-id="hladina"
-...
-\end{lstlisting}
 
+\subsection{Plná nádrž}
+Na obrázku č. \ref{picture5} je vykreslená plná nádrž. Hladina má súradnice x, a šírku rovnakú ako v prázdnej nádrži. Zmenila sa os y, a výška - na 1320,16 a na 605,92. 
 
+\begin{figure}[hp]
+	\begin{center}
+		\includegraphics [height=6.5cm]  {obrazky/obr5.png}
+		\caption{Plná nádrž}
+		\label{picture5}
+	\end{center}
+\end{figure}
 
-Hladina nádrže:
-vykreslená ako obdĺžnik
+V SVG súbore je to zapísané nasledovným kódom. 
+
 \begin{lstlisting} [language=html]
 <rect
 	inkscape:label="#hladina"
@@ -110,8 +94,6 @@ vykreslená ako obdĺžnik
 		stroke-linecap:butt;
 		stroke-linejoin:miter;
 		stroke-opacity:0.80952382">
-<desc id="desc3119-4">hladina</desc>
-<title id="title3117-0">hladina</title>
 </rect>
 \end{lstlisting}
 
