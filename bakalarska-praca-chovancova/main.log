@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 12:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 16:30
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -804,21 +804,21 @@ l.84 \include{ine/title}
 (C:\Github\project\bakalarska-praca-chovancova\main.toc [1
 
 
-])
-\tf@toc=\write5
-
+]
 
 LaTeX Font Warning: Font shape `IL2/ptm/m/sl' in size <12> not available
-(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 98.
+(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 51.
 
-[2] (C:\Github\project\bakalarska-praca-chovancova\main.lof)
+[2])
+\tf@toc=\write5
+ [3] (C:\Github\project\bakalarska-praca-chovancova\main.lof)
 \tf@lof=\write6
- [3
+ [4
 
 ]
 (C:\Github\project\bakalarska-praca-chovancova\main.lot)
 \tf@lot=\write7
- [4
+ [5
 
 ]
 (C:\Github\project\bakalarska-praca-chovancova\main.lol)
@@ -858,7 +858,7 @@ LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 124
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )
-<obrazky/jednoduchyKruh.png, id=199, 131.74219pt x 128.73094pt>
+<obrazky/jednoduchyKruh.png, id=219, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
@@ -883,13 +883,31 @@ Kapitola 2.
 
 ] [9]) [10] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
 Kapitola 3.
+
+Underfull \hbox (badness 3514) in paragraph at lines 46--47
+[]|\IL2/ptm/m/n/12 vyplnenie ne-pre-h�ad-nosti, na-do-
+ []
+
+
+Overfull \hbox (10.93405pt too wide) in paragraph at lines 37--62
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 4.99005pt on input line 66.
+
+[11
+
+
+
+] [12]
 Runaway argument?
-Kľúč \unskip \relax \d@llarend \hfil \hskip \col@sep \vrule width\arrayrulew
-idth 
+ríkaz \unskip \relax \d@llarend \hfil \hskip \col@sep \vrule width\arrayrulewi
+dth 
 ! Forbidden control sequence found while scanning use of \check@nocorr@.
 <inserted text> 
                 \par 
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+l.93 ...e \textbf{Príkaz & Názov & Parametre \\}
                                                   
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -899,7 +917,7 @@ you'd better type `E' or `X' now and fix your file.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+l.93 ...e \textbf{Príkaz & Názov & Parametre \\}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -910,7 +928,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+l.93 ...e \textbf{Príkaz & Názov & Parametre \\}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -921,7 +939,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 \text@command ...e \check@nocorr@ #1\nocorr \@nil 
                                                   \fi \fi 
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+l.93 ...e \textbf{Príkaz & Názov & Parametre \\}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -932,41 +950,36 @@ and I'll forget about whatever was undefined.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
-                                                  
+l.94 	\hline
+             M & moveto & (x y)+ \\
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-! You can't use `\hrule' here except with leaders.
-\hline ->\noalign {\ifnum 0=`}\fi \hrule 
-                                         \@height \arrayrulewidth \futurelet...
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
-                                                  
-To put a horizontal rule in an hbox or an alignment,
-you should use \leaders or \hrulefill (see The TeXbook).
+! Misplaced alignment tab character &.
+l.94 	\hline M &
+                 moveto & (x y)+ \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! Missing number, treated as zero.
-<to be read again> 
-                   \futurelet 
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+! Misplaced alignment tab character &.
+l.94 	\hline M & moveto &
+                          (x y)+ \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \futurelet 
-l.84 ...úč & Hodnota & Príklad & Využitie \\ }
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.85 		\hlin
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.95 	\hline
+             Z & closepath & (none) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematu
