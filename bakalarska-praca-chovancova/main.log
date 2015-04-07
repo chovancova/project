@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 09:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  7 APR 2015 12:36
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -883,154 +883,90 @@ Kapitola 2.
 
 ] [9]) [10] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
 Kapitola 3.
-[11
+Runaway argument?
+Kľúč \unskip \relax \d@llarend \hfil \hskip \col@sep \vrule width\arrayrulew
+idth 
+! Forbidden control sequence found while scanning use of \check@nocorr@.
+<inserted text> 
+                \par 
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-]) [12] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.tex
-Kapitola 4.
-<obrazky/obr1.png, id=284, 1028.34187pt x 578.16pt>
-File: obrazky/obr1.png Graphic file (type png)
- <use obrazky/obr1.png>
-Package pdftex.def Info: obrazky/obr1.png used on input line 9.
-(pdftex.def)             Requested size: 426.79134pt x 239.95839pt.
+! Undefined control sequence.
+\text@command ...e \check@nocorr@ #1\nocorr \@nil 
+                                                  \fi \fi 
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[13
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
+! You can't use `\hrule' here except with leaders.
+\hline ->\noalign {\ifnum 0=`}\fi \hrule 
+                                         \@height \arrayrulewidth \futurelet...
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+To put a horizontal rule in an hbox or an alignment,
+you should use \leaders or \hrulefill (see The TeXbook).
 
+! Missing number, treated as zero.
+<to be read again> 
+                   \futurelet 
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
- <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr2.png, id=291, 1028.34187pt x 578.16pt>
-File: obrazky/obr2.png Graphic file (type png)
- <use obrazky/obr2.png>
-Package pdftex.def Info: obrazky/obr2.png used on input line 22.
-(pdftex.def)             Requested size: 426.79134pt x 239.95839pt.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \futurelet 
+l.84 ...úč & Hodnota & Príklad & Využitie \\ }
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-<obrazky/obr3.png, id=293, 203.25937pt x 182.93344pt>
-File: obrazky/obr3.png Graphic file (type png)
- <use obrazky/obr3.png>
-Package pdftex.def Info: obrazky/obr3.png used on input line 32.
-(pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
-
-<obrazky/obr6.png, id=295, 502.12593pt x 465.23813pt>
-File: obrazky/obr6.png Graphic file (type png)
- <use obrazky/obr6.png>
-Package pdftex.def Info: obrazky/obr6.png used on input line 60.
-(pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
-
-[14 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>] [15 <C:/G
-ithub/project/bakalarska-praca-chovancova/obrazky/obr3.png> <C:/Github/project/
-bakalarska-praca-chovancova/obrazky/obr6.png>]
-<obrazky/obr5.png, id=308, 500.62032pt x 463.7325pt>
-File: obrazky/obr5.png Graphic file (type png)
- <use obrazky/obr5.png>
-Package pdftex.def Info: obrazky/obr5.png used on input line 72.
-(pdftex.def)             Requested size: 199.65639pt x 184.9429pt.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `IL2/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `IL2/cmtt/m/n' tried instead on input line 82.
- [16 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>]) [17]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.tex
-Kapitola 5.
-[18
-
-
-
-] [19] [20]) [21]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap6.tex
-Kapitola 6.
-) [22
-
-
-
-] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.tex
-Kapitola 7.
-) [23
-
-
-
-] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap8.tex
-Kapitola 8.
-) [24
-
-
-
-] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap9.tex
-Kapitola 9.
-) [25
-
-
-
-] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.tex)
-[26
-
-
-
-] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [27
-
-
-
-]) [28]
-(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [29
-
-
-
-]) [30
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
-
-(C:\Github\project\bakalarska-praca-chovancova\main.aux
-(C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap1.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap2.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap6.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap8.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap9.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.aux)
-(C:\Github\project\bakalarska-praca-chovancova\ine/lit.aux)
-(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 153.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 90 ({)
-### bottom level 
-Here is how much of TeX's memory you used:
- 13956 strings out of 493921
- 192241 string characters out of 3144865
- 326771 words of memory out of 3000000
- 16708 multiletter control sequences out of 15000+200000
- 32336 words of font info for 77 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 30i,10n,56p,821b,2010s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.
-enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cs/csitt10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on main.pdf (38 pages, 400265 bytes).
-PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 226 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.85 		\hlin
