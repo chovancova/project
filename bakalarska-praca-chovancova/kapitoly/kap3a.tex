@@ -68,8 +68,18 @@ el.attr({
 
 
 \section{Element.animate()}
+ Snap.animation = function (attr, ms, easing, callback) 
 
+- attr (object) attributes of final destination
+- duration (number) duration of the animation, 
 
+in milliseconds
+- easing (function) \#optional one of easing 
+
+functions of @mina or custom one
+- callback (function) \#optional callback 
+
+function that fires when animation ends
 
 
 \section{Gradinets, Path String, Colour Parsing}
@@ -80,6 +90,7 @@ Sú dve možnosti ako zobraziť gradient.
 	alebo "0 - \#fff - \#00f : 20 - \#000" $0^o$ gradient z bielej cez modrú pri  20\% a potom na čiernu. 
 	\item \textbf{Radial gradient: }"r[($<$fx$>$, $<$fy$>$)]$<$farba$>$[-$<$farba$>$[>$<$ofset$>$]]*-$<$farba$>$", napríklad: "r\#fff-\#000" - je gradient z bielej na čiernu alebo "r(0.25, 0.75)\#fff-\#000" - gradient z bielej na čiernu s zameraním na bod 0.25 a 0.75. Súradnicové body sú zo škály 0...1. Môžu byť len použité pre kruhy, a elipsy.
 \end{itemize}
+
 
 \subsection{Paper.path([pathString])}
 Vytvorí $<$path$>$ element podľa daného reťazca. Parameter pozostáva z jedno písmenkových príkazov, nasledovanými bodkami a oddeľovaný argumentami a číslami. 
@@ -108,3 +119,30 @@ Krátky zoznam príkazov je uvedený v tabuľke ....
 \end{table}
 	\end{center}
 		
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Easing}
+
+\begin{itemize}
+\item 	“linear”
+\item 	“<” or “easeIn” or “ease-in”
+\item 	“>” or “easeOut” or “ease-out”
+\item 	“<>” or “easeInOut” or “ease-in-out”
+\item 	“backIn” or “back-in”
+\item 	“backOut” or “back-out”
+\item 	“elastic”
+\item 	“bounce”
+\end{itemize}
+
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  8 APR 2015 09:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  8 APR 2015 11:20
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -897,10 +897,10 @@ LaTeX Warning: Float too large for page by 4.99005pt on input line 66.
 
 
 
-] [12]) [13] [14]
+] [12] [13]) [14]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.tex
 Kapitola 4.
-<obrazky/obr1.png, id=315, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=316, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 9.
@@ -911,26 +911,26 @@ Package pdftex.def Info: obrazky/obr1.png used on input line 9.
 
 
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr2.png, id=322, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=323, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 22.
 (pdftex.def)             Requested size: 426.79134pt x 239.95839pt.
 
-<obrazky/obr3.png, id=324, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=325, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 32.
 (pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
 
-<obrazky/XmlEditor.png, id=326, 579.66562pt x 379.4175pt>
+<obrazky/XmlEditor.png, id=327, 1371.1225pt x 770.88pt>
 File: obrazky/XmlEditor.png Graphic file (type png)
 
 <use obrazky/XmlEditor.png>
 Package pdftex.def Info: obrazky/XmlEditor.png used on input line 59.
-(pdftex.def)             Requested size: 284.52756pt x 186.23462pt.
+(pdftex.def)             Requested size: 284.52756pt x 159.9605pt.
  [16 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>] <obrazky
-/obr6.png, id=334, 502.12593pt x 465.23813pt>
+/obr6.png, id=335, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
 
 <use obrazky/obr6.png>
@@ -938,7 +938,7 @@ Package pdftex.def Info: obrazky/obr6.png used on input line 73.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
  [17 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png> <C:/Githu
 b/project/bakalarska-praca-chovancova/obrazky/XmlEditor.png>] <obrazky/obr5.png
-, id=342, 500.62032pt x 463.7325pt>
+, id=343, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
 
 <use obrazky/obr5.png>
@@ -1048,9 +1048,9 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
 ### simple group (level 1) entered at line 90 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13910 strings out of 493921
- 191641 string characters out of 3144865
- 326575 words of memory out of 3000000
+ 13911 strings out of 493921
+ 191652 string characters out of 3144865
+ 327573 words of memory out of 3000000
  16650 multiletter control sequences out of 15000+200000
  33854 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1065,8 +1065,9 @@ KTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (42 pages, 424582 bytes).
+Output written on main.pdf (42 pages, 484567 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 237 named destinations out of 1000 (max. 500000)
+ 597 PDF objects out of 1000 (max. 8388607)
+ 238 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

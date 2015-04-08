@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {3.4}Gradinets, Path String, Colour Parsing}{13}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Gradients}{13}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Paper.path([pathString])}{13}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Easing}{14}{section.3.5}
 \contentsline {chapter}{\numberline {4}Grafick\IeC {\'y} komponent v Inkscape}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Vytvorenie SVG v programe Inkscape}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Zistenie id SVG}{16}{section.4.2}
