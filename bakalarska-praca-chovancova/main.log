@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  8 APR 2015 11:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  8 APR 2015 14:22
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -652,9 +652,6 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
 Package: acronym 2014/09/29 v1.40 Support for acronyms (Tobias Oetiker)
 
@@ -671,6 +668,9 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks25
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap1.aux)
@@ -686,25 +686,25 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/lit.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/skratky.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Try loading font information for IL2+ptm on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Try loading font information for IL2+ptm on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\cspsfonts\il2ptm.fd"
 File: il2ptm.fd 1998/01/31 CS Times
@@ -729,7 +729,7 @@ LaTeX Font Info:    Created by CsPsFont utility v.1.0e (C) Z. Wagner, 1998/01/3
 )
 \c@lstlisting=\count129
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 77.
+Package hyperref Info: Link coloring OFF on input line 86.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -738,9 +738,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
 
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.tex
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 46
@@ -786,17 +786,17 @@ arning (ext4): destination with the same identifier (name{page.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \end{abstract}
+l.85 \end{abstract}
                     [1]pdfTeX warning (ext4): destination with the same identif
 ier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.116 \end{abstract}
+l.118 \end{abstract}
                      [1])pdfTeX warning (ext4): destination with the same ident
 ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 \include{ine/title}
+l.93 \include{ine/title}
                         	% Titulna strana, Abstrakt, Prehlasenie [1]
 (C:\Github\project\bakalarska-praca-chovancova\main.toc [1
 
@@ -804,7 +804,7 @@ l.84 \include{ine/title}
 ]
 
 LaTeX Font Warning: Font shape `IL2/ptm/m/sl' in size <12> not available
-(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 51.
+(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 53.
 
 [2])
 \tf@toc=\write5
@@ -824,7 +824,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \clearpage
+l.123 \clearpage
                  [1
 
 ]
@@ -850,18 +850,20 @@ Package acronym Info: Label `acro:W3C' overridden on input line 65.
 
 
 ] [5]
-LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 124
-.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
-File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 125.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
 )
-<obrazky/jednoduchyKruh.png, id=223, 131.74219pt x 128.73094pt>
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 125.
+
+[6] <obrazky/jednoduchyKruh.png, id=256, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
 Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 154.
 (pdftex.def)             Requested size: 131.74185pt x 128.7306pt.
- [6]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 165.
 
 
@@ -874,13 +876,22 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3.tex
 Kapitola 2.
-[8
+LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 12.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
+File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
+) [8
 
 
 
-] [9]) [10] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
+] [9])
+[10] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
 Kapitola 3.
+[11
 
+
+
+]
 Underfull \hbox (badness 3514) in paragraph at lines 46--47
 []|\IL2/ptm/m/n/12 vyplnenie ne-pre-hµad-nosti, na-do-
  []
@@ -893,14 +904,10 @@ Overfull \hbox (10.93405pt too wide) in paragraph at lines 37--62
 
 LaTeX Warning: Float too large for page by 4.99005pt on input line 66.
 
-[11
-
-
-
-] [12] [13]) [14]
+[12] [13]) [14]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.tex
 Kapitola 4.
-<obrazky/obr1.png, id=316, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=324, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 9.
@@ -911,26 +918,26 @@ Package pdftex.def Info: obrazky/obr1.png used on input line 9.
 
 
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr2.png, id=323, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=331, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 22.
 (pdftex.def)             Requested size: 426.79134pt x 239.95839pt.
 
-<obrazky/obr3.png, id=325, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=333, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 32.
 (pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
 
-<obrazky/XmlEditor.png, id=327, 1371.1225pt x 770.88pt>
+<obrazky/XmlEditor.png, id=335, 1371.1225pt x 770.88pt>
 File: obrazky/XmlEditor.png Graphic file (type png)
 
 <use obrazky/XmlEditor.png>
 Package pdftex.def Info: obrazky/XmlEditor.png used on input line 59.
 (pdftex.def)             Requested size: 284.52756pt x 159.9605pt.
  [16 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>] <obrazky
-/obr6.png, id=335, 502.12593pt x 465.23813pt>
+/obr6.png, id=343, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
 
 <use obrazky/obr6.png>
@@ -938,7 +945,7 @@ Package pdftex.def Info: obrazky/obr6.png used on input line 73.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
  [17 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png> <C:/Githu
 b/project/bakalarska-praca-chovancova/obrazky/XmlEditor.png>] <obrazky/obr5.png
-, id=343, 500.62032pt x 463.7325pt>
+, id=351, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
 
 <use obrazky/obr5.png>
@@ -950,33 +957,33 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `IL2/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `IL2/cmtt/m/n' tried instead on input line 95.
- [18 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr6.png>]) [19] [2
-0 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>]
+) [18 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr6.png>]) [19] [
+20 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.tex
 Kapitola 5.
 [21
 
 
 
-] [22] [23]) [24]
+] [22] [23] [24]) [25]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap6.tex
 Kapitola 6.
-) [25
+Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
+
+although it is yet undefined on input line 11.
+) [26
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.tex
 Kapitola 7.
-) [26
+) [27
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap8.tex
 Kapitola 8.
-) [27
+) [28
 
 
 
@@ -1000,29 +1007,29 @@ Overfull \hbox (183.04462pt too wide) in paragraph at lines 32--33
 s / performance / rendering / optimize-[]javascript-[]execution ?$
  []
 
-) [28
+) [29
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.tex)
-[29
+[30
 
 
 
-] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [30
+] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [31
 
 
 
-]) [31]
-(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [32
+]) [32]
+(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [33
 
 
 
-]) [33
+]) [34
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
 
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
@@ -1039,35 +1046,35 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/lit.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/skratky.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 153.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 162.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 90 ({)
+### simple group (level 1) entered at line 99 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13911 strings out of 493921
- 191652 string characters out of 3144865
- 327573 words of memory out of 3000000
- 16650 multiletter control sequences out of 15000+200000
- 33854 words of font info for 79 fonts, out of 3000000 for 9000
+ 13937 strings out of 493921
+ 192049 string characters out of 3144865
+ 324200 words of memory out of 3000000
+ 16667 multiletter control sequences out of 15000+200000
+ 33546 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,10n,53p,821b,2295s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,10n,53p,821b,2258s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.enc}<C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
-rw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on main.pdf (42 pages, 484567 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on main.pdf (43 pages, 483747 bytes).
 PDF statistics:
- 597 PDF objects out of 1000 (max. 8388607)
- 238 named destinations out of 1000 (max. 500000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
