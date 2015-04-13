@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  9 APR 2015 07:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  13 APR 2015 11:37
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -804,7 +804,7 @@ l.93 \include{ine/title}
 ]
 
 LaTeX Font Warning: Font shape `IL2/ptm/m/sl' in size <12> not available
-(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 53.
+(Font)              Font shape `IL2/ptm/m/it' tried instead on input line 52.
 
 [2])
 \tf@toc=\write5
@@ -853,7 +853,7 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 125.
 
-[6] <obrazky/jednoduchyKruh.png, id=251, 131.74219pt x 128.73094pt>
+[6] <obrazky/jednoduchyKruh.png, id=249, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
@@ -902,7 +902,7 @@ LaTeX Warning: Float too large for page by 4.99005pt on input line 66.
 [12] [13]) [14]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4.tex
 Kapitola 4.
-<obrazky/obr1.png, id=319, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=317, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 9.
@@ -913,26 +913,26 @@ Package pdftex.def Info: obrazky/obr1.png used on input line 9.
 
 
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png>]
-<obrazky/obr2.png, id=326, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=324, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 22.
 (pdftex.def)             Requested size: 426.79134pt x 239.95839pt.
 
-<obrazky/obr3.png, id=328, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=326, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 32.
 (pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
 
-<obrazky/XmlEditor.png, id=330, 1371.1225pt x 770.88pt>
+<obrazky/XmlEditor.png, id=328, 1371.1225pt x 770.88pt>
 File: obrazky/XmlEditor.png Graphic file (type png)
 
 <use obrazky/XmlEditor.png>
 Package pdftex.def Info: obrazky/XmlEditor.png used on input line 59.
 (pdftex.def)             Requested size: 284.52756pt x 159.9605pt.
  [16 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png>] <obrazky
-/obr6.png, id=337, 502.12593pt x 465.23813pt>
+/obr6.png, id=335, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
 
 <use obrazky/obr6.png>
@@ -940,20 +940,19 @@ Package pdftex.def Info: obrazky/obr6.png used on input line 73.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
  [17 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png> <C:/Githu
 b/project/bakalarska-praca-chovancova/obrazky/XmlEditor.png>] <obrazky/obr5.png
-, id=346, 500.62032pt x 463.7325pt>
+, id=344, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
 
 <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 85.
 (pdftex.def)             Requested size: 199.65639pt x 184.9429pt.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [18 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr6.png>]) [19] [
-20 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>]
+
+Package Listings Warning: Text dropped after begin of listing on input line 93.
+
+
+[18 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr6.png>]) [19]
+[20 <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.tex
 Kapitola 5.
 [21
@@ -965,20 +964,20 @@ Kapitola 5.
 Kapitola 6.
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
-although it is yet undefined on input line 11.
-[26
+although it is yet undefined on input line 13.
+) [26
 
 
 
-]) [27] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.tex
+] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.tex
 Kapitola 7.
-) [28
+) [27
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap8.tex
 Kapitola 8.
-) [29
+) [28
 
 
 
@@ -1002,25 +1001,25 @@ Overfull \hbox (183.04462pt too wide) in paragraph at lines 32--33
 s / performance / rendering / optimize-[]javascript-[]execution ?$
  []
 
-) [30
+) [29
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.tex)
-[31
+[30
 
 
 
-] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [32
+] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [31
 
 
 
-]) [33]
-(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [34
+]) [32]
+(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [33
 
 
 
-]) [35
+]) [34
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
@@ -1050,13 +1049,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
 ### simple group (level 1) entered at line 99 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13932 strings out of 493921
- 191909 string characters out of 3144865
- 324195 words of memory out of 3000000
- 16666 multiletter control sequences out of 15000+200000
+ 13731 strings out of 493921
+ 189588 string characters out of 3144865
+ 323246 words of memory out of 3000000
+ 16461 multiletter control sequences out of 15000+200000
  33546 words of font info for 79 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,10n,53p,821b,2258s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,10n,43p,821b,1975s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.enc}<C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
@@ -1067,9 +1066,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (43 pages, 484500 bytes).
+Output written on main.pdf (42 pages, 484797 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 241 named destinations out of 1000 (max. 500000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,47 +20,37 @@
    id="svg3"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="PumpingStation.svg"><metadata
-   id="metadata3107"><rdf:RDF><cc:Work
-       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
-   id="defs3105" /><sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1366"
-   inkscape:window-height="745"
-   id="namedview3103"
-   showgrid="false"
-   inkscape:zoom="0.87"
-   inkscape:cx="235.1781"
-   inkscape:cy="298.85541"
-   inkscape:window-x="-8"
-   inkscape:window-y="-8"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="stanica"
-   fit-margin-top="0"
-   fit-margin-left="0"
-   fit-margin-right="0"
-   fit-margin-bottom="0" />
-<g
-   id="Layer_1"
-   transform="translate(0.05906059,-12.324741)">
-</g>
-
-
-
-
-
-<g
-   id="stanica"
-   transform="matrix(0.47240637,0,0,0.47240637,-828.08361,-307.68173)"><g
-     transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
-     id="Layer_2">
+     id="metadata3107"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+     id="defs3105" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     id="namedview3103"
+     showgrid="false"
+     inkscape:zoom="0.87"
+     inkscape:cx="235.1781"
+     inkscape:cy="299.43012"
+     inkscape:window-x="-32000"
+     inkscape:window-y="-32000"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" /><g
+     id="stanica"
+     transform="matrix(0.47240637,0,0,0.47240637,-828.08361,-307.68173)"><g
+       transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
+       id="Layer_2">
 	<path
    style="fill:#028c4e;stroke:#17321b;stroke-width:10.41569996;stroke-miterlimit:10"
    inkscape:connector-curvature="0"
@@ -74,8 +64,8 @@
    d="m 2823.776,1701.049 h -265.484 v -262.241 c 0,0 -0.085,-3.862 1.687,-5.526 1.771,-1.663 5.907,-1.522 5.907,-1.522 l 249.945,0 c 0,0 2.572,-0.138 5.447,1.587 2.543,1.786 2.498,4.661 2.498,4.661 v 263.044 z"
    stroke-miterlimit="10" />
 </g><g
-     transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
-     id="Layer_3">
+       transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
+       id="Layer_3">
 	
 		<rect
    style="fill:#657e7f;stroke:#000000;stroke-width:4;stroke-miterlimit:10"
@@ -194,8 +184,8 @@
    stroke-miterlimit="10"
    y="1532.3806"
    x="2648.3352" /></g><g
-     transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
-     id="Layer_4">
+       transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
+       id="Layer_4">
 	<rect
    style="fill:#010202"
    id="rect3083"
@@ -237,72 +227,63 @@
    cy="1100.853"
    cx="2691.0349" />
 </g><g
-     transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
-     id="vrtule"><desc
-   id="desc3123">vrtulky cerpadla motora</desc><title
-   id="title3121">vrtule</title>
-	<rect
-   style="fill:#fecb06"
-   id="rect3092"
-   height="152.992"
-   width="17.273001"
-   y="1024.35"
-   x="2682.397" />
-	<rect
-   style="fill:#ffcc04"
-   id="rect3094"
-   height="17.273001"
-   width="152.992"
-   y="1092.209"
-   x="2614.5381" />
-	<circle
-   style="fill:#fecb06"
-   sodipodi:ry="25.292999"
-   sodipodi:rx="25.292999"
-   sodipodi:cy="1100.8459"
-   sodipodi:cx="2691.0339"
-   d="m 2716.3269,1100.8459 c 0,13.969 -11.324,25.293 -25.293,25.293 -13.9689,0 -25.293,-11.324 -25.293,-25.293 0,-13.9689 11.3241,-25.293 25.293,-25.293 13.969,0 25.293,11.3241 25.293,25.293 z"
-   id="circle3096"
-   r="25.292999"
-   cy="1100.8459"
-   cx="2691.0339" />
-	<circle
-   style="fill:#cb9904"
-   sodipodi:ry="14.822"
-   sodipodi:rx="14.822"
-   sodipodi:cy="1100.8459"
-   sodipodi:cx="2691.0349"
-   d="m 2705.8569,1100.8459 c 0,8.186 -6.636,14.822 -14.822,14.822 -8.186,0 -14.822,-6.636 -14.822,-14.822 0,-8.1859 6.636,-14.822 14.822,-14.822 8.186,0 14.822,6.6361 14.822,14.822 z"
-   id="circle3098"
-   r="14.822"
-   cy="1100.8459"
-   cx="2691.0349" />
-</g><g
-     transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
-     id="Layer_6">
-	<path
-   style="fill:#cc1417;stroke:#140606;stroke-width:2.72519994000000000;stroke-miterlimit:10;stroke-opacity:1"
-   inkscape:connector-curvature="0"
-   id="ventil"
-   d="M 2073.867,1504.246 H 1969.23 v -31.418 c 0,0 0.238,-2.986 2.655,-5.404 2.418,-2.417 6.968,-2.198 6.968,-2.198 h 83.613 l 1.423,8.455 9.978,3.129 v 27.436 z"
-   stroke-miterlimit="10"><desc
-     id="desc3111">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc></path>
-</g><rect
-     inkscape:label="#hladina1"
-     y="1912.7173"
-     x="2507.533"
-     height="16.300568"
-     width="796.5788"
-     id="hladina1"
-     style="fill:#0000ff;fill-opacity:0.6507937;fill-rule:evenodd;stroke:#000000;stroke-width:1.21760452px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><desc
-       id="desc3119">hladina1</desc><title
-       id="title3117">hladina1</title></rect><rect
-     inkscape:label="#hladina"
-     y="1320.1689"
-     x="2507.8459"
-     height="605.83868"
-     width="797.04492"
-     id="hladina"
-     style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:7.42523718px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
-       id="desc3119-4">hladina</desc><title
-       id="title3117-0">hladina</title></rect></g></svg>
+       transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
+       id="vrtule"><rect
+         style="fill:#fecb06"
+         id="rect3092"
+         height="152.992"
+         width="17.273001"
+         y="1024.35"
+         x="2682.397" /><rect
+         style="fill:#ffcc04"
+         id="rect3094"
+         height="17.273001"
+         width="152.992"
+         y="1092.209"
+         x="2614.5381" /><circle
+         style="fill:#fecb06"
+         sodipodi:ry="25.292999"
+         sodipodi:rx="25.292999"
+         sodipodi:cy="1100.8459"
+         sodipodi:cx="2691.0339"
+         d="m 2716.3269,1100.8459 c 0,13.969 -11.324,25.293 -25.293,25.293 -13.9689,0 -25.293,-11.324 -25.293,-25.293 0,-13.9689 11.3241,-25.293 25.293,-25.293 13.969,0 25.293,11.3241 25.293,25.293 z"
+         id="circle3096"
+         r="25.292999"
+         cy="1100.8459"
+         cx="2691.0339" /><circle
+         style="fill:#cb9904"
+         sodipodi:ry="14.822"
+         sodipodi:rx="14.822"
+         sodipodi:cy="1100.8459"
+         sodipodi:cx="2691.0349"
+         d="m 2705.8569,1100.8459 c 0,8.186 -6.636,14.822 -14.822,14.822 -8.186,0 -14.822,-6.636 -14.822,-14.822 0,-8.1859 6.636,-14.822 14.822,-14.822 8.186,0 14.822,6.6361 14.822,14.822 z"
+         id="circle3098"
+         r="14.822"
+         cy="1100.8459"
+         cx="2691.0349" /></g><g
+       transform="matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)"
+       id="Layer_6"><path
+         style="fill:#cc1417;stroke:#140606;stroke-width:2.72519994000000000;stroke-miterlimit:10;stroke-opacity:1"
+         inkscape:connector-curvature="0"
+         id="ventil"
+         d="M 2073.867,1504.246 H 1969.23 v -31.418 c 0,0 0.238,-2.986 2.655,-5.404 2.418,-2.417 6.968,-2.198 6.968,-2.198 h 83.613 l 1.423,8.455 9.978,3.129 v 27.436 z"
+         stroke-miterlimit="10"><desc
+           id="desc3111">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc></path></g><rect
+       inkscape:label="#hladina1"
+       y="1912.7173"
+       x="2507.533"
+       height="16.300568"
+       width="796.5788"
+       id="hladina1"
+       style="fill:#0000ff;fill-opacity:0.6507937;fill-rule:evenodd;stroke:#000000;stroke-width:1.21760452px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><desc
+         id="desc3119">hladina1</desc><title
+         id="title3117">hladina1</title></rect><rect
+       inkscape:label="#hladina"
+       y="1325.6111"
+       x="2507.8459"
+       height="600.39648"
+       width="797.04492"
+       id="hladina"
+       style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:7.39181185px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
+         id="desc3119-4">hladina</desc><title
+         id="title3117-0">hladina</title></rect></g></svg>
