@@ -1,23 +1,47 @@
 \chapter*{Úvod}
 \addcontentsline{toc}{chapter}{Úvod}
 
-Téma práce je vizualizácia technologických dát zo SCADA systémov na webe.  Produktom Bakalárskej práce je  vzorová sada grafických komponent na vizualizáciu technologických procesov s využitím HTML 5 štandardov.  Jedná sa o grafické komponenty, ktoré nie sú bežne dostupné na tvorbu interaktívnych webových aplikácií ako napríklad vizualizácie mechanických súčastí hydraulických systémov, alebo technologických liniek, vizualizácie silových a výkonových častí automatizačných sústav. 
+Téma práce je vizualizácia technologických dát zo SCADA systémov na webe. Cieľ práce je nájsť postup tvorby a vizualizácie grafických komponentov. Produktom bakalárskej práce je grafický komponent na vizualizáciu technologických procesov s využitím HTML 5 štandardov. 
+V práci je animovaná prečerpávacia stanica. Navrhnutý bol aj interface, pomocou ktorého komponenty komunikujú so serverovou časťou SCADA systému. 
+
+% Jedná sa o grafické komponenty, ktoré nie sú bežne dostupné na tvorbu interaktívnych webových aplikácií ako napríklad vizualizácie mechanických súčastí hydraulických systémov, alebo technologických liniek, vizualizácie silových a výkonových častí automatizačných sústav. 
 Návrh  interface, pomocou ktorého budú tieto komponenty komunikovať so serverovou časťou SCADA systému. 
 
 V súčasnosti je v IPESOFT s.r.o. software, ktorý dokáže vizualizovať dáta z technológii pomocou "hrubých klientov",  čo sú natívne (exe) Windows aplikácie a je technológia,  ktorá dokáže rovnaké dáta zobrazovať na webe. 
 
 Aktuálna webová prezentácia takýchto dát nespĺňa súčasne štandardy pre moderne webové aplikácie a preto je potrebne nájsť nový spôsob vizualizácie na webe, ktorá bude v budúcnosti použiteľná na rôznych platformách, nielen na PC. 
 
+Výsledná webová aplikácia je kompatibilná s štandardmi HTML 5. Riešenie využíva výhradne open-source knižnice s licenciami typu MIT, GNU GPL, BSD, Apache 2. Zdrojové kódy práce sú udržiavané v Git repository. \url{https://github.com/chovancova/project} 
 
-Cieľová platforma pre výslednú webovú aplikáciu bude každý web prehliadač kompatibilný s rodinou štandardov HTML 5. Riešenie bude využívať výhradne open-source knižnice s licenciami typu MIT, GNU GPL, BSD. Zdrojové kódy práce budú udržiavané v Git repository.
+%Cieľová platforma pre výslednú webovú aplikáciu bude každý webový prehliadač kompatibilný s rodinou štandardov HTML 5. Riešenie bude využívať výhradne open-source knižnice s licenciami typu MIT, GNU GPL, BSD. Zdrojové kódy práce budú udržiavané v Git repository.
 
-Predbežný postup práce:
+%Predbežný postup práce:
+%
+%\begin{enumerate}
+%\item  Analýza požiadaviek, prieskum možnosti využitia \acs{WYSIWYG}\par editorov na tvorbu grafických komponent s možnosťou exportu do formátov \acs{SVG}, \acs{JSON}, \acs{XML}, alebo JavaScript.
+%\item Výber vhodných open-source knižníc na tvorbu grafických komponent kompatibilných s HTML 5.
+%\item Návrh \acs{REST} \acs{API} na prepojenie grafických komponent so \acs{SCADA} serverom.
+%\item  Analýza možnosti automatického mapovania API grafických prvkov pomocou metadát na existujúce API dostupné pre SCADA server D2000.
+%\item  Implementácia vzorovej sady grafických komponent.
+%\item  Analýza výkonnosti a výkonnostné obmedzenia.
+%\end{enumerate}
 
+
+Postup práce: 
 \begin{enumerate}
 \item  Analýza požiadaviek, prieskum možnosti využitia \acs{WYSIWYG}\par editorov na tvorbu grafických komponent s možnosťou exportu do formátov \acs{SVG}, \acs{JSON}, \acs{XML}, alebo JavaScript.
 \item Výber vhodných open-source knižníc na tvorbu grafických komponent kompatibilných s HTML 5.
 \item Návrh \acs{REST} \acs{API} na prepojenie grafických komponent so \acs{SCADA} serverom.
 \item  Analýza možnosti automatického mapovania API grafických prvkov pomocou metadát na existujúce API dostupné pre SCADA server D2000.
+\item Popis postupu vizualizácie grafického komponentu 
 \item  Implementácia vzorovej sady grafických komponent.
 \item  Analýza výkonnosti a výkonnostné obmedzenia.
 \end{enumerate}
+
+
+
+
+
+
+
+
