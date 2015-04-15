@@ -1,5 +1,7 @@
 %\chapter{Implementácia komponentov}
-\chapter{Implementácia grafického komponentu}
+\chapter{Integrácia grafického komponentu pre dynamické ovládanie SVG objektu}
+
+TODO SUBOROVA STRUKTURA PRIDAT TODO
 
 \section{HTML súbor}
 Do HTML súboru index.html pridáme párový tag $<$svg$>$. Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
@@ -33,7 +35,7 @@ A ešte jedna vec pri HTML súbore - TODO.
 
 
 \section{PumpingStation.js}
-
+TODO
 V súbore PumpingStation.js sú funkcie na animovanie.. TODO
 \subsection{onPageLoad()}
 Táto funkcia sa spustí pri načítaní tela HTML súboru index.html. Funkcia spustí funkciu PumpingStation(). Prvý parameter je udaný konkrétny svg súbor, ktorý chcem načítať. Druhý parameter je id tagu svg, ktorý je v html. TODO
@@ -47,7 +49,7 @@ function onPageLoad() {
 \subsection{PumpingStation(par1, par2)}
 
 Funkcia inicializuje daný svg súbor, a vykreslí ho. 
-Parametre pre PumpingStation je názov svg súboru, a id, ktoré sa nachádza v tagu $<$svg$>$ html súbore.
+Parametre pre PumpingStation sú názov svg súboru, a id, ktoré sa nachádza v tagu $<$svg$>$ html súbore.
 
 \begin{lstlisting}
 var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
@@ -58,12 +60,12 @@ var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
 };
 \end{lstlisting}
 
-\textbf{paper} - bude globálna premenná. Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. Napríklad Snap(600, 800), alebo Snap("\#svgStanica"), resp Snap(). 
+\textbf{paper} - globálna premenná. TODO REFERENCIA NA PLOCHU ... Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. Napríklad Snap(600, 800), alebo Snap("\#svgStanica"), resp Snap(). 
 
-\textbf{load} - volám funkciu z knižnice Snap. Cez ňu načítam  svg súbor. Ako parametre funkcie je názov súboru svg, prípadne môže byť prázdny, ak nenačítavam súbor, ale beriem ho priamo z html súboru. Druhý parameter je funkcia, v ktorej volám funkciu na zobrazenie obsahu svg súboru do daného tagu svg s  id, ktorý bol daný pri funkcii paper.  Na plochu ho zobrazím pomocou príkazu append. TODO
+\textbf{load} - TODO funkciu z knižnice Snap. Cez ňu TODO načítam  svg súbor. Ako parametre funkcie je názov súboru svg, prípadne môže byť prázdny, ak TODO nenačítavam súbor, ale beriem ho priamo z html súboru. Druhý parameter je funkcia, v ktorej TODO volám funkciu na zobrazenie obsahu svg súboru do daného tagu svg s  id, ktorý bol daný pri funkcii paper.  Na plochu TODO ho zobrazím pomocou príkazu append. TODO
 
 \subsection{Tank}
-Zanimovanie stupania a klesania hladiny nadrze. 
+Zanimovanie stúpania a klesania hladiny nádrže. 
 \begin{lstlisting}
 var Tank = {
 	idTank: "#hladina",
@@ -83,8 +85,8 @@ var Tank = {
 	}
 };
 \end{lstlisting}
-
-Vytvorila som objekt Tank medzi jeho atribúty patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie daný objekt, ktorý chcem ovládať. Pomocou Tank.tank() môžem volať funkcie z Snap knižnice. n 
+TODO PRESTYLIZOVAT VYHODIT RODY MOJE TODO
+TODO Vytvorila som objekt Tank medzi jeho atribúty patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie daný objekt, ktorý chcem ovládať. Pomocou Tank.tank() môžem volať funkcie z Snap knižnice. 
 
 Zanimovanie tanku je realizované v funkcii animateComponentTank - kde parametrom je v percentách udané o koľko sa ma zdvihnúť hladina nadrze. 
 Využívam funkciu animate. Kde v prvom parametri - mením výšku a os y. Hodnotu perHeight je výška 600, ktorú vynásobím percentom o ktoré sa ma posunúť. PerY je hodnota, o ktorú sa posuniem po y-osi. Je vypočitaná ako 1912 co je y prázdnej nádrže a je od nej odpočítaná hodnota výšky. 
@@ -116,3 +118,6 @@ Názov farby môže byť uvedený slovne, alebo ako RGB.
 
 Zmena farby Valve - \begin{verbatim} this.valve().attr  ({fill: this.colorValve}); \end{verbatim}
 
+
+\section{TODO TRANSFORM}
+TODO TRANSFORM .. TODO
