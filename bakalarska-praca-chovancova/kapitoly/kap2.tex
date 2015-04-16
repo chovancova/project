@@ -87,13 +87,13 @@ SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s št
 %SVG drawings can be dynamic and interactive. The Document Object Model (DOM) for SVG, which includes the full XML DOM, allows for straightforward and efficient vector graphics animation via scripting. A rich set of event handlers such as onmouseover and onclick can be assigned to any SVG graphical object. Because of its compatibility and leveraging of other Web standards, features like scripting can be done on SVG elements and other XML elements from different namespaces simultaneously within the same Web page.
  
  
- \subsection{Podpora v prehliadači}
+ \subsection{Podpora v webovom prehliadači}
  Súčasné prehliadače plne podporujú SVG elementy.
  V tabuľke je TODO - PREROBIM TO ESTE DO TABULKY 
  \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/podpora}
-\caption{podpora SVG vo webových prehliadavačoch}
+\caption{podpora SVG vo webových prehliadačoch}
 \label{fig:podpora}
 \end{figure}
 
@@ -101,7 +101,9 @@ SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s št
 % http://caniuse.com/#feat=svg
  
  \subsection{Rozdiely medzi SVG a Canvas}
-TODO 
+TODO \url{http://www.petrpexa.cz/diplomky/trantyr.pdf} strana 52
+
+
  SVG je jazyk na opisanie dvojrozmernej grafiky v XML. 
  Canvas kreslí dvojrozmernú grafiku za behu programu cez JavaScript.
  SVG je XML založený, čo znamená, že každý element je dostupný cez SVG DOM. Môžem k tomu priložiť JavaScript na ovládanie udalostí elementov. TODO . 
@@ -124,12 +126,12 @@ TODO
  \begin{table}[h]
  \centering
  \begin{tabular}{|l|p{7.5cm} |}
- 	\hline Canvas & SVG \\
- 	 	\hline Rozlíšenie závislé & Rozlíšenie nezávislé \\ 
- 	\hline Nepodporuje manipuláciu udalostí & Podporuje manipuláciu udalostí \\ 
- 	\hline Malé vykresľovacie možnosti & Vhodné pre aplikácie s veľkými vykresľovacími plochami \\ 
- 	\hline Možnosť uložiť výsledok ako .png, .jpg & Pomalé vykresľovanie, ak je to komplexné \\ 
- 	\hline Veľmi vhodné pre grafické-intenzívne hry & Nevhodné pre hracie aplikácie \\ 
+ 	\hline \textbf{Canvas} & \textbf{SVG} \\
+ 	 	\hline Závislé na rozlíšení a \acs{DPI} & Nezávislé na rozlíšení a DPI \\ 
+ 	\hline Nepodporuje dynamické zmeny & Podporuje dynamické zmeny \\ 
+ 	\hline Obmedzené možnosti na vykresľovanie  & Vhodné pre aplikácie s veľkými plochami na vykresľovanie \\ 
+ 	\hline & Väčší výpočtový výkon pri komplexnom obrázku \\ 
+ 	\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
  	\hline 
  \end{tabular} 
 
@@ -140,13 +142,70 @@ TODO
  
  
  \section{Základná syntax \acs*{SVG}}
-
+TODO
 V HTML5 sa môžu používať vložené SVG elementy priamo v na HTML stránke. 
 %https://css-tricks.com/using-svg/
 
-TODO DOPLNIT POUTIZIIE TRI SPOSOBY \url{https://css-tricks.com/using-svg/}
+%TODO DOPLNIT POUTIZIIE TRI SPOSOBY \url{https://css-tricks.com/using-svg/}
 
-\subsection{Príklad použitia SVG v HTML }
+SVG can be created 
+-   inline: within the HTML document 
+-   by embedding a stand alone .SVG file
+
+
+Copy/paste SVG code within HTML code (inlining)
+Using the HTML img tag
+Using the HTML object tag
+Using the HTML iframe tag
+Using CSS (background images)
+Including SVG within SVG using the image tag.
+
+
+%citovane z knihy Sergey's HTML5 & CSS3 Quick Reference: HTML5, CSS3 and APIs (3rd Edition)
+%preview je volne dostupny na nete / aspon tie kapitoly, ktore potrebujem
+
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline \textbf{Technika} & \textbf{Popis} \\ 
+			\hline $<$embed$>$ tag & Načíta vytvorený SVG súbor.  \\ 
+			\hline $<$object$>$ tag & Nepovoľuje skriptovanie.  \\ 
+			\hline $<$iframe$>$ tag & Zobrazí SVG v rámci  \\ 
+			\hline Inline & Vytvorí Svg súbor \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	\caption{Spôsoby vytvorenia SVG v HTML dokumente}
+	\label{vytvorenie:SVG}
+\end{table}
+
+Príklady načítania SVG v HTML dokumente.
+
+$<$img$>$ tag 
+
+\begin{lstlisting}
+	Image:
+	<img src="stanica2.svg" width = "50" height= "50" />
+	
+	Embed:
+	<embed src="stanica2.svg" width = "50" height= "50" />
+	
+	Object:
+	<object type="image/svg+xml" data="stanica2.svg"
+	width="50" height="50"></object>
+	
+	Iframe:
+	<iframe src="stanica2.svg" width = "50" height= "50"><</iframe>
+	
+\end{lstlisting}
+
+
+
+
+
+
+\subsection{Príklad použitia SVG v HTML dokumentu s inline SVG }
 
 HTML kód: 
 
@@ -169,7 +228,7 @@ HTML kód:
 \end{lstlisting}
 
 
-\subsubsection{Popis  SVG kódu}
+
 
 SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu. Atribúty cx, cy definujú x, y súradnice od centra kruhu. Ak je cx, cy vynechané, tak center kruhu je nastavený na $($0, 0$)$. Atribút r  definuje polomer kruhu. Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
 Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. 
