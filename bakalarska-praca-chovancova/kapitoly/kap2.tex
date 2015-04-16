@@ -2,23 +2,22 @@
 % !TeX spellcheck = sk_SK
 % !TeX encoding = UTF-8
 \chapter{Základné pojmy}
+V kapitole sú popísané základné pojmy. 
 
+\section{\acs{HTML}5 štandard}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\acs{HTML} 5 štandardy}
-
-Medzi štandardy ... TODO
-
+\ac{W3C} vydalo štandard HTML5 dňa 28. októbra 2014. 
+HTML5 je podporovaný vo všetkých moderných webových prehliadačoch. 
 Na obrázku \ref{fig:obrazokHTML} je HTML5 API a súvisiace taxonómia technológií a ich status. 
 
-\begin{figure}
+\begin{center}
+	\begin{figure}[hp]
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/obrazokHTML}
 \caption{HTML 5 API}
 \label{fig:obrazokHTML}
 \end{figure}
+\end{center}
 %http://html5.belisso.com/
 
 
@@ -91,8 +90,23 @@ SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s št
  
  
  \subsection{Podpora v webovom prehliadači}
- Súčasné prehliadače plne podporujú SVG elementy.
- V tabuľke je TODO - PREROBIM TO ESTE DO TABULKY 
+ Súčasné prehliadače plne podporujú SVG elementy. V tabulke  \ref{svgpreh} je prehlad webovych prehliadacov a podpora pre ne. 
+  
+  Čísla v tabuľke \ref{svgpreh} špecifikujú prvú verziu webového prehliadača, ktorý plne podporuje $<$svg$>$ element.\cite{w3svg}
+  
+\begin{table}[hp]
+\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+		\hline \textbf{Element} & \textbf{Chrome} & \textbf{Internet} \textbf{Explorer}  & \textbf{Firefox}  & \textbf{Safari} & \textbf{Opera}  \\ 
+		\hline $<svg>$ & 4.0& 9.0 & 3.0 & 3.2  &   10.1 \\ 
+		\hline 
+	\end{tabular} 
+\end{center}
+	
+	\caption{Podpora HTML $<svg>$ elementu v webových prehliadačoch}
+	\label{svgpreh}
+\end{table}
+ 
  \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/podpora}
@@ -126,7 +140,7 @@ TODO \url{http://www.petrpexa.cz/diplomky/trantyr.pdf} strana 52
  Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG. 
 % The table below shows some important differences between Canvas and SVG:
  TODO DPI
- \begin{table}[h]
+ \begin{table}[hp]
  \centering
  \begin{tabular}{|l|p{7.5cm} |}
  	\hline \textbf{Canvas} & \textbf{SVG} \\
@@ -240,7 +254,7 @@ Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag,
 
 Vykreslí na HTML webovú stránku útvar, ktorý je na obrázku \ref{jednoduchyKruh}.
 
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics  {obrazky/jednoduchyKruh.png}
 		\caption{Vykreslenie SVG na HTML stránke}

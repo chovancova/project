@@ -1,3 +1,5 @@
+% !TeX encoding = UTF-8
+% !TeX root = ../main.tex
 \chapter{Príklad vytvorenia grafického komponentu v Inkscape}
 
 \section{Vytvorenie SVG v programe Inkscape}
@@ -7,7 +9,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 %Prečerpávacia stanica sa skladá z rúriek, ventila, nádrže, hladiny vody, motora, vrtuliek. Ako je možné vidieť na obrázku \ref{picture1}.  
 
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics [width=15cm] {obrazky/obr1.png}
 		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
@@ -20,7 +22,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. Sú v SVG označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
 
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics [width=15cm] {obrazky/obr2.png}
 		\caption{Zobrazenie menu pre daný objekt v Inkscape}
@@ -28,9 +30,9 @@ Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identi
 	\end{center}
 \end{figure}
 
-Po stlačení sa nám zobrazí nasledovné okno viď obrázok \ref{picture3}. 
+Po kliknutí sa nám zobrazí okno s názvom Object Properties. 
 
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics  {obrazky/obr3.png}
 		\caption{Object Properties}
@@ -39,13 +41,19 @@ Po stlačení sa nám zobrazí nasledovné okno viď obrázok \ref{picture3}.
 \end{figure}
 
 
-Z obrázka možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. Toto nám umožni TODO TODO potom neskôr ako CSS selektor, cez ktorý budeme môcť ovládať danú časť. Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
+Z obrázka č.\ref{picture3} možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+\newpage{}
+Toto nám umožni TODO TODO potom neskôr ako CSS selektor, cez ktorý budeme môcť ovládať danú časť. Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
 TODO ROZDIEL MEDZI ID A LABEL DESCRIPTION A TITTLE... TODO
+
+\newpage{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Alebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť tú hodnotu v PumpingStation.svg. Je to označené ako id="ventil".
 
 V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí na Interactivity sa zobrazia ďalšie kolónky, kde je možné zadať akciu, ktorá má nastať.  
 
-%\begin{figure}[ht]
+%\begin{figure}[hp]
 %	\begin{center}
 %		\includegraphics[height=7cm]  {obrazky/obr4.png}
 %		\caption{obrázok 4}
@@ -57,9 +65,9 @@ V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
 Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodu je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
-		\includegraphics[width=10cm]  {obrazky/XmlEditor.png}
+		\includegraphics[width=15cm]  {obrazky/XmlEditor.png}
 		\caption{Xml Editor v Inkscape}
 		\label{xmlEditor}
 	\end{center}
@@ -71,7 +79,7 @@ Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu v
 \subsection{Prázdna nádrž}
 Prázdna nádrž je zobrazená na obrázku \ref{picture6}
 Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastavenú na 9,64px. Šírka a súradnica x je rovnaká ako pri plnej nádrži. Súradnice osi y, x sú 1916,36 a 2507,84. Pri plnej nádrži sa zmení výška a os y. Pre animáciu zdvihnutia hladiny nádrže bude potrebné si zapamätať tieto súradnice. 
-\begin{figure}[ht]
+\begin{figure}[hp]
 	\begin{center}
 		\includegraphics [height=6.5cm]  {obrazky/obr6.png}
 		\caption{Prázdna nádrž prečerpávacej stanice}
@@ -113,9 +121,11 @@ V SVG súbore je to zapísané nasledovným kódom.
 </rect>
 \end{lstlisting}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+\newpage{}
 Parametre ako stroke, fill, a iné sa dajú meniť prostredníctvom FUNKCIE attr v Snap API. … TODO
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+\newpage{}
 TODO POPIS SURADNICOVEHO SYSTEMU VEDIET VYSVETLIT SUVISLOST MEDZI DPI A PIX SURADNICAMI. .TODO
 
 
