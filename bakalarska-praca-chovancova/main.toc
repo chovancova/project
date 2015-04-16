@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {1.2.2}Rozdiely medzi SVG a Canvas}{5}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Porovnanie Canvas a SVG}{6}{subsection.1.2.3}
 \contentsline {section}{\numberline {1.3}Z\IeC {\'a}kladn\IeC {\'a} syntax \acs *{SVG}}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Pr\IeC {\'\i }klad pou\IeC {\v z}itia SVG v HTML dokumentu s inline SVG }{7}{subsection.1.3.1}
-\contentsline {section}{\numberline {1.4}SVG \IeC {\'u}tvary}{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.3.1}Pr\IeC {\'\i }klad pou\IeC {\v z}itia SVG v HTML dokumentu s inline SVG }{8}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.4}SVG \IeC {\'u}tvary}{9}{section.1.4}
 \contentsline {chapter}{\numberline {2}Anal\IeC {\'y}za po\IeC {\v z}iadaviek}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}N\IeC {\'a}stroje na tvorbu grafick\IeC {\'y}ch komponentov}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}JavaScriptov\IeC {\'e} kni\IeC {\v z}nice pre grafick\IeC {\'e} komponenty}{11}{section.2.2}
@@ -32,8 +32,8 @@
 \contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Vytvorenie SVG v HTML dokumente}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{19}{subsection.4.1.1}
-\contentsline {subsubsection}{Cez program}{19}{section*.9}
-\contentsline {subsubsection}{Cez JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{19}{section*.10}
+\contentsline {subsubsection}{Cez program}{19}{section*.8}
+\contentsline {subsubsection}{Cez JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{19}{section*.9}
 \contentsline {section}{\numberline {4.2}JavaScript}{19}{section.4.2}
 \contentsline {chapter}{\numberline {5}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{20}{chapter.5}
 \contentsline {section}{\numberline {5.1}Vytvorenie SVG v programe Inkscape}{20}{section.5.1}

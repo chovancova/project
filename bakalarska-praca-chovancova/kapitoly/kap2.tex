@@ -6,9 +6,9 @@ V kapitole sú popísané základné pojmy.
 
 \section{\acs{HTML}5 štandard}
 
-\ac{W3C} vydalo štandard HTML5 dňa 28. októbra 2014. 
+\ac{W3C} vydalo štandard \acs{HTML}5 dňa 28. októbra 2014. 
 HTML5 je podporovaný vo všetkých moderných webových prehliadačoch. 
-Na obrázku \ref{fig:obrazokHTML} je HTML5 API a súvisiace taxonómia technológií a ich status. 
+Na obrázku \ref{fig:obrazokHTML} je HTML5 \acs{API} a súvisiace taxonómia technológií a ich status. 
 
 \begin{center}
 	\begin{figure}[hp]
@@ -18,81 +18,31 @@ Na obrázku \ref{fig:obrazokHTML} je HTML5 API a súvisiace taxonómia technoló
 \label{fig:obrazokHTML}
 \end{figure}
 \end{center}
-%http://html5.belisso.com/
 
-
-
-
-%\ac*{W3C} značkový jazyk vždy bolo \acs{HTML}. 
-%HTML bolo primárne navrhnuté ako jazyk, pre systematické opisovanie vedeckých dokumentov.  
-%Hlavná oblasť
-%TODO
-
-%http://www.w3.org/TR/html5/  
-
-%The World Wide Web's markup language has always been HTML. HTML was primarily designed as a language for semantically describing scientific documents, although its general design and adaptations over the years have enabled it to be used to describe a number of other types of documents.
-
-%The main area that has not been adequately addressed by HTML is a vague subject referred to as Web Applications. This specification attempts to rectify this, while at the same time updating the HTML specifications to address issues raised in the past few years.
-
-%1.2 Audience
-
-%This section is non-normative.
-
-%This specification is intended for authors of documents and scripts that use the features defined in this specification, implementors of tools that operate on pages that use the features defined in this specification, and individuals wishing to establish the correctness of documents or implementations with respect to the requirements of this specification.
-
-%This document is probably not suited to readers who do not already have at least a passing familiarity with Web technologies, as in places it sacrifices clarity for precision, and brevity for completeness. More approachable tutorials and authoring guides can provide a gentler introduction to the topic.
-
-%In particular, familiarity with the basics of DOM is necessary for a complete understanding of some of the more technical parts of this specification. An understanding of Web IDL, HTTP, XML, Unicode, character encodings, JavaScript, and CSS will also be helpful in places but is not essential.
-
-%1.3 Scope
-%
-%This section is non-normative.
-
-%This specification is limited to providing a semantic-level markup language and associated semantic-level scripting APIs for authoring accessible pages on the Web ranging from static documents to dynamic applications.
-
-%The scope of this specification does not include providing mechanisms for media-specific customization of presentation (although default rendering rules for Web browsers are included at the end of this specification, and several mechanisms for hooking into CSS are provided as part of the language).
-
-%The scope of this specification is not to describe an entire operating system. In particular, hardware configuration software, image manipulation tools, and applications that users would be expected to use with high-end workstations on a daily basis are out of scope. In terms of applications, this specification is targeted specifically at applications that would be expected to be used by users on an occasional basis, or regularly but from disparate locations, with low CPU requirements. Examples of such applications include online purchasing systems, searching systems, games (especially multiplayer online games), public telephone books or address books, communications software (e-mail clients, instant messaging clients, discussion software), document editing software, etc.
-
-%1.4 History
-
-
-%
-%blal 3.2.5.1 The id attribute
-%
-%The id attribute specifies its element's unique identifier (ID). [DOM]
-%
-%The value must be unique amongst all the IDs in the element's home subtree and must contain at least one character. The value must not contain any space characters.
-
-
-
+HTML5 Graphics definuje dva spôsoby vykreslenia využívajúc: 
+\begin{itemize}
+	\item $<$canvas$>$ - JavaScript
+	\item $<$svg$>$ - SVG
+\end{itemize}
 
 
 \section{Čo je SVG?}
 \ac{SVG} je štandardný formát pre vektorovú grafiku. Vektorová grafika je definovaná cez body, priamky, mnohouholníky, elipsy, krivky, alebo iné geometrické tvary.  
 
 \acs{SVG} je jazyk na opísanie dvojrozmernej grafiky v   \ac*{XML}. Vďaka tomu, umožňuje reprezentáciu grafických informácii v kompaktnom a prenositeľnom tvare.
-%SVG patrí do rodiny špecifikácií HTML 5.
 
  SVG povoľuje tieto tri typy grafických objektov: vektorové grafické tvary, obrázky a text. 
 Grafické objekty môžu byť zoskupené, štylizované, zmenené, a kombinované do predošlých vrstiev objektov. 
 
-SVG obrázky môžu byť dynamické a interaktívne. \ac*{DOM} pre SVG, ktoré zahŕňa celé XML DOM, a povoľuje priamočiaro a efektívnu vektorovú grafickú animáciu cez príkazy. TODO
+SVG obrázky môžu byť dynamické a interaktívne.
 
 Prispôsobiteľnosť SVG umožňuje zmeniť veľkosť grafického komponentu bez straty kvality vzhľadu. Čo umožňuje zobraziť responzívne na viacerých možných zariadení. 
 SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s štandardmi \acs{HTML}5, ktoré navrhla \ac*{W3C}. 
 
-%http://www.w3.org/Graphics/SVG/About.html
 
-%SVG is a language for describing two-dimensional graphics in XML. SVG allows for three types of graphic objects: vector graphic shapes (e.g., paths consisting of straight lines and curves), images and text. Graphical objects can be grouped, styled, transformed and composited into previously rendered objects. Text can be in any XML namespace suitable to the application, which enhances searchability and accessibility of the SVG graphics. The feature set includes nested transformations, clipping paths, alpha masks, filter effects, template objects and extensibility.
-
-%SVG drawings can be dynamic and interactive. The Document Object Model (DOM) for SVG, which includes the full XML DOM, allows for straightforward and efficient vector graphics animation via scripting. A rich set of event handlers such as onmouseover and onclick can be assigned to any SVG graphical object. Because of its compatibility and leveraging of other Web standards, features like scripting can be done on SVG elements and other XML elements from different namespaces simultaneously within the same Web page.
- 
- 
  \subsection{Podpora v webovom prehliadači}
- Súčasné prehliadače plne podporujú SVG elementy. V tabulke  \ref{svgpreh} je prehlad webovych prehliadacov a podpora pre ne. 
-  
-  Čísla v tabuľke \ref{svgpreh} špecifikujú prvú verziu webového prehliadača, ktorý plne podporuje $<$svg$>$ element.\cite{w3svg}
+ Súčasné prehliadače plne podporujú $<$svg$>$ elementy.  
+  Čísla v tabuľke \ref{svgpreh} špecifikujú prvé verzie webových prehliadačov, ktoré sú schopné zobraziť $<$svg$>$ element.\cite{w3svg}
   
 \begin{table}[hp]
 \begin{center}
@@ -110,22 +60,16 @@ SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s št
  \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/podpora}
-\caption{podpora SVG vo webových prehliadačoch}
+\caption{Podpora SVG vo webových prehliadačoch}
 \label{fig:podpora}
 \end{figure}
-
- 
 % http://caniuse.com/#feat=svg
  
  \subsection{Rozdiely medzi SVG a Canvas}
 TODO \url{http://www.petrpexa.cz/diplomky/trantyr.pdf} strana 52
 
-
- SVG je jazyk na opisanie dvojrozmernej grafiky v XML. 
- Canvas kreslí dvojrozmernú grafiku za behu programu cez JavaScript.
- SVG je XML založený, čo znamená, že každý element je dostupný cez SVG DOM. Môžem k tomu priložiť JavaScript na ovládanie udalostí elementov. TODO . 
-  %You can attach JavaScript event handlers for an element.
- V SVG je každý tvar zapamätaný ako objekt. Ak potrebujem zmeniť atribút SVG, tak prehliadač  automaticky prekreslí daný tvar.
+SVG patrí do vektorovej grafiky a Canvas zase do raster bitmap grafiky. 
+ SVG je jazyk na opísanie dvojrozmernej grafiky v XML.  Canvas kreslí dvojrozmernú grafiku za behu programu cez JavaScript.  SVG je XML založený, čo znamená, že každý element je dostupný cez SVG DOM.   JavaScript umožňuje ovládanie udalostí elementov. V SVG je každý tvar zapamätaný ako objekt.  V prípade zmeny $<$svg$>$ elementu sa automaticky prekreslí.  
  
  
  Canvas je prekresľovaný pixel za pixelom. Prehliadač na neho zabudne, ako náhle sa vykreslí. Keď chcem zmeniť jeho pozíciu, musím prekresliť úplne všetko. 
@@ -159,11 +103,11 @@ TODO \url{http://www.petrpexa.cz/diplomky/trantyr.pdf} strana 52
  
  
  \section{Základná syntax \acs*{SVG}}
-TODO
+
 V HTML5 sa môžu používať vložené SVG elementy priamo v na HTML stránke. 
 %https://css-tricks.com/using-svg/
 
-%TODO DOPLNIT POUTIZIIE TRI SPOSOBY \url{https://css-tricks.com/using-svg/}
+
 
 SVG can be created 
 -   inline: within the HTML document 
@@ -178,11 +122,7 @@ Using CSS (background images)
 Including SVG within SVG using the image tag.
 
 
-%citovane z knihy Sergey's HTML5 & CSS3 Quick Reference: HTML5, CSS3 and APIs (3rd Edition)
-%preview je volne dostupny na nete / aspon tie kapitoly, ktore potrebujem
-
-
-\begin{table}[h]
+\begin{table}[hp]
 	\begin{center}
 		\begin{tabular}{|l|l|}
 			\hline \textbf{Technika} & \textbf{Popis} \\ 
