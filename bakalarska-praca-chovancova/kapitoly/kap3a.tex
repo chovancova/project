@@ -34,29 +34,30 @@ el.attr({
 \begin{table}[tp]
 	\begin{center}
 	
-	\begin{tabular}{|l|l|p{4cm}|p{6cm}|}
-	\hline \textbf{	Kľúč} & \textbf{Hodnota} & \textbf{Príklad použitia} & \textbf{Poznámka} \\ 
-		\hline cx & číslo & cx: 50 & x-os súradnica centra kruhu, alebo elipsy \\ 
-		\hline cy & číslo & cy: 90 & y-os súradnica centra kruhu, alebo elipsy \\ 
-		\hline r & číslo & r: 40 & polomer kruhu, elipsy alebo okruhlých rohov na obdĺžniku \\ 
-		\hline rx & číslo & r: 50 & horizontálny polomer elipsy \\ 
-		\hline ry & číslo & r: 40 & vertikálny polomer elipsy \\ 
-		\hline x, y & číslo & x: 50, y: 100 & súradnica x-osi, y-osi  \\ 
-			\hline width, height & číslo & width: 500, height: 10 & šírka, výška \\ 
-			\hline "fill-opacity" & číslo & "fill-opacity": 0.5 & vyplnenie neprehľadnosti, nadobúda hodnoty od 0 po 1 \\ 
-		\hline fill & reťazec & fill: "blue" & vyplnenie farbou, gradientom, obrázkom \\ 
-		\hline stroke & reťazec & stroke: "blue" & farba výplne okraja \\ 
-		\hline strokeWidth & číslo & strokeWidth: 2 & šírka okraja v px, default je 1 \\ 
-		\hline strokeLinecap & reťazec & strokeLinecap: "round" & ["butt", "square", "round"] \\ 
-		\hline strokeLinejoin & reťazec &  strokeLinejoin: "round" & ["bevel", "round", "miter"] \\ 
-		\hline viewBox & pole & & napr. viewBox: [0, 0, 800, 600]
+	%\begin{tabular}{|l|p{3.9cm}|p{5.9cm}|}
+	\begin{tabular}{l|p{4.5cm}|p{6.5cm}|}
+	\hline \textbf{Parameter} & \textbf{Príklad použitia} & \textbf{Poznámka} \\ 
+		\hline cx & cx: 50 & x-os súradnica centra kruhu, alebo elipsy \\ 
+		\hline cy & cy: 90 & y-os súradnica centra kruhu, alebo elipsy \\ 
+		\hline r & r: 40 & polomer kruhu, elipsy alebo okruhlých rohov na obdĺžniku \\ 
+		\hline rx & r: 50 & horizontálny polomer elipsy \\ 
+		\hline ry & r: 40 & vertikálny polomer elipsy \\ 
+		\hline x, y & x: 50, y: 100 & súradnica x-osi, y-osi  \\ 
+			\hline width, height & width: 500, height: 10 & šírka, výška \\ 
+			\hline "fill-opacity" & "fill-opacity": 0.5 & neprehľadnosť, 0-1 \\ 
+		\hline fill & fill: "blue" & vyplnenie farbou, gradientom, obrázkom \\ 
+		\hline stroke & stroke: "blue" & farba výplne okraja \\ 
+		\hline strokeWidth & strokeWidth: 2 & šírka okraja v px, default je 1 \\ 
+		\hline strokeLinecap & strokeLinecap: "butt" & ["butt", "square", "round"] \\ 
+		\hline strokeLinejoin &  strokeLinejoin: "round" & ["bevel", "round", "miter"] \\ 
+		\hline viewBox & & napr. viewBox: [0, 0, 800, 600]
 		  \\ 
-		\hline strokeDasharray & reťazec &    strokeDasharray: "5 3" & pole čiarok, bodiek, pomlčiek \\ 
-		\hline font & reťazec &   font: "20px Source Sans Pro, sans-serif", & zmena písma, rodiny písma, veľkosti v pixeloch, a weight \\ 
-		\hline transform & reťazec & transform: "t" + [0, 5] +
-		"r" + 20 & t - preloží sa na dané súradnice, r - otočí sa o daný úhol udaný v stupňoch \\ 
-			\hline path & reťazec & path: "M10,10 210,10" & SVG cesta \\ 
-			\hline text & reťazec & text: "snap" & zmení text elementu \\ 
+		\hline strokeDasharray &    strokeDasharray: "5 3" & pole čiarok, bodiek, pomlčiek \\ 
+		\hline font &   font: $"$20px Source Sans Pro, sans-serif$"$& zmena písma, rodiny písma, veľkosti v pixeloch, a weight \\ 
+		\hline transform & transform: "t" + [0, 5] +
+		"r" + 20 & t - zmena súradníc, r - otočenie \\ 
+			\hline path & path: "M10,10 210,10" & SVG cesta \\ 
+			\hline text & text: "snap" & zmení text elementu \\ 
 		\hline 
 	\end{tabular} 
 	

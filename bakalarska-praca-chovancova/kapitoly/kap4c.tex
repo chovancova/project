@@ -7,7 +7,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 %Prečerpávacia stanica sa skladá z rúriek, ventila, nádrže, hladiny vody, motora, vrtuliek. Ako je možné vidieť na obrázku \ref{picture1}.  
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics [width=15cm] {obrazky/obr1.png}
 		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
@@ -20,7 +20,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. Sú v SVG označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics [width=15cm] {obrazky/obr2.png}
 		\caption{Zobrazenie menu pre daný objekt v Inkscape}
@@ -30,7 +30,7 @@ Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identi
 
 Po stlačení sa nám zobrazí nasledovné okno viď obrázok \ref{picture3}. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics  {obrazky/obr3.png}
 		\caption{Object Properties}
@@ -57,7 +57,7 @@ V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
 Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodu je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=10cm]  {obrazky/XmlEditor.png}
 		\caption{Xml Editor v Inkscape}
@@ -71,7 +71,7 @@ Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu v
 \subsection{Prázdna nádrž}
 Prázdna nádrž je zobrazená na obrázku \ref{picture6}
 Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastavenú na 9,64px. Šírka a súradnica x je rovnaká ako pri plnej nádrži. Súradnice osi y, x sú 1916,36 a 2507,84. Pri plnej nádrži sa zmení výška a os y. Pre animáciu zdvihnutia hladiny nádrže bude potrebné si zapamätať tieto súradnice. 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics [height=6.5cm]  {obrazky/obr6.png}
 		\caption{Prázdna nádrž prečerpávacej stanice}
@@ -115,7 +115,7 @@ V SVG súbore je to zapísané nasledovným kódom.
 
 
 Parametre ako stroke, fill, a iné sa dajú meniť prostredníctvom FUNKCIE attr v Snap API. … TODO
-\newpage
+
 TODO POPIS SURADNICOVEHO SYSTEMU VEDIET VYSVETLIT SUVISLOST MEDZI DPI A PIX SURADNICAMI. .TODO
 
 
