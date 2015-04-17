@@ -3,6 +3,9 @@
  
 <br>Vedúci: Ing. Juraj Veverka
 <br>Tútor:	Ing. Patrik Hrkút, PhD.
+
+<h2>Aktualizovana verzia textovej casti: https://www.overleaf.com/1485579hvkrdk </h2>
+
 <h2>Cieľ</h2>
 <body>
 	Cieľom práce je vytvorenie vzorovej sady grafických komponentov na vizualizáciu technologických procesov s využitím HTML 5 štandardov. Jedná sa o grafické komponenty, ktoré nie sú bežne dostupné na tvorbu interaktívnych webových aplikácii ako napríklad vizualizácie mechanických súčasti hydraulických systémov, technologických liniek, silových a výkonových častí automatizačných sústav. Cieľová platforma pre výslednú webovú aplikáciu bude kompatibilná s rodinou štandardov HTML 5 pre každý webový prehliadač. Riešenie bude využívať výhradne open-source knižnice s licenciami typu MIT, GNU, GPL, BSD.
