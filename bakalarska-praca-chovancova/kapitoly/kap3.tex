@@ -14,8 +14,8 @@ Kapitola popisuje výber z dostupných nástrojov a knižníc.
 \end{itemize}
 
 Nástroj, ktorý najviac vyhovuje  požiadavkam je Inkscape. 
-Adobe Illustrator, CorelDraw, Sketch boli platené.  
-TODO PREFORMULOVAT
+Adobe Illustrator, CorelDraw, Sketch boli vylúčené pretože nie sú open-source.  
+
 
 
 %http://noeticforce.com/Javascript-libraries-for-svg-animation
@@ -39,62 +39,46 @@ Popis jednotlivých JavaScriptových knižníc.
 %http://christopheviau.com/d3_tutorial/d3_inkscape/
 \subsection{D3.js}
 
-D3.js je JavaScriptová knižnica určená na manipuláciu dokumentov vychádzajúcich z dátach. Pomocou \acs{HTML}, \acs{SVG} a \acs{CSS} umožňuje ...TODO TODO
-TODO % vdýchnuť život dátam. 
+D3.js je JavaScriptová knižnica určená na manipuláciu dokumentov založených na dátach. Pomocou \acs{HTML}, \acs{SVG} a \acs{CSS} umožňuje vizualizáciu dát.
 Je vhodná na vytváranie interaktívnych SVG grafov s hladkými prechodmi a interakciami. 
-
-%D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using \acs{HTML}, \acs{SVG} and \acs{CSS}. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation. 
-
-%D3 allows you to bind arbitrary data to a ac*\{DOM}, and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.
 
 D3 rieši efektívnu manipuláciu dokumentov zakladajúcich si na dátach. Využíva webové štandardy ako \acs{HTML}, \acs{SVG} a \acs{CSS}3. \cite{d3js}
 
-%D3 is not a monolithic framework that seeks to provide every conceivable feature. Instead, D3 solves the crux of the problem: efficient manipulation of documents based on data. This avoids proprietary representation and affords extraordinary flexibility, exposing the full capabilities of web standards such as CSS3, HTML5 and SVG. With minimal overhead, D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation. D3’s functional style allows code reuse through a diverse collection of components and plugins. 
-
 \subsection{Raphaël.js}
-%Raphael.js je dostupné na: \url{http://raphaeljs.com/}.
-%mohla by som spomenut kto ju vytvoril
 
 Raphaël je malá JavaScriptová knižnica, ktorá umožnuje jednoducho pracovať s vektorovou grafikou na webe. Umožňuje pomocou jednoduchých príkazov vytvárať špecifické grafy, obrázky. 
 
-%Raphaël is a small JavaScript library that should simplify your work with vector graphics on the web. If you want to create your own specific chart or image crop and rotate widget, for example, you can achieve it simply and easily with this library.
-Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva, to že každý grafický objekt, ktorý vytvorím je zároveň aj DOM objekt. To umožnuje cez JavaScriptové pridávať manipuláciu udalostí, alebo upravovať ich neskôr.
+Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva, to že každý vytvorený grafický objekt je zároveň aj DOM objekt. To umožňuje cez JavaScriptové pridávať manipuláciu udalostí, alebo upravovať ich neskôr.
 Momentálne podporuje Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+.\cite{Raphael}
-Autor knižnice je Dmitry Baranovskiy. Raphael API má už ukončený vývoj, ale používatelia ho stále používajú. TODO  
-Knižnica neumožnuje load SVG dokumentu zo súboru. 
+Autor knižnice je Dmitry Baranovskiy. Raphael API má široké spektrum používateľov. 
+Knižnica neumožňuje load SVG do dokumentu zo súboru. 
 
-%Raphaël  uses the SVG W3C Recommendation and VML as a base for creating graphics. This means every graphical object you create is also a DOM object, so you can attach JavaScript event handlers or modify them later. Raphaël’s goal is to provide an adapter that will make drawing vector art compatible cross-browser and easy.
-
-%Raphaël currently supports Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+. 
 
 
 \subsection{Snap.svg.js}
 
-Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktorá umožňuje animáciu a manipulovanie s buď existujúcim SVG, alebo vygenerovaným s Snapom. 
+Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktoré umožňuje animáciu a manipulovanie s buď existujúcim SVG, alebo programátorsky vytvorene cez Snap API. 
 
-TODO - NASTUPCA RAPHAELA
-TODO - PRAGRAMTIC SVG CREATING 
-TODO - LOAD EXISTING SVG OBJECT
+%TODO - NASTUPCA RAPHAELA
+%TODO - PRAGRAMTIC SVG CREATING 
+%TODO - LOAD EXISTING SVG OBJECT
 
+Tvorca Snap knižnice je rovnaký ako pri Raphael knižnici.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox, and Opera). Z toho vyplýva, že umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín. 
 
-Snap bol napísaný rovnakým autorom ako Raphael.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox, and Opera). Z toho vyplýva, že umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín... 
-
-%Snap.svg is a brand new JavaScript library for working with SVG. Snap provides web developers with a clean, streamlined, intuitive, and powerful API for animating and manipulating both existing SVG content, and SVG content generated with Snap.
-
-%Currently, the most popular library for working with SVG is Raphaël. One of the primary reasons Raphaël became the de facto standard is that it supports browsers all the way back to IE 6. However, supporting so many browsers means only being able to implement a common subset of SVG features. Snap was written entirely from scratch by the author of Raphaël (Dmitry Baranovskiy), and is designed specifically for modern browsers (IE9 and up, Safari, Chrome, Firefox, and Opera). Targeting more modern browsers means that Snap can support features like masking, clipping, patterns, full gradients, groups, and more.
-
-Medzi hlavnú výhodu je schopnosť pracovať s existujúcim SVG súborom. To znamená, že  SVG obsah generovať cez Snap API, aby SA MOHOL ODDELENE používať. Z toho vyplýva, že SA DÁ vytvoriť SVG obsah v nástroji ako Illustrator, Inkscape, alebo Sketch a potom animovať, alebo inak manipulovať cez Snap API. Môžem pracovať aj s reťazcom SVG. TODO 
+Snap API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snap API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať, alebo inak manipulovať cez Snap API.
+Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderované. 
 
 %Another unique feature of Snap is its ability to work with existing SVG. That means your SVG content does not have to be generated with Snap for you to be able to use Snap to work with it (think “jQuery or Zepto for SVG”). That means you create SVG content in tools like Illustrator, Inkscape, or Sketch then animate or otherwise manipulate it using Snap. You can even work with strings of SVG (for example, SVG files loaded via Ajax) without having to actually render it first which means you can do things like query specific shapes out of an SVG file, essentially turning it into a resource container or sprite sheet.
 
 Snap podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre animáciu. Snap umožňuje urobiť SVG obsah viac interaktívnejší a záživnejší. \cite{snapsvg}
-TODO NIECO O DYNAMICKOM POUZITI A JSON PARSOVANI
+%TODO NIECO O DYNAMICKOM POUZITI A JSON PARSOVANI
 
 %Snap je zadarmo a open-source. 
 
 %Finally, Snap supports animation. By providing a simple and intuitive JavaScript API for animation, Snap can help make your SVG content more interactive and engaging.
 
 %Snap is    free and   open-source (released under an Apache 2 license).
+
 
 \subsection{SVG.JS}
 

@@ -57,7 +57,7 @@ SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s št
 	\label{svgpreh}
 \end{table}
  
- \begin{figure}
+ \begin{figure}[hp]
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/podpora}
 \caption{Podpora SVG vo webových prehliadačoch}
@@ -72,15 +72,14 @@ SVG patrí do vektorovej grafiky a Canvas zase do raster bitmap grafiky.
  SVG je jazyk na opísanie dvojrozmernej grafiky v XML.  Canvas kreslí dvojrozmernú grafiku za behu programu cez JavaScript.  SVG je XML založený, čo znamená, že každý element je dostupný cez SVG DOM.   JavaScript umožňuje ovládanie udalostí elementov. V SVG je každý tvar zapamätaný ako objekt.  V prípade zmeny $<$svg$>$ elementu sa automaticky prekreslí.  
  
  
- Canvas je prekresľovaný pixel za pixelom. Prehliadač na neho zabudne, ako náhle sa vykreslí. Keď chcem zmeniť jeho pozíciu, musím prekresliť úplne všetko. 
- 
- 
- %SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element.
- %In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.
- %Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.
- 
- 
- \subsection{Porovnanie Canvas a SVG}
+ Canvas je prekresľovaný pixel za pixelom. Bitmapová grafika je zložitejšia pre dynamické prekresľovanie, a má menšie pamäťové nároky a je rýchlejšie. 
+
+Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektoré potĺáčajú 300 \ac{PPI} s tým, že sa spoliehajú na obmedzenosť ľudských očí rozoznávať jemné detaily. Pixel nemá v reálnom živote equivalent vo veľkosti až pokým je na obrazovke s fixovaným rozmerom a rozlíšením. Text s veľkosťou 16 pixelov bude veľmi malý pre oko. Pre tento dôvod zariadenia jednoducho nezobrazujú 1 CSS pixelovú jednotku na 1 pixel zariadenia. Namiesto toho zdvoja svoju veľkosť.  
+%http://www.smashingmagazine.com/2012/01/16/resolution-independence-with-svg/
+
+%SVG and relative sizes, we have solved the three big issues highlighted above. A scalable graphic can be rasterized on demand to perfectly suit any device resolution and any zoom level. By using relative sizes, we can continue implementing a responsive design, minimizing as much as possible the need for the user to zoom. We’re also respecting the browser’s default font size, and enabling our design to adapt accordingly.
+
+
  Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG. 
 % The table below shows some important differences between Canvas and SVG:
  TODO DPI
@@ -102,24 +101,12 @@ SVG patrí do vektorovej grafiky a Canvas zase do raster bitmap grafiky.
 \end{table}
  
  
- \section{Základná syntax \acs*{SVG}}
-
-V HTML5 sa môžu používať vložené SVG elementy priamo v na HTML stránke. 
-%https://css-tricks.com/using-svg/
+ \section{\acs*{SVG} v HTML dokumente}
 
 
+SVG môže byť zobrazená buď ako inline v HTML dokumente, alebo ako vloženým samostatného .SVG súboru.
+V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG. 
 
-SVG can be created 
--   inline: within the HTML document 
--   by embedding a stand alone .SVG file
-
-
-Copy/paste SVG code within HTML code (inlining)
-Using the HTML img tag
-Using the HTML object tag
-Using the HTML iframe tag
-Using CSS (background images)
-Including SVG within SVG using the image tag.
 
 
 \begin{table}[hp]
@@ -130,39 +117,47 @@ Including SVG within SVG using the image tag.
 			\hline $<$object$>$ tag & Nepovoľuje skriptovanie.  \\ 
 			\hline $<$iframe$>$ tag & Zobrazí SVG v rámci  \\ 
 			\hline Inline & Vytvorí Svg súbor \\ 
-			\hline 
+			\hline
 		\end{tabular} 
 	\end{center}
 	\caption{Spôsoby vytvorenia SVG v HTML dokumente}
 	\label{vytvorenie:SVG}
 \end{table}
 
-Príklady načítania SVG v HTML dokumente.
+\subsection{Príklady načítania SVG v HTML dokumente}
 
-$<$img$>$ tag 
+	\subsubsection{Image}
+	\begin{lstlisting}
+<img src="stanica2.svg" width = "50" height= "50" />
+	\end{lstlisting}
+	
+	\subsubsection{Embed}
+	\begin{lstlisting}
+<embed src="stanica2.svg" width = "50" height= "50" />
+	\end{lstlisting}
+	
+	
+\subsubsection{Object}
 
-\begin{lstlisting}
-	Image:
-	<img src="stanica2.svg" width = "50" height= "50" />
-	
-	Embed:
-	<embed src="stanica2.svg" width = "50" height= "50" />
-	
-	Object:
-	<object type="image/svg+xml" data="stanica2.svg"
+	\begin{lstlisting}
+<object type="image/svg+xml" data="stanica2.svg"
 	width="50" height="50"></object>
+	\end{lstlisting}
 	
-	Iframe:
-	<iframe src="stanica2.svg" width = "50" height= "50"><</iframe>
 	
-\end{lstlisting}
+\subsubsection{	Iframe}
+
+	\begin{lstlisting}
+<iframe src="stanica2.svg" width = "50" height= "50"><</iframe>
+	\end{lstlisting}
 
 
 
 
 
 
-\subsection{Príklad použitia SVG v HTML dokumentu s inline SVG }
+
+\subsection{Príklad použitia SVG v HTML dokumente s inline SVG }
 
 HTML kód: 
 
@@ -170,29 +165,21 @@ HTML kód:
 <!DOCTYPE html>
 <html>
 <head lang="sk">
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
-
+	<meta charset="UTF-8">
+	<title>Bakalarska praca</title>
+</head> <body>
 	<svg width="100" height="100">
 		<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="silver" />
 	</svg>	
-	
 </body>
 </html>
 
 \end{lstlisting}
 
+SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu.
 
-
-
-SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu. Atribúty cx, cy definujú x, y súradnice od centra kruhu. Ak je cx, cy vynechané, tak center kruhu je nastavený na $($0, 0$)$. Atribút r  definuje polomer kruhu. Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
-Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. 
-%zdroj www.w3schools.com/svg/svg_inhtml.asp
-
-
-Vykreslí na HTML webovú stránku útvar, ktorý je na obrázku \ref{jednoduchyKruh}.
+ Atribúty cx, cy definujú x, y súradnice od centra kruhu. Ak je cx, cy vynechané, tak center kruhu je nastavený na $($0, 0$)$. Atribút r  definuje polomer kruhu. Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
+Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. \cite{inline} Vykreslí na HTML webovú stránku útvar, ktorý je na obrázku \ref{jednoduchyKruh}.
 
 \begin{figure}[hp]
 	\begin{center}
@@ -203,9 +190,9 @@ Vykreslí na HTML webovú stránku útvar, ktorý je na obrázku \ref{jednoduchy
 \end{figure}
 
 
-\section{SVG útvary} 
+\section{SVG tvary} 
 
-\acs*{SVG} má preddefinované tieto tvary elementov:
+\acs*{SVG} má preddefinované tvary elementov:
 \begin{itemize}
 	\item Obdĺžník $<$rect$>$
 	\item Kruh $<$circle$>$
@@ -213,90 +200,35 @@ Vykreslí na HTML webovú stránku útvar, ktorý je na obrázku \ref{jednoduchy
 	\item Čiara $<$line$>$
 	\item Polyline $<$polyline$>$
 	\item Mnohouholník $<$polygon$>$
-	\item Cesta $<$path$>$	
+	\item Path $<$path$>$	
 \end{itemize}
 
-TODO ESTE NIECO PRIDAT
+Spoločné vlastnosti pre kruh, elipsu, a čiaru sú r, x, y, cx, cy, rx, ry. Teda polomer, pravá a ľavá pozícia,x a y súradnice od stredu, a horizontálny a vertikálny polomer. 
 
-%\section{CSS vlastnosti - tuto kapitolu asi vyhodim}
-%
-%Podľa HTML5 štandardov dokáže CSS meniť vlastnosti SVG.
-%
-%%www.w3.org/tr/svg/styling.html
-%%http://www.w3.org/TR/SVG/propidx.html http://www.w3.org/TR/SVG2/styling.html
-%
-%Vymenované vlastnosti, ktoré majú rovnaké \acs{CSS} 2.1 a \acs{SVG}. 
-%
-%Vlastnosti písma: 
-%‘font’,
-%‘font-family’,
-%‘font-size’,
-%‘font-size-adjust’,
-%‘font-stretch’,
-%‘font-style’,
-%‘font-variant’,
-%‘font-weight’.
-%
-%Vlastnosti textu: 
-%‘direction’,
-%‘letter-spacing’,
-%‘text-decoration’,
-%‘unicode-bidi’,
-%‘word-spacing’.
-%
-%Ďalšie vlastností:
-%‘clip’,
-%‘color’ (‘fill’, ‘stroke’, ‘stop-color’, ‘flood-color’ a ‘lighting-color’), 
-%‘cursor’,
-%‘display’,
-%‘overflow’,
-%‘visibility’.
-%
-%Nasledujúce vlastností nie sú definované v CSS 2.1. 
-%
-%Clipping, Masking and Compositing properties:
-%‘clip-path’, 
-%‘clip-rule’,
-%‘mask’, 
-%‘opacity’.
-%
-%
-%Filter Effects properties:
-%‘enable-background’
-%‘filter’
-% ‘flood-color’
-% ‘flood-opacity’
-% ‘lighting-color’	
-%
-%
-%Gradient properties: ‘stop-color’, 	‘stop-opacity’. 
-%
-%Interactivity properties:
-%\begin{itemize}
-%\item 	‘pointer-events’
-%\end{itemize}
-%Color and Painting properties:
-%\begin{itemize}
-%\item ‘color-interpolation’, ‘color-rendering’
-%\item ‘fill’, ‘fill-opacity’, ‘fill-rule’
-%\item ‘image-rendering’
-%\item ‘marker’, ‘marker-end’, ‘marker-mid’,‘marker-start’
-%\item ‘shape-rendering’
-%\item ‘stroke’, ‘stroke-dasharray’, ‘stroke-dashoffset’, ‘stroke-linecap’, ‘stroke-linejoin’, ‘stroke-miterlimit’, ‘stroke-opacity’, ‘stroke-width’
-%\item ‘text-rendering’	
-%\end{itemize}
-%
-%Text properties:
-%\begin{itemize}
-%\item 	‘alignment-baseline’
-%\item 	‘baseline-shift’
-%\item 	‘dominant-baseline’
-%\item 	‘glyph-orientation-horizontal’
-%\item 	‘glyph-orientation-vertical’
-%\item 	‘text-anchor’
-%\item 	‘writing-mode’
-%\end{itemize}
-%
-% 
-%
-%mozno tu este pridam nieco z prezentacii, ktore ma ucitel mikus
+\subsection{Element Path} 
+
+TODO NIECO NAPISAT K TOMU
+
+\begin{center}
+	\begin{table}
+		\begin{center}
+			\begin{tabular}{|c|l|c|}
+				\hline \textbf{Príkaz} & \textbf{Názov} & \textbf{Parametre} \\
+				\hline M & moveto & (x y)+ \\ 
+				\hline Z & closepath & (none) \\ 
+				\hline L & lineto & (x y)+ \\ 
+				\hline H & horizonal lineto & x+ \\ 
+				\hline V & vertical lineto & y+ \\ 
+				\hline C & curveto & (x1 y1 x2 y2 x y)+ \\ 
+				\hline S & smooth curveto & (x2 y2 x y)+ \\ 
+				\hline Q & quadratic Bézier curveto & (x1 y1 x y)+ \\ 
+				\hline T & smooth quadratic Bézier curveto & (x y)+ \\ 
+				\hline 
+			\end{tabular} 
+		\end{center}
+		\caption{Niekoľko príkazov na tvorbu Path elementu}
+		\label{prikazyPath}
+	\end{table}
+\end{center}
+
+%https://msdn.microsoft.com/en-us/hh552482.aspx
