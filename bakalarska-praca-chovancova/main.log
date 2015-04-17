@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  17 APR 2015 14:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  17 APR 2015 14:19
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -957,19 +957,19 @@ l.34 	\item p
              omocou JavaScriptovej knižnice.]) [18]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4c.tex
 Kapitola 5.
-<obrazky/obr1.png, id=361, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=362, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 14.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr2.png, id=363, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=364, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 27.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr3.png, id=364, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=365, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 37.
@@ -995,20 +995,20 @@ l.51 A
       lebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť ...
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png> <C:/Github/pr
 oject/bakalarska-praca-chovancova/obrazky/obr2.png>]
-<obrazky/XmlEditor2.png, id=375, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=376, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
 Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 69.
 (pdftex.def)             Requested size: 312.83247pt x 205.54225pt.
 
-<obrazky/obr6.png, id=377, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=378, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 83.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
 
-<obrazky/obr5.png, id=379, 500.62032pt x 463.7325pt>
+<obrazky/obr5.png, id=380, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
  <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 94.
@@ -1121,8 +1121,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
 ### simple group (level 1) entered at line 64 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13556 strings out of 493921
- 188641 string characters out of 3144865
+ 13557 strings out of 493921
+ 188648 string characters out of 3144865
  311075 words of memory out of 3000000
  16300 multiletter control sequences out of 15000+200000
  50555 words of font info for 52 fonts, out of 3000000 for 9000
@@ -1141,9 +1141,9 @@ TeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on main.pdf (46 pages, 663607 bytes).
+Output written on main.pdf (46 pages, 663789 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 244 named destinations out of 1000 (max. 500000)
+ 650 PDF objects out of 1000 (max. 8388607)
+ 245 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

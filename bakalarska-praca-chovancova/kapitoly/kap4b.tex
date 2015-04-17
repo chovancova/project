@@ -50,12 +50,12 @@ Postup (načítanie súboru v tele JavaScriptovej metóde):
 	\item Vytvorenie funkcie na načítanie Snap API, a .SVG súboru. 
 	\item V tele funkcie inicializácia Snap Canvasu. To znamená, kde konkrétne v HTML stránke sa zobrazí.
 	\begin{itemize}
-		\item Snap() - najbližšie voľné miesto
-		\item Snap(šírka, výška) 
-		\item Snap(HTMLtag) - id tagu $<$svg$>$, ktoré sa pridalo v bode č. 3
+		\item s = Snap() - najbližšie voľné miesto
+		\item s = Snap(šírka, výška) 
+		\item s = Snap(HTMLtag) - id tagu $<$svg$>$, ktoré sa pridalo v bode č. 3
 	\end{itemize}
-	\item Načítanie .SVG súboru cez funkciu Snap.load(), s parametrami: názov súboru a funkcie. 
-	
+	\item Načítanie .SVG súboru cez funkciu Snap.load(), s parametrami: názov súboru a funkcie s parametrom f. 
+	\item Zobrazenie súboru cez príkaz s.append(f);, ekvivalenté zápisy: s.appendAll(f);, s.add(f);. 
 	
 	
 \end{enumerate}
