@@ -5,17 +5,33 @@ UML diagram...
 Spôsob vytvorenia grafických komponentov je nasledovný. Najprv používateľ vytvorí SVG súbor, následne ho načíta, a vytvorí funkcie v JavaScripte na ovládanie atribútov SVG elementu. 
 Alternatívna možnosť je vytvoriť SVG elementy prostredníctvom JavaScriptovej knižnice a nenačítavať súbor. 
 
+
+\begin{table}[hp]
+	
+\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+		\hline \textbf{akcia} & \textbf{SVG akcia} & \textbf{JavaScript akcia} & \textbf{Popis} \\ 
+		\hline Animácia &  &  &  \\ 
+		\hline Nastavenie farby &  &  &  \\ 
+		\hline Transformácia &  &  &  \\ 
+		\hline Skryvanie  &  & attr({visibility: true}) &  \\ 
+		\hline  &  &  &  \\ 
+		\hline  &  &  &  \\ 
+		\hline 
+	\end{tabular} 
+\end{center}
+	
+	\caption{Mapovacia tabuľka}
+	\label{haha}
+\end{table}
+
 \section{Vytvorenie SVG v HTML dokumente}
 
-SVG can be created 
--   inline: within the HTML document 
--   by embedding a stand alone .SVG file
-
-SVG môže byť vytvorené dvoma spôsobmi:
+SVG sa dá vytvoriť a zobraziť  týmito spôsobmi:
 \begin{itemize}
-	\item Priamo v HTML dokumente
-	\item Načítané zo súboru
-	\item Pomocou JavaScriptovej knižnice
+	\item priamo v HTML dokumente - inline, 
+	\item cez nástroj Inkscape,
+	\item pomocou JavaScriptovej knižnice.
 \end{itemize}
 
 
