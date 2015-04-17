@@ -41,7 +41,24 @@ SVG sa dá vytvoriť a zobraziť  týmito spôsobmi:
  
  \subsubsection{Cez JavaScriptovú knižnicu}
 
-
+Postup (načítanie súboru v tele JavaScriptovej metóde): 
+\begin{enumerate}
+	\item Načítať knižnicu Snap.svg.js do HTML súboru. 
+	\item Pridať atribút onPageLoad(); do definicie body.
+	\item Pridať HTML tag $<$svg$>$ do tela HTML a nastaviť v ňom požadovanú veľkosť cez viewBox.
+	\item Vytvoriť JavaScriptový súbor, alebo tag $<$script$>$, ktorý bude obsahovať funkcie. 
+	\item Vytvorenie funkcie na načítanie Snap API, a .SVG súboru. 
+	\item V tele funkcie inicializácia Snap Canvasu. To znamená, kde konkrétne v HTML stránke sa zobrazí.
+	\begin{itemize}
+		\item Snap() - najbližšie voľné miesto
+		\item Snap(šírka, výška) 
+		\item Snap(HTMLtag) - id tagu $<$svg$>$, ktoré sa pridalo v bode č. 3
+	\end{itemize}
+	\item Načítanie .SVG súboru cez funkciu Snap.load(), s parametrami: názov súboru a funkcie. 
+	
+	
+	
+\end{enumerate}
 
 
 
