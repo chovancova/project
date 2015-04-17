@@ -11,7 +11,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 \begin{figure}[hp]
 	\begin{center}
-		\includegraphics [width=15cm] {obrazky/obr1.png}
+		\includegraphics [width=13cm] {obrazky/obr1.png}
 		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
 		\label{picture1}
 	\end{center}
@@ -20,11 +20,11 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 \section{Definovanie id SVG}
 
-Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. Sú v SVG označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
+Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
 
 \begin{figure}[hp]
 	\begin{center}
-		\includegraphics [width=15cm] {obrazky/obr2.png}
+		\includegraphics [width=13cm] {obrazky/obr2.png}
 		\caption{Zobrazenie menu pre daný objekt v Inkscape}
 		\label{picture2}
 	\end{center}
@@ -43,11 +43,10 @@ Po kliknutí sa nám zobrazí okno s názvom Object Properties.
 
 Z obrázka č.\ref{picture3} možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-\newpage{}
-Toto nám umožni TODO TODO potom neskôr ako CSS selektor, cez ktorý budeme môcť ovládať danú časť. Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
-TODO ROZDIEL MEDZI ID A LABEL DESCRIPTION A TITTLE... TODO
+Na ovládanie časti svg elementu cez CSS selektor je potrebné si zapamätať hodnotu Labelu.  %Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
+%TODO ROZDIEL MEDZI ID A LABEL DESCRIPTION A TITTLE... TODO
 
-\newpage{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Alebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť tú hodnotu v PumpingStation.svg. Je to označené ako id="ventil".
 
@@ -65,7 +64,7 @@ V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
 Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodu je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
-\begin{figure}[hp]
+\begin{figure}[!hp]
 	\begin{center}
 		\includegraphics[width=15cm]  {obrazky/XmlEditor.png}
 		\caption{Xml Editor v Inkscape}
@@ -87,7 +86,6 @@ Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastaven�
 	\end{center}
 \end{figure}
 
-
 \subsection{Plná nádrž}
 Na obrázku č. \ref{picture5} je vykreslená plná nádrž. Hladina má súradnice x, a šírku rovnakú ako v prázdnej nádrži. Zmenila sa os y, a výška - na 1320,16 a na 605,92. 
 
@@ -100,6 +98,7 @@ Na obrázku č. \ref{picture5} je vykreslená plná nádrž. Hladina má súradn
 \end{figure}
 
 V SVG súbore je to zapísané nasledovným kódom. 
+
 
 \begin{lstlisting} [language=html]
 <rect
@@ -119,16 +118,18 @@ V SVG súbore je to zapísané nasledovným kódom.
 		stroke-linejoin:miter;
 		stroke-opacity:0.80952382">
 </rect>
+
 \end{lstlisting}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-\newpage{}
-Parametre ako stroke, fill, a iné sa dajú meniť prostredníctvom FUNKCIE attr v Snap API. … TODO
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-\newpage{}
-TODO POPIS SURADNICOVEHO SYSTEMU VEDIET VYSVETLIT SUVISLOST MEDZI DPI A PIX SURADNICAMI. .TODO
 
-
-TODO MIERKY OBRAZKOV ZJEDNOTIT
-TODO aj ich lokalizaciu v dokumente
-TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+%
+%Parametre ako stroke, fill, a iné sa dajú meniť prostredníctvom FUNKCIE attr v Snap API. … TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+%
+%TODO POPIS SURADNICOVEHO SYSTEMU VEDIET VYSVETLIT SUVISLOST MEDZI DPI A PIX SURADNICAMI. .TODO
+%
+%
+%TODO MIERKY OBRAZKOV ZJEDNOTIT
+%TODO aj ich lokalizaciu v dokumente
+%TODO
