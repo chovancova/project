@@ -1,10 +1,14 @@
+<strong>Upozornenie k otváraniu .pdf súborov:</strong> webový prehliadač zamrzne, keď sa na githube snaži otvoriť .pdf súbor. Preto odporúčam si projekt stiahnúť ako .zip súbor a následne to otvoriť v ňom .
+<h3>Aktualizovana verzia textovej casti: https://www.overleaf.com/1485579hvkrdk </h3>
+
+web page: http://vaii.fri.uniza.sk/~chovancova26/
+<br/>
+
 <h1>Vizualizácia dát získaných pomocou SCADA systémov s využitím HTML 5 štandardov</h1>
 <h3>Data visualization acquired by SCADA systems using HTML 5 standards </h3>
  
 <br>Vedúci: Ing. Juraj Veverka
 <br>Tútor:	Ing. Patrik Hrkút, PhD.
-
-<h2>Aktualizovana verzia textovej casti: https://www.overleaf.com/1485579hvkrdk </h2>
 
 <h2>Cieľ</h2>
 <body>
@@ -20,14 +24,3 @@
 <li>Zhodnoťte výkonnosť riešenia a definujte výkonnostné obmedzenia.
 </ol>
 
-koncept práce: https://docs.google.com/document/d/1OAneSuBY0WMFwy_0b815vG-HkNIc1a1xhGWQDdeDthc/edit?usp=sharing
-<br>
-web page: http://vaii.fri.uniza.sk/~chovancova26/
-<br>
-
-
-<br>
-https://www.overleaf.com/1485579hvkrdk
-<br>
-na tomto linku budem pisat a vkladat casti / ktore budu potom officialne finall... 
-taktiez tam pridam kapitoly z wordu<br>git clone https://git.overleaf.com/1485579hvkrdk OVERLEAFpisomnaCast
