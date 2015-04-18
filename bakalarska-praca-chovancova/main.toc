@@ -1,3 +1,5 @@
+\contentsline {section}{\numberline {0.1}Pozn\IeC {\'a}mky - informa\IeC {\v c}n\IeC {\'y} \IeC {\'u}\IeC {\v c}el}{1}{section.0.1}
+\contentsline {subsection}{\numberline {0.1.1}Learning Raphael JS Vector Graphics}{1}{subsection.0.1.1}
 \select@language {english}
 \select@language {slovak}
 \select@language {english}
@@ -34,10 +36,10 @@
 \contentsline {section}{\numberline {3.4}Gradinets, Path String, Colour Parsing}{15}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Paper.path([pathString])}{15}{subsection.3.4.1}
 \contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Vytvorenie SVG v HTML dokumente}{17}{section.4.1}
+\contentsline {section}{\numberline {4.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{17}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{18}{subsection.4.1.1}
-\contentsline {subsubsection}{Cez program}{18}{section*.13}
-\contentsline {subsubsection}{Cez JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{18}{section*.14}
+\contentsline {subsubsection}{Cez program WYSWING}{18}{section*.13}
+\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{18}{section*.14}
 \contentsline {section}{\numberline {4.2}JavaScript}{19}{section.4.2}
 \contentsline {chapter}{\numberline {5}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{20}{chapter.5}
 \contentsline {section}{\numberline {5.1}Vytvorenie SVG v programe Inkscape}{20}{section.5.1}
