@@ -1,0 +1,8 @@
+http://html5.belisso.com/HTML5_preview.pdf
+
+ Sergey s HTML5 & CSS3 Quick Reference
+
+\bibitem{sergey}
+ Mavrody S.,
+ {\it Sergey$'$s HTML5 \& CSS3 Quick Reference: HTML5, CSS3 and APIs},
+ 3rd edition, Belisso, 2012, ISBN  978-0-98338-674-2
