@@ -234,13 +234,32 @@
          height="152.992"
          width="17.273001"
          y="1024.35"
-         x="2682.397" /><rect
+         x="2682.397" 
+		   <animateTransform id="rectRotateAnimation" attributeType="xml"
+                    attributeName="transform"
+                    type=""
+                    from="0 180 50"
+                    to="360 180 50"
+                    dur="4s"
+                    repeat="indefinite"
+                    />
+		 /><rect
          style="fill:#ffcc04"
          id="rect3094"
          height="17.273001"
          width="152.992"
          y="1092.209"
-         x="2614.5381" /><circle
+         x="2614.5381" 
+		   <animateTransform id="rectRotateAnimation2" attributeType="xml"
+                    attributeName="transform"
+                    type=""
+                    from="0 180 50"
+                    to="360 180 50"
+                    dur="4s"
+                    repeat="indefinite"
+                    />
+		 
+		 /><circle
          style="fill:#fecb06"
          sodipodi:ry="25.292999"
          sodipodi:rx="25.292999"
