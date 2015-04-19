@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet" >
+    <script src="snap.svg-min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="demo.js"></script>
+  </head>
+  <body onload="onPageLoad();">
+    <h1>SVG rotate demo 04</h1>
+    
+    <svg  id ="rotorDemo"  viewBox="0 0 600 600" width="400" height="400"  ></svg>
+
+    <br/>
+    <button id="demoCtrl" type="button" onclick="toggleRotation();">Toggle rotation</button> 
+    
+    <p>
+       Rotate animation is triggered by toggle button.<br/>
+       If rotate animation is in progress, it mat be stopped by same button.<br/>
+       Animation always ends (completes full 360 dgree rotation) after being stopped.
+    </p>
+
+  </body>
+</html>
+
