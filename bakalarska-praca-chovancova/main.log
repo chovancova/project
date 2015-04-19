@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 APR 2015 10:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 APR 2015 13:26
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -843,7 +843,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 1.
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
-<obrazky/obrazokHTML.jpg, id=258, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=260, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -872,7 +872,7 @@ although it is yet undefined on input line 30.
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
 although it is yet undefined on input line 32.
 
-<obrazky/podpora.jpg, id=271, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=273, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -920,7 +920,7 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
 
 
 ] [12]
-<obrazky/suradnice1.jpg, id=352, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=354, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -961,37 +961,40 @@ Overfull \hbox (24.61787pt too wide) in paragraph at lines 311--326
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.344 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.3.5}) has been already used, duplicate ignored
+l.341 var 
+          obdlznik = paper.rect(120, 10, 80, 80);pdfTeX warning (ext4): destina
+tion with the same identifier (name{table.3.5}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.344 \newpage
-              ]
-<obrazky/jednoduchyKruh.png, id=405, 131.74219pt x 128.73094pt>
-File: obrazky/jednoduchyKruh.png Graphic file (type png)
+l.341 var 
+          obdlznik = paper.rect(120, 10, 80, 80);]
+<obrazky/grupovanieElementov.jpg, id=406, 307.1475pt x 97.11281pt>
+File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
-<use obrazky/jednoduchyKruh.png>
-Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 385.
-(pdftex.def)             Requested size: 131.74185pt x 128.7306pt.
- [19
-
-] [20pdfTeX warning (ext4): destination with the same identifier (name{figure.3
-.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.487 -
-        attr (object) attributes of final destinationpdfTeX warning (ext4): des
-tination with the same identifier (name{table.3.6}) has been already used, dupl
-icate ignored
+<use obrazky/grupovanieElementov.jpg>
+Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 357
+.
+(pdftex.def)             Requested size: 312.83247pt x 98.91592pt.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.487 -
-        attr (object) attributes of final destination <C:/Github/project/bakala
-rska-praca-chovancova/obrazky/jednoduchyKruh.png>]) [21]
+l.423 \newpage
+               <C:/Github/project/bakalarska-praca-chovancova/obrazky/grupovani
+eElementov.jpg>] [20
+
+]) [21pdfTeX warning (ext4): destination with the same identifier (name{table.3
+.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.109 \include{kapitoly/kap3a}
+                              
+
+]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4b.tex
 Kapitola 4.
 [22
@@ -1018,13 +1021,13 @@ File: obrazky/obr1.png Graphic file (type png)
 Package pdftex.def Info: obrazky/obr1.png used on input line 14.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr2.png, id=461, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=462, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 27.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr3.png, id=462, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=463, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 37.
@@ -1050,20 +1053,20 @@ l.51 A
       lebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť ...
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png> <C:/Github/pr
 oject/bakalarska-praca-chovancova/obrazky/obr2.png>]
-<obrazky/XmlEditor2.png, id=473, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=474, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
 Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 69.
 (pdftex.def)             Requested size: 312.83247pt x 205.54225pt.
 
-<obrazky/obr6.png, id=475, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=476, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 83.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
 
-<obrazky/obr5.png, id=477, 500.62032pt x 463.7325pt>
+<obrazky/obr5.png, id=478, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
  <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 94.
@@ -1177,10 +1180,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
 ### simple group (level 1) entered at line 68 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13632 strings out of 493921
- 189903 string characters out of 3144865
- 306219 words of memory out of 3000000
- 16317 multiletter control sequences out of 15000+200000
+ 13639 strings out of 493921
+ 190055 string characters out of 3144865
+ 305235 words of memory out of 3000000
+ 16321 multiletter control sequences out of 15000+200000
  50555 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  31i,10n,53p,738b,2272s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1197,9 +1200,9 @@ TeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on main.pdf (54 pages, 712004 bytes).
+Output written on main.pdf (54 pages, 726292 bytes).
 PDF statistics:
- 758 PDF objects out of 1000 (max. 8388607)
- 295 named destinations out of 1000 (max. 500000)
+ 760 PDF objects out of 1000 (max. 8388607)
+ 298 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

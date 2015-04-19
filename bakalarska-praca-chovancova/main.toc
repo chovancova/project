@@ -25,20 +25,20 @@
 \contentsline {subsection}{\numberline {3.2.1}S\IeC {\'u}radnice pl\IeC {\'a}tna}{13}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}DOM element}{14}{subsection.3.2.2}
 \contentsline {subsubsection}{\acs *{SVG} v HTML dokumente}{14}{section*.9}
-\contentsline {section}{\numberline {3.3}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez Snap}{15}{section.3.3}
+\contentsline {section}{\numberline {3.3}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez Snap API}{15}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Popis atrib\IeC {\'u}tov tvarov}{15}{subsection.3.3.1}
 \contentsline {subsubsection}{Path tvar}{16}{section*.10}
 \contentsline {section}{\numberline {3.4}Vykreslenie obr\IeC {\'a}zku}{16}{section.3.4}
 \contentsline {section}{\numberline {3.5}Atrib\IeC {\'u}ty elementu}{17}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}V\IeC {\'y}pl\IeC {\v n} elementu }{17}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Nastavenie okraja elementu}{17}{subsection.3.5.2}
-\contentsline {subsubsection}{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }{19}{section*.11}
-\contentsline {section}{\numberline {3.6}Element.animate()}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.5.1}V\IeC {\'y}pl\IeC {\v n} elementu - fill }{17}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Nastavenie okraja elementu - stroke}{17}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Zoskupovanie elementov}{17}{section.3.6}
+\contentsline {section}{\numberline {3.7}Element.animate()}{21}{section.3.7}
 \contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{22}{chapter.4}
 \contentsline {section}{\numberline {4.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{22}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{23}{subsection.4.1.1}
-\contentsline {subsubsection}{Cez program WYSWING}{23}{section*.12}
-\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{23}{section*.13}
+\contentsline {subsubsection}{Cez program WYSWING}{23}{section*.11}
+\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{23}{section*.12}
 \contentsline {section}{\numberline {4.2}JavaScript}{24}{section.4.2}
 \contentsline {chapter}{\numberline {5}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Vytvorenie SVG v programe Inkscape}{25}{section.5.1}

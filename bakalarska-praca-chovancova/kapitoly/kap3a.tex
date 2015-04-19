@@ -166,7 +166,7 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section{Kreslenie základných tvarov cez Snap}
+\section{Kreslenie základných tvarov cez Snap API}
 
 Snap API poskytuje metódy na kreslenie jednoduchých tvarov. 
 
@@ -289,7 +289,7 @@ Tvary, ktoré sa dajú nakresliť sa môžu vyfarbiť, orámovať alebo mnoho in
 
 %Element.attr(...) vráti alebo nastaví dané atribúty elementu. Medzi parametre patrí buď objekt, ktorý sa skladá s páru kľúč-hodnota, alebo názvu atribútu. 
 
-\subsection{Výplň elementu }
+\subsection{Výplň elementu - fill }
 
 Pozadie pre element nastavím cez metódu attr použitím fill atribútu ako parameter. Pre jednofarebné výplne je formát vyjadrený cez CSS špecifikáciu. CSS špecifikácia farieb je nasledovná: \#rrggbb alebo skrátene \#rgb , rgb(r, g, b) reťazec alebo slovne. 
 Napríklad: 
@@ -300,7 +300,7 @@ var kruh = paper.circle(50, 50, 40).attr("fill", "red");
 Ďalšie spôsoby výplne elementu sú obrázkom,  gradientom, alebo vzorom. 
 Pre nastavenie neprehľadnosti nastavíme atribút "fill-opacity" hodnotou čísla v rozsahu od 0-1. Element pri "fill-opacity": 1 je neprehľadný.  
 
-\subsection{Nastavenie okraja elementu}
+\subsection{Nastavenie okraja elementu - stroke}
 
 Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad tých najznámejších je v tabuľke \ref{parametre:styl}.\cite{styly}
 
@@ -329,63 +329,34 @@ Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad 
 \end{table}
 
 
+\section{Zoskupovanie elementov}
 
+Niekedy je potrebné použiť rovnaké atribúty, transformácie, alebo animácie pre viacero elementov. V Snap API je možné využiť metódu group alebo g. Group zoskupí viacero elementov do množiny. Príkazom add sa dajú pridať ďalšie prvky. V množine sa dajú meniť atribúty pre viacero prvkov naraz volaním metódy attr. 
 
-
-
-
-
-
-
-
-
-
-
-\newpage
-\clearpage
-TOTO BUDE PRIKLAD KED BUDEM MAT UZ NAPISANE ATTRIBUTY NA ZMENU STYLU
-asi by bolo velmi vhodne pouzit nejake ine demo, ako ubohy kruh, teda asi teplomer, alebo mapu, ale urcite nieco ine ako kruh!!!!!!!!!!
-
-\subsubsection{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }
-
-Kód vytvoreného kruhu: 
+Príklad zoskupenia elementov. Výsledné zoskupenie je zobrazené na obrázku \ref{fig:grupovanieElementov}. 
 
 \begin{lstlisting}
-<svg width="100" height="100">
-<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="silver" />
-</svg>	
-\end{lstlisting}
-
-SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu.
-
-
-TODO TODO TODO
-
-Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
-Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. \cite{inline}
-
-Kruh vytvorený cez Snap API má nasledovný kód:
-
-\begin{lstlisting}
-var paper = Snap(100, 100);
+var paper = Snap();
 var kruh = paper.circle(50, 50, 40);
-kruh.attr({
-stroke: "black", 
-strokeWidth: 2, 
-fill: "silver"
+var obdlznik = paper.rect(120, 10, 80, 80);
+var elipsa = paper.ellipse(270, 50, 40, 20);
+
+var group = paper.g(kruh, obdlznik);
+group.add(elipsa);
+
+group.attr({
+	fill: 'yellow',
+	stroke: '#000',
+	strokeWidth: 5, 
+	strokeDasharray: [3, 5, 1]
 });
-
 \end{lstlisting}
-
-
-Vykreslí sa na HTML stránku obrázok \ref{jednoduchyKruh}. Obidva spôsoby vykreslili kruh na webovej stránke úplne rovnako.  
 
 \begin{figure}[hp]
-	\begin{center}
-		\includegraphics  {obrazky/jednoduchyKruh.png}
-		\caption{Vykreslený kruh vytvorený cez SVG, a Snap API}
-		\label{jednoduchyKruh}
-	\end{center}
+\centering
+\includegraphics[width=0.7\linewidth]{obrazky/grupovanieElementov}
+\caption{Príklad zoskupenia elementov a následná zmena atribútov}
+\label{fig:grupovanieElementov}
 \end{figure}
 
 
@@ -395,22 +366,67 @@ Vykreslí sa na HTML stránku obrázok \ref{jednoduchyKruh}. Obidva spôsoby vyk
 
 
 
+%
+%
+%\newpage
+%\clearpage
+%TOTO BUDE PRIKLAD KED BUDEM MAT UZ NAPISANE ATTRIBUTY NA ZMENU STYLU
+%asi by bolo velmi vhodne pouzit nejake ine demo, ako ubohy kruh, teda asi teplomer, alebo mapu, ale urcite nieco ine ako kruh!!!!!!!!!!
+%
+%\subsubsection{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }
+%
+%Kód vytvoreného kruhu: 
+%
+%\begin{lstlisting}
+%<svg width="100" height="100">
+%<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="silver" />
+%</svg>	
+%\end{lstlisting}
+%
+%SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu.
+%
+%
+%TODO TODO TODO
+%
+%Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
+%Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. \cite{inline}
+%
+%Kruh vytvorený cez Snap API má nasledovný kód:
+%
+%\begin{lstlisting}
+%var paper = Snap(100, 100);
+%var kruh = paper.circle(50, 50, 40);
+%kruh.attr({
+%stroke: "black", 
+%strokeWidth: 2, 
+%fill: "silver"
+%});
+%
+%\end{lstlisting}
+%
+%
+%Vykreslí sa na HTML stránku obrázok \ref{jednoduchyKruh}. Obidva spôsoby vykreslili kruh na webovej stránke úplne rovnako.  
+%
+%\begin{figure}[hp]
+%	\begin{center}
+%		\includegraphics  {obrazky/jednoduchyKruh.png}
+%		\caption{Vykreslený kruh vytvorený cez SVG, a Snap API}
+%		\label{jednoduchyKruh}
+%	\end{center}
+%\end{figure}
+%
+%
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+\newpage
+\clearpage
+\begin{center}
+	Prazdna strana
+\end{center}
+\newpage
+\clearpage
 
 
 
