@@ -9,9 +9,15 @@ var paper;
 
 var init = function(id, subor) {
     paper = new Snap(id);
+  //  paper.attr({ viewBox: "0 0 800 600" });
+
 
     Snap.load (subor, function (f) {
-            paper.append (f);
+            paper.append(f);
+            //zabezpecenie responzivneho dizajnu a vzhladu
+
+            paper.attr({ viewBox: "0 0 615 305 ", width: "100%", height: "100%" });
+
         }
     );
 };
