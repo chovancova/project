@@ -1,72 +1,65 @@
 \contentsline {section}{\numberline {0.1}Pozn\IeC {\'a}mky - informa\IeC {\v c}n\IeC {\'y} \IeC {\'u}\IeC {\v c}el}{1}{section.0.1}
 \contentsline {section}{\numberline {0.2}Kapitoly by mali byt nasledovne}{1}{section.0.2}
 \contentsline {section}{\numberline {0.3}Learning Raphael JS Vector Graphics}{3}{section.0.3}
-\contentsline {subsection}{\numberline {0.3.1}Porovnanie sp\IeC {\^o}sobu vykreslenia cez SVG SMIL a Snap}{3}{subsection.0.3.1}
-\contentsline {subsection}{\numberline {0.3.2}Krok 1: Inicializ\IeC {\'a}cia pl\IeC {\'a}tna na kreslenie}{4}{subsection.0.3.2}
-\contentsline {subsubsection}{S\IeC {\'u}radnice pl\IeC {\'a}tna}{4}{section*.1}
-\contentsline {subsubsection}{DOM element}{4}{section*.2}
-\contentsline {subsection}{\numberline {0.3.3}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez Snap}{6}{subsection.0.3.3}
-\contentsline {subsection}{\numberline {0.3.4}Popis atrib\IeC {\'u}tov tvarov}{6}{subsection.0.3.4}
-\contentsline {subsubsection}{Path tvar}{7}{section*.3}
-\contentsline {subsubsection}{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }{8}{section*.4}
+\contentsline {section}{\numberline {0.4}Porovnanie sp\IeC {\^o}sobu vykreslenia cez \acs {SVG} \acs {SMIL} a Snap}{3}{section.0.4}
+\contentsline {section}{\numberline {0.5}Krok 1: Inicializ\IeC {\'a}cia pl\IeC {\'a}tna na kreslenie}{4}{section.0.5}
+\contentsline {subsection}{\numberline {0.5.1}S\IeC {\'u}radnice pl\IeC {\'a}tna}{4}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {0.5.2}DOM element}{4}{subsection.0.5.2}
+\contentsline {subsubsection}{\acs *{SVG} v HTML dokumente}{5}{section*.1}
+\contentsline {section}{\numberline {0.6}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez Snap}{6}{section.0.6}
+\contentsline {subsection}{\numberline {0.6.1}Popis atrib\IeC {\'u}tov tvarov}{6}{subsection.0.6.1}
+\contentsline {subsubsection}{Path tvar}{7}{section*.2}
+\contentsline {subsubsection}{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }{9}{section*.3}
 \select@language {english}
 \select@language {slovak}
 \select@language {english}
 \select@language {slovak}
-\contentsline {chapter}{\IeC {\'U}vod}{2}{chapter*.8}
+\contentsline {chapter}{\IeC {\'U}vod}{2}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Z\IeC {\'a}kladn\IeC {\'e} pojmy}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}\acs {HTML}5 \IeC {\v s}tandard}{4}{section.1.1}
 \contentsline {section}{\numberline {1.2}\IeC {\v C}o je SVG?}{5}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Podpora v webovom prehliada\IeC {\v c}i}{5}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Rozdiely medzi SVG a Canvas}{5}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}\acs *{SVG} v HTML dokumente}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Pr\IeC {\'\i }klady na\IeC {\v c}\IeC {\'\i }tania SVG v HTML dokumente}{6}{subsection.1.3.1}
-\contentsline {subsubsection}{Image}{6}{section*.13}
-\contentsline {subsubsection}{Embed}{6}{section*.14}
-\contentsline {subsubsection}{Object}{8}{section*.15}
-\contentsline {subsubsection}{ Iframe}{8}{section*.16}
-\contentsline {subsection}{\numberline {1.3.2}Pr\IeC {\'\i }klad pou\IeC {\v z}itia SVG v HTML dokumente s inline SVG }{8}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}SVG tvary}{9}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Element Path}{10}{subsection.1.4.1}
-\contentsline {chapter}{\numberline {2}Anal\IeC {\'y}za po\IeC {\v z}iadaviek}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}N\IeC {\'a}stroje na tvorbu grafick\IeC {\'y}ch komponentov}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}JavaScriptov\IeC {\'e} kni\IeC {\v z}nice pre grafick\IeC {\'e} komponenty}{11}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}D3.js}{12}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Rapha\IeC {\"e}l.js}{12}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Snap.svg.js}{12}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}SVG.JS}{13}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Zhodnotenie po\IeC {\v z}iadaviek}{13}{section.2.3}
-\contentsline {chapter}{\numberline {3}Kni\IeC {\v z}nica Snap.svg.js}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}append()}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Element.attr(...)}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Parametre:}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2} Pou\IeC {\v z}itie:}{14}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Element.animate()}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Gradinets, Path String, Colour Parsing}{15}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Paper.path([pathString])}{15}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{17}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{18}{subsection.4.1.1}
-\contentsline {subsubsection}{Cez program WYSWING}{18}{section*.17}
-\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{18}{section*.18}
-\contentsline {section}{\numberline {4.2}JavaScript}{19}{section.4.2}
-\contentsline {chapter}{\numberline {5}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Vytvorenie SVG v programe Inkscape}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Definovanie id SVG}{20}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}XML Editor}{22}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}Zistenie atrib\IeC {\'u}tov SVG}{22}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Pr\IeC {\'a}zdna n\IeC {\'a}dr\IeC {\v z}}{22}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Pln\IeC {\'a} n\IeC {\'a}dr\IeC {\v z}}{22}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {6}Integr\IeC {\'a}cia grafick\IeC {\'e}ho komponentu pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{26}{chapter.6}
-\contentsline {section}{\numberline {6.1}HTML s\IeC {\'u}bor}{26}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}K\IeC {\'o}d}{27}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Vysvetlenie k\IeC {\'o}du}{27}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}PumpingStation.js}{27}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}onPageLoad()}{28}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}PumpingStation(par1, par2)}{28}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Tank}{29}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Ventil}{30}{subsection.6.2.4}
-\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh \acs {REST} \acs {API}}{31}{chapter.7}
-\contentsline {section}{\numberline {7.1}\acs {JSON}}{31}{section.7.1}
-\contentsline {chapter}{\numberline {8}Automatick\IeC {\'e} mapovanie API}{32}{chapter.8}
-\contentsline {chapter}{\numberline {9}TODO --- Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } SVG}{33}{chapter.9}
+\contentsline {subsection}{\numberline {1.2.3}Pr\IeC {\'\i }klad pou\IeC {\v z}itia SVG v HTML dokumente s inline SVG }{6}{subsection.1.2.3}
+\contentsline {chapter}{\numberline {2}Anal\IeC {\'y}za po\IeC {\v z}iadaviek}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}N\IeC {\'a}stroje na tvorbu grafick\IeC {\'y}ch komponentov}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}JavaScriptov\IeC {\'e} kni\IeC {\v z}nice pre grafick\IeC {\'e} komponenty}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}D3.js}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Rapha\IeC {\"e}l.js}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Snap.svg.js}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}SVG.JS}{10}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Zhodnotenie po\IeC {\v z}iadaviek}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Kni\IeC {\v z}nica Snap.svg.js}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}append()}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Element.attr(...)}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Parametre:}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2} Pou\IeC {\v z}itie:}{11}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Element.animate()}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Gradinets, Path String, Colour Parsing}{12}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Paper.path([pathString])}{12}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{14}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{15}{subsection.4.1.1}
+\contentsline {subsubsection}{Cez program WYSWING}{15}{section*.12}
+\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{15}{section*.13}
+\contentsline {section}{\numberline {4.2}JavaScript}{16}{section.4.2}
+\contentsline {chapter}{\numberline {5}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Vytvorenie SVG v programe Inkscape}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Definovanie id SVG}{17}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}XML Editor}{19}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Zistenie atrib\IeC {\'u}tov SVG}{19}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Pr\IeC {\'a}zdna n\IeC {\'a}dr\IeC {\v z}}{19}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Pln\IeC {\'a} n\IeC {\'a}dr\IeC {\v z}}{19}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Integr\IeC {\'a}cia grafick\IeC {\'e}ho komponentu pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}HTML s\IeC {\'u}bor}{23}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}K\IeC {\'o}d}{24}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Vysvetlenie k\IeC {\'o}du}{24}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}PumpingStation.js}{24}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}onPageLoad()}{25}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}PumpingStation(par1, par2)}{25}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Tank}{26}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Ventil}{27}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}N\IeC {\'a}vrh \acs {REST} \acs {API}}{28}{chapter.7}
+\contentsline {section}{\numberline {7.1}\acs {JSON}}{28}{section.7.1}
+\contentsline {chapter}{\numberline {8}Automatick\IeC {\'e} mapovanie API}{29}{chapter.8}
+\contentsline {chapter}{\numberline {9}TODO --- Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } SVG}{30}{chapter.9}

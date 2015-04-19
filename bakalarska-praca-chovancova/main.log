@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 APR 2015 05:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 APR 2015 05:52
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -688,11 +688,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (C:\Github\project\bakalarska-praca-chovancova\poznamky.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap1_uvod.aux)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap2.aux
-
-LaTeX Warning: Label `jednoduchyKruh' multiply defined.
-
-) (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3.aux)
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap2.aux)
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4b.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4c.aux)
@@ -830,7 +827,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 65.
  [3]
-<obrazky/suradnice1.jpg, id=61, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=65, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -843,35 +840,41 @@ Package pdftex.def Info: obrazky/suradnice1.jpg used on input line 109.
                                                   \fi \fi 
 l.121  \end{lstlisting}
                         <C:/Github/project/bakalarska-praca-chovancova/obrazky/
-suradnice1.jpg>] [5] [6pdfTeX warning (ext4): destination with the same identif
-ier (name{table.0.1}) has been already used, duplicate ignored
+suradnice1.jpg>] [5pdfTeX warning (ext4): destination with the same identifier 
+(name{table.0.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.212 
+l.193 \newpage
+              ] [6pdfTeX warning (ext4): destination with the same identifier (
+name{table.0.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.275 
       ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.0.2}) has been already used, duplicate ignored
+le.0.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.242 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.0.3}) has been already used, duplicate ignored
+l.307 \newpage
+              ] [8pdfTeX warning (ext4): destination with the same identifier (
+name{table.0.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.242 \newpage
-              ]
-<obrazky/jednoduchyKruh.png, id=109, 131.74219pt x 128.73094pt>
+l.308 \clearpage
+                ]
+<obrazky/jednoduchyKruh.png, id=122, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
-Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 282.
+Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 347.
 (pdftex.def)             Requested size: 131.74185pt x 128.7306pt.
-) [8
+) [9
 
-] [9pdfTeX warning (ext4): destination with the same identifier (name{figure.0.
-2}) has been already used, duplicate ignored
+] [10pdfTeX warning (ext4): destination with the same identifier (name{figure.0
+.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -910,7 +913,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 1.
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
-<obrazky/obrazokHTML.jpg, id=355, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=357, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -932,7 +935,7 @@ Package acronym Info: Label `acro:SVG' newly defined as it shall be overridden
 although it is yet undefined on input line 30.
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
 although it is yet undefined on input line 32.
- <obrazky/podpora.jpg, id=368, 799.48688pt x 405.01312pt>
+ <obrazky/podpora.jpg, id=370, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -941,63 +944,39 @@ Package pdftex.def Info: obrazky/podpora.jpg used on input line 62.
  [5]
 Package acronym Info: Label `acro:PPI' newly defined as it shall be overridden
 although it is yet undefined on input line 77.
- [6] [7pdfTeX warning (ext4): destination with the same identifier (name{table.
-1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.141 	\begin{lstlisting}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.1.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.141 	\begin{lstlisting}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{table.1.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.141 	\begin{lstlisting}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{table.1.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.141 	\begin{lstlisting}
-                          <C:/Github/project/bakalarska-praca-chovancova/obrazk
-y/podpora.jpg>] [8]
-File: obrazky/jednoduchyKruh.png Graphic file (type png)
- <use obrazky/jednoduchyKruh.png>
-Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 185.
-(pdftex.def)             Requested size: 131.74185pt x 128.7306pt.
-) [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
-3}) has been already used, duplicate ignored
+) [6] [7pdfTeX warning (ext4): destination with the same identifier (name{table
+.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.107 \include{kapitoly/kap2}
-                             	%] [10pdfTeX warning (ext4): destination with the
- same identifier (name{table.1.4}) has been already used, duplicate ignored
+                             	%pdfTeX warning (ext4): destination with the same
+ identifier (name{figure.1.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.107 \include{kapitoly/kap2}
-                             	%]
+                             	%pdfTeX warning (ext4): destination with the same
+ identifier (name{table.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.107 \include{kapitoly/kap2}
+                             	% <C:/Github/project/bakalarska-praca-chovancova/
+obrazky/podpora.jpg>]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3.tex
 Kapitola 2.
+[8
+
+
+
+] [9]) [10] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
+Kapitola 3.
 [11
 
 
 
-] [12]) [13]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap3a.tex
-Kapitola 3.
-[14
-
-
-
-]) [15] [16pdfTeX warning (ext4): destination with the same identifier (name{ta
+]) [12] [13pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1006,7 +985,7 @@ l.109 \include{kapitoly/kap3a}
                               ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4b.tex
 Kapitola 4.
-[17
+[14
 
 
 
@@ -1016,37 +995,37 @@ as been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.34 	\item n
-             ačítanie pomocou JavaScriptovej knižnice.] [18]
+             ačítanie pomocou JavaScriptovej knižnice.] [15]
 Overfull \hbox (15.56447pt too wide) in paragraph at lines 76--77
 []\IL2/lmr/m/n/12 V tejto chv�li je mo-�n� vo-la� fun-kcie z Snap API pr�-ka-zo
 m: fun-kcia().funkciaAPISnap.. 
  []
 
-) [19] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4c.tex
+) [16] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4c.tex
 Kapitola 5.
-<obrazky/obr1.png, id=505, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=468, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 14.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr2.png, id=507, 1028.34187pt x 578.16pt>
+<obrazky/obr2.png, id=470, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
  <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 27.
 (pdftex.def)             Requested size: 369.88582pt x 207.961pt.
 
-<obrazky/obr3.png, id=508, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=471, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 37.
 (pdftex.def)             Requested size: 203.25887pt x 182.93298pt.
 
-[20
+[17
 
 
 
-] [21pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+] [18pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1062,20 +1041,20 @@ l.51 A
       lebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť ...
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr1.png> <C:/Github/pr
 oject/bakalarska-praca-chovancova/obrazky/obr2.png>]
-<obrazky/XmlEditor2.png, id=520, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=482, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
 Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 69.
 (pdftex.def)             Requested size: 312.83247pt x 205.54225pt.
 
-<obrazky/obr6.png, id=522, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=484, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 83.
 (pdftex.def)             Requested size: 199.60559pt x 184.9429pt.
 
-<obrazky/obr5.png, id=524, 500.62032pt x 463.7325pt>
+<obrazky/obr5.png, id=486, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
  <use obrazky/obr5.png>
 Package pdftex.def Info: obrazky/obr5.png used on input line 94.
@@ -1086,8 +1065,8 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [22]
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+) [19]
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1101,7 +1080,7 @@ ifier (name{figure.5.4}) has been already used, duplicate ignored
 l.108 	height=
               "605.83868" <C:/Github/project/bakalarska-praca-chovancova/obrazk
 y/obr3.png> <C:/Github/project/bakalarska-praca-chovancova/obrazky/XmlEditor2.p
-ng>] [24pdfTeX warning (ext4): destination with the same identifier (name{figur
+ng>] [21pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.5.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1115,50 +1094,50 @@ ifier (name{figure.5.6}) has been already used, duplicate ignored
 l.108 	height=
               "605.83868" <C:/Github/project/bakalarska-praca-chovancova/obrazk
 y/obr6.png> <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr5.png>])
-[25] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.tex
+[22] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap5.tex
 Kapitola 6.
-[26
+[23
 
 
 
-] [27] [28] [29]) [30]
+] [24] [25] [26]) [27]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap6.tex
 Kapitola 7.
-) [31
+) [28
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap7.tex
 Kapitola 8.
-) [32
+) [29
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap8.tex)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap9.tex
 Kapitola 9.
-) [33
+) [30
 
 
 
 
 
 ] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap10.tex)
-[34
+[31
 
 
 
-] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [35
+] (C:\Github\project\bakalarska-praca-chovancova\ine/lit.tex [32
 
 
 
-]) [36]
-(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [37
+]) [33]
+(C:\Github\project\bakalarska-praca-chovancova\ine/skratky.tex [34
 
 
 
-] [38])
-[39
+] [35])
+[36
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
@@ -1182,10 +1161,6 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
 (C:\Github\project\bakalarska-praca-chovancova\ine/skratky.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 135.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  )
 (\end occurred inside a group at level 1)
@@ -1193,10 +1168,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
 ### simple group (level 1) entered at line 68 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13682 strings out of 493921
- 190528 string characters out of 3144865
- 312141 words of memory out of 3000000
- 16329 multiletter control sequences out of 15000+200000
+ 13639 strings out of 493921
+ 189949 string characters out of 3144865
+ 306099 words of memory out of 3000000
+ 16314 multiletter control sequences out of 15000+200000
  50555 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  31i,10n,53p,738b,2265s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1213,9 +1188,9 @@ TeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on main.pdf (56 pages, 720493 bytes).
+Output written on main.pdf (54 pages, 711625 bytes).
 PDF statistics:
- 811 PDF objects out of 1000 (max. 8388607)
- 333 named destinations out of 1000 (max. 500000)
+ 767 PDF objects out of 1000 (max. 8388607)
+ 305 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -39,11 +39,11 @@ ujednotnit nazov attribut a parameter
 %Namet na zmenu: pouzit to demo, ktore mi poslal veduci na transformaciu zmeny. 
 
 
-\subsection{Porovnanie spôsobu vykreslenia cez SVG SMIL a Snap}
+\section{Porovnanie spôsobu vykreslenia cez \acs{SVG} \acs{SMIL} a Snap}
 
 Kreslenie vektorov je jednoduchšie cez Snap ako čisto písanie SVG. 
 
-Príklad kreslenia obdĺžníka a animovanie šírky z 50 pixlov na 100 pixelov cez čisté SVG:\cite[p.~9]{Dawber}
+Príklad kreslenia obdĺžníka a animovanie šírky z 50 pixlov na 100 pixelov cez SVG SMIL:\cite[p.~9]{Dawber}
 \begin{lstlisting}
 <svg>
 <rect x="10" y="10" width="50" height="30">
@@ -79,7 +79,7 @@ Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa
 %Krok 0: ziskanie Snapu...
 
  
-\subsection{Krok 1: Inicializácia plátna na kreslenie}
+\section{Krok 1: Inicializácia plátna na kreslenie}
 %viewport = výrez
 Na to, aby sme boli schopní kresliť grafické komponenty, tak potrebujeme definovať miesto, kde budú vykreslené. 
 %Určenie miesta, kde bude vykreslené plátno je buď viditeľné okno vo webovom prehliadači, alebo viewport. 
@@ -91,7 +91,7 @@ Okno prehliadača je referencia na viewport a kresliaca oblasť je plátno.   \c
 
 Vytvorenie plátna cez Snap konštruktor sa dá urobiť viacerými spôsobmi.
 
-\subsubsection{Súradnice plátna}
+\subsection{Súradnice plátna}
  
  
 Nasledujúci príkaz zadefinuje pláno s rozmermi šírka je 300 a výška 200. 
@@ -113,7 +113,7 @@ Začiatok súradnic na osi x, y je rovné nule. Bod na plátne so súradnicami x
 \end{center}
 
 
-\subsubsection{DOM element}
+\subsection{DOM element}
 
 Dosť často je potrebné použiť existujúci DOM element ako kontajner pre plátno než viewport. Ako element môžeme použiť napríklad:
 \begin{lstlisting}
@@ -131,10 +131,68 @@ Keď využívam túto formu konštruktora, tak prvý element je ID elementu. Alt
 Snap(document.getElementById('mojePlatno'), 500, 300);
 \end{lstlisting}
 
+
+
+\subsubsection{\acs*{SVG} v HTML dokumente}
+
+SVG môže byť zobrazená buď ako inline v HTML dokumente, alebo ako vloženým samostatného .SVG súboru. 
+V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG. 
+
+
+\begin{table}[hp]
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline \textbf{Technika} & \textbf{Popis} \\ 
+			\hline
+			\hline $<$embed$>$ tag & Načíta vytvorený SVG súbor.  \\ 
+			\hline $<$object$>$ tag & Nepovoľuje skriptovanie.  \\ 
+			\hline $<$iframe$>$ tag & Zobrazí SVG v rámci  \\ 
+			\hline Inline $<$svg$>$ tag & Vytvorí Svg  \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	\caption{Spôsoby vytvorenia SVG v HTML dokumente}
+	\label{vytvorenie:SVG}
+\end{table}
+
+
+%Príklady načítania SVG v HTML dokumente:
+%\begin{itemize}
+%\item Image 	
+%\begin{lstlisting}
+%<img src="stanica2.svg" width = "50" height= "50" />
+%\end{lstlisting}
+%\item Embed
+%\begin{lstlisting}
+%<embed src="stanica2.svg" width = "50" height= "50" />
+%\end{lstlisting}
+%\item Objekt
+%\begin{lstlisting}
+%<object type="image/svg+xml" data="stanica2.svg"
+%width="50" height="50"></object>
+%\end{lstlisting}
+%\item IFrame
+%\begin{lstlisting}
+%<iframe src="stanica2.svg" width = "50" height= "50">
+%</iframe>
+%\end{lstlisting}
+%\item Inline
+%\begin{lstlisting}
+%<svg width="100" height="100"> 
+%<circle cx="50" cy="50" r="40"/> </svg>
+%\end{lstlisting}
+%	
+%
+%\end{itemize}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\subsection{Kreslenie základných tvarov cez Snap}
+\section{Kreslenie základných tvarov cez Snap}
 
 Snap API poskytuje metódy na kreslenie jednoduchých tvarov. 
 
@@ -180,7 +238,7 @@ Tvar, ktorý je vykreslený priamo na HTML webovej stránke má vo vnútri eleme
 
 \subsection{Popis atribútov tvarov}
 
-Názvy atribútov a ich význam: 
+Názvy atribútov a ich význam pre obdĺžnik, kruh, elipsu sú vyjadrené v tabuľke \ref{parametre:tvar} 
 
 \begin{table}[tp]
 	\begin{center}
@@ -194,6 +252,8 @@ Názvy atribútov a ich význam:
 			\hline r & polomer kruhu, elipsy alebo okruhlých rohov na obdĺžniku \\ 
 			\hline rx & horizontálny polomer elipsy \\ 
 			\hline ry & vertikálny polomer elipsy \\ 
+			\hline x1, y1 & začiatočné x, y súradnice \\
+			\hline x2, y2 & konečné x, y súradnice \\
 			
 			%\hline width, height & šírka, výška\\
 			\hline
@@ -204,10 +264,15 @@ Názvy atribútov a ich význam:
 	\label{parametre:tvar}
 \end{table}
 
+Pre útvary polyline, polygon sú atribúty dvojice súradníc osi x, y, ktoré určujú body, ktoré sa spoja. 
+
 
 
 \subsubsection{Path tvar}
-Vytvorí $<$path$>$ element podľa daného reťazca. Parameter pozostáva z jedno písmenkových príkazov, nasledovanými bodkami a oddeľovaný argumentami a číslami. Príkazy sú uvedené v tabuľke \ref{prikazy:Path}.
+
+
+V Snap API je to metóda Paper.path([pathString]), ktorá vytvorí $<$path$>$ element podľa daného reťazca.  Parameter pathString pozostáva reťazca skladajúceho sa z jedno písmenkových príkazov, nasledovanými bodkami a oddeľovaný argumentami a číslami. Príkazy sú uvedené v tabuľke \ref{prikazy:Path}.
+
 Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30, 40). Rozdiel vo veľkosti písma vyjadruje to, či ide o absolútnu, alebo relatívnu cestu. Ak sú malé znaky jedná sa o relatívne, v prípade veľkých znakov absolútna cesta. 
 
 
