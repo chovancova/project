@@ -12,16 +12,20 @@ Pridat postup ako sa ziska Snap zo stranky a implementuje do html dokumentu. .
 
 ujednotnit nazov attribut a parameter
 
+dalsie co ma napadlo - je kapitola \cite[p.~81]{Dawber} ktora je o praci s existujucimi svg subormi / kedze to takmer na konci, tak by som mohla prehodit taktiez kapitoly, ze najprv budem pisat o svg knizniciach, ako sa to tam tvori, a tak dalej, a ptom prejdem na inkscape a priklad a animaciu .. 
+
 \section{Kapitoly by mali byt nasledovne}
 \begin{enumerate}
 	\item ciel prace 
 	\item metodika prace
 	\item definovanie zakladnych pojmov / co je html5, co je scada system, a co je svg vektorova grafika (takmer hotove, len nemam scada systemy definovane), 
-	\item analyza nastrojov - preco som sa rozhodla pouzit inkscape na tvorbu svg obrazkov, //este tam musim spomenut moznost exportu do formatov... 
-	\item postup na vytvorenie OBRAZKA SVG V INKSCAPE
-	\item priklad vytvorenia precepavacej stanice v Inkscape (toto je uz takmer hotove)
+
 	\item ANALYZA javascriptovych kniznic / (toto uz je takmer hotove, este tam pridat jquery )
-	\item Postup \textbf{tvorby} grafickych komponentov cez Snap... 
+	\item Postup \textbf{tvorby} grafickych komponentov cez Snap...
+		\item analyza nastrojov - preco som sa rozhodla pouzit inkscape na tvorbu svg obrazkov, //este tam musim spomenut moznost exportu do formatov... 
+		
+		\item postup na vytvorenie OBRAZKA SVG V INKSCAPE a integracia do snapu  \cite[p.~82-5]{Dawber} 
+		\item priklad vytvorenia precepavacej stanice v Inkscape (toto je uz takmer hotove) 
 	\item Postup \textbf{animacie} uz vytvorenych grafickych elementov 
 	\item Priklad v kode animovanie Precerpavaciej stanice... (Takmer hotove) toto je vlastne ta implementacia vzorovej sady grafickych komponentov
 	\item Navrh REST API na prepojenie grafickych komponentov so SCADA SERVEROM  \textit{toto no nemam / mam iba priklad kodu jednoducheho }
@@ -32,8 +36,8 @@ ujednotnit nazov attribut a parameter
 \end{enumerate}
 
 
-\newpage
-\section{Learning Raphael JS Vector Graphics}
+
+\chapter{Learning Raphael JS Vector Graphics}
 %V práci cituj: \cite{Dawber} , strany sa cituju takto: \cite[p.~215]{Dawber} \\ Priklady z knihy:\url{http://raphaeljsvectorgraphics.com/}  \cite{Dawber} .
 %Z tejto knihy idem pridávať do bakalárky nasledovné veci:
 %Namet na zmenu: pouzit to demo, ktore mi poslal veduci na transformaciu zmeny. 
@@ -200,6 +204,7 @@ Snap API poskytuje metódy na kreslenie jednoduchých tvarov.
 	\begin{center}
 		\begin{tabular}{|l|l|l|l|}
 		\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap metoda} & \textbf{Atribúty} \\ 
+		\hline
 		\hline Obdlžnik & $<$rect$>$ & .rect() & x, y, šírka, výška, rx, ry \\ 
 		\hline Kruh & $<$circle$>$ & .circle() & r, x, y, cx, cy, rx, ry \\ 
 		\hline Elipsa & $<$ellipse $>$ & .ellipse() & x, y, cx, cy, rx, ry \\ 
@@ -298,6 +303,68 @@ Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30
 		\label{prikazy:Path}
 	\end{table}
 \end{center}
+
+
+\section{Vykreslenie obrázku}
+Snap povoľuje vloženie bitmapových obrázkov (.jpg alebo .png) na plátno. Používa metódu image z Paper objektu. Parametre metódy image sú: zdroj, x, y, šírka, výška. Príklad kódu, ktorý vkladá .jpg obrázok do plátna:
+\begin{lstlisting}
+var paper = Snap("mojePlatno", 300, 200);
+paper.image("obrazok.jpg", 15, 15, 100, 150);
+\end{lstlisting}
+
+
+\section{Atribúty elementu}
+
+Tvary, ktoré sa dajú nakresliť sa môžu vyfarbiť, orámovať alebo mnoho iných atribútov sa dá nastaviť. Keď sa vytvorí tvar, tak sa vráti Element objekt. Tento objekt má attr metódu, ktorá akceptuje key-value pár atribútov. V tomto odseku sa pozrieme na rôzne atribúty, ktoré môžu byť aplikované na naše grafické komponenty používajúc túto metódu. 
+
+%Element.attr(...) vráti alebo nastaví dané atribúty elementu. Medzi parametre patrí buď objekt, ktorý sa skladá s páru kľúč-hodnota, alebo názvu atribútu. 
+
+\subsection{Výplň elementu }
+
+Pozadie pre element nastavím cez metódu attr použitím fill atribútu ako parameter. Pre jednofarebné výplne je formát vyjadrený cez CSS špecifikáciu. CSS špecifikácia farieb je nasledovná: \#rrggbb alebo skrátene \#rgb , rgb(r, g, b) reťazec alebo slovne. 
+Napríklad: 
+\begin{lstlisting}
+	var kruh = paper.circle(50, 50, 40).attr("fill", "red");
+\end{lstlisting}
+
+Ďalšie spôsoby výplne elementu sú obrázkom,  gradientom, alebo vzorom. 
+Pre nastavenie neprehľadnosti nastavíme atribút "fill-opacity" hodnotou čísla v rozsahu od 0-1. Element pri "fill-opacity": 1 je neprehľadný.  
+
+\subsection{Nastavenie okraja elementu}
+
+Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad tých najznámejších je v tabuľke \ref{parametre:styl}.\cite{styly}
+
+
+\begin{table}[tp]
+	\begin{center}
+	
+		\begin{tabular}{|l|l|l|}
+			\hline \textbf{Atribút pre attr() } &\textbf{CSS atribút} & \textbf{Poznámka} \\ 
+			\hline 
+		
+			\hline stroke & stroke & farba výplne okraja \\ 
+			\hline strokeWidth & stroke-width & šírka okraja v px, default je 1 \\ 
+			\hline
+			strokeOpacity & stroke-opacity & neprehľadnosť, 0-1 \\
+			\hline strokeLinecap & stroke-linecap & ["butt", "square", "round"], tvar - okraj konca\\ 
+			\hline strokeLinejoin & stroke-linejoin & ["bevel", "round", "miter"], tvar - okraj roku\\ 
+		
+			\hline strokeDasharray &stroke-dasharray & pole čiarok, bodiek.., napr.5,3,2\\
+			
+		 \hline
+		\end{tabular} 
+		\end{center}
+	\caption{Výber možných stroke atribútov}
+	\label{parametre:styl}
+\end{table}
+
+
+
+
+
+
+
+
 
 
 

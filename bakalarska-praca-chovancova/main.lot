@@ -1,19 +1,21 @@
-\contentsline {table}{\numberline {1}{\ignorespaces Sp\IeC {\^o}soby vytvorenia SVG v HTML dokumente}}{5}{table.0.1}
-\contentsline {table}{\numberline {2}{\ignorespaces Zoznam tvarov, ktor\IeC {\'e} podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}}{6}{table.0.2}
-\contentsline {table}{\numberline {3}{\ignorespaces N\IeC {\'a}zvy atrib\IeC {\'u}tov a ich v\IeC {\'y}znam}}{7}{table.0.3}
-\contentsline {table}{\numberline {4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{8}{table.0.4}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Sp\IeC {\^o}soby vytvorenia SVG v HTML dokumente}}{6}{table.1.1}
+\contentsline {table}{\numberline {1.2}{\ignorespaces Zoznam tvarov, ktor\IeC {\'e} podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}}{7}{table.1.2}
+\contentsline {table}{\numberline {1.3}{\ignorespaces N\IeC {\'a}zvy atrib\IeC {\'u}tov a ich v\IeC {\'y}znam}}{8}{table.1.3}
+\contentsline {table}{\numberline {1.4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{10}{table.1.4}
+\contentsline {table}{\numberline {1.5}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch stroke atrib\IeC {\'u}tov}}{10}{table.1.5}
 \select@language {english}
 \select@language {slovak}
 \select@language {english}
 \select@language {slovak}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Podpora HTML $<svg>$ elementu v webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{7}{table.1.1}
-\contentsline {table}{\numberline {1.2}{\ignorespaces Porovnanie Canvas a SVG}}{7}{table.1.2}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Podpora HTML $<svg>$ elementu v webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{7}{table.2.1}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Porovnanie Canvas a SVG}}{7}{table.2.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch parametrov pre funkciu Element.atrr(...)}}{13}{table.3.1}
+\contentsline {table}{\numberline {4.1}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch parametrov pre funkciu Element.atrr(...)}}{12}{table.4.1}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{14}{table.4.1}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{13}{table.5.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
