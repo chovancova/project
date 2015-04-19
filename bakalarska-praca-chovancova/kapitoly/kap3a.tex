@@ -417,6 +417,69 @@ group.attr({
 %
 %
 
+\subsection{Maskovanie - Element.mask()}
+TODO - 
+PRE DANY ELEMENT VOLAM FUNKCIU ATTR, KDE NASTAVIM VLASTNOST MASK 
+NAPR. mask: ellipse
+
+/ Now more interesting stuff
+// Let's assign this group as a mask for our big circle
+bigCircle.attr({
+	mask: discs
+});
+
+\section{Práca s textom - Paper.text(x, y, text)}
+
+Vykreslenie textu na plátne namiesto HTML markup s CSS štýlovaným umožňuje animovať a transformovať v rovnakým spôsobom ako iné tvary. Text vytvorení cez metódu text. Parametre metódy text sú súradnice x, y a text, ktorý sa vykreslí. Vlastnosti textu sa dajú zmeniť volaním metódy attr. V tabuľke sú atribúty, ktoré sa dajú zmeniť prostredníctvom metódy attr. 
+
+
+\begin{table}[hp]
+	
+	\begin{center}
+		
+		\begin{tabular}{|l|l|l|}
+			\hline \textbf{Snap atribút}  &\textbf{ CSS atribút}  & \textbf{Poznámka} \\ 
+						\hline
+			\hline font & font & napr. "30px Helvetica, sans-serif",\\ 
+			\hline textAnchor & text-anchor & pozícia textu, napr. "middle" \\ 
+			\hline fill & fill & výplň textu farbou, gradientom, vzorom \\ 
+			\hline fontSize  & font-size  & veľkosť textu  \\ 
+			\hline fontFamily & font-family & napr. "monospace" \\ 
+			\hline fontStyle & font-style  & štýl písma, napr. kurzíva  \\ 
+			\hline fontVariant  & font-variant  & napr. "small-caps"  \\ 
+			\hline  fontWeight & font-weight  &  hrúbka písma,  napr. normal, bold, bolder, lighter, 100-900\\ 
+			\hline 
+		
+		\end{tabular} 
+		
+		
+	\end{center}
+\label{tab:text}
+\caption{Atribúty na zmenu vlastností elementu text}
+\end{table}
+
+Príklad zmeny farby: 
+\begin{lstlisting}
+var paper = Snap();
+var text = paper.text(30, 100, "Namestovo");
+
+text.attr({
+	textAnchor: "middle",
+	fill: "#00b", 
+	fontSize: '16px', 
+	fontFamily: "Veranda", 
+	fontStyle: "italic", 
+	fontVariant: "small-caps", 
+	fontWeight: 800, 
+});
+\end{lstlisting}
+
+
+
+
+
+
+
 
 
 
@@ -424,6 +487,7 @@ group.attr({
 \clearpage
 \begin{center}
 	Prazdna strana
+$vymaz$
 \end{center}
 \newpage
 \clearpage
