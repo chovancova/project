@@ -35,7 +35,9 @@
 \contentsline {section}{\numberline {3.6}Zoskupovanie elementov}{18}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Maskovanie - Element.mask()}{20}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Pr\IeC {\'a}ca s textom - Paper.text(x, y, text)}{21}{section.3.7}
-\contentsline {section}{\numberline {3.8}Element.animate()}{24}{section.3.8}
+\contentsline {section}{\numberline {3.8}Transform\IeC {\'a}cie - Element.transform(...)}{22}{section.3.8}
+\contentsline {section}{\numberline {3.9}Anim\IeC {\'a}cie - Element.animate(...)}{22}{section.3.9}
+\contentsline {section}{\numberline {3.10}Element.animate()}{24}{section.3.10}
 \contentsline {chapter}{\numberline {4}Postup vytvorenia komponentov}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{25}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Vytvorenenie SVG }{26}{subsection.4.1.1}

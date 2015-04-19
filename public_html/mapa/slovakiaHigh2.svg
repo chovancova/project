@@ -29,7 +29,7 @@
      id="namedview18"
      showgrid="false"
      inkscape:zoom="1.58"
-     inkscape:cx="266.98395"
+     inkscape:cx="168.24977"
      inkscape:cy="169.44815"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -240,7 +240,7 @@ InkWeb.log = function () { /* if you need that, use the inkweb-debug.js too */ }
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -251,11 +251,11 @@ InkWeb.log = function () { /* if you need that, use the inkweb-debug.js too */ }
        type="text/css">
 			.land
 			{
-				fill: #CCCCCC;
-				fill-opacity: 1;
-				stroke:white;
-				stroke-opacity: 1;
-				stroke-width:0.5;
+				//fill: #CCCCCC;
+				//fill-opacity: 1;
+				//stroke:white;
+				//stroke-opacity: 1;
+				//stroke-width:0.5;
 			}
 		</style>
     <!-- All areas are listed in the line below. You can use this list in your script. -->
@@ -341,8 +341,7 @@ InkWeb.log = function () { /* if you need that, use the inkweb-debug.js too */ }
      style="fill:#0000ff;fill-opacity:0.65098039;stroke:#2c20c8;stroke-opacity:0.80952382"
      sodipodi:type="arc" />
   <path
-     onclick=";
-InkWeb.setAtt({el:['bodNamestovo'], att:'fill stroke stroke-width', val:'red black 5px'})"
+     onclick="; InkWeb.setAtt({el:['bodNamestovo'], att:'fill stroke stroke-width', val:'red black 5px'})"
      transform="matrix(1,0,0,0.77398005,-1.8987342,20.394476)"
      d="m 203.16456,54.683544 a 3.164557,4.7468352 0 1 1 -6.32912,0 3.164557,4.7468352 0 1 1 6.32912,0 z"
      sodipodi:ry="4.7468352"
@@ -355,12 +354,12 @@ InkWeb.setAtt({el:['bodNamestovo'], att:'fill stroke stroke-width', val:'red bla
   <text
      sodipodi:linespacing="125%"
      id="textBratislava"
-     y="230.31647"
-     x="29.746836"
+     y="230.94937"
+     x="27.848101"
      style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
      xml:space="preserve"><tspan
-       y="230.31647"
-       x="29.746836"
+       y="230.94937"
+       x="27.848101"
        id="tspan3007"
        sodipodi:role="line">Bratislava</tspan></text>
   <text
@@ -377,13 +376,63 @@ InkWeb.setAtt({el:['bodNamestovo'], att:'fill stroke stroke-width', val:'red bla
   <text
      sodipodi:linespacing="125%"
      id="textNamestovo"
-     y="44.873417"
-     x="253.79747"
+     y="22.088606"
+     x="277.21518"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
      xml:space="preserve"><tspan
        style="font-size:12px"
-       y="44.873417"
-       x="253.79747"
+       y="22.088606"
+       x="277.21518"
        id="tspan3015"
        sodipodi:role="line">Námestovo</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 21.518987,227.1519 C 57.860473,155.88073 178.04009,134.63672 196.83544,65.126582 c 0.0943,-0.188697 0,-0.421941 0,-0.632911 0,-0.210971 0,-0.421941 0,-0.632912"
+     id="path3033"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccsc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 197.46836,61.329114 c 19.46596,20.238064 113.71157,4.023373 82.27848,-32.278481"
+     id="pathNamestovo"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 198.73418,63.227848 C 321.01448,172.15814 552.26971,-51.865779 526.58228,151.20253"
+     id="pathKosice "
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     transform="matrix(1,0,0,0.84009765,503.79747,-38.994335)"
+     d="m 25.316456,227.1519 a 3.164557,3.7974684 0 1 1 -6.329114,0 3.164557,3.7974684 0 1 1 6.329114,0 z"
+     sodipodi:ry="3.7974684"
+     sodipodi:rx="3.164557"
+     sodipodi:cy="227.1519"
+     sodipodi:cx="22.151899"
+     style="fill:#0000ff;fill-opacity:0.65098039;stroke:#2c20c8;stroke-opacity:0.80952382"
+     sodipodi:type="arc"
+     id="bodKosice" />
+  <text
+     sodipodi:linespacing="125%"
+     id="textKosice"
+     y="166.18663"
+     x="500.03345"
+     style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"><tspan
+       y="166.18663"
+       x="500.03345"
+       sodipodi:role="line"
+       id="tspan3078">Košice</tspan></text>
+  <path
+     sodipodi:type="arc"
+     style="fill:#000000;fill-opacity:0.65098038999999996;stroke:#1c1111;stroke-opacity:0.80952382"
+     id="bod"
+     sodipodi:cx="24.367088"
+     sodipodi:cy="200.88608"
+     sodipodi:rx="8.5443039"
+     sodipodi:ry="9.1772156"
+     d="m 32.911392,200.88608 a 8.5443039,9.1772156 0 1 1 -17.088608,0 8.5443039,9.1772156 0 1 1 17.088608,0 z"
+     transform="translate(-8.8607595,15.189873)"
+     inkscape:label="#bod" />
 </svg>
