@@ -16,7 +16,7 @@ var init = function(id, subor) {
             paper.append(f);
             //zabezpecenie responzivneho dizajnu a vzhladu
 
-            paper.attr({ viewBox: "0 0 615 305 ", width: "100%", height: "100%" });
+          paper.attr({ viewBox: "0 0 615 305 ", width: "100%", height: "100%" });
 
         }
     );
@@ -41,7 +41,7 @@ var nazov = nazovIDelementu;
    paper.selectAll(nazov).attr({
             textAnchor: "right",
             fill: "#00b",
-            fontSize: '16px',
+            fontSize: '26px',
             fontFamily: "monospace",
             fontStyle: "italic",
             fontVariant: "small-caps",
@@ -63,6 +63,7 @@ var zmenaFarbyKraja = function(okr, p_farba){
 var spustiTesty = function spustTesty(){
     testZmenaVlastnosti();
     testZmenyFarbyKraja();
+    testAnimovanieCiest();
 }
 
 function testNaGroup(){
@@ -87,6 +88,165 @@ function testZmenyFarbyKraja(){
     zmenaFarbyKraja(TA,"#abc");
     zmenaFarbyKraja(TC, "#0f0");
     zmenaFarbyKraja(ZI, "#f0a");
+
+}
+
+function testGroup(){
+    g = Snap().group();
+    g.g(paper.selectAll("#g8"));
+    g.attr({fill: "blue"});
+}
+
+
+function testAnimovanieCiest(){
+    animovanieBodkyPopriPath3("#pathBA");
+    animovanieBodkyPopriPath2("#pathNamestovo");
+    animovanieBodkyPopriPath1("#pathKE")
+}
+
+//http://raphaeljs.com/gear.html ,
+// ALE AJ PODLA CODEPEN http://codepen.io/mattsince87/details/snqLy
+
+function animovanieBodkyPopriPath1(mesto){
+var myPath =   paper.select(mesto);
+
+
+    var dlzkaCesty = myPath.getTotalLength();
+
+
+    myPath.attr({
+        id: "squiggle",
+        fill: "none",
+        strokeWidth: "4",
+        stroke: "#ffffff",
+        strokeMiterLimit: "10",
+        strokeDasharray: "9 9",
+        strokeDashOffset: "988.01"
+    });
+
+myPath.attr({
+        stroke: '#fff',
+        strokeWidth: 4,
+        fill: 'none',
+        strokeDasharray: "12 6",
+        strokeDashoffset: "180"
+    }).animate({
+    strokeDashoffset: 10},
+    10000,
+    mina.easeinout);
+
+
+    var Triangle = paper.polyline("0,30 15,0 30,30");
+    Triangle.attr({
+        id: "plane",
+        fill: "#fff"
+    });
+
+    var triangleGroup = paper.g( Triangle ); // Group polyline
+
+    setTimeout( function() {
+        Snap.animate(0, dlzkaCesty, function( value ) {
+            movePoint = myPath.getPointAtLength( value );
+            triangleGroup.transform(
+                't' + parseInt(movePoint.x - 15) + ','
+                + parseInt( movePoint.y - 15) + 'r'
+                + (movePoint.alpha - 90));
+        }, 10000,mina.easeinout);
+    });
+
+}
+
+
+
+function animovanieBodkyPopriPath2(mesto){
+      // SVG B - "Squiggly" Path
+    var myPath =   paper.select(mesto);
+
+
+    var lenB = myPath.getTotalLength();
+
+
+    myPath.attr({
+        id: "squiggle",
+        fill: "none",
+        strokeWidth: "4",
+        stroke: "#ffffff",
+        strokeMiterLimit: "10",
+        strokeDasharray: "9 9",
+        strokeDashOffset: "988.01"
+    });
+
+    // SVG B - Draw Path
+    var lenB = myPath.getTotalLength();
+
+    // SVG B - Animate Path
+    myPath.attr({
+        stroke: '#fff',
+        strokeWidth: 4,
+        fill: 'none',
+        // Draw Path
+        strokeDasharray: lenB + " " + lenB,
+        strokeDashoffset: lenB
+    }).animate({"stroke-dashoffset": 10}, 2500,mina.easeinout);
+
+    // SVG B - Circle
+    var CircleB = paper.circle(16,16,8);
+    CircleB.attr({
+        fill: "#3f4445",
+        stroke: "#fff",
+        strokeWidth: 2
+    });
+
+    setTimeout( function() {
+        Snap.animate(0, lenB, function( value ) {
+            movePoint = myPath.getPointAtLength( value );
+            CircleB.attr({ cx: movePoint.x, cy: movePoint.y }); // move along path via cx & cy attributes
+        }, 10000,mina.easeinout);
+    });
+
+}
+
+
+function animovanieBodkyPopriPath3(mesto){
+    var myPath =   paper.select(mesto);
+
+    myPath.attr({
+        id: "squiggle",
+        fill: "none",
+        strokeWidth: "4",
+        stroke: "#ffffff",
+        strokeMiterLimit: "10",
+        strokeDasharray: "9 9",
+        strokeDashOffset: "988.01"
+    });
+
+    // SVG A - Draw Path
+    var len = myPath.getTotalLength();
+
+    // SVG1 - Animate Path
+    myPath.attr({
+        stroke: '#fff',
+        strokeWidth: 4,
+        fill: 'none',
+        // Animate Path
+        "stroke-dasharray": "12 6",
+        "stroke-dashoffset": len
+    }).animate({"stroke-dashoffset": 10}, 10000,mina.easeinout);
+
+    // SVG A - Circle
+    var CircleA = paper.circle(32,32,16);
+    CircleA.attr({
+        fill: "#3f4445",
+        stroke: "#fff",
+        strokeWidth: 2
+    });
+
+    setTimeout( function() {
+        Snap.animate(0, len, function( value ) {
+            movePoint = myPath.getPointAtLength( value );
+            CircleA.attr({ cx: movePoint.x, cy: movePoint.y }); // move along path via cx & cy attributes
+        }, 10000,mina.easeinout);
+    });
 
 }
 

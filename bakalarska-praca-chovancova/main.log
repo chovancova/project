@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  19 APR 2015 19:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  20 APR 2015 01:04
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -802,11 +802,54 @@ Overfull \hbox (110.15419pt too wide) in paragraph at lines 7--9
 ad ov-la-da-nia.. []$\IL2/lmtt/m/n/12 http : / / raphaeljsvectorgraphics .$
  []
 
+! You can't use `macro parameter character #' in horizontal mode.
+<argument> ... system@active\string "\endcsname ##
+                                                  
+l.25 var s = Snap("#
+                    svgout");
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \language@active@arg" has an extra }.
+<inserted text> 
+                \par 
+l.26 s.attr({ viewBox: "0 0 600 600" }
+                                      );
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \language@active@arg" was complete.
+<to be read again> 
+                   \par 
+l.26 s.attr({ viewBox: "0 0 600 600" }
+                                      );
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+LaTeX Warning: Command \frqq invalid in math mode on input line 27.
+
+
+Overfull \hbox (42.50996pt too wide) in paragraph at lines 26--28
+[]\IL2/lmr/m/n/12 ); 2. spo-sob pri de-fi-ni-cii svg $\OML/lmm/m/it/12 < svgid 
+\OT1/lmr/m/n/12 = []\OML/lmm/m/it/12 dsvg\OT1/lmr/m/n/12 "\OML/lmm/m/it/12 view
+Box \OT1/lmr/m/n/12 = "00600600"\OML/lmm/m/it/12 weight \OT1/lmr/m/n/12 = "100%
+"\OML/lmm/m/it/12 height \OT1/lmr/m/n/12 =$
+ []
+
 [1
 
 
 {C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (0.38025pt too wide) in paragraph at lines 30--31
+Overfull \hbox (0.38025pt too wide) in paragraph at lines 43--44
 []\IL2/lmr/m/n/12 Priklad v kode ani-mo-va-nie Pre-cer-pa-va-ciej sta-nice... (
 Tak-mer ho-tove) toto je vlastne
  []
@@ -843,7 +886,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 1.
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
-<obrazky/obrazokHTML.jpg, id=272, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=273, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -872,7 +915,7 @@ although it is yet undefined on input line 30.
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
 although it is yet undefined on input line 32.
 
-<obrazky/podpora.jpg, id=285, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=286, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -921,7 +964,7 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
 
 
 ] [13]
-<obrazky/suradnice1.jpg, id=369, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=370, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -971,7 +1014,7 @@ e ignored
                                                   \fi \fi 
 l.341 var 
           obdlznik = paper.rect(120, 10, 80, 80);]
-<obrazky/grupovanieElementov.jpg, id=421, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=422, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
@@ -1002,7 +1045,7 @@ Overfull \hbox (40.35301pt too wide) in paragraph at lines 440--454
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.474 })
-        ;] <obrazky/textPriklad.jpg, id=456, 93.34875pt x 30.1125pt>
+        ;] <obrazky/textPriklad.jpg, id=457, 93.34875pt x 30.1125pt>
 File: obrazky/textPriklad.jpg Graphic file (type jpg)
 
 <use obrazky/textPriklad.jpg>
@@ -1211,18 +1254,18 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
 ### simple group (level 1) entered at line 68 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13676 strings out of 493921
- 190629 string characters out of 3144865
- 306421 words of memory out of 3000000
- 16338 multiletter control sequences out of 15000+200000
+ 13680 strings out of 493921
+ 190685 string characters out of 3144865
+ 305425 words of memory out of 3000000
+ 16342 multiletter control sequences out of 15000+200000
  50555 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 31i,10n,53p,738b,2272s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,10n,53p,738b,2269s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
-.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cssc.enc}{C:/Program Files (x86)/MiKTeX 2.9
-/fonts/enc/dvips/lm/lm-cs.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvip
+.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cssc.enc}{C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cs.enc}{C:/Program Files (x86)
+/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvip
 s/lm/lm-cstt.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
 2.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Fil
@@ -1231,7 +1274,7 @@ TeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on main.pdf (57 pages, 745611 bytes).
+Output written on main.pdf (57 pages, 748941 bytes).
 PDF statistics:
  800 PDF objects out of 1000 (max. 8388607)
  317 named destinations out of 1000 (max. 500000)

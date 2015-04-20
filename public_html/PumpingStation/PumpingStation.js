@@ -54,7 +54,8 @@ var Valve = {
 var Engine = {
     isRotate: false,
     rot: 0,
-
+     isPaused : true,
+ animationRunning : false,
         propellor1: function(){
         return paper.select("#rect3094");},
 
@@ -75,7 +76,31 @@ var Engine = {
             fill: color
         });
         return "ok";
+    },
+
+    toggleRotation:   function toggleRotation() {
+    if (!this.animationRunning && this.isPaused) {
+        this.isPaused = false;
+        this.rotateLeft(this.propellor1());
+        //this.rotateLeft(this.propellor2());
+    } else {
+        this.isPaused = true;
     }
+},
+
+    rotateLeft: function rotateLeft(element) {
+    this.animationRunning = true;
+    element.transform('r0,152,17');
+    if (!this.isPaused) {
+        element.animate({ transform: 'r360,152,17'},
+            2000,
+            mina.linear
+          //  ,this.rotateLeft.bind(null, element)
+        );
+    } else {
+        this.animationRunning = false;
+    }
+}
   };
 
 
