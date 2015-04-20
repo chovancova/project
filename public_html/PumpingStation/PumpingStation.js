@@ -65,6 +65,7 @@ var Engine = {
     rotate: function(rot){
       //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
         this.propellor2().attr({transform: "r" + rot});
+        this.propellor1().attr({transform: "r" + rot});
 
         console.log("rotacia vrtuliek o " + rot);
         },
@@ -113,5 +114,34 @@ var Engine = {
     }
 }
   };
+
+
+
+
+
+
+var isPaused = true;
+var animationRunning = false;
+
+function toggleRotation1() {
+    if (!animationRunning && isPaused) {
+        isPaused = false;
+        rotateLeft(paper.select("#vrtule"));
+    } else {
+        isPaused = true;
+    }
+}
+var rot = 360;
+function rotateLeft(element) {
+    animationRunning = true;
+    element.transform('r' + 0);
+    if (!isPaused) {
+        element.animate({ transform: 'r' + rot},500, mina.linear, rotateLeft.bind(null, element));
+    } else {
+        animationRunning = false;
+    }
+}
+
+
 
 

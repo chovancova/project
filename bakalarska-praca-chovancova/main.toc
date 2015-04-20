@@ -1,3 +1,4 @@
+\contentsline {section}{\numberline {0.1}Kapitoly by mali byt nasledovne}{1}{section.0.1}
 \select@language {english}
 \select@language {slovak}
 \select@language {english}
@@ -80,4 +81,4 @@
 \contentsline {chapter}{\numberline {9}Automatick\IeC {\'e} mapovanie API}{47}{chapter.9}
 \contentsline {chapter}{\numberline {10}TODO --- Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } SVG}{48}{chapter.10}
 \contentsline {section}{\numberline {.1}Pozn\IeC {\'a}mky - informa\IeC {\v c}n\IeC {\'y} \IeC {\'u}\IeC {\v c}el}{56}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Kapitoly by mali byt nasledovne}{56}{section.Alph0.2}
+\contentsline {section}{\numberline {.2}Kapitoly by mali byt nasledovne}{57}{section.Alph0.2}

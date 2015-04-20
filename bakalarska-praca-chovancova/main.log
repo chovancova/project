@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  20 APR 2015 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  20 APR 2015 15:20
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -685,6 +685,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box32
 )
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
+(C:\Github\project\bakalarska-praca-chovancova\navrhKapitol.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap1_uvod.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap2.aux)
@@ -754,6 +755,10 @@ LaTeX Info: Redefining \ref on input line 51.
 LaTeX Info: Redefining \pageref on input line 51.
 LaTeX Info: Redefining \nameref on input line 51.
 
+(C:\Github\project\bakalarska-praca-chovancova\navrhKapitol.tex) [1
+
+
+{C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 1.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 48.
@@ -798,15 +803,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [1
 
 
-{C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1] [1]
-) [1]
-(C:\Github\project\bakalarska-praca-chovancova\main.toc [1
+] [1]
+[1]) [1] (C:\Github\project\bakalarska-praca-chovancova\main.toc [1
 
 
 ] [2])
 \tf@toc=\write5
- [3] [4]
-(C:\Github\project\bakalarska-praca-chovancova\main.lof)
+
+[3] [4] (C:\Github\project\bakalarska-praca-chovancova\main.lof)
 \tf@lof=\write6
  [5
 
@@ -832,7 +836,7 @@ File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
-<obrazky/obrazokHTML.jpg, id=282, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=299, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -861,7 +865,7 @@ although it is yet undefined on input line 30.
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
 although it is yet undefined on input line 32.
 
-<obrazky/podpora.jpg, id=296, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=312, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -910,7 +914,7 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
 
 
 ] [13]
-<obrazky/suradnice1.jpg, id=381, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=396, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -959,7 +963,7 @@ Overfull \hbox (24.61787pt too wide) in paragraph at lines 318--333
                                                   \fi \fi 
 l.345 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=433, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=448, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
@@ -986,7 +990,7 @@ able.3.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.480 	fontWeight:
                    800,]
-<obrazky/textPriklad.jpg, id=466, 93.34875pt x 30.1125pt>
+<obrazky/textPriklad.jpg, id=482, 93.34875pt x 30.1125pt>
 File: obrazky/textPriklad.jpg Graphic file (type jpg)
 
 <use obrazky/textPriklad.jpg>
@@ -1050,7 +1054,7 @@ or  <return>  to continue without it.
                                                   \fi \fi 
 l.703 \end{itemize}
                    ] [28]
-<obrazky/easing.jpg, id=536, 637.63219pt x 235.63031pt>
+<obrazky/easing.jpg, id=551, 637.63219pt x 235.63031pt>
 File: obrazky/easing.jpg Graphic file (type jpg)
 
 <use obrazky/easing.jpg>
@@ -1094,7 +1098,7 @@ m: fun-kcia().funkciaAPISnap..
 
 ) [35] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap4c.tex
 Kapitola 6.
-<obrazky/obr1.png, id=576, 1028.34187pt x 578.16pt>
+<obrazky/obr1.png, id=591, 1028.34187pt x 578.16pt>
 File: obrazky/obr1.png Graphic file (type png)
  <use obrazky/obr1.png>
 Package pdftex.def Info: obrazky/obr1.png used on input line 14.
@@ -1111,13 +1115,13 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.22 \section
              {Definovanie id SVG} <C:/Github/project/bakalarska-praca-chovancov
-a/obrazky/obr1.png>] <obrazky/obr2.png, id=583, 1028.34187pt x 578.16pt>
+a/obrazky/obr1.png>] <obrazky/obr2.png, id=598, 1028.34187pt x 578.16pt>
 File: obrazky/obr2.png Graphic file (type png)
 
 <use obrazky/obr2.png>
 Package pdftex.def Info: obrazky/obr2.png used on input line 28.
 (pdftex.def)             Requested size: 312.83247pt x 175.8842pt.
- <obrazky/obr3.png, id=584, 203.25937pt x 182.93344pt>
+ <obrazky/obr3.png, id=599, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
 
 <use obrazky/obr3.png>
@@ -1137,14 +1141,14 @@ l.49
 l.49 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr2.png> <C:/Gith
 ub/project/bakalarska-praca-chovancova/obrazky/obr3.png>]
-<obrazky/XmlEditor2.png, id=592, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=607, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
 Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 70.
 (pdftex.def)             Requested size: 312.83247pt x 205.54225pt.
 
-<obrazky/obr6.png, id=594, 502.12593pt x 465.23813pt>
+<obrazky/obr6.png, id=609, 502.12593pt x 465.23813pt>
 File: obrazky/obr6.png Graphic file (type png)
  <use obrazky/obr6.png>
 Package pdftex.def Info: obrazky/obr6.png used on input line 84.
@@ -1157,7 +1161,7 @@ Package pdftex.def Info: obrazky/obr6.png used on input line 84.
                                                   \fi \fi 
 l.88 \end{figure}
                   <C:/Github/project/bakalarska-praca-chovancova/obrazky/XmlEdi
-tor2.png>] <obrazky/obr5.png, id=600, 500.62032pt x 463.7325pt>
+tor2.png>] <obrazky/obr5.png, id=615, 500.62032pt x 463.7325pt>
 File: obrazky/obr5.png Graphic file (type png)
 
 <use obrazky/obr5.png>
@@ -1238,7 +1242,7 @@ ad ov-la-da-nia.. []$\IL2/lmtt/m/n/12 http : / / raphaeljsvectorgraphics .$
 
 
 ]
-Overfull \hbox (0.38025pt too wide) in paragraph at lines 43--44
+Overfull \hbox (0.38025pt too wide) in paragraph at lines 44--45
 []\IL2/lmr/m/n/12 Priklad v kode ani-mo-va-nie Pre-cer-pa-va-ciej sta-nice... (
 Tak-mer ho-tove) toto je vlastne
  []
@@ -1247,6 +1251,7 @@ Tak-mer ho-tove) toto je vlastne
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (C:\Github\project\bakalarska-praca-chovancova\main.aux
+(C:\Github\project\bakalarska-praca-chovancova\navrhKapitol.aux)
 (C:\Github\project\bakalarska-praca-chovancova\ine/title.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap1_uvod.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kap2.aux)
@@ -1269,18 +1274,18 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 135.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 13747 strings out of 493921
- 191909 string characters out of 3144865
- 308695 words of memory out of 3000000
- 16361 multiletter control sequences out of 15000+200000
+ 13766 strings out of 493921
+ 192393 string characters out of 3144865
+ 309106 words of memory out of 3000000
+ 16363 multiletter control sequences out of 15000+200000
  50555 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,10n,53p,738b,1973s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,53p,738b,1977s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cstt.enc}{C:/Program Files (x86
 )/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.
-9/fonts/enc/dvips/lm/lm-cs.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvi
-ps/lm/lm-cssc.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+9/fonts/enc/dvips/lm/lm-cssc.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-cs.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
 12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/Mi
@@ -1288,9 +1293,9 @@ KTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on main.pdf (66 pages, 825594 bytes).
+Output written on main.pdf (67 pages, 829320 bytes).
 PDF statistics:
- 909 PDF objects out of 1000 (max. 8388607)
- 357 named destinations out of 1000 (max. 500000)
+ 928 PDF objects out of 1000 (max. 8388607)
+ 367 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
