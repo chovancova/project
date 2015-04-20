@@ -1,5 +1,20 @@
 \chapter{TODO --- Analýza výkonnosti a obmedzení SVG}
 
+\url{http://www.sitepoint.com/advanced-snap-svg/}
+Performance Improvements
+
+One way to improve performance when manipulating the DOM is using DocumentFragments. Fragments are minimal containers for DOM nodes. Introduced a few years ago, they allow you to inexpensively manipulate entire subtrees, and then clone and add a whole subtree with n nodes to our page with 2 method calls instead of n. The actual difference is explained in details on John Resig’s blog.
+
+Snap allows for native use of fragments as well, with two methods:
+
+Snap.parse(svg) takes a single argument, a string with SVG code, parses it and returns a fragment that can be later appended to any drawing surface.
+
+Snap.fragment(varargs) takes a variable number of elements or strings, and creates a single fragment containing all the elements provided.
+
+Especially for large svg drawings, fragments can lead to a huge performance saving, when used appropriately.
+
+
+\newpage
 
 %http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
 

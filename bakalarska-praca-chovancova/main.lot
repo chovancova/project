@@ -10,12 +10,15 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces Sp\IeC {\^o}soby vytvorenia SVG v HTML dokumente}}{15}{table.3.1}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Zoznam tvarov, ktor\IeC {\'e} podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}}{16}{table.3.2}
 \contentsline {table}{\numberline {3.3}{\ignorespaces N\IeC {\'a}zvy atrib\IeC {\'u}tov a ich v\IeC {\'y}znam}}{17}{table.3.3}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{19}{table.3.4}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{18}{table.3.4}
 \contentsline {table}{\numberline {3.5}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch stroke atrib\IeC {\'u}tov}}{19}{table.3.5}
 \contentsline {table}{\numberline {3.6}{\ignorespaces Atrib\IeC {\'u}ty na zmenu vlastnost\IeC {\'\i } elementu text}}{21}{table.3.6}
-\contentsline {table}{\numberline {3.7}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch parametrov pre funkciu Element.atrr(...)}}{24}{table.3.7}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Jednoduch\IeC {\'e} pr\IeC {\'\i }kazy na vytvorenie parametra stringu pre metodu v Element.transform(...) TODO}}{24}{table.3.7}
+\contentsline {table}{\numberline {3.8}{\ignorespaces SVG transform\IeC {\'a}cie }}{24}{table.3.8}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{27}{table.3.9}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{25}{table.4.1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{33}{table.5.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

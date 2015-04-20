@@ -1,3 +1,6 @@
+http://commons.oreilly.com/wiki/index.php/SVG_Essentials
+
+verzia 2 - umoznuje iba nahlad, a spomina aj Snap.svg.js
 https://books.google.sk/books?id=g44PBQAAQBAJ&lpg=PA257&dq=snap.svg&pg=PA257#v=onepage&q=snap.svg&f=false
 
 dobre spracovane, a vysvetleny kod

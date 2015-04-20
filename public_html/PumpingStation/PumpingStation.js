@@ -53,7 +53,7 @@ var Valve = {
 
 var Engine = {
     isRotate: false,
-    rot: 0,
+    rot: 280,
      isPaused : true,
  animationRunning : false,
         propellor1: function(){
@@ -63,10 +63,22 @@ var Engine = {
         return paper.select("#rect3092");},
 
     rotate: function(rot){
-        this.propellor1().attr({transform: "r" + rot});
+      //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
         this.propellor2().attr({transform: "r" + rot});
+        this.propellor2().animate({transform: ["r" + rot]}, 10000);
+
         console.log("rotacia vrtuliek o " + rot);
         },
+    animujRotaciu: function(){
+        this.propellor1().animate ({ transform: "r280" }, 10000, mina.bounce );
+       // this.propellor1().transform("r280");
+        var g = paper.group(this.propellor1);
+
+
+
+        g.animate({ transform: "r280" },3000, mina.bounce);
+
+    },
 
     setColor : function (color){
          this.propellor1().attr({

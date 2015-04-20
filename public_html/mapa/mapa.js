@@ -93,7 +93,7 @@ function testZmenyFarbyKraja(){
 
 function testGroup(){
     g = Snap().group();
-    g.g(paper.selectAll("#g8"));
+    g.paper.selectAll("#g8"));
     g.attr({fill: "blue"});
 }
 

@@ -9,22 +9,23 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 %Prečerpávacia stanica sa skladá z rúriek, ventila, nádrže, hladiny vody, motora, vrtuliek. Ako je možné vidieť na obrázku \ref{picture1}.  
 
-\begin{figure}[hp]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics [width=13cm] {obrazky/obr1.png}
+		\includegraphics[width=0.7\linewidth] {obrazky/obr1.png}
 		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
 		\label{picture1}
 	\end{center}
 \end{figure}
+=
 
 
 \section{Definovanie id SVG}
 
 Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. Ako je možné vidieť na obrázku \ref{picture2}.
 
-\begin{figure}[hp]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics [width=13cm] {obrazky/obr2.png}
+		\includegraphics [width=0.7\linewidth] {obrazky/obr2.png}
 		\caption{Zobrazenie menu pre daný objekt v Inkscape}
 		\label{picture2}
 	\end{center}
@@ -32,9 +33,9 @@ Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identi
 
 Po kliknutí sa nám zobrazí okno s názvom Object Properties. 
 
-\begin{figure}[hp]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics  {obrazky/obr3.png}
+		\includegraphics [width=5cm]  {obrazky/obr3.png}
 		\caption{Object Properties}
 		\label{picture3}
 	\end{center}
@@ -64,7 +65,7 @@ V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
 Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodu je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
-\begin{figure}[!hp]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.7\linewidth]  {obrazky/XmlEditor2.png}
 		\caption{Xml Editor v Inkscape}
@@ -78,7 +79,7 @@ Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu v
 \subsection{Prázdna nádrž}
 Prázdna nádrž je zobrazená na obrázku \ref{picture6}
 Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastavenú na 9,64px. Šírka a súradnica x je rovnaká ako pri plnej nádrži. Súradnice osi y, x sú 1916,36 a 2507,84. Pri plnej nádrži sa zmení výška a os y. Pre animáciu zdvihnutia hladiny nádrže bude potrebné si zapamätať tieto súradnice. 
-\begin{figure}[hp]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics [height=6.5cm]  {obrazky/obr6.png}
 		\caption{Prázdna nádrž prečerpávacej stanice}
@@ -89,7 +90,7 @@ Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastaven�
 \subsection{Plná nádrž}
 Na obrázku č. \ref{picture5} je vykreslená plná nádrž. Hladina má súradnice x, a šírku rovnakú ako v prázdnej nádrži. Zmenila sa os y, a výška - na 1320,16 a na 605,92. 
 
-\begin{figure}[hp]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics [height=6.5cm]  {obrazky/obr5.png}
 		\caption{Plná nádrž}
