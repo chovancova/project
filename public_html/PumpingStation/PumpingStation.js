@@ -65,7 +65,6 @@ var Engine = {
     rotate: function(rot){
       //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
         this.propellor2().attr({transform: "r" + rot});
-        this.propellor2().animate({transform: ["r" + rot]}, 10000);
 
         console.log("rotacia vrtuliek o " + rot);
         },
