@@ -1,0 +1,10 @@
+\select@language {english}
+\select@language {slovak}
+\select@language {english}
+\select@language {slovak}
+\contentsline {chapter}{\IeC {\'U}vod}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Postup vytvorenia komponentov}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Pou\IeC {\v z}itie SVG v HTML dokumente}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Vytvorenenie SVG }{4}{subsection.1.1.1}
+\contentsline {subsubsection}{Cez program WYSWING}{4}{section*.3}
+\contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{4}{section*.4}

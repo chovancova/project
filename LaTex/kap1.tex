@@ -1,0 +1,89 @@
+\chapter{Postup vytvorenia komponentov}
+
+UML diagram... 
+
+Spôsob vytvorenia grafických komponentov je nasledovný. Najprv používateľ vytvorí SVG súbor, následne ho načíta, a vytvorí funkcie v JavaScripte na ovládanie atribútov SVG elementu. 
+Alternatívna možnosť je vytvoriť SVG elementy prostredníctvom JavaScriptovej knižnice a nenačítavať súbor. 
+
+
+
+
+\section{Použitie SVG v HTML dokumente}
+
+SVG sa dá použiť a vytvoriť viacerými spôsobmi:
+\begin{itemize}
+	\item priamo v HTML dokumente - inline, 
+	\item načítanie z oddeleného SVG súboru,
+	\item načítanie pomocou JavaScriptovej knižnice.
+\end{itemize}
+
+
+ \subsection{Vytvorenenie SVG }
+ 
+ \subsubsection{Cez program WYSWING}
+ 
+ \subsubsection{načítanie JavaScriptovú knižnicu}
+
+Postup (načítanie súboru v tele JavaScriptovej metóde): 
+\begin{enumerate}
+	\item Načítať knižnicu Snap.svg.js do HTML súboru. 
+	\item Pridať atribút onPageLoad(); do definicie body.
+	\item Pridať HTML tag $<$svg$>$ do tela HTML a nastaviť v ňom požadovanú veľkosť cez viewBox.
+	\item Vytvoriť JavaScriptový súbor, alebo tag $<$script$>$, ktorý bude obsahovať funkcie. 
+	\item Vytvorenie funkcie na načítanie Snap API, a .SVG súboru. 
+	\item V tele funkcie inicializácia Snap Canvasu. To znamená, kde konkrétne v HTML stránke sa zobrazí.
+	\begin{itemize}
+		\item s = Snap() - najbližšie voľné miesto
+		\item s = Snap(šírka, výška) 
+		\item s = Snap(HTMLtag) - id tagu $<$svg$>$, ktoré sa pridalo v bode č. 3
+	\end{itemize}
+	\item Načítanie .SVG súboru cez funkciu Snap.load(), s parametrami: názov súboru a funkcie s parametrom f. 
+	\item Zobrazenie súboru cez príkaz s.append(f);, ekvivalenté zápisy: s.appendAll(f);, s.add(f);. 
+	\item V HTML stránke sa zobrazí daný .SVG súbor. 
+	
+	
+\end{enumerate}
+
+Postup ovládania SVG elementu:
+
+\begin{enumerate}
+	\item Vytvorenie novej funkcie. 
+	\begin{itemize}
+		\item anonymná funkcia 
+		\item pomenovaná funkcia
+		\item objekt, v ktorom bude zadefinovaná funkcia. 
+	\end{itemize}
+	\item Nová premenná var, ktorá obsahuje id SVG elementu, ktorý sa ide ovládať. (Na zistenie id SVG vid Postup krokov na zistenie id.)
+	\item Vytvorenie funkcie cez ktorú sa bude pristupovať k API Snap knižnice. 
+	\item s.select(id SVG)
+	\item V tejto chvíli je možné volať funkcie z Snap API príkazom: funkcia().funkciaAPISnap.. 
+	\begin{itemize}
+		\item .animate() - animácia
+		\item .attr() - nastavenie atribútu
+		\item .add() 
+		\item TODO
+		\
+	\end{itemize}
+	
+	
+	
+\end{enumerate}
+
+TODO - odkazat tuto na vsetky mozne attributy, ktore sa daju zmeniť.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

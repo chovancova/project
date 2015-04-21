@@ -9,13 +9,12 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{listings}
-    %%\usepackage{titlepage}
-    %%\usepackage{multicol}
+%%\usepackage{titlepage}
+%%\usepackage{multicol}
 \usepackage{eurosym}
 \usepackage{url,mathptmx} 
 \usepackage[pdftex,unicode,bookmarks=false]{hyperref}
 \usepackage{comment}
-
 
 
 \renewcommand{\baselinestretch}{1.5}  % pre zvascenie riadkovania
@@ -28,50 +27,110 @@
 \addtolength{\textheight}{2.cm}
 \newlength{\verbcorr}
 \setlength{\verbcorr}{0ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{acronym}
 
 
+
+\lstset{%
+	language={Java},
+	breaklines=true,
+	breakindent=0pt,
+	tabsize=2,
+	showstringspaces=true
+}
+
+
+
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+%\usepackage{type1ec}
+
+\usepackage{float}
 
 \begin{document}
-\selectlanguage{slovak}
-
-
-\pagestyle{empty}
-\pagenumbering{arabic}
-
-\include{title}	% Titulna strana, Abstrakt, Prehlasenie
-
-\pagestyle{myheadings}
-
-%%%%%%%%%%%%%%%%%% obsah
-
-{\setlength{\parskip}{1pt plus 1pt}
-
-\markboth{}{}
-
-\tableofcontents
-
-
-\markboth{}{}
-
-\clearpage
-
-\include{kap1}	
-\include{kap2}	%  
-\include{kap3}	%  
-\include{kap4}	%  
-\include{kap5}	%  
-\include{kap6}	%  
-\include{kap7}
-\include{kap8}
-
-
-%%%%%%%%%%%%%%%%%% literatura
-
-
-
-
-%  zoznam obrázkov
-\listoffigures
-
-
-\end{document}
+	\selectlanguage{slovak}
+	
+	
+	\pagestyle{empty}
+	\pagenumbering{arabic}
+	
+	\include{navrhKapitol}
+	
+	\include{title}	% Titulna strana, Abstrakt, Prehlasenie
+	
+	\pagestyle{myheadings}
+	
+	%%%%%%%%%%%%%%%%%% obsah
+	
+	{\setlength{\parskip}{1pt plus 1pt}
+		
+		\markboth{}{}
+		\pagenumbering{roman}
+		
+		
+		
+		
+		
+		
+		% table of contents
+		\tableofcontents{}
+		
+		
+		
+		
+		% end roman page numbering
+		
+		
+		
+		\pagenumbering{arabic}
+		\thispagestyle{empty}
+		\clearpage
+		
+		
+		
+		
+		\markboth{}{}
+		
+		\clearpage
+		
+	\include{uvod}
+	\include{kap1}	
+	\include{kap2}	%  
+	\include{kap3}	%  
+	\include{kap4}	%  
+	\include{kap5}	%  
+	\include{kap6}	%  
+	\include{kap7}
+	\include{kap8}
+		
+		
+		
+		\include{lit}	%  Literatura
+		%%%%% \MakeBibliography 
+		
+		
+		\appendix
+		
+		
+		% list of images
+		\listoffigures
+		
+		% list of tables
+		\listoftables
+		
+		% list of listings
+		%\lstlistoflistings
+		
+		
+		
+		
+		\include{skratky}
+		
+		
+		
+		
+		
+		
+		
+	\end{document}
