@@ -122,21 +122,27 @@ var Engine = {
 
 var isPaused = true;
 var animationRunning = false;
-
+var rot =0;
 function toggleRotation1() {
     if (!animationRunning && isPaused) {
         isPaused = false;
-        rotateLeft(paper.select("#vrtule"));
+        rot++;
+        rotateLeft();
+       // rotateLeft(paper.select("#vrtule"));
     } else {
         isPaused = true;
     }
 }
 var rot = 360;
-function rotateLeft(element) {
+function rotateLeft() {
     animationRunning = true;
-    element.transform('r' + 0);
+  //  element.transform('r' + 0);
     if (!isPaused) {
-        element.animate({ transform: 'r' + rot},500, mina.linear, rotateLeft.bind(null, element));
+        Engine.rotate(rot);
+       // element.animate({ transform: 'r' + rot},
+       //     500,
+      //      mina.linear//,
+            //rotateLeft.bind(null, element));
     } else {
         animationRunning = false;
     }

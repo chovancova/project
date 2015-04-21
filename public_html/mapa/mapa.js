@@ -80,20 +80,20 @@ function testNaGroup(){
 }
 
 function testZmenyFarbyKraja(){
-    zmenaFarbyKraja(BC, "#00a");
-    zmenaFarbyKraja(BL,"#0ff");
-    zmenaFarbyKraja(KI, "#0fa");
-    zmenaFarbyKraja(NI, "#faa");
-    zmenaFarbyKraja(PV, "#f00");
-    zmenaFarbyKraja(TA,"#abc");
-    zmenaFarbyKraja(TC, "#0f0");
-    zmenaFarbyKraja(ZI, "#f0a");
+    zmenaFarbyKraja(BC, "#ffa");
+    zmenaFarbyKraja(BL, "#ffb");
+    zmenaFarbyKraja(KI, "#ffc");
+    zmenaFarbyKraja(NI, "#ffd");
+    zmenaFarbyKraja(PV, "#ffe");
+    zmenaFarbyKraja(TA, "#fff");
+    zmenaFarbyKraja(TC, "#ff0");
+    zmenaFarbyKraja(ZI, "#ff6");
 
 }
 
 function testGroup(){
     g = Snap().group();
-    g.paper.selectAll("#g8"));
+    g.paper.selectAll("#g8");
     g.attr({fill: "blue"});
 }
 
@@ -101,7 +101,7 @@ function testGroup(){
 function testAnimovanieCiest(){
     animovanieBodkyPopriPath3("#pathBA");
     animovanieBodkyPopriPath2("#pathNamestovo");
-    animovanieBodkyPopriPath1("#pathKE")
+    animovanieBodkyPopriPath1("#pathKE");
 }
 
 //http://raphaeljs.com/gear.html ,
@@ -118,14 +118,14 @@ var myPath =   paper.select(mesto);
         id: "squiggle",
         fill: "none",
         strokeWidth: "4",
-        stroke: "#ffffff",
+        stroke: "#0f0f0f",
         strokeMiterLimit: "10",
         strokeDasharray: "9 9",
         strokeDashOffset: "988.01"
     });
 
 myPath.attr({
-        stroke: '#fff',
+        stroke: '#000',
         strokeWidth: 4,
         fill: 'none',
         strokeDasharray: "12 6",
@@ -139,7 +139,7 @@ myPath.attr({
     var Triangle = paper.polyline("0,30 15,0 30,30");
     Triangle.attr({
         id: "plane",
-        fill: "#fff"
+        fill: "#000"
     });
 
     var triangleGroup = paper.g( Triangle ); // Group polyline
@@ -170,7 +170,7 @@ function animovanieBodkyPopriPath2(mesto){
         id: "squiggle",
         fill: "none",
         strokeWidth: "4",
-        stroke: "#ffffff",
+        stroke: "#f0f0f0",
         strokeMiterLimit: "10",
         strokeDasharray: "9 9",
         strokeDashOffset: "988.01"
@@ -181,7 +181,7 @@ function animovanieBodkyPopriPath2(mesto){
 
     // SVG B - Animate Path
     myPath.attr({
-        stroke: '#fff',
+        stroke: '#000',
         strokeWidth: 4,
         fill: 'none',
         // Draw Path
@@ -193,7 +193,7 @@ function animovanieBodkyPopriPath2(mesto){
     var CircleB = paper.circle(16,16,8);
     CircleB.attr({
         fill: "#3f4445",
-        stroke: "#fff",
+        stroke: "#000",
         strokeWidth: 2
     });
 
@@ -214,7 +214,7 @@ function animovanieBodkyPopriPath3(mesto){
         id: "squiggle",
         fill: "none",
         strokeWidth: "4",
-        stroke: "#ffffff",
+        stroke: "#000000",
         strokeMiterLimit: "10",
         strokeDasharray: "9 9",
         strokeDashOffset: "988.01"
@@ -225,7 +225,7 @@ function animovanieBodkyPopriPath3(mesto){
 
     // SVG1 - Animate Path
     myPath.attr({
-        stroke: '#fff',
+        stroke: '#000',
         strokeWidth: 4,
         fill: 'none',
         // Animate Path
@@ -237,7 +237,7 @@ function animovanieBodkyPopriPath3(mesto){
     var CircleA = paper.circle(32,32,16);
     CircleA.attr({
         fill: "#3f4445",
-        stroke: "#fff",
+        stroke: "#000",
         strokeWidth: 2
     });
 
