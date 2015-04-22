@@ -1,68 +1,68 @@
-\chapter{Návrh \acs{REST} \acs{API}}
-
-%JSON
-
-%23 strana knihy restful web apis
-
-\section{\acs{JSON}}
-
-
+%\chapter{Návrh \acs{REST} \acs{API}}
+%
+%%JSON
+%
+%%23 strana knihy restful web apis
+%
+%\section{\acs{JSON}}
+%
+%
+%%%
+%%\ac{JSON} predstavuje spôsob, ako poskytovať objekty JavaScriptom ako dáta namiesto kódovania týchto dát do dokumentu XML. ....TODO
+%
+%TODO PREROBIT CELE - TODO - 
+%%Formát \ac{JSON} je založený na rovnakom princípe ako sa tvoria objekty v JavaScripte. Dátový formát je schopný reprezentovať rovnaké typy dát ako jazyk \acs{XML}. \cite[p.~622-4]{Zakas}
+%
+%%JSON je efektívnejší spôsob ako posielať dáta od serveru klientovi, pretože nie je potrebné spracovať odpoveď pomocou \acs{DOM} a dáta je možné použiť ihneď, bez nutnosti explicitnej konverzie na objekty JavaScriptu. \cite[p.~280]{Suehring}
+%
+%
+%
+%
+%
+%
+%
+%%\subsection{JSON Syntax}
+%
+%
+%
+%
+%%Napríklad ko  
 %%
-%\ac{JSON} predstavuje spôsob, ako poskytovať objekty JavaScriptom ako dáta namiesto kódovania týchto dát do dokumentu XML. ....TODO
-
-TODO PREROBIT CELE - TODO - 
-%Formát \ac{JSON} je založený na rovnakom princípe ako sa tvoria objekty v JavaScripte. Dátový formát je schopný reprezentovať rovnaké typy dát ako jazyk \acs{XML}. \cite[p.~622-4]{Zakas}
-
-%JSON je efektívnejší spôsob ako posielať dáta od serveru klientovi, pretože nie je potrebné spracovať odpoveď pomocou \acs{DOM} a dáta je možné použiť ihneď, bez nutnosti explicitnej konverzie na objekty JavaScriptu. \cite[p.~280]{Suehring}
-
-
-
-
-
-
-
-%\subsection{JSON Syntax}
-
-
-
-
-%Napríklad ko  
+%%Pravidlá pre tvorbu JSON:
+%%
+%%\begin{itemize}
+%%	\item Dáta sú pároch - meno/hodnota 
+%%	\item Dáta musia byť v úvodzovkách, napríklad "fillPerc":"50"
+%%	\item Dáta sú oddelené čiarkou
+%%	\item Kučeravé zátvorky uchovávajú objekty
+%%	\item Hranaté zátvorky ukladajú pole
+%%	\item Nemôže obsahovať komentáre
+%%	\item 
+%%\end{itemize}
 %
-%Pravidlá pre tvorbu JSON:
+%%štandard - pre JSON
+%%http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
 %
-%\begin{itemize}
-%	\item Dáta sú pároch - meno/hodnota 
-%	\item Dáta musia byť v úvodzovkách, napríklad "fillPerc":"50"
-%	\item Dáta sú oddelené čiarkou
-%	\item Kučeravé zátvorky uchovávajú objekty
-%	\item Hranaté zátvorky ukladajú pole
-%	\item Nemôže obsahovať komentáre
-%	\item 
-%\end{itemize}
-
-%štandard - pre JSON
-%http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
-
-
-API k Pumping station schéme. 
-
-\begin{lstlisting}
-var updateData = {
-	"valve": "true",
-	"tank": "20",
-	"engine": "20"
-};
-\end{lstlisting}
-
-Tento kód definuje objekt s názvom updateData, ktorá má tri vlastnosti. 
-
-
-
-
- Interface funkcia k REST API. 
- 
- \begin{lstlisting}
- function updateSchema(updateData){
-	 updateSchema01(updateData.valve, updateData.tank, updateData.engine);
- }
- \end{lstlisting}
+%
+%API k Pumping station schéme. 
+%
+%\begin{lstlisting}
+%var updateData = {
+%	"valve": "true",
+%	"tank": "20",
+%	"engine": "20"
+%};
+%\end{lstlisting}
+%
+%Tento kód definuje objekt s názvom updateData, ktorá má tri vlastnosti. 
+%
+%
+%
+%
+% Interface funkcia k REST API. 
+% 
+% \begin{lstlisting}
+% function updateSchema(updateData){
+%	 updateSchema01(updateData.valve, updateData.tank, updateData.engine);
+% }
+% \end{lstlisting}
