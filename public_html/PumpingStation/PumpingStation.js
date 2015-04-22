@@ -64,8 +64,9 @@ var Engine = {
 
     rotate: function(rot){
       //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
-        this.propellor2().attr({transform: "r" + rot});
-        this.propellor1().attr({transform: "r" + rot});
+       // this.propellor2().animate({transform: "r" + rot}, 1000);
+       // this.propellor1().animate({transform: "r" + rot},1000);
+        paper.select("#rect3092").animate({transform: "r" + rot},1000);
 
         console.log("rotacia vrtuliek o " + rot);
         },
@@ -120,29 +121,31 @@ var Engine = {
 
 
 
-var isPaused = true;
+var isPaused = false;
 var animationRunning = false;
 var rot =0;
 function toggleRotation1() {
     if (!animationRunning && isPaused) {
         isPaused = false;
-        rot++;
-        rotateLeft();
+       // rot++;
+
        // rotateLeft(paper.select("#vrtule"));
+        rotateLeft(paper.select('#rect3094'));
+        rotateLeft(paper.select('#rect3094'));
     } else {
         isPaused = true;
     }
 }
-var rot = 360;
+//var rot = 360;
 function rotateLeft() {
     animationRunning = true;
-  //  element.transform('r' + 0);
+    element.transform('r0,0,0');
     if (!isPaused) {
-        Engine.rotate(rot);
-       // element.animate({ transform: 'r' + rot},
-       //     500,
-      //      mina.linear//,
-            //rotateLeft.bind(null, element));
+       // Engine.rotate(rot);
+       element.animate({ transform: 'r360,0,0'},
+           500,
+           mina.linear,
+           rotateLeft.bind(null, element));
     } else {
         animationRunning = false;
     }

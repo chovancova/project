@@ -15,10 +15,11 @@ function updateSchema01(boolVentil, intHladina, rot) {
     return console.log("update prebehol... ");
 }
 //**toto je interface metoda k pumping station scheme
+//zapne a vypne
 var updateData = {
     "valve": "true",
     "tank": "20",
-    "engine": "20"
+    "engineRotation": "true"
 };
  //toto je interfesna funkcia k REST API k tank...
 function updateSchema(updateData){

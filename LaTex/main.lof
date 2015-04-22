@@ -3,3 +3,6 @@
 \select@language {english}
 \select@language {slovak}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces HTML 5 API}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Podpora SVG vo webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{10}{figure.2.2}

@@ -115,7 +115,7 @@ var myPath =   paper.select(mesto);
 
 
     myPath.attr({
-        id: "squiggle",
+
         fill: "none",
         strokeWidth: "4",
         stroke: "#0f0f0f",
@@ -151,7 +151,7 @@ myPath.attr({
                 't' + parseInt(movePoint.x - 15) + ','
                 + parseInt( movePoint.y - 15) + 'r'
                 + (movePoint.alpha - 90));
-        }, 10000,mina.easeinout);
+        }, 10000,mina.easeinout );
     });
 
 }
@@ -167,7 +167,7 @@ function animovanieBodkyPopriPath2(mesto){
 
 
     myPath.attr({
-        id: "squiggle",
+
         fill: "none",
         strokeWidth: "4",
         stroke: "#f0f0f0",
@@ -211,7 +211,7 @@ function animovanieBodkyPopriPath3(mesto){
     var myPath =   paper.select(mesto);
 
     myPath.attr({
-        id: "squiggle",
+
         fill: "none",
         strokeWidth: "4",
         stroke: "#000000",
@@ -244,7 +244,7 @@ function animovanieBodkyPopriPath3(mesto){
     setTimeout( function() {
         Snap.animate(0, len, function( value ) {
             movePoint = myPath.getPointAtLength( value );
-            CircleA.attr({ cx: movePoint.x, cy: movePoint.y }); // move along path via cx & cy attributes
+            CircleA.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
         }, 10000,mina.easeinout);
     });
 
