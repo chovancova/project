@@ -3,7 +3,7 @@
  * napr. "#svgStanica" si nastavim viewbox / s pozadovanymi rozmermi..
  */
 function onPageLoad() {
-   PumpingStation("PumpingStation.svg", "#svgStanica" );
+   PumpingStation("PumpingStation2.svg", "#svgStanica" );
 //"#svgStanica"
    }
 

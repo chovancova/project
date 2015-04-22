@@ -6,6 +6,11 @@ var PumpingStation = function(nazovFileSVG, idDOMsvgElement) {
         paper.append(f);
         console.log("bola nacitana stanica do svgStanica");
     });
+   /* Snap.load("rotor.svg", function (f) {
+        paper.append(f);
+        paper.select("#engineRotor").attr({height: "100", wight: "100"});
+        console.log("bola nacitana stanica do svgStanica");
+    });*/
 };
 
 var Tank = {
@@ -66,19 +71,18 @@ var Engine = {
       //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
        // this.propellor2().animate({transform: "r" + rot}, 1000);
        // this.propellor1().animate({transform: "r" + rot},1000);
-        paper.select("#rect3092").animate({transform: "r" + rot},1000);
-
+       // paper.select("#rect3092").animate({transform: "r" + rot},1000);
+        this.rot = rot;
+         stringove = "r" + this.rot;
+      //  paper.select("#stanica").transform(stringove);
+        this.propellor1().animate({ transform: stringove},2000);
         console.log("rotacia vrtuliek o " + rot);
         },
     animujRotaciu: function(){
-        this.propellor1().animate ({ transform: "r280" }, 10000, mina.bounce );
-       // this.propellor1().transform("r280");
-        var g = paper.group(this.propellor1);
 
-
-
-        g.animate({ transform: "r280" },3000, mina.bounce);
-
+        var stringove = "r" + this.rot;
+        paper.select("#stanica").transform(stringove);
+        paper.select("#stanica").animate({ transform: stringove},2000);
     },
 
     setColor : function (color){
@@ -89,38 +93,17 @@ var Engine = {
             fill: color
         });
         return "ok";
-    },
-
-    toggleRotation:   function toggleRotation() {
-    if (!this.animationRunning && this.isPaused) {
-        this.isPaused = false;
-        this.rotateLeft(this.propellor1());
-        //this.rotateLeft(this.propellor2());
-    } else {
-        this.isPaused = true;
     }
-},
 
-    rotateLeft: function rotateLeft(element) {
-    this.animationRunning = true;
-    element.transform('r0,152,17');
-    if (!this.isPaused) {
-        element.animate({ transform: 'r360,152,17'},
-            2000,
-            mina.linear
-          //  ,this.rotateLeft.bind(null, element)
-        );
-    } else {
-        this.animationRunning = false;
-    }
-}
+
+
   };
 
 
 
 
 
-
+/*
 var isPaused = false;
 var animationRunning = false;
 var rot =0;
@@ -151,6 +134,44 @@ function rotateLeft() {
     }
 }
 
+*/
 
 
 
+
+
+
+/*
+*   takze, na zaciatku je matica matrix(1.2170949,0,0,1.2170949,-382.65639,-142.77151)
+*   po ukonceni sa to matrix(1,0,0,1,0,0)
+*
+* */
+var isPaused = true;
+var animationRunning = false;
+
+
+function toggleRotation() {
+    if (!animationRunning && isPaused) {
+        isPaused = false;
+        rotateLeft(paper.select("#vrtule"));
+    } else {
+        isPaused = true;
+    }
+}
+
+function rotateLeft(element) {
+    animationRunning = true;
+
+    var cislo1 = element.cx ;
+    var cislo2 = element.cy;
+    var strigove = "r0,"+cislo1+","+cislo2+"";
+    var strigove2 = "r360,"+cislo1+","+cislo2+"";
+    console.log(strigove);
+
+    element.transform(strigove);
+    if (!isPaused) {
+        element.animate({ transform: strigove2},2000, mina.linear, rotateLeft.bind(null, element));
+    } else {
+        animationRunning = false;
+    }
+}
