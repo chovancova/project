@@ -1,103 +1,31 @@
-%\chapter{Návrh \acs{REST} \acs{API}}
-%
-%%JSON
-%
-%%23 strana knihy restful web apis
-%
-%\section{\acs{JSON}}
-%
-%
-%%%
-%%\ac{JSON} predstavuje spôsob, ako poskytovať objekty JavaScriptom ako dáta namiesto kódovania týchto dát do dokumentu XML. ....TODO
-%
-%TODO PREROBIT CELE - TODO - 
-%%Formát \ac{JSON} je založený na rovnakom princípe ako sa tvoria objekty v JavaScripte. Dátový formát je schopný reprezentovať rovnaké typy dát ako jazyk \acs{XML}. \cite[p.~622-4]{Zakas}
-%
-%%JSON je efektívnejší spôsob ako posielať dáta od serveru klientovi, pretože nie je potrebné spracovať odpoveď pomocou \acs{DOM} a dáta je možné použiť ihneď, bez nutnosti explicitnej konverzie na objekty JavaScriptu. \cite[p.~280]{Suehring}
-%
-%
-%
-%
-%
-%
-%
-%%\subsection{JSON Syntax}
-%
-%
-%
-%
-%%Napríklad ko  
-%%
-%%Pravidlá pre tvorbu JSON:
-%%
-%%\begin{itemize}
-%%	\item Dáta sú pároch - meno/hodnota 
-%%	\item Dáta musia byť v úvodzovkách, napríklad "fillPerc":"50"
-%%	\item Dáta sú oddelené čiarkou
-%%	\item Kučeravé zátvorky uchovávajú objekty
-%%	\item Hranaté zátvorky ukladajú pole
-%%	\item Nemôže obsahovať komentáre
-%%	\item 
-%%\end{itemize}
-%
-%%štandard - pre JSON
-%%http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
-%
-%
-%API k Pumping station schéme. 
-%
-%\begin{lstlisting}
-%var updateData = {
-%	"valve": "true",
-%	"tank": "20",
-%	"engine": "20"
-%};
-%\end{lstlisting}
-%
-%Tento kód definuje objekt s názvom updateData, ktorá má tri vlastnosti. 
-%
-%
-%
-%
-% Interface funkcia k REST API. 
-% 
-% \begin{lstlisting}
-% function updateSchema(updateData){
-%	 updateSchema01(updateData.valve, updateData.tank, updateData.engine);
-% }
-% \end{lstlisting}
-
-
-
-%\chapter{Automatické mapovanie API}
-%
-%Analyzujte možnosti automatického mapovania \acs{API} grafických prvkov pomocou metadát na existujúce API dostupné pre \acs{SCADA} server D2000.
-%
-
 \chapter{REST API}
 
+\section{REST API pre grafické komponenty}
+Grafické komponenty pre vizualizáciu dát zo systému D2000 budú umiestňované na html stránkach použitých ako súčasť web rozhrania frameworku D2000 WebSuite.
 
-\section{REST API pre graficke komponenty}
-Graficke koponenty pre vizualizaciu dat zo systemu D2000 budu umiestnovane na html strankach pouzitych ako sucast web rozhrania frameworku D2000 WebSuite.
-Tento framework je zalozeny na technologii Java Enterprise Edition a Java Server Faces.
-Zivotny cyklus web stranky - nacitanie stranky s technologickou schemou, pre prve zobrazenie kompletnej schemy je potrebny plny data set.
-priklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/gatfulldataset
-priklad JSON dat: (mozes uviest data z puping station)
-Zobrazenie stranky v ramci jednej http session, typicky vo web aplikaciach kde sa uzivatel prihlasi pomocou mena a hesla, trvanie jeho session je obmendzene na predom stanoveny cas, napriklad jednu hodinu.
-Pri zobrazeni zlozitejsej technologickej schemy, je potrebne optimalizovat mnozstvo prenesenych dat a interakciu z DOM stranky. Preto je pocas zobrazenia schemy vyhodne implementovat ciastocne aktualizacie, ktore
-menia len dotknute casti schemy a nie celu schemu ako je tomu pri nacitani stranky.  
-priklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getvalvestatus
-priklad JSON dat: (mozes uviest data z puping station)
-priklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getrotorstatus
-priklad JSON dat: (mozes uviest data z puping station)
-priklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getwaterlevel
-priklad JSON dat: (mozes uviest data z puping station)
+Tento framework je založený na technológii Java Enterprise Edition a Java Server Faces.
+
+Životný cyklus webovej stránky - načítanie stránky s technologickou schémou, pre prvé zobrazenie kompletnej schémy je potrebný plný dáta set.
+
+
+príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/gatfulldataset
+príklad JSON dát: (môžeš uviesť dáta z puding stati on)
+
+
+Zobrazenie stránky v rámci jednej http session, typicky vo web aplikáciách kde sa užívateľ prihlási pomocou mena a hesla, trvanie jeho session je obmedzene na predom stanovený čas, napríklad jednu hodinu.
+
+
+Pri zobrazení zložitejšej technologickej schémy, je potrebne optimalizovať množstvo prenesených dát a interakciu z DOM stránky. Preto je počas zobrazenia schémy výhodne implementovať čiastočne aktualizácie, ktoré menia len dotknute casti schémy a nie celu schemu ako je tomu pri nacitani stránky.  
+príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getvalvestatus
+príklad JSON dát: (môžeš uviesť dáta z puding stati on)
+príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getrotorstatus
+príklad JSON dát: (môžeš uviesť dáta z puding stati on)
+príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getwaterlevel
+príklad JSON dát: (môžeš uviesť dáta z puding stati on)
 
 
 \section{Data binding pre system D2000}
-Priama vazba v pripade jednoduchych schem. Jednoducha schema predstavuje vizualizaciu meraneho alebo pocitaneho bodu v systeme D2000. Takato vizualizacia je realizovana pomocou widgetu
-(mozes uviest priklad ako teplomer alebo rucickovy merac, obrazky) jedna sa o mapovanie 1:1.
-Zlozitejsie schemy pozostavajuce z vizualizacie vyrobneho procesu alebo komplexnej technologie su mapovane vo vztahu n:1, teda jedna schena vizualizuje data z n meranych alebo pocitanych bodov,
-pripadne ziskava data cez asynchronne volania RPC (remote procedure call) systemu D2000.
-Ak to vyzaduje logika aplikacie, server implementuje datovy zdroj (service), ktory agreguje data a systemove udalosti. Pre dosiahnutie real-time odozvy web rozhrania vyhodne pouzit obojstrannu
-komunikaciu medzi web browserom a serverom - technologiu web sockets. (mozes uviest nieco o web socketoch, skus pohladat na webe), vo stvrtok to mozme doladit.
+Priama väzba v prípade jednoduchých schém. Jednoduchá schéma predstavuje vizualizáciu meraného alebo počítaného bodu v systéme D2000. Takáto vizualizácia je realizovaná pomocou widgetu (môžeš uviesť príklad ako teplomer alebo ručičkový merač, obrázky) jedna sa o mapovanie 1:1.
+Zložitejšie schémy pozostávajúce z vizualizácie výrobného procesu alebo komplexnej technológie sú mapovane vo vzťahu n:1, teda jedna schéma vizualizuje dáta z n meraných alebo počítaných bodov, pripadne získava dáta cez asynchrónne volania RPC (remote procedure call) systému D2000.
+
+Ak to vyžaduje logika aplikácie, server implementuje dátový zdroj (service), ktorý agreguje dáta a systémové udalosti. Pre dosiahnutie real-time odozvy web rozhrania výhodne použiť obojstrannú komunikáciu medzi web browserom a serverom - technológiu web sockets. (môžeš uviesť niečo o web socketoch, skús pohľadať na webe), vo stvrtok to mozme doladit.

@@ -9,16 +9,11 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{listings}
-    %%\usepackage{titlepage}
-    %%\usepackage{multicol}
 \usepackage{eurosym}
 \usepackage{url,mathptmx} 
 \usepackage[pdftex,unicode,bookmarks=false]{hyperref}
 \usepackage{comment}
-
-
-\renewcommand{\baselinestretch}{1.5}  % pre zvascenie riadkovania
-
+\renewcommand{\baselinestretch}{1.5} 
 \addtolength{\oddsidemargin}{-.5cm}
 \addtolength{\evensidemargin}{-2.9cm}   
 \addtolength{\topmargin}{0cm}
@@ -27,12 +22,8 @@
 \addtolength{\textheight}{2.cm}
 \newlength{\verbcorr}
 \setlength{\verbcorr}{0ex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage{acronym}
-
-
-
+%pre nastavenie formatovania kodu TODO vylepsit
 \lstset{%
 	language={Java},
 	breaklines=true,
@@ -42,68 +33,63 @@
 }
 
 
-
-\usepackage{lmodern}% http://ctan.org/pkg/lm
+%\usepackage{lmodern}%INE pismo
 %\usepackage{type1ec}
-
-\usepackage{float}
+\usepackage{float}%H pri tabulkach
+\usepackage{pdfpages}
 
 \begin{document}
+
+
 \selectlanguage{slovak}
-
-
 \pagestyle{empty}
 \pagenumbering{arabic}
+\include{special/title}	
+\pagestyle{plain}
+\pagestyle{myheadings}
+
+\includepdf[pages={1}]{zadanie_temy_bakalarskej_prace.pdf}
+
+	
+
+
+%%%%%%%%%%%%%%%%%% obsah
+% table of contents
+\tableofcontents{}
+
+
+%{\setlength{\parskip}{1pt plus 1pt}
+%\markboth{}{}
+\pagenumbering{arabic}
+	
+	
 
 
 
-\include{special/title}	% Titulna strana, Abstrakt, Prehlasenie
+
+\markboth{}{}
+
+\clearpage
+	
+	
+
+
+
+\pagenumbering{arabic}
+
+\thispagestyle{empty}
 
 \pagestyle{plain}
 
-\pagestyle{myheadings}
-
-%%%%%%%%%%%%%%%%%% obsah
-
-{\setlength{\parskip}{1pt plus 1pt}
-
-\markboth{}{}
-\pagenumbering{roman}
-	
-	
-	
-	
-	
-	
-% table of contents
-\tableofcontents{}
-% list of images
-\listoffigures
-
-% list of tables
-\listoftables
-
-% list of listings
-%\lstlistoflistings
-     
-         
-         
-   % end roman page numbering
-
-
-
-\pagenumbering{arabic}
-\thispagestyle{empty}
-\clearpage
+%\clearpage
 
 
 
 
-\markboth{}{}
+%\markboth{}{}
 
 \clearpage
-\setcounter{page}{6}
-
+\setcounter{page}{8}
 \include{kapitoly/uvod}	
 \include{kapitoly/kapitola1}
 \include{kapitoly/kapitola2}	
@@ -122,6 +108,8 @@
 %%%%% \MakeBibliography 
 
 
+\listoffigures{}
+\listoftables{}
 \appendix
 
 
