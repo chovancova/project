@@ -1,0 +1,129 @@
+\chapter{Analýza požiadaviek}
+Kapitola popisuje výber z dostupných nástrojov a knižníc. 
+
+\section{Nástroje na tvorbu grafických komponentov}
+
+\acs{WYSIWYG} editory, ktoré umožňujú tvorbu grafických komponentov sú: 
+
+\begin{itemize}
+\item Adobe Illustrator, 
+\item CorelDraw, 
+\item Inkscape,
+\item Sketch, 
+\item Libre Office Draw .
+\end{itemize}
+
+Voľne dostupné online SVG editory: 
+\begin{itemize}
+	\item ScriptDraw - online SVG editor vyvinutý pomocou modernej technológie Adobe Flex.
+	
+	\item svg-edit - Rýchly, webový SVG editor založený na JavaScriptovej technológii, ktorá funguje v akékoľvek modernom webovom prehliadavači. 
+	
+\end{itemize}
+
+
+
+Nástroj, ktorý najviac vyhovuje  požiadavkam je Inkscape. Inkscape is Free and Open Source Software licensed under the GPL.
+Adobe Illustrator, CorelDraw, Sketch boli vylúčené pretože nie sú open-source.  
+
+
+
+%http://noeticforce.com/Javascript-libraries-for-svg-animation
+
+\section{JavaScriptové knižnice pre grafické komponenty}
+Na internete sa nachádzajú tieto OpenSource JavaScriptové knižnice na tvorbu grafických komponentov: 
+\begin{itemize}
+	\item \acs{D3}.js, 
+	\item Raphael.js, 
+	\item Snap.svg.js,  
+	\item Svg.js. 
+\end{itemize}
+
+
+
+Popis jednotlivých JavaScriptových knižníc.
+
+%\section{JavaScript knižnice SVG}
+
+
+%http://christopheviau.com/d3_tutorial/d3_inkscape/
+\subsection{D3.js}
+
+D3.js je JavaScriptová knižnica určená na manipuláciu dokumentov založených na dátach. Pomocou \acs{HTML}, \acs{SVG} a \acs{CSS} umožňuje vizualizáciu dát.
+Je vhodná na vytváranie interaktívnych SVG grafov s hladkými prechodmi a interakciami. 
+
+D3 rieši efektívnu manipuláciu dokumentov zakladajúcich si na dátach. Využíva webové štandardy ako \acs{HTML}, \acs{SVG} a \acs{CSS}3. \cite{d3js}
+
+
+\subsection{SVG.JS}
+
+SVG.JS je ďalšia knižnica umožňujúca manipulovať a animovať SVG.
+
+Medzi hlavné výhody knižnice patrí to, že je má ľahko čitateľnú syntax. Umožňuje animovanie veľkosti, pozície, transformácie, farby. Má modulárnu štruktúru, čo umožnuje používanie rôznych rozšírení. Existuje množstvo užitočných pluginou dostupných na internete. \cite{svgjs}
+
+%TODO NAPISAT NIECO PRECO SOM HO VYLUCILA
+
+
+\subsection{Raphaël.js}
+
+Raphaël je malá JavaScriptová knižnica, ktorá umožnuje jednoducho pracovať s vektorovou grafikou na webe. Umožňuje pomocou jednoduchých príkazov vytvárať špecifické grafy, obrázky. 
+
+Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva, to že každý vytvorený grafický objekt je zároveň aj DOM objekt. To umožňuje cez JavaScriptové pridávať manipuláciu udalostí, alebo upravovať ich neskôr.
+Momentálne podporuje Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+.\cite{Raphael}
+Autor knižnice je Dmitry Baranovskiy. Raphael API má široké spektrum používateľov. 
+Knižnica neumožňuje load SVG do dokumentu zo súboru. 
+
+
+
+\subsection{Snap.svg.js}
+
+Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktoré umožňuje animáciu a manipulovanie s buď existujúcim SVG, alebo programátorsky vytvorene cez Snap API. 
+
+%TODO - NASTUPCA RAPHAELA
+%TODO - PRAGRAMTIC SVG CREATING 
+%TODO - LOAD EXISTING SVG OBJECT
+%  http://www.ciiycode.com/0z6HNUjXPgQx/programmatically-creating-an-svg-image-element-with-javascript
+%
+
+Tvorca Snap knižnice je rovnaký ako pri Raphael knižnici.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox, and Opera). Z toho vyplýva, že umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín. 
+
+Snap API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snap API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať, alebo inak manipulovať cez Snap API.
+Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderované. 
+
+%Another unique feature of Snap is its ability to work with existing SVG. That means your SVG content does not have to be generated with Snap for you to be able to use Snap to work with it (think “jQuery or Zepto for SVG”). That means you create SVG content in tools like Illustrator, Inkscape, or Sketch then animate or otherwise manipulate it using Snap. You can even work with strings of SVG (for example, SVG files loaded via Ajax) without having to actually render it first which means you can do things like query specific shapes out of an SVG file, essentially turning it into a resource container or sprite sheet.
+
+Snap podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre animáciu. Snap umožňuje urobiť SVG obsah viac interaktívnejší a záživnejší. \cite{snapsvg}
+%TODO NIECO O DYNAMICKOM POUZITI A JSON PARSOVANI
+
+%Snap je zadarmo a open-source. 
+
+%Finally, Snap supports animation. By providing a simple and intuitive JavaScript API for animation, Snap can help make your SVG content more interactive and engaging.
+
+%Snap is    free and   open-source (released under an Apache 2 license).
+
+\subsection{Porovnanie JS knižníc}
+V nasledujúcej tabuľke \ref{jsKniznice} je stručné zrhnutie JavaScriptových knižníc.
+
+ \begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|c|c|c|c|}
+	\hline Názov & Snap.svg.js & Raphael.js & D3.js & SVG.js & jQuery \\ 
+	\hline Načítanie zo súboru & ano & nie  & nie & cez plugin & nie \\ 
+	\hline Podprora vo IE 9+ & ano & ano  & ano & ano  & ano \\ 
+	\hline TODO &  &  &  &  &  \\ 
+	\hline 
+\end{tabular} 
+ \caption{Porovnanie JavaScriptových knižníc}
+ \label{jsKniznice}
+ 
+\end{table}
+
+
+
+
+\section{Zhodnotenie požiadaviek}
+Grafické komponenty sa budú vytvárať v programe Inkscape. Následné budu použité v HTML dokumente. Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg.js. 
+
+Hlavný dôvod, prečo som sa rozhodla pre túto  knižnicu bol, že dokáže načítavať SVG súbor a potom s ním manipulovať.
+ 
+Spĺňa požiadavku kompatibility pre moderné webové prehliadače. Je to open-source knižnica a má licenciu Apache 2.

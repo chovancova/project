@@ -55,9 +55,11 @@
 \pagestyle{empty}
 \pagenumbering{arabic}
 
-%\include{navrhKapitol}
 
-\include{ine/title}	% Titulna strana, Abstrakt, Prehlasenie
+
+\include{special/title}	% Titulna strana, Abstrakt, Prehlasenie
+
+\pagestyle{plain}
 
 \pagestyle{myheadings}
 
@@ -72,10 +74,17 @@
 	
 	
 	
-\setcounter{page}{6}	
+	
 % table of contents
 \tableofcontents{}
+% list of images
+\listoffigures
 
+% list of tables
+\listoftables
+
+% list of listings
+%\lstlistoflistings
      
          
          
@@ -93,53 +102,34 @@
 \markboth{}{}
 
 \clearpage
+\setcounter{page}{6}
+
+\include{kapitoly/uvod}	
+\include{kapitoly/kapitola1}
+\include{kapitoly/kapitola2}	
+\include{kapitoly/kapitola3}	
+\include{kapitoly/kapitola4}
+\include{kapitoly/kapitola5}
+\include{kapitoly/kapitola6}
+\include{kapitoly/kapitola7}
+\include{kapitoly/kapitola8}
+\include{kapitoly/zaver}
 
 
 
 
-
-\include{kapitoly/kap1_uvod}	
-\include{kapitoly/kap2}	%  
-\include{kapitoly/kap3}	% 
-\include{kapitoly/kap3a} 
-\include{kapitoly/kap3b}
-\include{kapitoly/kap4b}	% 
-\include{kapitoly/kap4c}	%  
-\include{kapitoly/kap5}	%  
-\include{kapitoly/kap6}	%  
-\include{kapitoly/kap7}
-\include{kapitoly/kap8}
-\include{kapitoly/kap9}
-\include{kapitoly/kap10}
-
-
-
-\include{ine/lit}	%  Literatura
+\include{special/lit}	%  Literatura
 %%%%% \MakeBibliography 
 
 
 \appendix
 
 
-% list of images
-\listoffigures
-
-% list of tables
-\listoftables
-
-% list of listings
-%\lstlistoflistings
+\include{special/skratky}
 
 
 
-
-\include{ine/skratky}
-
-
-
-
-
-\include{poznamky}
+%\include{poznamky}
 
 
 
