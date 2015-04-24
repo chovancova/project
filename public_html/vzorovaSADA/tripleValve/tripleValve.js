@@ -3,9 +3,6 @@
  */
 
 var paper;
-var isPaused = true;
-var animationRunning = false;
-
 function onPageLoad() {
     paper = Snap("#svg1");
     Snap.load("Triple Valve.svg", function (f) {
@@ -14,7 +11,10 @@ function onPageLoad() {
     });
 }
 
+
+
 function rotuj1(){
+
     toggleRotation("#engineMotor");
 }
 function rotuj2(){
@@ -22,14 +22,17 @@ function rotuj2(){
 }
 
 
+var isPaused = true;
+var animationRunning = false;
 function toggleRotation(nazov) {
     if (!animationRunning && isPaused) {
         isPaused = false;
         rotateLeft(paper.select(nazov));
-
+        rotateLeft(paper.select("#engineMotor1"));
     } else {
         isPaused = true;
     }
+
 }
 
 function rotateLeft(element) {
