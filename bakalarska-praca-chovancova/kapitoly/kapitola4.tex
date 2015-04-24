@@ -41,7 +41,7 @@ width: 100
 }, 10000);
 \end{lstlisting}
 
-Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa tiež dobre integruje s inými knižnicami, ako napríklad jQuery. 
+Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa tiež dobre integruje s inými knižnicami. V práci som využívala iba Snap.svg.js knižnicu.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,16 +67,17 @@ Vytvorenie plátna cez Snap konštruktor sa dá urobiť viacerými spôsobmi.
 
 \subsection{Súradnice plátna}
 
-TODO Na to, aby bolo plátno responzívne vo webovom prehliadači musí byť nastavené tieto dve veci: 
+Na to, aby bolo plátno responzívne vo webovom prehliadači musí byť nastavené nasledujúce atribúty: 
  \begin{itemize}
  	\item definovaný viewBox
  	\item výška a šírka plátna musí byť v relatívnych rozmeroch, najlepšie nastavená na 100\%
  \end{itemize}
+ 
  %var s = Snap("$ #s $vgout"); 
  %s.attr({ viewBox: "0 0 600 600" });
  %2. sposob pri definicii svg $ <svg id="idsvg" viewBox="0 0 600 600" weight="100\%" height="100\%"> $
 
-Nasledujúci príkaz zadefinuje pláno s rozmermi šírka je 300 a výška 200. 
+Nasledujúci príkaz zadefinuje plátno s rozmermi šírka je 300 a výška 200. 
 \begin{lstlisting}
 var paper = Snap(300, 200);
 \end{lstlisting}
@@ -95,8 +96,7 @@ Začiatok súradnic na osi x, y je rovné nule. Bod na plátne so súradnicami x
 \end{center}
 
 \subsection{DOM element}
-
-Dosť často je potrebné použiť existujúci DOM element ako kontajner pre plátno než viewport. Ako element môžeme použiť napríklad:
+Sú situácie, kde je potrebné použiť existujúci DOM element ako kontajner pre plátno než viewport. Ako element môžeme použiť napríklad:
 \begin{lstlisting}
 <div id="mojePlatno"></div>  
 \end{lstlisting}
@@ -123,12 +123,12 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{|l|l|}
-			\hline \textbf{Technika} & \textbf{Popis} \\ 
-			\hline
-			\hline $<$embed$>$ tag & Načíta vytvorený SVG súbor.  \\ 
-			\hline $<$object$>$ tag & Nepovoľuje skriptovanie.  \\ 
-			\hline $<$iframe$>$ tag & Zobrazí SVG v rámci  \\ 
-			\hline Inline $<$svg$>$ tag & Vytvorí Svg  \\ 
+			\hline \textbf{Technika (tag)} & \textbf{Popis} \\ 
+		
+			\hline $<$embed$>$ & Načíta vytvorený SVG súbor.  \\ 
+			\hline $<$object$>$ & Vytvorí objekt SVG  \\ 
+			\hline $<$iframe$>$ & Zobrazí SVG v rámci  \\ 
+			\hline Inline $<$svg$>$ & Vytvorí SVG   \\ 
 			\hline 
 		\end{tabular} 
 	\end{center}
@@ -136,58 +136,24 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 	\label{vytvorenie:SVG}
 \end{table}
 
-
-%Príklady načítania SVG v HTML dokumente:
-%\begin{itemize}
-%\item Image 	
-%\begin{lstlisting}
-%<img src="stanica2.svg" width = "50" height= "50" />
-%\end{lstlisting}
-%\item Embed
-%\begin{lstlisting}
-%<embed src="stanica2.svg" width = "50" height= "50" />
-%\end{lstlisting}
-%\item Objekt
-%\begin{lstlisting}
-%<object type="image/svg+xml" data="stanica2.svg"
-%width="50" height="50"></object>
-%\end{lstlisting}
-%\item IFrame
-%\begin{lstlisting}
-%<iframe src="stanica2.svg" width = "50" height= "50">
-%</iframe>
-%\end{lstlisting}
-%\item Inline
-%\begin{lstlisting}
-%<svg width="100" height="100"> 
-%<circle cx="50" cy="50" r="40"/> </svg>
-%\end{lstlisting}
-%	
-%
-%\end{itemize}
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 \section{Kreslenie základných tvarov cez Snap API}
 
-Snap API poskytuje metódy na kreslenie jednoduchých tvarov. 
+Snap API poskytuje metódy na kreslenie jednoduchých tvarov uvedené v tabuľke \ref{porovnanieSVG:Snap}.
 
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{|l|l|l|l|}
-			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap metoda} & \textbf{Atribúty} \\ 
+			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap API} & \textbf{Atribúty} \\ 
 			\hline
 			\hline Obdlžnik & $<$rect$>$ & .rect() & x, y, šírka, výška, rx, ry \\ 
 			\hline Kruh & $<$circle$>$ & .circle() & r, x, y, cx, cy, rx, ry \\ 
 			\hline Elipsa & $<$ellipse $>$ & .ellipse() & x, y, cx, cy, rx, ry \\ 
 			\hline Čiara & $<$line$>$ & .line() & x1, y1, x2, y2 \\ 
-			\hline Polyline & $<$polyline$>$ & .polyline() & pole x, y suradnic bodov \\ 
-			\hline Polygon & $<$polygon$>$ & .polygone() & pole x, y suradnic bodov \\ 
+			\hline Polyline & $<$polyline$>$ & .polyline() & pole x, y súradnic bodov \\ 
+			\hline Polygon & $<$polygon$>$ & .polygone() & pole x, y súradnic bodov \\ 
 			\hline Path & $<$path$>$ & .path() & vid tabuľka \ref{prikazy:Path}  \\ 
 			\hline 
 		\end{tabular} 
@@ -195,7 +161,7 @@ Snap API poskytuje metódy na kreslenie jednoduchých tvarov.
 	\end{center}
 	
 	\label{porovnanieSVG:Snap}
-	\caption{Zoznam tvarov, ktoré podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}
+	\caption{Zoznam tvarov, ktoré podporuje SVG a Snap API}
 \end{table}
 
 
@@ -255,7 +221,7 @@ Pre útvary polyline, polygon sú atribúty dvojice súradníc osi x, y, ktoré 
 
 V Snap API je to metóda Paper.path([pathString]), ktorá vytvorí $<$path$>$ element podľa daného reťazca.  Parameter pathString pozostáva reťazca skladajúceho sa z jedno písmenkových príkazov, nasledovanými bodkami a oddeľovaný argumentami a číslami. Príkazy sú uvedené v tabuľke \ref{prikazy:Path}.
 
-Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30, 40). Rozdiel vo veľkosti písma vyjadruje to, či ide o absolútnu, alebo relatívnu cestu. Ak sú malé znaky jedná sa o relatívne, v prípade veľkých znakov absolútna cesta. 
+Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30, 40). Rozdiel vo veľkosti písma v príkaze vyjadruje to, či ide o absolútnu, alebo relatívnu cestu. Ak sú malé znaky jedná sa o relatívne, v prípade veľkých znakov absolútna cesta. 
 
 
 \begin{center}
@@ -276,7 +242,7 @@ Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30
 				\hline 
 			\end{tabular} 
 		\end{center}
-		\caption{Niekoľko príkazov na tvorbu Path elementu}
+		\caption{Príkazy na tvorbu Path elementu}
 		\label{prikazy:Path}
 	\end{table}
 \end{center}
@@ -499,40 +465,40 @@ Na obrázku \ref{fig:textPriklad} je zobrazený text, ktorý bol uvedený v prí
 \section{Transformácie - Element.transform(...)}
 
 
-
-"t100,100r30,100,100s2,2,100,100r45s1.5"
-Each letter is a command. There are four commands: t is for translate, r is for rotate, s is for scale and m is for matrix.
-
-There are also alternative “absolute” translation, rotation and scale: T, R and S. They will not take previous transformation into account. For example, ...T100,0 will always move element 100 px horisontally, while ...t100,0 could move it vertically if there is r90 before. Just compare results of r90t100,0 and r90T100,0.
-
-So, the example line above could be read like “translate by 100, 100; rotate 30 stupnov around 100, 100; scale twice around 100, 100; rotate 45 stupnov around centre; scale 1.5 times relative to centre”. As you can see rotate and scale commands have origin coordinates as optional parameters, the default is the centre point of the element. Matrix accepts six parameters.
-
-Usage
-\begin{lstlisting}
-
-
-var el = paper.rect(10, 20, 300, 200);
-// translate 100, 100, rotate 45, translate -100, 0
-el.transform("t100,100r45t-100,0");
-// if you want you can append or prepend transformations
-el.transform("...t50,50");
-el.transform("s2...");
-// or even wrap
-el.transform("t50,50...t-50-50");
-// to reset transformation call method with empty string
-el.transform("");
-// to get current value call it without parameters
-console.log(el.transform());
-\end{lstlisting}
-
-
+%
+%"t100,100r30,100,100s2,2,100,100r45s1.5"
+%Each letter is a command. There are four commands: t is for translate, r is for rotate, s is for scale and m is for matrix.
+%
+%There are also alternative “absolute” translation, rotation and scale: T, R and S. They will not take previous transformation into account. For example, ...T100,0 will always move element 100 px horisontally, while ...t100,0 could move it vertically if there is r90 before. Just compare results of r90t100,0 and r90T100,0.
+%
+%So, the example line above could be read like “translate by 100, 100; rotate 30 stupnov around 100, 100; scale twice around 100, 100; rotate 45 stupnov around centre; scale 1.5 times relative to centre”. As you can see rotate and scale commands have origin coordinates as optional parameters, the default is the centre point of the element. Matrix accepts six parameters.
+%
+%Usage
+%\begin{lstlisting}
+%
+%
+%var el = paper.rect(10, 20, 300, 200);
+%// translate 100, 100, rotate 45, translate -100, 0
+%el.transform("t100,100r45t-100,0");
+%// if you want you can append or prepend transformations
+%el.transform("...t50,50");
+%el.transform("s2...");
+%// or even wrap
+%el.transform("t50,50...t-50-50");
+%// to reset transformation call method with empty string
+%el.transform("");
+%// to get current value call it without parameters
+%console.log(el.transform());
+%\end{lstlisting}
 
 
 
-
-Keď vytváram element v Snap, tak efektívne vytváram \ac{DOM} objekt. TODO... \cite [page~51] {Dawber} 
-
-\subsection{Suradnicovy system}
+%
+%
+%
+%Keď vytváram element v Snap, tak efektívne vytváram \ac{DOM} objekt. TODO... \cite [page~51] {Dawber} 
+%
+%\subsection{Suradnicovy system}
 
 \subsection{Jednoduché transformácie}
 
@@ -551,7 +517,7 @@ Transformácia je realizovaná cez metódu Element.transform(), ktorá má v par
 		\end{tabular} 	
 	\end{center}
 	\label{tab:trasf}
-	\caption{Syntax transformačného stringu}
+	\caption{Syntax transformačného stringu pre Snap API}
 	
 \end{table}
 
@@ -576,11 +542,11 @@ V SVG sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attribu
 	\label{tab:svgTrans}
 	\caption{Typy transformácií vo vnútri SVG tagu animateTransform }
 \end{table}
-
-\section{Pracovanie s maticami}
-
-Metóda Snap.matrix(a, b, c, d, e, f) vráti maticu nastavenú podľa daných parametrov.
-Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. Konvencia špecifikuje číslo riadka ako prvé, keď sa referuje veľkosti matice. Každý element v matici môže byť považovaný ako komponent, ktorý mapuje niektoré body do ďalšieho budu. ---TODO, ALEBO TO VYHODIM
+%
+%\section{Pracovanie s maticami}
+%
+%Metóda Snap.matrix(a, b, c, d, e, f) vráti maticu nastavenú podľa daných parametrov.
+%Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. Konvencia špecifikuje číslo riadka ako prvé, keď sa referuje veľkosti matice. Každý element v matici môže byť považovaný ako komponent, ktorý mapuje niektoré body do ďalšieho budu. ---TODO, ALEBO TO VYHODIM
 
 
 \section{Animácie }
@@ -616,7 +582,7 @@ Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. K
 V SVG SMIL animacia používa na animáciu elementy, :
 V tabuľke \ref{haha2} je
 
-\begin{table}
+\begin{table}[H]
 
 \begin{tabular}{|c|c|c|}
 	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
