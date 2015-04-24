@@ -402,12 +402,12 @@ InkWeb.log = function () { /* if you need that, use the inkweb-debug.js too */ }
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 198.73418,63.227848 C 321.01448,172.15814 552.26971,-51.865779 526.58228,151.20253"
+     d="M 198.73418,63.227848 C 321.01448,172.15814 514.92794,-55.663247 489.24051,147.40506"
      id="pathKE"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" />
   <path
-     transform="matrix(1,0,0,0.84009765,503.79747,-38.994335)"
+     transform="matrix(1,0,0,0.84009765,467.08861,-42.158892)"
      d="m 25.316456,227.1519 a 3.164557,3.7974684 0 1 1 -6.329114,0 3.164557,3.7974684 0 1 1 6.329114,0 z"
      sodipodi:ry="3.7974684"
      sodipodi:rx="3.164557"
@@ -419,12 +419,12 @@ InkWeb.log = function () { /* if you need that, use the inkweb-debug.js too */ }
   <text
      sodipodi:linespacing="125%"
      id="textKosice"
-     y="166.18663"
-     x="500.03345"
+     y="163.65498"
+     x="461.42584"
      style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
      xml:space="preserve"><tspan
-       y="166.18663"
-       x="500.03345"
+       y="163.65498"
+       x="461.42584"
        sodipodi:role="line"
        id="tspan3078">Košice</tspan></text>
 </svg>

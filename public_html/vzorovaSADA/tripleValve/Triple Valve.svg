@@ -28,7 +28,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
      inkscape:cx="293.27061"
-     inkscape:cy="259.71719"
+     inkscape:cy="145.43148"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -63,6 +63,15 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-2.516655,-11.967942)">
+    <rect
+       style="fill:#657e7f;stroke:#000000;stroke-width:2.67899418;stroke-miterlimit:10"
+       id="rect3058-5-1-17"
+       height="33.599823"
+       width="165.98518"
+       stroke-miterlimit="10"
+       y="372.85959"
+       x="-337.81769"
+       transform="matrix(0,-1,1,0,0,0)" />
     <g
        transform="matrix(0.00108861,-0.47743409,0.44900621,0.00115753,-344.31334,1410.3331)"
        id="Layer_4">
@@ -125,7 +134,7 @@
        id="engineMotor1"
        inkscape:connector-curvature="0" />
     <g
-       transform="matrix(0.00108861,-0.47743409,0.44900621,0.00115753,-275.7419,1647.476)"
+       transform="matrix(0.00108861,-0.47743409,0.44900621,0.00115753,-341.45619,1647.476)"
        id="Layer_4-8">
       <rect
          style="fill:#010202"
@@ -173,16 +182,16 @@
        id="rect3809-1-1"
        width="60.287891"
        height="7.7436709"
-       x="186.85782"
+       x="121.14353"
        y="260.41852" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.38227826px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 249.74837,252.9476 0,28.59202 19.44775,-17.87 z"
+       d="m 184.03408,252.9476 0,28.59202 19.44775,-17.87 z"
        id="path3817-7-7"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.80022138;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 223.01627,325.09066 0,39.49847 39.5047,0 c -0.17692,-21.73943 -17.76475,-39.32382 -39.5047,-39.49847 z m -40.15487,40.15488 c 0.17465,21.74141 17.76328,39.33005 39.5047,39.50469 l 0,-39.50469 -39.5047,0 z"
+       d="m 157.30198,325.09066 0,39.49847 39.5047,0 c -0.17692,-21.73943 -17.76475,-39.32382 -39.5047,-39.49847 z m -40.15487,40.15488 c 0.17465,21.74141 17.76328,39.33005 39.5047,39.50469 l 0,-39.50469 -39.5047,0 z"
        id="engineMotor"
        inkscape:connector-curvature="0" />
     <rect
@@ -193,34 +202,23 @@
        stroke-miterlimit="10"
        y="109.41464"
        x="196.88823" />
-    <rect
-       style="fill:#657e7f;stroke:#000000;stroke-width:2.00911641;stroke-miterlimit:10"
-       id="rect3058"
-       height="36.879433"
-       width="85.052826"
-       stroke-miterlimit="10"
-       y="369.66199"
-       x="-248.78438"
-       transform="matrix(-0.01799822,-0.99983802,0.99989257,-0.01465779,0,0)"
-       inkscape:transform-center-x="125.71429"
-       inkscape:transform-center-y="33.518377" />
     <path
        style="fill:#cc1417;stroke:#140606;stroke-width:2.80351663;stroke-miterlimit:10;stroke-opacity:1"
        inkscape:connector-curvature="0"
        id="ventil"
-       d="m 435.5933,243.99336 -83.06353,-0.49726 86.02259,90.86255 -89.47528,0.56086 z"
+       d="m 429.87902,196.85051 -83.06353,-0.49726 86.02259,90.86255 -89.47528,0.56086 z"
        stroke-miterlimit="10">
       <desc
          id="desc3111">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc>
     </path>
     <rect
-       style="fill:#657e7f;stroke:#000000;stroke-width:2.01016903;stroke-miterlimit:10"
+       style="fill:#657e7f;stroke:#000000;stroke-width:2.62980771;stroke-miterlimit:10"
        id="rect3056-1"
        height="33.599823"
-       width="93.453575"
+       width="159.94798"
        stroke-miterlimit="10"
        y="350.8432"
-       x="264.80719" />
+       x="198.31277" />
     <rect
        style="fill:#657e7f;stroke:#000000;stroke-width:2.14920616;stroke-miterlimit:10"
        id="rect3058-5"
@@ -242,21 +240,21 @@
        d="m 361.859,143.06554 c 0,0 6.18307,-0.0532 9.58152,4.21835 3.39947,4.27148 2.68197,8.1098 2.68197,8.1098 h 35.10647 c 0,0 0.7739,-19.88115 -12.4388,-33.65544 -13.21371,-13.77376 -34.93167,-13.65781 -34.93167,-13.65781 v 34.9851 z"
        stroke-miterlimit="10" />
     <rect
-       style="fill:#657e7f;stroke:#000000;stroke-width:2.67899418;stroke-miterlimit:10"
+       style="fill:#657e7f;stroke:#000000;stroke-width:2.16206264;stroke-miterlimit:10"
        id="rect3058-5-1"
        height="33.599823"
-       width="165.98518"
+       width="108.10914"
        stroke-miterlimit="10"
        y="348.4194"
-       x="11.232435" />
+       x="5.9130731" />
     <rect
-       style="fill:#657e7f;stroke:#000000;stroke-width:3.12386775;stroke-miterlimit:10"
+       style="fill:#657e7f;stroke:#000000;stroke-width:3.20110941;stroke-miterlimit:10"
        id="rect3058-5-4"
        height="33.599823"
-       width="225.68935"
+       width="236.98825"
        stroke-miterlimit="10"
-       y="269.84799"
-       x="413.48029" />
+       y="221.27657"
+       x="406.33743" />
     <rect
        style="fill:#657e7f;stroke:#000000;stroke-width:1.14028883;stroke-miterlimit:10"
        id="rect3058-5-1-1"
@@ -278,11 +276,11 @@
        id="rect3809-1-0"
        width="60.287891"
        height="7.7436709"
-       x="483.11655"
-       y="228.39426" />
+       x="485.97369"
+       y="196.96568" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.38227826px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 546.00712,220.92332 0,28.59202 19.44774,-17.87 z"
+       d="m 544.57855,186.63761 0,28.59202 19.44774,-17.87 z"
        id="path3817-7-9"
        inkscape:connector-curvature="0" />
   </g>
