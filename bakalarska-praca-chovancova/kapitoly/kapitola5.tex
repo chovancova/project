@@ -5,12 +5,8 @@
 
 \section{Príklad vytvorenia grafického komponentu v Inkscape}
 
-%\section{Vytvorenie SVG v programe Inkscape}
-
 Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z potrubí, indikátora úrovne hladiny vody, motora, a symbolu rotora čerpadla. Ako je možné vidieť na obrázku  \ref{picture1}.  
 
-
-%Prečerpávacia stanica sa skladá z rúriek, ventila, nádrže, hladiny vody, motora, vrtuliek. Ako je možné vidieť na obrázku \ref{picture1}.  
 
 \begin{figure}[H]
 	\begin{center}
@@ -24,15 +20,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 \section{Definovanie id SVG}
 
-Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties. %Ako je možné vidieť na obrázku \ref{picture2}.
-
-%\begin{figure}[H]
-%	\begin{center}
-%		\includegraphics [width=0.7\linewidth] %{obrazky/obr2.png}
-%		\caption{Zobrazenie menu pre daný objekt v Inkscape}
-%		\label{picture2}
-%	\end{center}
-%\end{figure}
+Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. Zistenie id je pomerne jednoduché. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties.
 
 Po kliknutí sa nám zobrazí okno s názvom Object Properties. 
 
@@ -46,23 +34,14 @@ Po kliknutí sa nám zobrazí okno s názvom Object Properties.
 
 
 Z obrázka č.\ref{picture3} možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke Label - \#ventil. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+
 Na ovládanie časti svg elementu cez CSS selektor je potrebné si zapamätať hodnotu Labelu.  %Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
 %TODO ROZDIEL MEDZI ID A LABEL DESCRIPTION A TITTLE... TODO
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Alebo ďalší spôsob zistenia id SVG časti tvarov je priamo nájsť tú hodnotu v PumpingStation.svg. Je to označené ako id="ventil".
 
 V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí na Interactivity sa zobrazia ďalšie kolónky, kde je možné zadať akciu, ktorá má nastať.  
 
-%\begin{figure}[hp]
-%	\begin{center}
-%		\includegraphics[height=7cm]  {obrazky/obr4.png}
-%		\caption{obrázok 4}
-%		\label{picture4}
-%	\end{center}
-%\end{figure}
 
 
 \subsection{XML Editor}

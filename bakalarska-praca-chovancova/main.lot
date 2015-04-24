@@ -2,21 +2,21 @@
 \select@language {english}
 \select@language {slovak}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Podpora HTML $<svg>$ elementu v webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{10}{table.1.1}
-\contentsline {table}{\numberline {1.2}{\ignorespaces Porovnanie Canvas a SVG}}{11}{table.1.2}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Podpora HTML $<svg>$ elementu v webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{12}{table.1.1}
+\contentsline {table}{\numberline {1.2}{\ignorespaces Porovnanie Canvas a SVG}}{13}{table.1.2}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Porovnanie JavaScriptov\IeC {\'y}ch kni\IeC {\v z}n\IeC {\'\i }c}}{15}{table.2.1}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Sp\IeC {\^o}soby vytvorenia SVG v HTML dokumente}}{22}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Zoznam tvarov, ktor\IeC {\'e} podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}}{23}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces N\IeC {\'a}zvy atrib\IeC {\'u}tov a ich v\IeC {\'y}znam}}{24}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{25}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch stroke atrib\IeC {\'u}tov}}{26}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Atrib\IeC {\'u}ty na zmenu vlastnost\IeC {\'\i } elementu text}}{28}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Jednoduch\IeC {\'e} pr\IeC {\'\i }kazy na vytvorenie parametra stringu pre metodu v Element.transform(...) TODO}}{31}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces SVG transform\IeC {\'a}cie }}{31}{table.4.8}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{34}{table.4.9}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Porovnanie JavaScriptov\IeC {\'y}ch kni\IeC {\v z}n\IeC {\'\i }c}}{16}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Sp\IeC {\^o}soby vytvorenia SVG v HTML dokumente}}{24}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Zoznam tvarov, ktor\IeC {\'e} podporuje SVG a Snap API, a TODO TODO POROZMYSLAT NAD NAZVOM a atributy pre definovanie tvaru}}{25}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces N\IeC {\'a}zvy atrib\IeC {\'u}tov a ich v\IeC {\'y}znam}}{26}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Nieko\IeC {\v l}ko pr\IeC {\'\i }kazov na tvorbu Path elementu}}{27}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces V\IeC {\'y}ber mo\IeC {\v z}n\IeC {\'y}ch stroke atrib\IeC {\'u}tov}}{28}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Atrib\IeC {\'u}ty na zmenu vlastnost\IeC {\'\i } elementu text}}{30}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Syntax transforma\IeC {\v c}n\IeC {\'e}ho stringu}}{33}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Typy transform\IeC {\'a}ci\IeC {\'\i } vo vn\IeC {\'u}tri SVG tagu animateTransform }}{33}{table.4.8}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1}{\ignorespaces Mapovacia tabu\IeC {\v l}ka}}{54}{table.Alph0.1}

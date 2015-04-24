@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Precerpavacia stanica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/snap.svg-min.js"></script>
+    <script type="text/javascript" src="PumpingStation.js"></script>
+    <script type="text/javascript" src="TestPumpingStation.js"></script>
+    <script type="text/javascript" src="exec.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body onload="onPageLoad();">
+<h2>Pumping station</h2>
+<svg  id ="svgStanica"  viewBox="0 0 640 400" width="50%" height="50%"  ></svg>
+<!--je to responzivne... viewBox
+The viewBox attribute allows to specify that a given set of graphics stretch to fit a particular container element.
+The value of the viewBox attribute is a list of four numbers min-x, min-y, width and height,
+separated by whitespace and/or a comma, which specify a rectangle in user space which should
+be mapped to the bounds of the viewport established by the given element, taking into account
+attribute preserveAspectRatio.-->
+<div>
+    <h2>Run tests</h2>
+    <div><button id="demo" type="button" onclick="spustiTesty();">Vsetky testy</button></div>
+    <div>  <button id="demo2" type="button" onclick="Tank.animateComponentTank(getRandomCislo());">Tank</button></div>
+<body>
+
+
+
+</body>
+</html>

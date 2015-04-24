@@ -36,7 +36,7 @@
 %\usepackage{lmodern}%INE pismo
 %\usepackage{type1ec}
 \usepackage{float}%H pri tabulkach
-\usepackage{pdfpages}
+%\usepackage{pdfpages}
 
 \begin{document}
 
@@ -45,39 +45,49 @@
 \pagestyle{empty}
 \pagenumbering{arabic}
 \include{special/title}	
-\pagestyle{plain}
-\pagestyle{myheadings}
 
-\includepdf[pages={1}]{zadanie_temy_bakalarskej_prace.pdf}
+\pagestyle{empty}
+{\setlength{\parskip}{1pt plus 1pt}
 
-	
+\markboth{}{}
 
+\tableofcontents
 
-%%%%%%%%%%%%%%%%%% obsah
-% table of contents
-\tableofcontents{}
-
-
-%{\setlength{\parskip}{1pt plus 1pt}
-%\markboth{}{}
-\pagenumbering{arabic}
-	
-	
-
-
-
+\newpage
+%
+\vspace{0pt plus 2cm}
+%
+\listoffigures
+%
+\vspace{0pt plus 2cm}
+%
+\listoftables
+}
 
 \markboth{}{}
 
 \clearpage
-	
-	
 
 
 
+%%%%%%%%%%%%%%%%%% obsah
+% table of contents
+
+
+\pagestyle{plain}
+\pagestyle{myheadings}
+
+%{\setlength{\parskip}{1pt plus 1pt}
+%\markboth{}{}
 \pagenumbering{arabic}
+\markboth{}{}
 
-\thispagestyle{empty}
+\clearpage
+	
+
+
+
+%\thispagestyle{empty}
 
 \pagestyle{plain}
 
@@ -104,12 +114,11 @@
 
 
 
+
+
 \include{special/lit}	%  Literatura
 %%%%% \MakeBibliography 
 
-
-\listoffigures{}
-\listoftables{}
 \appendix
 
 
@@ -119,6 +128,6 @@
 
 %\include{poznamky}
 
-
+\include {poznamkovaKaptiloa}
 
 \end{document}
