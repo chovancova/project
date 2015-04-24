@@ -544,7 +544,7 @@ Transformácia je realizovaná cez metódu Element.transform(), ktorá má v par
 		
 		\begin{tabular}{|c|c|c|c|}
 			\hline \textbf{Názov} & \textbf{Príkaz} & \textbf{Parameter} & \textbf{Príklad} \\ 
-			\hline Preloženie & T, t & x, y & t50,100 \\ 
+			\hline Posunutie & T, t & x, y & t50,100 \\ 
 			\hline Rotácia& R, r & uhol, (bod rotacie x, y) & r45,0,0 \\ 
 			\hline Škála & S, s & scale x, y, (scale bod x, y) & S 2,4.5,75,125 \\ 
 			\hline 
@@ -577,27 +577,136 @@ V SVG sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attribu
 	\caption{Typy transformácií vo vnútri SVG tagu animateTransform }
 \end{table}
 
+\section{Pracovanie s maticami}
 
-\subsubsection{Translation}
-
-Element.transform("T 300 0);
-todo \cite{Dawber}[p~53]
-
-\subsubsection{Rotation}
-
-Element.transform("t 100 0 r 180 220 100");
-
-\subsubsection{Scaling}
-
-Element.transform("t 100 0 s 1.2 0.5");
-
-TODO je tam este toho dost o tych maticiach.. a
+Metóda Snap.matrix(a, b, c, d, e, f) vráti maticu nastavenú podľa daných parametrov.
+Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. Konvencia špecifikuje číslo riadka ako prvé, keď sa referuje veľkosti matice. Každý element v matici môže byť považovaný ako komponent, ktorý mapuje niektoré body do ďalšieho budu. ---TODO, ALEBO TO VYHODIM
 
 
-\subsection{Event handler}
-tuto by som porovnala ake su predefinovane v svg,a ake su v javascripte.. 
-onstart, onend, onmove, draffing, dropping, 
+\section{Animácie }
 
-Transformation je dost rozsiahla.. 
+
+%\begin{table}[H]
+%	
+%	\begin{center}
+%		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+%			\hline \textbf{Animacia} & \textbf{SVG akcia} & \textbf{JavaScript akcia} & \textbf{Popis} \\ 
+%			\hline Animácia &  &  &  \\ 
+%			\hline Nastavenie farby &  &  &  \\ 
+%			\hline Transformácia &  &  &  \\ 
+%			\hline Skryvanie  &  & attr({visibility: true}) &  \\ 
+%			\hline Atributy farby & animateColor  & attr({fill: farba}) &  \\ 
+%			\hline  &  &  &  \\ 
+%			\hline Nastavenie atributov & set element & metoda attr &  \\ 
+%			\hline zmena farby & animateColor element & attr(fill: farba) &  \\ 
+%			\hline animovanie transformacie & animateTransform element & transform() &  \\ 
+%			\hline  & animateMotion element &  &  zoznam atributov pridate este\\ 
+%			\hline  &  &  &  \\ 
+%			\hline  &  &  &  \\ 
+%			\hline 
+%			
+%			\hline 
+%		\end{tabular} 
+%	\end{center}
+%	
+%	\caption{Mapovacia tabuľka}
+%	\label{haha2}
+%\end{table}
+
+V SVG SMIL animacia používa na animáciu elementy, :
+V tabuľke \ref{haha2} je
+
+\begin{table}
+
+\begin{tabular}{|c|c|c|}
+	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
+	\hline Animácia & animate & Element.animate(...) \\ 
+	\hline Nastavovanie & set & Element.attr(...) \\ 
+	\hline Animovanie pohybu & animateMotion & Element.animate(..) \\ 
+	\hline Transformácia & animateTransform & Element.animate({transform: ..}) \\ 
+	\hline 
+\end{tabular} 	\caption{Animovanie v SVG SMIL a v Snap.svg.js }
+	\label{haha2}
+\end{table}
+
+
+O čom bude táto časť: 
+\begin{itemize}
+	\item Animácia metód a jednoduchých atribútov animácie TODO ZMENA FARBY INDIKATORA 
+	\item Animovanie path TODO KAPITOLA O NADRZI
+	\item Easing využívajúc kubickú Bézierovú syntax
+	\item Animácie transformácie TODO KAPITOLA ROTOR
+	\item Animácie využívajúce spoločné atribúty a animácie popri path TODO MAPA CESTY
+\end{itemize}
+
+\section{Animacia - Element.animate(...)}
+Snap.animation = function (attr, ms, easing, callback) 
+\begin{itemize}
+	\item	- attr (object) atribúty finalného produktu
+	\item	- duration (number) trvanie animácie v milisekundách , 
+	\item - easing (function) vid tabluka, alebo kapitola o tom 	funkcie  @mina 
+	\item funkcia, ktorá sa vykoná po skončení animácii
+\end{itemize}
+
+
+
+\subsection{Animácia atribútov}
+TODO NAPR ZMENA FARBY INDIKATORA TOKU VODY
+
+tabulka ake atributy sa daju menit
+napr
+\begin{itemize}
+	\item visibility: / attr({visibility: true})
+	\item okrajov: pozri tabulku c. \ref{parametre:styl}
+	\item farby: pozri tabulku 
+	\item textu: tabulka \ref{tab:text}
+	\item tvarov: tabulka \ref{parametre:tvar}
+\end{itemize}
+
+
+
+\subsection{Animácia elementov, path}
+TODO NAPR ANIMOVANIE ZMENY PRITOKU VODY DO NADRZE
+\subsection{Animation easing}
+Easing describes how the value of an attribute varies with regard to time. By default,
+the value of an attribute changes consistently—that is, linearly—over the course of
+an animation but by specifying a particular easing type, we can change the way in
+which the attribute is animated. Consider the following graph that demonstrates
+three of the available easing types\ref{fig:easing}:
+\cite{Dawber}[p~70]
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/easing}
+	\caption{Graf troch easing typov}
+	\label{fig:easing}
+\end{figure}
+
+
+For each easing type, the rate at which the attribute changes varies along the graph in
+the time axis. Each easing type can be described as such:
+\begin{itemize}
+	
+	
+	\item Linear: The value varies consistently from its start value to its end value over
+	the course of the animation
+	\item Ease Out: The value increases quickly towards its end point before slowing
+	down towards the end of the animation
+	\item Ease In Out: The value decreases slowly at first and then increases quickly
+	before finally slowing down to its end point towards the end of the animation
+\end{itemize}
+
+
+
+
+\subsection{Animácia transformácií}
+TODO ASI TEN VENTIL BY BOLO VHODNE ZANIMOVAT A TRANSFORMOVAT
+
+\subsection{Animacia vyuzivajuca vlastne atributy}
+
+\subsection{Animacia podla path}
+toto uz v prikladoch mam ako mapu TODO /
+todo urobit pri nadrzi 
+
 
 

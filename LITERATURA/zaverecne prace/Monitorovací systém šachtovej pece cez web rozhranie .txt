@@ -1,1 +1,11 @@
 http://crzp.sk/crzpopacxe/openURL?crzpID=pm799ju-2-1&crzpSigla=tukosice
+
+
+Vizualizácia dát získaných pomocou SCADA systémov s využitím HTML 5 štandardov
+
+ Bachelor's thesis
+
+Scheimann
+
+
+
