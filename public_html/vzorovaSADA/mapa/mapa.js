@@ -89,8 +89,6 @@ function AnimujCestu(myPath) {
                 Element1.attr({ cx: movePoint.x, cy: movePoint.y});
             }, 10000,mina.easeinout, haha.bind(null, Element1));
         });
-
-        element.animate({},2000, mina.linear, nazovFunkcie.bind(null, element));
     } else {
         animationRunning = false;
     }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  24 APR 2015 17:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  25 APR 2015 15:15
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -1077,33 +1077,33 @@ Kapitola 6.
 ]) [47]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
 Kapitola 7.
-) [48
+[48
 
 
 
-]
+]) [49]
 No file kapitoly/kapitola8.tex.
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [49
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [50
 
 
 
 
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [50
+(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [51
 
 
 
-]) [51]
-(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [52
+]) [52]
+(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [53
 
 
 
 ]
-[53]) [54
+[54]) [55
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [55
+(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [56
 
 
 ]
@@ -1146,9 +1146,9 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (58 pages, 536630 bytes).
+Output written on main.pdf (59 pages, 537325 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
+ 767 PDF objects out of 1000 (max. 8388607)
  294 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

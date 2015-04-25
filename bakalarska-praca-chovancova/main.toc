@@ -66,8 +66,8 @@
 \contentsline {section}{\numberline {6.1}REST API pre grafick\IeC {\'e} komponenty}{46}{section.6.1}
 \contentsline {section}{\numberline {6.2}Data binding pre system D2000}{47}{section.6.2}
 \contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } }{48}{chapter.7}
-\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{55}{subsection.Alph0.0.1}
-\contentsline {section}{\numberline {.1}Pr\IeC {\'a}ca s Existuj\IeC {\'u}cimi SVG}{55}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Inkscape}{55}{section.Alph0.2}
-\contentsline {section}{\numberline {.3}Definovanie id SVG}{55}{section.Alph0.3}
-\contentsline {section}{\numberline {.4}Zoznam id SVG atributov vyuzite v priklade}{55}{section.Alph0.4}
+\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{56}{subsection.Alph0.0.1}
+\contentsline {section}{\numberline {.1}Pr\IeC {\'a}ca s Existuj\IeC {\'u}cimi SVG}{56}{section.Alph0.1}
+\contentsline {section}{\numberline {.2}Inkscape}{56}{section.Alph0.2}
+\contentsline {section}{\numberline {.3}Definovanie id SVG}{56}{section.Alph0.3}
+\contentsline {section}{\numberline {.4}Zoznam id SVG atributov vyuzite v priklade}{56}{section.Alph0.4}
