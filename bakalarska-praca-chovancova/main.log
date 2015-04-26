@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  26 APR 2015 02:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  26 APR 2015 12:56
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -799,7 +799,7 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<obrazky/obrazokHTML.jpg, id=255, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=245, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -828,7 +828,7 @@ although it is yet undefined on input line 38.
                                                   \fi \fi 
 l.47 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obrazokHTML.jpg>]
-<obrazky/podpora.jpg, id=275, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=265, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -884,7 +884,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 
 
 ]
-<obrazky/suradnice1.jpg, id=373, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=363, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -926,13 +926,13 @@ dentifier (name{table.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.311 \begin{lstlisting}
+l.312 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=428, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=418, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
-Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 330
+Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 331
 .
 (pdftex.def)             Requested size: 312.83247pt x 98.91592pt.
  [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
@@ -940,80 +940,135 @@ Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 330
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.346 
+l.347 
        <C:/Github/project/bakalarska-praca-chovancova/obrazky/grupovanieElement
 ov.jpg>] [29pdfTeX warning (ext4): destination with the same identifier (name{t
 able.4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.447 \begin{lstlisting}
+l.448 \begin{lstlisting}
                         ]
-<obrazky/textPriklad.jpg, id=454, 93.34875pt x 30.1125pt>
+<obrazky/textPriklad.jpg, id=444, 93.34875pt x 30.1125pt>
 File: obrazky/textPriklad.jpg Graphic file (type jpg)
 
 <use obrazky/textPriklad.jpg>
-Package pdftex.def Info: obrazky/textPriklad.jpg used on input line 466.
+Package pdftex.def Info: obrazky/textPriklad.jpg used on input line 467.
 (pdftex.def)             Requested size: 93.34851pt x 30.11241pt.
  [30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.472 \newpage
-               <C:/Github/project/bakalarska-praca-chovancova/obrazky/textPrikl
-ad.jpg>] [31pdfTeX warning (ext4): destination with the same identifier (name{t
-able.4.7}) has been already used, duplicate ignored
+l.533 
+       <C:/Github/project/bakalarska-praca-chovancova/obrazky/textPriklad.jpg>]
+[31pdfTeX warning (ext4): destination with the same identifier (name{table.4.7}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.562 
-      ] [32pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.4.8}) has been already used, duplicate ignored
+l.583 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.4
+.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.620 \end{itemize}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{table.4.9}) has been already used, duplicate ignored
+l.583 
+      ]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...ent.animate({transform: [transformačný 
+                                                  string]});
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...ent.animate({transform: [transformačný 
+                                                  string]});
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...ent.animate({transform: [transformačný 
+                                                  string]});
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...ent.animate({transform: [transformačný 
+                                                  string]});
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) [32pdfTeX warning (ext4): destination with the same identifier (name{table.4.
+9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.620 \end{itemize}
-                   ]) [33] [34]
+l.107 \include{kapitoly/kapitola4}
+                                  ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola5.tex
 Kapitola 5.
-<obrazky/jednoduchyKruh.png, id=492, 131.74219pt x 128.73094pt>
+<obrazky/jednoduchyKruh.png, id=476, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
 Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 13.
 (pdftex.def)             Requested size: 312.83247pt x 305.73518pt.
- [35
+ [33
 
 
 
 ]
-<obrazky/obr3.png, id=497, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=481, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 29.
 (pdftex.def)             Requested size: 142.26378pt x 128.04135pt.
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.34 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/jednoduchyKruh.png
->] <obrazky/XmlEditor2.png, id=504, 572.89032pt x 376.40625pt>
+>] <obrazky/XmlEditor2.png, id=489, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
 Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 52.
 (pdftex.def)             Requested size: 312.83247pt x 205.54225pt.
- [37pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1025,7 +1080,7 @@ File: obrazky/jednoduchyKruh.png Graphic file (type png)
 <use obrazky/jednoduchyKruh.png>
 Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 66.
 (pdftex.def)             Requested size: 189.28644pt x 184.9429pt.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1043,7 +1098,7 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [39pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+) [37pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1055,43 +1110,43 @@ l.89 	y=
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.89 	y=
-        "1320.1689"] [40] [41] [42] [43]) [44]
+        "1320.1689"] [38] [39] [40] [41]) [42]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola6.tex
 Kapitola 6.
+[43
+
+
+
+]) [44]
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
+Kapitola 7.
 [45
 
 
 
 ]) [46]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
-Kapitola 7.
-[47
-
-
-
-]) [48]
 No file kapitoly/kapitola8.tex.
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [49
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [47
 
 
 
 
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [50
+(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [48
 
 
 
-]) [51]
-(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [52
+]) [49]
+(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [50
 
 
 
 ]
-[53]) [54
+[51]) [52
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [55
+(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [53
 
 
 ]
@@ -1118,13 +1173,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 133.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 13563 strings out of 493921
- 188138 string characters out of 3144865
- 304234 words of memory out of 3000000
- 16255 multiletter control sequences out of 15000+200000
+ 13567 strings out of 493921
+ 188201 string characters out of 3144865
+ 304250 words of memory out of 3000000
+ 16260 multiletter control sequences out of 15000+200000
  32379 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,9n,53p,702b,2175s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,10n,53p,702b,2175s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.enc}<C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/
@@ -1134,9 +1189,9 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (58 pages, 486895 bytes).
+Output written on main.pdf (56 pages, 483640 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 294 named destinations out of 1000 (max. 500000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 293 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

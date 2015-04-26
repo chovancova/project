@@ -90,7 +90,7 @@ Začiatok súradnic na osi x, y je rovné nule. Bod na plátne so súradnicami x
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{obrazky/suradnice1}
-		\caption{Súradnicový systém plátna s bodom (300, 200)}
+		\caption{Súradnicový systém plátna s bodom (300, 200) v Snap.svg knižnici}
 		\label{fig:suradnice1}
 	\end{figure}
 \end{center}
@@ -271,7 +271,8 @@ var kruh = paper.circle(50, 50, 40).attr("fill", "red");
 \end{lstlisting}
 
 Ďalšie spôsoby výplne elementu sú obrázkom,  gradientom, alebo vzorom. 
-Pre nastavenie neprehľadnosti nastavíme atribút "fill-opacity" hodnotou čísla v rozsahu od 0-1. Element pri "fill-opacity": 1 je neprehľadný.  
+Pre nastavenie neprehľadnosti nastavíme atribút opacity na hodnotou čísla v rozsahu od 0-1. Element bude neviditeľný pri hodnote opacity: 0. 
+ 
 
 \subsection{Nastavenie okraja elementu - stroke}
 
@@ -314,10 +315,10 @@ var kruh = paper.circle(50, 50, 40);
 var obdlznik = paper.rect(120, 10, 80, 80);
 var elipsa = paper.ellipse(270, 50, 40, 20);
 
-var group = paper.g(kruh, obdlznik);
-group.add(elipsa);
+var skupina = paper.g(kruh, obdlznik);
+skupina.add(elipsa);
 
-group.attr({
+skupina.attr({
 	fill: 'yellow',
 	stroke: '#000',
 	strokeWidth: 5, 
@@ -469,9 +470,6 @@ Na obrázku \ref{fig:textPriklad} je zobrazený text, ktorý bol uvedený v prí
 \end{figure}
 
 
-\newpage
-
-
 
 
 \section{Transformácie - Element.transform(...)}
@@ -561,7 +559,60 @@ V SVG sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attribu
 %Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. Konvencia špecifikuje číslo riadka ako prvé, keď sa referuje veľkosti matice. Každý element v matici môže byť považovaný ako komponent, ktorý mapuje niektoré body do ďalšieho budu. ---TODO, ALEBO TO VYHODIM
 
 
-\section{Animácie }
+\section{Animácie}
+
+Snap.svg umožňuje animovať SVG grafické komponenty priamo manipulovaním jeho atribútov v JavaScripte. 
+
+Element.animate(attr, ms, easing, callback). 
+Parametre sú v tabuľke \ref{fig:animacie}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|p{10cm}|}
+			\hline \textbf{Parameter} & \textbf{Popis} \\ 
+			\hline attr &   Atribúty požadovaného elementu sú zadané v pároch - typ atribútu a jeho hodnota \\ 
+			\hline duration &   Trvanie animácie v milisekundách \\ 
+			\hline easing & zjemnenie animácie, mina objekt \\ 
+			\hline callback & Funkcia, ktorá sa spustí po skončení animácie  \\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+
+	\caption{Parametre pre metódu animate}
+		\label{fig:animacie}
+\end{table}
+
+\subsubsection{Animácia metód a jednoduchých atribútov animácie }
+
+Jednoduché atribúty elementov, ktorých prechod sa zanimuje sú v časti o atribútoch elementov. Ako atribút sa dá použiť aj CSS3 atribút, ale musí byť v úvodzovkách, ak neexistuje v knižnici Snap.svg jeho ekvivalentný názov. 
+
+\subsubsection{Animovanie path}
+
+Pre animovanie zmeny tvaru jedného grafického komponentu na druhý sa využíva atribút path. Grafický element sa plynulo zanimuje, pretvaruje na tvar, ktorý je udaný. 
+
+\subsection{Animácie transformácie}
+
+Animovanie transformácie atribútu elementu využíva transformačný string.  Syntax: 
+\begin{lstlisting}
+	Element.animate({transform: [transformačný string]});
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 %\begin{table}[H]
@@ -591,102 +642,105 @@ V SVG sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attribu
 %	\label{haha2}
 %\end{table}
 
-V SVG SMIL animacia používa na animáciu elementy, :
-V tabuľke \ref{haha2} je
-
-\begin{table}[H]
-\begin{center}
-	
-\begin{tabular}{|c|c|c|}
-	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
-	\hline Animácia & animate & Element.animate(...) \\ 
-	\hline Nastavovanie & set & Element.attr(...) \\ 
-	\hline Animovanie pohybu & animateMotion & Element.animate(..) \\ 
-	\hline Transformácia & animateTransform & Element.animate({transform: ..}) \\ 
-	\hline 
-\end{tabular} 	\caption{Animovanie v SVG SMIL a v Snap.svg.js }
-	\label{haha2}
-\end{center}
-\end{table}
-
-
-O čom bude táto časť: 
-\begin{itemize}
-	\item Animácia metód a jednoduchých atribútov animácie TODO ZMENA FARBY INDIKATORA 
-	\item Animovanie path TODO KAPITOLA O NADRZI
-	\item Easing využívajúc kubickú Bézierovú syntax
-	\item Animácie transformácie TODO KAPITOLA ROTOR
-	\item Animácie využívajúce spoločné atribúty a animácie popri path TODO MAPA CESTY
-\end{itemize}
-
-\section{Animacia - Element.animate(...)}
-Snap.animation = function (attr, ms, easing, callback) 
-\begin{itemize}
-	\item	- attr (object) atribúty finalného produktu
-	\item	- duration (number) trvanie animácie v milisekundách , 
-	\item - easing (function) vid tabluka, alebo kapitola o tom 	funkcie  @mina 
-	\item funkcia, ktorá sa vykoná po skončení animácii
-\end{itemize}
 
 
 
-\subsection{Animácia atribútov}
-TODO NAPR ZMENA FARBY INDIKATORA TOKU VODY
-
-tabulka ake atributy sa daju menit
-napr
-\begin{itemize}
-	\item visibility: / attr({visibility: true})
-	\item okrajov: pozri tabulku c. \ref{parametre:styl}
-	\item farby: pozri tabulku 
-	\item textu: tabulka \ref{tab:text}
-	\item tvarov: tabulka \ref{parametre:tvar}
-\end{itemize}
-
-
-
-\subsection{Animácia elementov, path}
-TODO NAPR ANIMOVANIE ZMENY PRITOKU VODY DO NADRZE
-%\subsection{Animation easing}
-%Easing describes how the value of an attribute varies with regard to time. By default,
-%the value of an attribute changes consistently—that is, linearly—over the course of
-%an animation but by specifying a particular easing type, we can change the way in
-%which the attribute is animated. Consider the following graph that demonstrates
-%three of the available easing types\ref{fig:easing}:
-%\cite{Dawber}[p~70]
+%V SVG SMIL animacia používa na animáciu elementy, :
+%V tabuľke \ref{haha2} je
 %
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.7\linewidth]{obrazky/easing}
-%	\caption{Graf troch easing typov}
-%	\label{fig:easing}
-%\end{figure}
+%\begin{table}[H]
+%\begin{center}
+%	
+%\begin{tabular}{|c|c|c|}
+%	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
+%	\hline Animácia & animate & Element.animate(...) \\ 
+%	\hline Nastavovanie & set & Element.attr(...) \\ 
+%	\hline Animovanie pohybu & animateMotion & Element.animate(..) \\ 
+%	\hline Transformácia & animateTransform & Element.animate({transform: ..}) \\ 
+%	\hline 
+%\end{tabular} 	\caption{Animovanie v SVG SMIL a v Snap.svg.js }
+%	\label{haha2}
+%\end{center}
+%\end{table}
 %
 %
-%For each easing type, the rate at which the attribute changes varies along the graph in
-%the time axis. Each easing type can be described as such:
+%O čom bude táto časť: 
 %\begin{itemize}
-%	
-%	
-%	\item Linear: The value varies consistently from its start value to its end value over
-%	the course of the animation
-%	\item Ease Out: The value increases quickly towards its end point before slowing
-%	down towards the end of the animation
-%	\item Ease In Out: The value decreases slowly at first and then increases quickly
-%	before finally slowing down to its end point towards the end of the animation
+%	\item Animácia metód a jednoduchých atribútov animácie TODO ZMENA FARBY INDIKATORA 
+%	\item Animovanie path TODO KAPITOLA O NADRZI
+%	\item Easing využívajúc kubickú Bézierovú syntax
+%	\item Animácie transformácie TODO KAPITOLA ROTOR
+%	\item Animácie využívajúce spoločné atribúty a animácie popri path TODO MAPA CESTY
+%\end{itemize}
+%
+%\section{Animacia - Element.animate(...)}
+%Snap.animation = function (attr, ms, easing, callback) 
+%\begin{itemize}
+%	\item	- attr (object) atribúty finalného produktu
+%	\item	- duration (number) trvanie animácie v milisekundách , 
+%	\item - easing (function) vid tabluka, alebo kapitola o tom 	funkcie  @mina 
+%	\item funkcia, ktorá sa vykoná po skončení animácii
 %\end{itemize}
 %
 %
 %
-
-\subsection{Animácia transformácií}
-TODO ASI TEN VENTIL BY BOLO VHODNE ZANIMOVAT A TRANSFORMOVAT
-
-\subsection{Animacia vyuzivajuca vlastne atributy}
-
-\subsection{Animacia podla path}
-toto uz v prikladoch mam ako mapu TODO /
-todo urobit pri nadrzi 
-
-
-
+%\subsection{Animácia atribútov}
+%TODO NAPR ZMENA FARBY INDIKATORA TOKU VODY
+%
+%tabulka ake atributy sa daju menit
+%napr
+%\begin{itemize}
+%	\item visibility: / attr({visibility: true})
+%	\item okrajov: pozri tabulku c. \ref{parametre:styl}
+%	\item farby: pozri tabulku 
+%	\item textu: tabulka \ref{tab:text}
+%	\item tvarov: tabulka \ref{parametre:tvar}
+%\end{itemize}
+%
+%
+%
+%\subsection{Animácia elementov, path}
+%TODO NAPR ANIMOVANIE ZMENY PRITOKU VODY DO NADRZE
+%%\subsection{Animation easing}
+%%Easing describes how the value of an attribute varies with regard to time. By default,
+%%the value of an attribute changes consistently—that is, linearly—over the course of
+%%an animation but by specifying a particular easing type, we can change the way in
+%%which the attribute is animated. Consider the following graph that demonstrates
+%%three of the available easing types\ref{fig:easing}:
+%%\cite{Dawber}[p~70]
+%%
+%%\begin{figure}[H]
+%%	\centering
+%%	\includegraphics[width=0.7\linewidth]{obrazky/easing}
+%%	\caption{Graf troch easing typov}
+%%	\label{fig:easing}
+%%\end{figure}
+%%
+%%
+%%For each easing type, the rate at which the attribute changes varies along the graph in
+%%the time axis. Each easing type can be described as such:
+%%\begin{itemize}
+%%	
+%%	
+%%	\item Linear: The value varies consistently from its start value to its end value over
+%%	the course of the animation
+%%	\item Ease Out: The value increases quickly towards its end point before slowing
+%%	down towards the end of the animation
+%%	\item Ease In Out: The value decreases slowly at first and then increases quickly
+%%	before finally slowing down to its end point towards the end of the animation
+%%\end{itemize}
+%%
+%%
+%%
+%
+%\subsection{Animácia transformácií}
+%TODO ASI TEN VENTIL BY BOLO VHODNE ZANIMOVAT A TRANSFORMOVAT
+%
+%\subsection{Animacia vyuzivajuca vlastne atributy}
+%
+%\subsection{Animacia podla path}
+%toto uz v prikladoch mam ako mapu TODO /
+%todo urobit pri nadrzi 
+%
+%
+%
