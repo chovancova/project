@@ -37,29 +37,28 @@
      id="namedview3103"
      showgrid="false"
      inkscape:zoom="0.87"
-     inkscape:cx="526.05708"
-     inkscape:cy="201.08163"
+     inkscape:cx="538.70076"
+     inkscape:cy="65.541476"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3"
+     inkscape:current-layer="stanica"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" /><g
+     fit-margin-bottom="0"
+     inkscape:object-paths="false"
+     inkscape:snap-object-midpoints="true" /><g
      id="stanica"
      transform="matrix(0.47240637,0,0,0.47240637,-828.08361,-307.68173)"><g
        transform="matrix(0.70355256,0,0,0.9348419,666.34342,320.74724)"
        id="Layer_2"
-       style="fill:#e6e6e6">
-	<path
-   style="fill:#e6e6e6;stroke:#17321b;stroke-width:7.48165846;stroke-miterlimit:10"
-   inkscape:connector-curvature="0"
-   id="path3051"
-   d="M 2840.9566,1705.814 H 2369.8855 V 964.21524 c 0,0 -0.152,-10.92444 2.9919,-15.62886 3.1438,-4.70442 10.4826,-4.30555 10.4826,-4.30555 l 443.4972,-0.008 c 0,0 4.5656,-0.39088 9.6666,4.48791 4.5116,5.05027 4.4328,13.18111 4.4328,13.18111 V 1705.814 z"
-   stroke-miterlimit="10" />
-	
-</g><g
+       style="fill:#e6e6e6"><path
+         style="fill:#e6e6e6;stroke:#17321b;stroke-width:9;stroke-miterlimit:10"
+         inkscape:connector-curvature="0"
+         id="path3051"
+         d="M 2840.9566,1705.814 H 2369.8855 V 964.21524 c 0,0 -0.152,-10.92444 2.9919,-15.62886 3.1438,-4.70442 10.4826,-4.30555 10.4826,-4.30555 l 443.4972,-0.008 c 0,0 4.5656,-0.39088 9.6666,4.48791 4.5116,5.05027 4.4328,13.18111 4.4328,13.18111 V 1705.814 z"
+         stroke-miterlimit="10" /></g><g
        transform="matrix(1.2244629,0,0,1.299236,-395.57904,-283.703)"
        id="Layer_3">
 	
@@ -163,16 +162,16 @@
          style="fill:#cc1417;stroke:#140606;stroke-width:2.72519994;stroke-miterlimit:10;stroke-opacity:1"
          inkscape:connector-curvature="0"
          id="ventil"
-         d="m 67.898564,265.90458 1.250464,74.55949 93.784822,-78.861 2.50092,80.29483 z"
+         d="m 67.898564,261.77724 1.250464,78.68683 98.624342,-75.76549 1.29108,77.19932 z"
          stroke-miterlimit="10"><desc
            id="desc3111">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc></path></g><rect
        inkscape:label="#hladina"
        y="1883.326"
        x="2339.5425"
        height="22.400272"
-       width="315.02066"
+       width="317.90259"
        id="hladina"
-       style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:0.89760798px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
+       style="fill:#0000ff;fill-opacity:0.65098039;fill-rule:evenodd;stroke:#2c20c8;stroke-width:0.90170449px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.80952382"><desc
          id="desc3119-4">hladina</desc><title
          id="title3117-0">hladina</title></rect><rect
        style="fill:#000000;fill-opacity:1;stroke:#1c1111;stroke-width:0.80921489;stroke-opacity:0.80952382"
@@ -190,8 +189,9 @@
          style="fill:#cc1417;stroke:#140606;stroke-width:2.72519994;stroke-miterlimit:10;stroke-opacity:1"
          inkscape:connector-curvature="0"
          id="ventil2"
-         d="m 67.898564,265.90458 1.250464,74.55949 93.784822,-78.861 2.50092,80.29483 z"
-         stroke-miterlimit="10"><desc
+         d="m 67.898564,261.77724 1.250464,78.68683 99.834222,-80.92466 0.0812,82.35849 z"
+         stroke-miterlimit="10"
+         sodipodi:nodetypes="ccccc"><desc
            id="desc3111-0">Ak je ventil otvoreny, tak je zeleny, inak cerveny. </desc></path></g><rect
        style="fill:#000000;fill-opacity:1;stroke:#1c1111;stroke-width:0.80921483;stroke-opacity:0.80952382"
        id="rect3809-9"
