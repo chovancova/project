@@ -7,17 +7,17 @@
 
 
 
-\chapter{Využitie knižnice Snap.svg.js}
+\chapter{Využitie knižnice Snap.svg}
 %V práci cituj: \cite{Dawber} , strany sa cituju takto: \cite[p.~215]{Dawber} \\ Priklady z knihy:\url{http://raphaeljsvectorgraphics.com/}  \cite{Dawber} .
 %Z tejto knihy idem pridávať do bakalárky nasledovné veci:
 %Namet na zmenu: pouzit to demo, ktore mi poslal veduci na transformaciu zmeny. 
 
 
-\section{Porovnanie spôsobu vykreslenia cez \acs{SVG} \acs{SMIL} a Snap}
+%\section{Porovnanie spôsobu vizualizácie cez \acs{SVG} \acs{SMIL} a  Snap.svg}
 
-Kreslenie vektorov je jednoduchšie cez Snap ako čisto písanie SVG. 
+Animovanie vektorov je jednoduchšie cez knižnicu Snap.svg ako cez SVG SMIL. 
 
-Príklad kreslenia obdĺžníka a animovanie šírky z 50 pixlov na 100 pixelov cez SVG SMIL:\cite[p.~9]{Dawber}
+V nasledujúcom príklade je vykreslený a animovaný obdĺžnik cez SVG SMIL. Animácia spočíva v zmene šírky obdĺžnika z 50 na 100 pixlov. SMIL:
 \begin{lstlisting}
 <svg>
 <rect x="10" y="10" width="50" height="30">
@@ -29,7 +29,7 @@ dur="10s"  />
 </rect></svg>
 \end{lstlisting}
 
-Nakreslíme obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená na 50. 
+Nakreslíme obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená znova na 50 px. \cite[p.~9]{Dawber}
 
 Ekvivalent k animácii cez Snap API v nasledujúcom príklade:
 
@@ -41,11 +41,11 @@ width: 100
 }, 10000);
 \end{lstlisting}
 
-Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa tiež dobre integruje s inými knižnicami. V práci som využívala iba Snap.svg.js knižnicu.  
+Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa tiež dobre integruje s inými knižnicami. V práci som využívala iba Snap.svg knižnicu.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+
 %Jednoduche kreslenie ,
 %Interakcia ,
 %Animovanie.. 
@@ -137,9 +137,9 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
-\section{Kreslenie základných tvarov cez Snap API}
+
+\section{Kreslenie základných tvarov}
 
 Snap API poskytuje metódy na kreslenie jednoduchých tvarov uvedené v tabuľke \ref{porovnanieSVG:Snap}.
 
@@ -334,7 +334,19 @@ group.attr({
 
 
 
+\section{Gradient} 
 
+Snap.svg podporuje aplikovanie gradientov cez atribút fill s parametrom stringu gradientu. 
+
+
+
+\subsubsection{Linerárny gradient}
+Syntax pre lineárny gradient je $<$uhol$>$-$<$farba$>$[-$<$farba$>$[:$<$offset$>$]]*-$<$farba$>$ . Vyjadruje to gradient nakreslený v určitom uhle z prvej do druhej farby.\\ Napríklad rect.attr({fill: '0-\#f00-\#00f'}); . 
+Príklad využitia v SCADA systéme je teplomer. 
+
+\subsubsection{Radiálny gradient}
+Syntax pre radiálny gradient je r[($<$fx$>$, $<$fy$>$)]$<$farba$>$[-$<$farba$>$[:$<$offset$>$]]*-$<$farba$>$ . 
+Vykresľuje radiálne smerom von z fixovaného bodu na elemente. \\Napríklad circle.attr({fill:'r\#fff-000'});
 
 
 
@@ -583,7 +595,8 @@ V SVG SMIL animacia používa na animáciu elementy, :
 V tabuľke \ref{haha2} je
 
 \begin{table}[H]
-
+\begin{center}
+	
 \begin{tabular}{|c|c|c|}
 	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
 	\hline Animácia & animate & Element.animate(...) \\ 
@@ -593,6 +606,7 @@ V tabuľke \ref{haha2} je
 	\hline 
 \end{tabular} 	\caption{Animovanie v SVG SMIL a v Snap.svg.js }
 	\label{haha2}
+\end{center}
 \end{table}
 
 
@@ -633,37 +647,37 @@ napr
 
 \subsection{Animácia elementov, path}
 TODO NAPR ANIMOVANIE ZMENY PRITOKU VODY DO NADRZE
-\subsection{Animation easing}
-Easing describes how the value of an attribute varies with regard to time. By default,
-the value of an attribute changes consistently—that is, linearly—over the course of
-an animation but by specifying a particular easing type, we can change the way in
-which the attribute is animated. Consider the following graph that demonstrates
-three of the available easing types\ref{fig:easing}:
-\cite{Dawber}[p~70]
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/easing}
-	\caption{Graf troch easing typov}
-	\label{fig:easing}
-\end{figure}
-
-
-For each easing type, the rate at which the attribute changes varies along the graph in
-the time axis. Each easing type can be described as such:
-\begin{itemize}
-	
-	
-	\item Linear: The value varies consistently from its start value to its end value over
-	the course of the animation
-	\item Ease Out: The value increases quickly towards its end point before slowing
-	down towards the end of the animation
-	\item Ease In Out: The value decreases slowly at first and then increases quickly
-	before finally slowing down to its end point towards the end of the animation
-\end{itemize}
-
-
-
+%\subsection{Animation easing}
+%Easing describes how the value of an attribute varies with regard to time. By default,
+%the value of an attribute changes consistently—that is, linearly—over the course of
+%an animation but by specifying a particular easing type, we can change the way in
+%which the attribute is animated. Consider the following graph that demonstrates
+%three of the available easing types\ref{fig:easing}:
+%\cite{Dawber}[p~70]
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{obrazky/easing}
+%	\caption{Graf troch easing typov}
+%	\label{fig:easing}
+%\end{figure}
+%
+%
+%For each easing type, the rate at which the attribute changes varies along the graph in
+%the time axis. Each easing type can be described as such:
+%\begin{itemize}
+%	
+%	
+%	\item Linear: The value varies consistently from its start value to its end value over
+%	the course of the animation
+%	\item Ease Out: The value increases quickly towards its end point before slowing
+%	down towards the end of the animation
+%	\item Ease In Out: The value decreases slowly at first and then increases quickly
+%	before finally slowing down to its end point towards the end of the animation
+%\end{itemize}
+%
+%
+%
 
 \subsection{Animácia transformácií}
 TODO ASI TEN VENTIL BY BOLO VHODNE ZANIMOVAT A TRANSFORMOVAT
