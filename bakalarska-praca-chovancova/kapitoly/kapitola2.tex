@@ -6,9 +6,9 @@ Kapitola popisuje výber z dostupných nástrojov a knižníc.
 \acs{WYSIWYG} editory, ktoré umožňujú tvorbu grafických komponentov sú: 
 
 \begin{itemize}
-\item Adobe Illustrator, 
-\item CorelDraw, 
 \item Inkscape,
+\item CorelDraw, 
+\item  Adobe Illustrator, 
 \item Sketch, 
 \item Libre Office Draw .
 \end{itemize}
@@ -20,12 +20,6 @@ Voľne dostupné online SVG editory:
 	\item svg-edit - Rýchly, webový SVG editor založený na JavaScriptovej technológii, ktorá funguje v akékoľvek modernom webovom prehliadavači. 
 	
 \end{itemize}
-
-
-
-Nástroj, ktorý najviac vyhovuje  požiadavkam je Inkscape. Inkscape is Free and Open Source Software licensed under the GPL.
-Adobe Illustrator, CorelDraw, Sketch boli vylúčené pretože nie sú open-source.  
-
 
 
 %http://noeticforce.com/Javascript-libraries-for-svg-animation
@@ -59,14 +53,14 @@ D3 rieši efektívnu manipuláciu dokumentov zakladajúcich si na dátach. Využ
 
 SVG.JS je ďalšia knižnica umožňujúca manipulovať a animovať SVG.
 
-Medzi hlavné výhody knižnice patrí to, že je má ľahko čitateľnú syntax. Umožňuje animovanie veľkosti, pozície, transformácie, farby. Má modulárnu štruktúru, čo umožnuje používanie rôznych rozšírení. Existuje množstvo užitočných pluginou dostupných na internete. \cite{svgjs}
+Medzi hlavné výhody knižnice patrí to, že je má ľahko čitateľnú syntax. Umožňuje animovanie veľkosti, pozície, transformácie, farby. Má modulárnu štruktúru, čo umožňuje používanie rôznych rozšírení. Existuje množstvo užitočných pluginou dostupných na internete. \cite{svgjs}
 
 %TODO NAPISAT NIECO PRECO SOM HO VYLUCILA
 
 
 \subsection{Raphaël.js}
 
-Raphaël je malá JavaScriptová knižnica, ktorá umožnuje jednoducho pracovať s vektorovou grafikou na webe. Umožňuje pomocou jednoduchých príkazov vytvárať špecifické grafy, obrázky. 
+Raphaël je malá JavaScriptová knižnica, ktorá umožňuje jednoducho pracovať s vektorovou grafikou na webe. Umožňuje pomocou jednoduchých príkazov vytvárať špecifické grafy, obrázky. 
 
 Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva, to že každý vytvorený grafický objekt je zároveň aj DOM objekt. To umožňuje cez JavaScriptové pridávať manipuláciu udalostí, alebo upravovať ich neskôr.
 Momentálne podporuje Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+.\cite{Raphael}
@@ -92,7 +86,7 @@ Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderovan�
 
 %Another unique feature of Snap is its ability to work with existing SVG. That means your SVG content does not have to be generated with Snap for you to be able to use Snap to work with it (think “jQuery or Zepto for SVG”). That means you create SVG content in tools like Illustrator, Inkscape, or Sketch then animate or otherwise manipulate it using Snap. You can even work with strings of SVG (for example, SVG files loaded via Ajax) without having to actually render it first which means you can do things like query specific shapes out of an SVG file, essentially turning it into a resource container or sprite sheet.
 
-Snap podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre animáciu. Snap umožňuje urobiť SVG obsah viac interaktívnejší a záživnejší. \cite{snapsvg}
+Knižnica Snap.svg podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre vizualizáciu grafických komponentov. Snap.svg umožňuje urobiť SVG obsah viac interaktívnejší a záživnejší. \cite{snapsvg}
 %TODO NIECO O DYNAMICKOM POUZITI A JSON PARSOVANI
 
 %Snap je zadarmo a open-source. 
@@ -122,24 +116,18 @@ Snap podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre
 
 
 \section{Zhodnotenie požiadaviek}
+
+Animovanie cez SVG \acs{SMIL} poskytuje  časovo orientované animácie, ktoré sa spúšťajú v špecifickom intervale a dĺžky. Môžu byť  zobrazované opakovaných sekvenciách. 
+SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. 
+
+Použitím JavaScriptových knižníc zameraných na animovanie a manipulovanie s SVG súbormi odstránim problém s SVG SMIL animovaním. Umožnujú používať podmienky, stavy, a premenné. 
+
+Každá zmena objektu v SCADA systéme sa vykreslí v animácii okamžite bez toho, aby webový prehliadač znovu načítal celú schému. 
+
 Grafické komponenty sa budú vytvárať v programe Inkscape. Následné budu použité v HTML dokumente. Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg.js. 
 
 Zo spomínaných knižníc najviac vyhovuje práve Snap.svg.js pre splnenie cieľov práce.
-Ďalší dôvod, prečo som sa rozhodla pre túto  knižnicu bol, že dokáže načítavať SVG súbor a potom s ním manipulovať.
+Ďalší dôvod, prečo som sa rozhodla pre túto  knižnicu bol, že dokáže načítavať SVG súbor a~následné s ním manipulovať.
  
 Spĺňa požiadavku kompatibility pre moderné webové prehliadače. Je to open-source knižnica a má licenciu Apache 2.
 
-
-
-TODO DOPLNIT JEDNOU AZ TROMA VETAMI TOTO \\
-
-DO UVODU \\
-Current SVG animation are time-oriented animations, which are run with specific begin/end time and duration. It can be repeated, showing an animation in a sequence repeatedly. SCADA applications require instant animation change when associated data is being updated, thus making existing SVG animation unsuitable.
-
-
-State-oriented animations are proposed to enhance SVG animations to allow animations toggle by states or variable. On every state change, a pre-configured animation will perform according to which state the object is in. By adding states to animations, user can further enhance SVG animations into condition-based, therefore fulfill the requirement of SCADA and other state-oriented applications.
-
-\\NA ZAVER TEJTO KAPITOLY
-Conclusion
-
-The suggestions we have made above might not be sufficient to other applications such as games, simulations, presentations, etc. This idea is base on the requirements of a SCADA system, and is yet to revise to be useful to these applications. Studies of methods to utilize state-oriented animations on these applications should be carried out to refine the above proposal. However, we hope this paper can be taken into account, to make SVG unique among other technologies in this fierce competition.
