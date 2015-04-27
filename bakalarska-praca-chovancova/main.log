@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  26 APR 2015 14:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 08:21
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -799,7 +799,7 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<obrazky/obrazokHTML.jpg, id=249, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=259, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -828,7 +828,7 @@ although it is yet undefined on input line 38.
                                                   \fi \fi 
 l.47 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obrazokHTML.jpg>]
-<obrazky/podpora.jpg, id=269, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=279, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -884,7 +884,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 
 
 ]
-<obrazky/suradnice1.jpg, id=367, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=377, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -928,7 +928,7 @@ dentifier (name{table.4.5}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.312 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=422, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=432, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
@@ -949,7 +949,7 @@ able.4.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.448 \begin{lstlisting}
                         ]
-<obrazky/textPriklad.jpg, id=448, 93.34875pt x 30.1125pt>
+<obrazky/textPriklad.jpg, id=458, 93.34875pt x 30.1125pt>
 File: obrazky/textPriklad.jpg Graphic file (type jpg)
 
 <use obrazky/textPriklad.jpg>
@@ -983,7 +983,7 @@ l.107 \include{kapitoly/kapitola4}
                                   ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola5.tex
 Kapitola 5.
-<obrazky/pump1.jpg, id=480, 587.19376pt x 445.665pt>
+<obrazky/pump1.jpg, id=490, 587.19376pt x 445.665pt>
 File: obrazky/pump1.jpg Graphic file (type jpg)
  <use obrazky/pump1.jpg>
 Package pdftex.def Info: obrazky/pump1.jpg used on input line 18.
@@ -993,7 +993,7 @@ Package pdftex.def Info: obrazky/pump1.jpg used on input line 18.
 
 
 
-] <obrazky/obr3.png, id=484, 203.25937pt x 182.93344pt>
+] <obrazky/obr3.png, id=494, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
 
 <use obrazky/obr3.png>
@@ -1006,7 +1006,7 @@ Package pdftex.def Info: obrazky/obr3.png used on input line 36.
                                                   \fi \fi 
 l.41 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump1.jpg>]
-<obrazky/XmlEditor2.png, id=492, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=502, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
@@ -1019,7 +1019,7 @@ Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 59.
                                                   \fi \fi 
 l.64 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png>]
-<obrazky/jednoduchyKruh.png, id=498, 131.74219pt x 128.73094pt>
+<obrazky/jednoduchyKruh.png, id=508, 131.74219pt x 128.73094pt>
 File: obrazky/jednoduchyKruh.png Graphic file (type png)
 
 <use obrazky/jednoduchyKruh.png>
@@ -1032,12 +1032,6 @@ Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 75.
                                                   \fi \fi 
 l.80 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/XmlEditor2.png>]
-File: obrazky/jednoduchyKruh.png Graphic file (type png)
-
-<use obrazky/jednoduchyKruh.png>
-Package pdftex.def Info: obrazky/jednoduchyKruh.png used on input line 86.
-(pdftex.def)             Requested size: 189.28644pt x 184.9429pt.
-
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
@@ -1048,15 +1042,9 @@ File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.98 	y=
-        "1320.1689"pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.5.5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.98 	y=
-        "1320.1689" <C:/Github/project/bakalarska-praca-chovancova/obrazky/jedn
-oduchyKruh.png>] [38] [39] [40] [41]) [42]
+l.147 	\item i
+              ndex.html <C:/Github/project/bakalarska-praca-chovancova/obrazky/
+jednoduchyKruh.png>] [38] [39] [40] [41]) [42]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola6.tex
 Kapitola 6.
 [43
@@ -1071,28 +1059,104 @@ Kapitola 7.
 
 
 ]) [46]
-No file kapitoly/kapitola8.tex.
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [47
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola8.tex
+Kapitola 8.
+<obrazky/vzorovaSada/belt.jpg, id=614, 489.32813pt x 127.97812pt>
+File: obrazky/vzorovaSada/belt.jpg Graphic file (type jpg)
+
+<use obrazky/vzorovaSada/belt.jpg>
+Package pdftex.def Info: obrazky/vzorovaSada/belt.jpg used on input line 15.
+(pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
+
+<obrazky/vzorovaSada/map.jpg, id=615, 490.08093pt x 239.39438pt>
+File: obrazky/vzorovaSada/map.jpg Graphic file (type jpg)
+
+<use obrazky/vzorovaSada/map.jpg>
+Package pdftex.def Info: obrazky/vzorovaSada/map.jpg used on input line 23.
+(pdftex.def)             Requested size: 312.83247pt x 152.81735pt.
+
+<obrazky/vzorovaSada/pump.jpg, id=616, 246.9225pt x 135.50626pt>
+File: obrazky/vzorovaSada/pump.jpg Graphic file (type jpg)
+
+<use obrazky/vzorovaSada/pump.jpg>
+Package pdftex.def Info: obrazky/vzorovaSada/pump.jpg used on input line 29.
+(pdftex.def)             Requested size: 312.83247pt x 171.68575pt.
+ [47
 
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 \end{figure}
+                  <C:/Github/project/bakalarska-praca-chovancova/obrazky/vzorov
+aSada/belt.jpg>]
+<obrazky/vzorovaSada/thermometer.jpg, id=620, 63.23625pt x 124.96687pt>
+File: obrazky/vzorovaSada/thermometer.jpg Graphic file (type jpg)
+
+<use obrazky/vzorovaSada/thermometer.jpg>
+Package pdftex.def Info: obrazky/vzorovaSada/thermometer.jpg used on input line
+ 35.
+(pdftex.def)             Requested size: 63.23608pt x 124.96657pt.
+
+<obrazky/vzorovaSada/trippleValve.jpg, id=621, 258.21469pt x 163.3603pt>
+File: obrazky/vzorovaSada/trippleValve.jpg Graphic file (type jpg)
+
+<use obrazky/vzorovaSada/trippleValve.jpg>
+Package pdftex.def Info: obrazky/vzorovaSada/trippleValve.jpg used on input lin
+e 42.
+(pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
+) [48pdfTeX warning (ext4): destination with the same identifier (name{figure.8
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \include{kapitoly/kapitola8}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.8.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \include{kapitoly/kapitola8}
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.8.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \include{kapitoly/kapitola8}
+                                   <C:/Github/project/bakalarska-praca-chovanco
+va/obrazky/vzorovaSada/map.jpg> <C:/Github/project/bakalarska-praca-chovancova/
+obrazky/vzorovaSada/pump.jpg> <C:/Github/project/bakalarska-praca-chovancova/ob
+razky/vzorovaSada/thermometer.jpg>] [49pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.8.5}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 \include{kapitoly/kapitola8}
+                                   <C:/Github/project/bakalarska-praca-chovanco
+va/obrazky/vzorovaSada/trippleValve.jpg>]
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [50
 
 
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [48
+(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [51
 
 
 
-]) [49]
-(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [50
+]) [52]
+(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [53
 
 
 
 ]
-[51]) [52
+[54]) [55
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [53
+(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [56
 
 
 ]
@@ -1119,13 +1183,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 133.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 13572 strings out of 493921
- 188287 string characters out of 3144865
- 304329 words of memory out of 3000000
- 16262 multiletter control sequences out of 15000+200000
+ 13613 strings out of 493921
+ 189365 string characters out of 3144865
+ 312150 words of memory out of 3000000
+ 16290 multiletter control sequences out of 15000+200000
  32379 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,10n,53p,702b,2175s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,10n,53p,702b,1889s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.enc}<C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/
@@ -1135,9 +1199,9 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (56 pages, 558180 bytes).
+Output written on main.pdf (59 pages, 662653 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 295 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 771 PDF objects out of 1000 (max. 8388607)
+ 300 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
