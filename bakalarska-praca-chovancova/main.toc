@@ -45,30 +45,31 @@
 \contentsline {subsubsection}{Animovanie path}{32}{section*.16}
 \contentsline {subsection}{\numberline {4.9.1}Anim\IeC {\'a}cie transform\IeC {\'a}cie}{32}{subsection.4.9.1}
 \contentsline {section}{\numberline {4.10}\IeC {\v D}al\IeC {\v s}ie met\IeC {\'o}dy v kni\IeC {\v z}nici Snap.svg}{32}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}Snap.load(...)}{32}{subsection.4.10.1}
-\contentsline {subsection}{\numberline {4.10.2}Snap.append(...), Snap.add(...), }{32}{subsection.4.10.2}
-\contentsline {chapter}{\numberline {5}Implement\IeC {\'a}cia grafick\IeC {\'e}ho komponentu}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Pr\IeC {\'a}ca s Existuj\IeC {\'u}cimi SVG}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Inkscape}{33}{section.5.2}
-\contentsline {section}{\numberline {5.3}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{33}{section.5.3}
-\contentsline {section}{\numberline {5.4}Definovanie id v SVG}{34}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Object Properties}{34}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}XML Editor}{35}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Zistenie atrib\IeC {\'u}tov SVG}{36}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Pr\IeC {\'a}zdna n\IeC {\'a}dr\IeC {\v z}}{36}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Pln\IeC {\'a} n\IeC {\'a}dr\IeC {\v z}}{37}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Integr\IeC {\'a}cia grafick\IeC {\'e}ho komponentu pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{38}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}HTML s\IeC {\'u}bor}{38}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}K\IeC {\'o}d}{38}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Vysvetlenie k\IeC {\'o}du}{38}{subsection.5.6.3}
-\contentsline {section}{\numberline {5.7}PumpingStation.js}{39}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}onPageLoad()}{39}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}PumpingStation(par1, par2)}{40}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Tank}{40}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Ventil}{41}{subsection.5.7.4}
-\contentsline {chapter}{\numberline {6}REST API}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}REST API pre grafick\IeC {\'e} komponenty}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}Data binding pre system D2000}{44}{section.6.2}
-\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } }{45}{chapter.7}
-\contentsline {chapter}{\numberline {8}Vzorov\IeC {\'a} sada}{47}{chapter.8}
-\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{56}{subsection.Alph0.0.1}
+\contentsline {subsection}{\numberline {4.10.1}Snap.load(url, callback, [scope])}{32}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Element.append(...), Element.add(...), }{33}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}Snap.select(...)}{33}{subsection.4.10.3}
+\contentsline {chapter}{\numberline {5}Implement\IeC {\'a}cia grafick\IeC {\'e}ho komponentu}{34}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pr\IeC {\'a}ca s Existuj\IeC {\'u}cimi SVG}{34}{section.5.1}
+\contentsline {section}{\numberline {5.2}Inkscape}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pr\IeC {\'\i }klad vytvorenia grafick\IeC {\'e}ho komponentu v Inkscape}{34}{section.5.3}
+\contentsline {section}{\numberline {5.4}Definovanie id v SVG}{35}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Object Properties}{35}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}XML Editor}{36}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Zistenie atrib\IeC {\'u}tov SVG}{37}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Pr\IeC {\'a}zdna n\IeC {\'a}dr\IeC {\v z}}{37}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Pln\IeC {\'a} n\IeC {\'a}dr\IeC {\v z}}{38}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Integr\IeC {\'a}cia grafick\IeC {\'e}ho komponentu pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{39}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}HTML s\IeC {\'u}bor}{39}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}K\IeC {\'o}d}{39}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Vysvetlenie k\IeC {\'o}du}{39}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}PumpingStation.js}{40}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}onPageLoad()}{40}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}PumpingStation(par1, par2)}{41}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Tank}{41}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Ventil}{42}{subsection.5.7.4}
+\contentsline {chapter}{\numberline {6}REST API}{44}{chapter.6}
+\contentsline {section}{\numberline {6.1}REST API pre grafick\IeC {\'e} komponenty}{44}{section.6.1}
+\contentsline {section}{\numberline {6.2}Data binding pre system D2000}{45}{section.6.2}
+\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } }{46}{chapter.7}
+\contentsline {chapter}{\numberline {8}Vzorov\IeC {\'a} sada}{48}{chapter.8}
+\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{57}{subsection.Alph0.0.1}
