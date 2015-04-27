@@ -1,4 +1,4 @@
-var paper, idValve, idValve1, idNadrz,idHladina, idEngineMotor;
+var paper, idValve, idValve2, idNadrz,idHladina, idEngineMotor;
 function onPageLoad() {
     PumpingStation("PumpingStationNOVE.svg", "#svgStanica" );
 }
@@ -19,7 +19,7 @@ function PumpingStation(nazovFileSVG, idDOMsvgElement) {
 function animateTank(percento){
     var height = paper.select(idNadrz).getBBox().height;
     var y = paper.select(idNadrz).getBBox().y;
-    var newHeight = height * (percento/100);
+    var newHeight = height * (percento/100) ;
     var newY = y + height - newHeight;
     paper.select(idHladina).animate({
         y: newY,
@@ -82,3 +82,16 @@ var updateData = {
 function updateSchema(updateData){
     updateSchema01(updateData.valve1, updateData.tank, updateData.engineRotation, updateData.valve2);
 }
+
+
+
+
+
+
+var min = 0;
+var max = 100;
+var getRandomCislo = function getRandomCislo() {
+    var temp = Math.random() * (max - min) + min;
+    // console.log("nahodne cislo je: " + temp);
+    return temp;
+};

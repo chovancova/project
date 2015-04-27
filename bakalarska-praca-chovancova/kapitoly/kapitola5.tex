@@ -5,20 +5,23 @@
 \section{Vzorová sada}
 Vzorová sada grafických komponentov SCADA systémov obsahuje:
 \begin{itemize}
-	\item Thermometer - obrázok \ref{fig:thermometer}
+		\item Prečerpávacia stanica - obrázok \ref{fig:pump}
+			\item Prepravný pás - obrázok \ref{fig:belt}
 	\item Trojcestný ventil - obrázok \ref{fig:trippleValve}
 	\item Mapa Slovenska - obrázok \ref{fig:map}
-	\item Prečerpávacia stanica - obrázok \ref{fig:pump}
-	\item Prepravný pás - obrázok \ref{fig:belt}
-	
+	\item Thermometer - obrázok \ref{fig:thermometer}
+
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{figure}[H]
 	\centering
-	\includegraphics{obrazky/thermometer}
-	\caption{Termometer}
-	\label{fig:thermometer}
+	\includegraphics[width=0.7\linewidth]{obrazky/pump}
+	\caption{Prečerpávacia stanica}
+	\label{fig:pump}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 	\centering
@@ -35,13 +38,7 @@ Vzorová sada grafických komponentov SCADA systémov obsahuje:
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/pump}
-	\caption{Prečerpávacia stanica}
-	\label{fig:pump}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{obrazky/belt}
@@ -49,7 +46,13 @@ Vzorová sada grafických komponentov SCADA systémov obsahuje:
 	\label{fig:belt}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics{obrazky/thermometer}
+	\caption{Termometer}
+	\label{fig:thermometer}
+\end{figure}
 
 \section{Príklad vytvorenia prečerpávacej stanice v Inkscape}
 
@@ -67,8 +70,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice v Inkscape
 
 \section{Definovanie id v SVG}
 
-Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. V zdrojovom kóde .svg súboru je to označené id="nazovElementu". Na ovládanie časti svg elementu v JavaScripte bude realizované cez CSS selektor, kde pristúpim k id svg cez značku \#. 
-Príklad použitia: paper.select("\#ventil"); .
+Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V .svg súboroch sú označované ako id. V zdrojovom kóde .svg súboru je to označené id="nazovElementu". Na ovládanie časti svg elementu v JavaScripte bude realizované cez CSS selektor, kde pristúpim k id svg cez značku \#.  Napríklad: paper.select("\#ventil"); .
 
 
 \subsection{Object Properties}
@@ -151,6 +153,17 @@ Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spu
 
 \section{PumpingStation.js}
 V súbore PumpingStation.js sú metódy na vizualizáciu grafického komponentu. V tejto časti je popis jednotlivých funkcií. 
+Interface prečerpávacej stanice: 
+\begin{itemize}
+	\item onPageLoad();
+	\item PumpingStation(nazovFileSVG, idDOMsvgElement);
+    \item openValve1(isOpenValve1);
+    \item animateTank(intPercent);
+    \item rotateEngine(isRotating);
+    \item openValve2(isOpenValve2);
+    \item updateSchema01(isOpenValve1, intPercent, isRotating, isOpenValve2);
+    \item updateSchema(updateData);
+\end{itemize}
 
 \subsection{onPageLoad()}
 onPageLoad() sa spustí pri načítaní tela HTML súboru index.html. Následne spustí  PumpingStation(par1,, par2). Prvý parameter je udaný svg súbor vytvorení programom Inkscape. Druhý parameter je id tagu svg, kde sa vykreslí prečerpávacia stanica.
@@ -245,9 +258,25 @@ function openValve1(isOpen){
 
 
 
+\subsection{rotateEngine(isRotating)}
+Táto metóda bude rotovať až dovtedy pokým sa nezmení parameter isPaused. Rotácia motora je zabezpečená vnorenou metódou rotateLeft. Tá sa volá v toggleRotation(), kde v má parameter element vrtuliek čerpadla. 
 
+Popis metódy rotateLeft():
+\begin{itemize}
+\item animationRunning - nastavené na true, znamená to, že animácia ešte beží
+\item stringT0 - je transformačný string - potrebný na rotáciu vrtuliek čerpadla. Uhol rotácie je nulový, a súradnice stredovej osi x, y sú získané volaním metódy elementu getBBox().cx a getBBox().cy. 
+\item transform() - je metóda z Snap.svg knižnice, ktorá umožní nastaviť transformáciu rotácie, kde parametrom je transformančný string. 
+\item if(!(isPaused)){..} - je podiemka, ktorá zaručí opakované rotovanie elementu. 
+\item stringT360 - je transformačný string, ktorý zrotuje element o uhol 360 stupňov zo stredom súradnicovej osi elementu. 
+\item animate() - je metóda, kde animujem transformáciu z uhlu 0 stupňov na 360 stupňov. Ako parametre sú:
+\subitem - párový atribút transform s hodnotou transformačného stringu, 
+\subitem - rýchlosť animácie v milisekundách - 2000 ms, 
+\subitem - mina objekt, ktorý zaručí lineárny plynulý pohyb, 
+\subitem - callback funkcia, ktorá sa spustí po dokončení animácie. Toto zabezpečí opakované spustenie animácie rotácie elementu. 
+\item else - ak skončí animácia - tak sa nastaví animationRunning na hodnotu false. 
+\end{itemize}
 
-
+\subsubsection{Kód metódy} 
 \begin{lstlisting}
 var isPaused = true;
 var animationRunning = false;
@@ -259,27 +288,29 @@ function rotateEngine(isRotating){
 			isPaused = false;
 			rotateLeft(paper.select(idEngineMotor));
 		} else {
-			isPaused = true;
-		}
+			isPaused = true;}
 	}
 	toggleRotation();
 
 	function rotateLeft(element) {
 		animationRunning = true;
-		element.transform(
-		("R0,"+ element.getBBox().cx + ","+ element.getBBox().cy));
+		var stringT0 = "R0,"+ element.getBBox().cx 	+ ","+
+		element.getBBox().cy;
+		element.transform(stringT0);
 
 	if (!(isPaused)) {
+		var stringT360 = "R360,"+ element.getBBox().cx 	+ ","+
+		element.getBBox().cy;
 		element.animate({
-		 transform: ("R360,"+ element.getBBox().cx + ","+  element.getBBox().cy )
-		 },2000, 
+		 transform: stringT360 },
+		 2000, 
 		 mina.linear, 
 		 rotateLeft.bind(null, element));
 		} else { animationRunning = false;}
 	}
 }
 \end{lstlisting}
-\caption{Metóda rotateEngine(isRotating)}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

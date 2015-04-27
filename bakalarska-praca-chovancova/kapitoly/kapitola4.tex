@@ -612,12 +612,30 @@ Slúži na pridanie, zobrazenie elementu na danom plátne.
 Slúži na wrapovanie DOM elementu špecifikovaný CSS selektorom.  
 
 \subsection{Element.getBBox()}
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{obrazky/getBBox}
-\caption{}
-\label{fig:getBBox}
-\end{figure}
+Vráti bounding box opisovač pre daný element. Bounding box vyjadruje hranice elementu cez obdĺžnik. 
+
+Vráti objekt s nasledujúcimi atribútmi: 
+\begin{itemize}
+	\item cx, cy - x, y stredu elementu,
+	\item h, height - výška elementu,
+	\item path - príkaz path pre daný box
+	\item r0 - polomer kruhu, ktorý plne uzatvára box, 
+	\item r1 - polomer najmenšieho kruhu, ktorý môže byť opísaný ku box,
+	\item r2 - polomer najväčšieho kruhu, ktorý môže byť opísaný ku box, 
+	\item vb - string -box ako viewbox príkaz
+	\item w, width - šírka elemetnu 
+	\item x2 - x súradnica pravej strany, 
+	\item x - x súradnica ľavej strany, 
+	\item y2 - y súradnica spodného hrany, 
+	\item y - y horného hrany. 
+\end{itemize}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.7\linewidth]{obrazky/getBBox}
+%\caption{}
+%\label{fig:getBBox}
+%\end{figure}
 
 
 
