@@ -2,14 +2,14 @@
  * Created by chova_000 on 19-Apr-15.
  */
 function onPageLoad() {
-    init("#mojePlatno", "belt.svg");
+    ConveyorBelt("#mojePlatno", "belt.svg");
 }
 
 var paper, pas, motor1, motor2, motor3, motor4;
 
  /*
  * Initialization of the map of Slovakia, and selection of id from SVG, change of style some elements*/
-var init = function(id, subor) {
+var ConveyorBelt = function(id, subor) {
     paper = new Snap(id);
   //  paper.attr({ viewBox: "0 0 800 600" });
     Snap.load (subor, function (f) {
@@ -41,14 +41,15 @@ rotujMotory(true);
 }
 
 
-function rotujMotory(parIsPaused){
-    isPaused = parIsPaused;
-    toggleRotation();
-}
 
 
 var isPaused = true;
 var animationRunning = false;
+
+function rotujMotory(parIsPaused){
+    isPaused = parIsPaused;
+    toggleRotation();
+}
 
 function toggleRotation() {
     if (!animationRunning && isPaused) {
@@ -81,7 +82,6 @@ function rotateLeft(element) {
 
 
 function animovanieNaPase(){
-
 
     var road =   paper.select(pas);
     var len = road.getTotalLength();
@@ -117,3 +117,5 @@ var cas = 2000;
     });
 
 }
+
+

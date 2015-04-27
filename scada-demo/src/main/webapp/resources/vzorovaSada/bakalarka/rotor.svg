@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="rotor.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.01"
+     inkscape:cx="375"
+     inkscape:cy="729.24397"
+     inkscape:document-units="px"
+     inkscape:current-layer="g2985"
+     showgrid="false"
+     showguides="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2995" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2985">
+      <path
+         transform="translate(52.475248,57.425743)"
+         d="m 265.34653,266.22357 a 89.10891,89.10891 0 1 1 -178.217814,0 89.10891,89.10891 0 1 1 178.217814,0 z"
+         sodipodi:ry="89.10891"
+         sodipodi:rx="89.10891"
+         sodipodi:cy="266.22357"
+         sodipodi:cx="176.23763"
+         id="engineRotor"
+         style="fill:#cccccc;fill-opacity:1;stroke:#1c1111;stroke-opacity:0.80952382"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:type="star"
+         style="fill:#808080;fill-opacity:1;stroke:#1c1111;stroke-opacity:0.80952382"
+         id="vrtule"
+         sodipodi:sides="5"
+         sodipodi:cx="38.613861"
+         sodipodi:cy="29.589905"
+         sodipodi:r1="102.15308"
+         sodipodi:r2="7.2527347"
+         sodipodi:arg1="0.58531444"
+         sodipodi:arg2="0.054425032"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 123.76238,86.025551 45.855857,29.98444 11.252711,128.01053 40.476535,36.59937 -63.444779,33.981551 32.523061,33.527457 2.8993029,-66.116536 32.986866,25.013981 118.59969,-33.951575 41.226986,22.824276 z"
+         inkscape:transform-center-x="6.3528563"
+         inkscape:transform-center-y="1.0196738"
+         transform="matrix(0.75136791,0,0,0.75136791,203.90326,302.24886)" />
+    </g>
+  </g>
+</svg>

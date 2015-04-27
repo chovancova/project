@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 15:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 18:39
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -1137,8 +1137,20 @@ Kapitola 5.
 
 
 
-]) [49]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
+]
+! Too many }'s.
+l.36 \end{lstlisting}}
+                      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Overfull \hbox (3.1157pt too wide) in paragraph at lines 38--42
+[]$\IL2/cmtt/m/n/12 http : / / localhost : 8080 / scada-[]demo / rest / pumping
+station / getrotorstatus$[] \IL2/ptm/m/n/12 prí-klad
+ []
+
+) [49] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
 Kapitola 6.
 [50
 
@@ -1193,10 +1205,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 133.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 13675 strings out of 493921
- 190161 string characters out of 3144865
+ 13687 strings out of 493921
+ 190326 string characters out of 3144865
  312660 words of memory out of 3000000
- 16316 multiletter control sequences out of 15000+200000
+ 16318 multiletter control sequences out of 15000+200000
  32379 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,10n,53p,702b,1891s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1209,9 +1221,9 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (61 pages, 757064 bytes).
+Output written on main.pdf (61 pages, 760007 bytes).
 PDF statistics:
- 824 PDF objects out of 1000 (max. 8388607)
- 335 named destinations out of 1000 (max. 500000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 345 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

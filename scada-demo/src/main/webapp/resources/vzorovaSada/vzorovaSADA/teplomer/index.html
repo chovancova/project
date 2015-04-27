@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teplomer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script> -->
+
+        <script type="text/javascript"
+        src="../../js/snap.svg-min.js"></script>
+        <script type="text/javascript" src="teplomer.js"></script>
+        <script type="text/javascript" src="exec.js"></script>
+        <script type="text/javascript" src="testTeplomer.js"></script>
+    </head>
+    <body onload="onPageLoad();">
+        <h1>Thermometer</h1>
+       <svg id ="svg3" viewBox="0 0 320 750" width="40%" height="40%"></svg>
+        <div>
+            <h2>Thermometer - Spusti testy</h2>
+            <button id="demo" type="button" onclick="spustiTesty();">Testuj</button></div>
+        <ul>
+            <li> stlacenim tlacidla "Testuj" sa spustia automaticky test animuj s nahodnou hodnotou - vid console.log </li>
+            <li>Vytvorenie Thermometer: <b>Thermometer(percento); </b>// vytvorenie SVG teplomer</li>
+            <li>Pouzitie tychto funkcii na ovladanie daneho teplomeru...</li>
+            <li><b>animujTeplomer (percento);</b> //zanimuje rychlostou 800 ms </li>
+            <li> <b>nastavTeplomer(percento); </b> //iba cisto nastavi na danu hodnotu, bez animacie</li>
+            <li>Pre zjednodusenie je mozne pouzit funkciu <b>getRandomCislo();</b></li>
+            <li><b>    nastavTeplomer(getRandomCislo()); </b></li>
+            <li> <b>    animujTeplomer(getRandomCislo());</b></li>
+            <li>Vytvorila som i <b>zmenaFarby("#000");</b> na zmenu farby elementu
+                => da sa menit ktorykolvek element z svg</li>
+        </ul>
+    </body>
+</html>

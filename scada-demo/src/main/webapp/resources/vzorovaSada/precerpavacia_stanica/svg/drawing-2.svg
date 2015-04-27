@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="1052.4" width="744.09" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4">
+  <radialGradient id="radialGradient5107" gradientUnits="userSpaceOnUse" cy="518.08" cx="388.57" gradientTransform="matrix(0.72835786,0,0,1.1919908,159.24499,9.0461408)" r="240">
+   <stop id="stop3790" stop-color="#000" offset="0"/>
+   <stop id="stop3792" stop-color="#000" stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient5109" y2="435.22" gradientUnits="userSpaceOnUse" x2="491.49" y1="435.22" x1="342.79">
+   <stop id="stop4692" stop-color="#000" offset="0"/>
+  </linearGradient>
+ </defs>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <g id="g5078" transform="matrix(1.1776088,0,0,1.1776088,-22.231307,-24.69074)">
+   <g id="g5051">
+    <rect id="nadrz1" stroke-linejoin="miter" stroke-dasharray="none" height="572.16" width="349.61" stroke="url(#radialGradient5107)" stroke-linecap="round" stroke-miterlimit="4" y="340.51" x="267.46" stroke-width="3.016" fill="#999">
+     <desc id="desc4733">nadrz na vodu</desc>
+    </rect>
+    <g id="g5026">
+     <rect id="rect4444" height="106.14" width="95.731" stroke-dasharray="none" stroke-miterlimit="4" y="806.93" x="397.85" stroke-width="1.6" fill="#501616"/>
+     <g id="gRuravnutro">
+      <g id="g5010" transform="translate(-92.411735,-30.17526)">
+       <rect id="rura1" height="29.136" width="224.76" y="424.26" x="523.75" fill="#800080"/>
+       <rect id="voda1" height="21.397" width="214.75" stroke-dasharray="none" stroke-miterlimit="4" y="427.79" x="530.08" stroke-width="1.6" fill="#00F"/>
+      </g>
+      <g id="g5014" transform="translate(-15.08763,-35.833121)">
+       <rect id="rura2" height="493.22" width="28.745" y="455.28" x="446.43" fill="#800080"/>
+       <rect id="voda2" transform="matrix(0,1,-1,0,0,0)" height="17.625" width="490.1" stroke-dasharray="none" stroke-miterlimit="4" y="-468.99" x="447.1" stroke-width="1.6" fill="#00F"/>
+      </g>
+     </g>
+     <g id="motor1" transform="matrix(0.8325834,0,0,0.8325834,79.948296,1074.7936)">
+      <desc id="desc4729">motor cerpadla on/of</desc>
+      <title id="title4727">motor1</title>
+      <path id="path4431" style="marker-start:none;" d="m491.43,435.22c0,41.027-33.259,74.286-74.286,74.286s-74.286-33.259-74.286-74.286,33.259-74.286,74.286-74.286,74.286,33.259,74.286,74.286z" transform="matrix(0.87485681,0,0,0.87485681,76.441371,-965.60375)" stroke="url(#linearGradient5109)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.28608847" fill="#b3b3b3"/>
+      <path id="vrtulky" opacity="0.98999999" fill="#000" transform="matrix(-1,0,0,1,845.01657,25.911935)" stroke="#000" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2" d="m434.74-564.25-29.527-44.604-13.936,51.645,10.661-52.419-46.372,26.664,44.604-29.527-51.645-13.936,52.419,10.661-26.664-46.373,29.527,44.604,13.936-51.645-10.661,52.419,46.372-26.664-44.604,29.527,51.645,13.936-52.419-10.661z">
+       <desc id="desc4720">vrtulky sa otacahu, ked je motor zapnuty</desc>
+      </path>
+     </g>
+    </g>
+    <g id="g5042" stroke-dasharray="none" stroke-miterlimit="4" transform="translate(-1.8859585,-54.692659)">
+     <rect id="rura3" height="27.055" width="88.09" y="911.96" x="183.33" stroke-width="1.6" fill="#2b0000"/>
+     <g id="ventil" stroke-linejoin="miter" transform="matrix(0.68389663,0,0,0.68389663,-500.78827,641.19226)" stroke="#000" stroke-linecap="butt" stroke-width="2" fill="#58ad14">
+      <path id="path4481" d="m886.63,474.54-0.53245-113.85,57.512,60.566z"/>
+      <path id="path4481-1" d="m1001.9,474.61,0.5324-113.85-57.512,60.566z"/>
+     </g>
+     <rect id="rura4" height="27.055" width="84.318" y="912.48" x="21.963" stroke-width="1.6" fill="#2b0000"/>
+     <rect id="voda3" height="15.739" width="82.733" y="916.25" x="183.06" stroke-width="1.6" fill="#00F"/>
+     <rect id="voda4" height="15.739" width="84.618" y="917.19" x="20.87" stroke-width="1.6" fill="#00F"/>
+    </g>
+   </g>
+   <rect id="hladina1" height="44.028" width="342.99" stroke-dasharray="none" stroke-miterlimit="4" y="868.84" x="269.92" stroke-width="1.6" fill="#00F"/>
+  </g>
+ </g>
+</svg>

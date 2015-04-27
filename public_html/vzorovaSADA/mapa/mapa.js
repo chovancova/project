@@ -2,13 +2,13 @@
  * Created by chova_000 on 19-Apr-15.
  */
 function onPageLoad() {
-    init("#mojePlatno", "mapa.svg");
+    MapOfSlovakia("#mojePlatno", "mapa.svg");
 }
 
 var paper, textBA,textNO,textZA, textKE,BC,BL,KI,NI,PV,TA,TC,ZI, cestaBA;
  /*
  * Initialization of the map of Slovakia, and selection of id from SVG, change of style some elements*/
-var init = function(id, subor) {
+var MapOfSlovakia = function(id, subor) {
     paper = new Snap(id);
   //  paper.attr({ viewBox: "0 0 800 600" });
     Snap.load (subor, function (f) {

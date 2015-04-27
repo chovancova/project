@@ -36,6 +36,7 @@ public class TemperatureSingletonService {
 		ed.fireMessageDataEvent(new EventMessage("temperatureData", Integer.toString(currentTemperature)));
 	}
 	
+	
 	public Integer getCurrentTemperature() {
 		return currentTemperature;
 	}

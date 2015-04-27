@@ -1,31 +1,51 @@
 \chapter{REST API}
 
 \section{REST API pre grafické komponenty}
-Grafické komponenty pre vizualizáciu dát zo systému D2000 budú umiestňované na html stránkach použitých ako súčasť web rozhrania frameworku D2000 WebSuite.
+Grafické komponenty pre vizualizáciu dát zo systému D2000 budú umiestňované na HTML stránkach použitých ako súčasť web rozhrania frameworku D2000 WebSuite.
 
 Tento framework je založený na technológii Java Enterprise Edition a Java Server Faces.
 
 Životný cyklus webovej stránky - načítanie stránky s technologickou schémou, pre prvé zobrazenie kompletnej schémy je potrebný plný dáta set.
 
 
-príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/gatfulldataset
+Príklad REST URL:\\
+\url{http://localhost:8080/scada-demo/rest/pumpingstation/gatfulldataset}
+
+
+Príklad JSON dát z grafického komponentu prečerpávacia stanica: 
+\begin{lstlisting}
+var updateData = {
+	"valve1": "false",
+	"tank": "0",
+	"engineRotation": "false",
+	"valve2": "false"
+};
+\end{lstlisting}
+
+
+Zobrazenie stránky v rámci jednej http session, typicky vo web aplikáciách kde sa užívateľ prihlási pomocou mena a hesla, trvanie jeho session je obmedzené na predom stanovený čas, napríklad jednu hodinu.
+
+
+Pri zobrazení zložitejšej technologickej schémy, je potrebné optimalizovať množstvo prenesených dát a interakciu z DOM stránky. Preto je počas zobrazenia schémy výhodne implementovať čiastočne aktualizácie, ktoré menia len dotknuté časti schémy a nie celú schému ako je tomu pri načítaní stránky.  
+
+Príklad REST URL:\\ ň
+\url{http://localhost:8080/scada-demo/rest/pumpingstation/getvalvestatus}
+príklad JSON dát:
+\begin{lstlisting}
+var updateDataTank = {"tank": "86"};
+\end{lstlisting}}
+
+príklad REST URL\\ \url{http://localhost:8080/scada-demo/rest/pumpingstation/getrotorstatus}
 príklad JSON dát: (môžeš uviesť dáta z puding stati on)
-
-
-Zobrazenie stránky v rámci jednej http session, typicky vo web aplikáciách kde sa užívateľ prihlási pomocou mena a hesla, trvanie jeho session je obmedzene na predom stanovený čas, napríklad jednu hodinu.
-
-
-Pri zobrazení zložitejšej technologickej schémy, je potrebne optimalizovať množstvo prenesených dát a interakciu z DOM stránky. Preto je počas zobrazenia schémy výhodne implementovať čiastočne aktualizácie, ktoré menia len dotknute casti schémy a nie celu schemu ako je tomu pri nacitani stránky.  
-príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getvalvestatus
-príklad JSON dát: (môžeš uviesť dáta z puding stati on)
-príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getrotorstatus
-príklad JSON dát: (môžeš uviesť dáta z puding stati on)
-príklad REST URL\\ http://localhost:8080/scada-demo/rest/pumpingstation/getwaterlevel
+príklad REST URL\\ \url{http://localhost:8080/scada-demo/rest/pumpingstation/getwaterlevel}
 príklad JSON dát: (môžeš uviesť dáta z puding stati on)
 
 
 \section{Data binding pre system D2000}
-Priama väzba v prípade jednoduchých schém. Jednoduchá schéma predstavuje vizualizáciu meraného alebo počítaného bodu v systéme D2000. Takáto vizualizácia je realizovaná pomocou widgetu (môžeš uviesť príklad ako teplomer alebo ručičkový merač, obrázky) jedna sa o mapovanie 1:1.
-Zložitejšie schémy pozostávajúce z vizualizácie výrobného procesu alebo komplexnej technológie sú mapovane vo vzťahu n:1, teda jedna schéma vizualizuje dáta z n meraných alebo počítaných bodov, pripadne získava dáta cez asynchrónne volania RPC (remote procedure call) systému D2000.
+Priama väzba v prípade jednoduchých schém. Jednoduchá schéma predstavuje vizualizáciu meraného alebo počítaného bodu v systéme D2000. Takáto vizualizácia je realizovaná pomocou widgetu jedna sa o mapovanie 1:1.
+%(môžeš uviesť príklad ako teplomer alebo ručičkový merač, obrázky) 
+Zložitejšie schémy pozostávajúce z vizualizácie výrobného procesu alebo komplexnej technológie sú mapované vo vzťahu n:1, teda jedna schéma vizualizuje dáta z n meraných alebo počítaných bodov, pripadne získava dáta cez asynchrónne volania RPC (remote procedure call) systému D2000.
 
-Ak to vyžaduje logika aplikácie, server implementuje dátový zdroj (service), ktorý agreguje dáta a systémové udalosti. Pre dosiahnutie real-time odozvy web rozhrania výhodne použiť obojstrannú komunikáciu medzi web browserom a serverom - technológiu web sockets. (môžeš uviesť niečo o web socketoch, skús pohľadať na webe), vo stvrtok to mozme doladit.
+Ak to vyžaduje logika aplikácie, server implementuje dátový zdroj (service), ktorý agreguje dáta a systémové udalosti. Pre dosiahnutie real-time odozvy web rozhrania výhodne použiť obojstrannú komunikáciu medzi web browserom a serverom - technológiu web sockets.
+
+% (môžeš uviesť niečo o web socketoch, skús pohľadať na webe), vo stvrtok to mozme doladit.
