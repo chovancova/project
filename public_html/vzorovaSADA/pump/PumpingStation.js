@@ -1,6 +1,6 @@
 var paper, idValve, idValve2, idNadrz,idHladina, idEngineMotor;
 function onPageLoad() {
-    PumpingStation("PumpingStationNOVE.svg", "#svgStanica" );
+    PumpingStation("PumpingStation.svg", "#svgStanica" );
 }
 
 

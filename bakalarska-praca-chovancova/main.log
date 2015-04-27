@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 15:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 15:46
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -866,12 +866,8 @@ File: uml/aktivityInicializacie.png Graphic file (type png)
 
 <use uml/aktivityInicializacie.png>
 Package pdftex.def Info: uml/aktivityInicializacie.png used on input line 14.
-(pdftex.def)             Requested size: 335.17912pt x 618.55942pt.
-
-
-LaTeX Warning: Float too large for page by 3.99591pt on input line 17.
-
-[17
+(pdftex.def)             Requested size: 312.83247pt x 577.31995pt.
+ [17
 
 
 
@@ -1213,7 +1209,7 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (61 pages, 757063 bytes).
+Output written on main.pdf (61 pages, 757064 bytes).
 PDF statistics:
  824 PDF objects out of 1000 (max. 8388607)
  335 named destinations out of 1000 (max. 500000)
