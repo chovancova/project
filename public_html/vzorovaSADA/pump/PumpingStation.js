@@ -1,148 +1,84 @@
-//var paper = "";
+var paper, idValve, idValve1, idNadrz,idHladina, idEngineMotor;
+function onPageLoad() {
+    PumpingStation("PumpingStationNOVE.svg", "#svgStanica" );
+}
 
-var PumpingStation = function(nazovFileSVG, idDOMsvgElement) {
+
+function PumpingStation(nazovFileSVG, idDOMsvgElement) {
     paper = Snap(idDOMsvgElement);
     Snap.load(nazovFileSVG, function (f) {
         paper.append(f);
-        console.log("bola nacitana stanica do svgStanica");
+        idHladina = "#hladina";
+        idNadrz = "#nadrz";
+        idValve = "#ventil";
+        idValve2 = "#ventil2";
+        idEngineMotor = "#engineMotor";
     });
-   /* Snap.load("rotor.svg", function (f) {
-        paper.append(f);
-        paper.select("#engineRotor").attr({height: "100", wight: "100"});
-        console.log("bola nacitana stanica do svgStanica");
-    });*/
-};
+ }
 
-var Tank = {
-    idTank: "#hladina",
-    tank: function(){
-       return  paper.select(this.idTank);},
-
-    animateComponentTank: function(fillPerc) {
-        if (fillPerc === undefined || fillPerc < 0) {
-            fillPerc = 0;
-        }
-        var perHeight = 600 * (fillPerc / 100);
-        var perY = 1912 - perHeight;
-        this.tank().animate({
-            height: perHeight,
-            y: perY
-        }, 800);
-        return console.log("animacia tanku " + fillPerc);
-    }
-};
-
-
-var Valve = {
-    idValve: "#ventil",
-    idValve2:"#ventil2",
-    valve: function (){ return paper.select(this.idValve);},
-    valve2: function (){ return paper.select(this.idValve2);},
-    colorValve: "red",
-    colorValve2: "red",
-    changeIsOpen: function (isOpened) {
-        isOpened = (isOpened) ? 0 : 1;
-        this.colorValve = (isOpened) ?   "red" : "green";
-        this.valve().attr({fill: this.colorValve});
-        return  console.log("farba ventila sa zmenila " + this.colorValve);
-        },
-    setColorValve: function (colorV) {
-        this.colorValve = colorV;
-       this.valve().attr({fill: this.colorValve});
-        return  console.log("farba ventila sa zmenila " + this.colorValve);
-    },
-    openOff: true,
-    openOff2: true,
-    changeValve: function(){
-        this.openOff = (this.openOff) ? 0 : 1;
-        this.changeIsOpen(this.openOff);
-        return "ooook";
-    },
-    zmenFarbu1: function(boolOpen){
-        this.openOff = (this.openOff) ? 0 : 1;
-        this.colorValve = (this.openOff) ?   "red" : "green";
-        this.valve().attr({fill: this.colorValve});
-
-    },
-    zmenFarbu2: function(boolOpen){
-        this.openOff2 = (this.openOff2) ? 0 : 1;
-        this.colorValve2 = (this.openOff2) ?   "red" : "green";
-        this.valve2().attr({fill: this.colorValve2});
-    }
-};
-
-var Engine = {
-    isRotate: false,
-    rot: 280,
-     isPaused : true,
- animationRunning : false,
-        propellor1: function(){
-        return paper.select("#rect3094");},
-
-    propellor2: function(){
-        return paper.select("#rect3092");},
-
-    rotate: function(rot){
-      //  this.propellor1().animate(this.propellor1().attr{"transform": "r" + rot},10000 );
-       // this.propellor2().animate({transform: "r" + rot}, 1000);
-       // this.propellor1().animate({transform: "r" + rot},1000);
-       // paper.select("#rect3092").animate({transform: "r" + rot},1000);
-        this.rot = rot;
-         stringove = "r" + this.rot;
-      //  paper.select("#stanica").transform(stringove);
-        this.propellor1().animate({ transform: stringove},2000);
-        console.log("rotacia vrtuliek o " + rot);
-        },
-    animujRotaciu: function(){
-
-        var stringove = "r" + this.rot;
-        paper.select("#stanica").transform(stringove);
-        paper.select("#stanica").animate({ transform: stringove},2000);
-    },
-
-    setColor : function (color){
-         this.propellor1().attr({
-            fill: color
-        });
-        this.propellor2().attr({
-            fill: color
-        });
-        return "ok";
-    }
-
-
-  };
-
-function rotujMotor(parIsPaused){
-    isPaused = parIsPaused;
-    toggleRotation();
+function animateTank(percento){
+    var height = paper.select(idNadrz).getBBox().height;
+    var y = paper.select(idNadrz).getBBox().y;
+    var newHeight = height * (percento/100);
+    var newY = y + height - newHeight;
+    paper.select(idHladina).animate({
+        y: newY,
+        height: newHeight
+    }, 1000);
 }
 
+function openValve1(isOpen){
+    paper.select(idValve).attr({fill: ((isOpen === "true") ?   "green" : "red")});
+}
+
+function openValve2(isOpen2){
+    paper.select(idValve2).attr({fill: ((isOpen2 === "true") ?   "green" : "red")});
+}
 
 var isPaused = true;
 var animationRunning = false;
+function rotateEngine(isRotating){
+    isPaused = isRotating;
 
-function toggleRotation() {
-    if (!animationRunning && isPaused) {
-        isPaused = false;
-        rotateLeft(paper.select("#engineMotor"));
-    } else {
-        isPaused = true;
+    function toggleRotation() {
+        if (!animationRunning && isPaused) {
+            isPaused = false;
+            rotateLeft(paper.select("#engineMotor"));
+        } else {
+            isPaused = true;
+        }
     }
+    toggleRotation();
 
+    function rotateLeft(element) {
+        animationRunning = true;
+        var rotacia = "R0,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
+        element.transform(rotacia);
+        if (!isPaused) {
+            var rotacia = "R360,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
+            element.animate({ transform: rotacia},2000, mina.linear, rotateLeft.bind(null, element));
+        } else {
+            animationRunning = false;
+        }
+    }
 }
 
-function rotateLeft(element) {
-    animationRunning = true;
-    var rotacia = "R0,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
-    console.log(rotacia);
-    element.transform(rotacia);
-    if (!isPaused) {
-        var rotacia = "R360,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
-        element.animate({ transform: rotacia},2000, mina.linear, rotateLeft.bind(null, element));
-    } else {
-        animationRunning = false;
-    }
+function updateSchema01(isOpenValve1, intPercent, isRotating, isOpenValve2) {
+    openValve1(isOpenValve1) ;
+    animateTank(intPercent);
+    rotateEngine(isRotating);
+    openValve2(isOpenValve2);
+    return console.log("update prebehol... ");
 }
-
-
+//**toto je interface metoda k pumping station scheme
+//zapne a vypne
+var updateData = {
+    "valve1": "true",
+    "tank": "20",
+    "engineRotation": "true",
+    "valve2": "true"
+};
+//toto je interfesna funkcia k REST API k tank...
+function updateSchema(updateData){
+    updateSchema01(updateData.valve1, updateData.tank, updateData.engineRotation, updateData.valve2);
+}

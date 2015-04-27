@@ -1,8 +1,8 @@
 /**
  * Created by chova_000 on 16-Mar-15.
  */
-var min = -22;
-var max = 110;
+var min = 0;
+var max = 100;
 
 
 var getRandomCislo = function getRandomCislo() {

@@ -1,22 +1,65 @@
 % !TeX encoding = UTF-8
 % !TeX root = ../main.tex
-\chapter{Implementácia grafického komponentu}
+\chapter{Implementácia vzorovej sady grafických komponentov}
 
-\section {Práca s Existujúcimi SVG}
-Kreslenie grafických komponentov býva náročné pri zložitejších schémach. Snap.svg knižnica umožňuje načítať a používať existujúci .svg súbor.  
+\section{Vzorová sada}
+Vzorová sada grafických komponentov SCADA systémov obsahuje:
+\begin{itemize}
+	\item Thermometer - obrázok \ref{fig:thermometer}
+	\item Trojcestný ventil - obrázok \ref{fig:trippleValve}
+	\item Mapa Slovenska - obrázok \ref{fig:map}
+	\item Prečerpávacia stanica - obrázok \ref{fig:pump}
+	\item Prepravný pás - obrázok \ref{fig:belt}
+	
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics{obrazky/thermometer}
+	\caption{Termometer}
+	\label{fig:thermometer}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/trippleValve}
+	\caption{Trojcestný ventil}
+	\label{fig:trippleValve}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/map}
+	\caption{Mapa Slovenska}
+	\label{fig:map}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/pump}
+	\caption{Prečerpávacia stanica}
+	\label{fig:pump}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/belt}
+	\caption{Prepravný pás}
+	\label{fig:belt}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Inkscape}
+\section{Príklad vytvorenia prečerpávacej stanice v Inkscape}
 
-\section{Príklad vytvorenia grafického komponentu v Inkscape}
-
-Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z potrubí, indikátora úrovne hladiny vody, motora, a symbolu rotora čerpadla. Ako je možné vidieť na obrázku  \ref{picture1}.  
+Nakreslenie jednotlivých častí komponentov prečerpávacej stanice v Inkscape bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z potrubí, indikátora úrovne hladiny vody, motora, a dvoch symbolov prítoku hladiny. Ako je možné vidieť na obrázku  \ref{picture1}.  
 
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.7\linewidth] {obrazky/pump1.jpg}
-		\caption{TODO Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
+		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
 		\label{picture1}
 	\end{center}
 \end{figure}
@@ -24,7 +67,9 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice bolo reali
 
 \section{Definovanie id v SVG}
 
-Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. V zdrojovom kóde .svg súboru je to označené id="ventil". 
+Pre ovládanie JavaScriptom je nutné si pozrieť jednotlivé jedinečné identifikačné názvy. V SVG sú označované ako id. V zdrojovom kóde .svg súboru je to označené id="nazovElementu". Na ovládanie časti svg elementu v JavaScripte bude realizované cez CSS selektor, kde pristúpim k id svg cez značku \#. 
+Príklad použitia: paper.select("\#ventil"); .
+
 
 \subsection{Object Properties}
 Zistenie id je pomerne jednoduché v Inkscape. Klikneme pravým tlačidlom na daný komponent, ktorého id chceme vedieť, a potom na Objekt Properties.
@@ -40,119 +85,37 @@ Po kliknutí sa nám zobrazí okno s názvom Object Properties.
 \end{figure}
 
 
-Z obrázka č.\ref{picture3} možno vyčítať aké je ID, predvolené sú tam napr. desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke id - ventil. 
-
-Na ovládanie časti svg elementu v JavaScripte bude realizované cez CSS selektor, kde pristúpim k id svg cez značku \#.   %Spravidla hodnoty ID a Label sú rovnaké. Líšia sa iba v tom, že pri Label je pridaný znak \# pred názvom. ID je unikátny názov pre program Inkscape. 
-%TODO ROZDIEL MEDZI ID A LABEL DESCRIPTION A TITTLE... TODO
-
-
+Z obrázka č.\ref{picture3} možno vyčítať aké je ID, predvolené sú tam napríklad desc3072. Hodnoty je možné prepísať a zmeniť stlačením tlačidla Set. Pre nás je dôležitá hodnota v kolónke id - ventil. 
 
 V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí na Interactivity sa zobrazia ďalšie kolónky, kde je možné zadať akciu, ktorá má nastať.  
 
 
-
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
-Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodu je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
+Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodku je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.7\linewidth]  {obrazky/XmlEditor2.png}
+		\includegraphics[width=0.6\linewidth]  {obrazky/XmlEditor2.png}
 		\caption{Xml Editor v Inkscape}
 		\label{xmlEditor}
 	\end{center}
 \end{figure}
 
+XML Editor umožní zistiť ID jednotlivých komponentov, ale i hodnoty atribútov. 
 
 
+\section{Integrácia prečerpávacej stanice pre dynamické ovládanie SVG objektu}
 
-\section{Zistenie atribútov SVG}
-
-\subsection{Prázdna nádrž}
-Prázdna nádrž je zobrazená na obrázku \ref{picture3}
-Vyjadruje to, že do nádrže nevchádza tekutina. Hladina má výšku nastavenú na 9,64px. Šírka a súradnica x je rovnaká ako pri plnej nádrži. Súradnice osi y, x sú 2339.5425 a 1883.326. Pri plnej nádrži sa zmení výška a os y. Pre animáciu zdvihnutia hladiny nádrže bude potrebné si zapamätať tieto súradnice. 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics [height=6.5cm]  {obrazky/jednoduchyKruh.png}
-		\caption{TODO Prázdna nádrž prečerpávacej stanice}
-		\label{picture6}
-	\end{center}
-\end{figure}
-
-\subsection{Plná nádrž}
-%Na obrázku č. \ref{picture4} je vykreslená plná nádrž. 
-Hladina má súradnice x, a šírku rovnakú ako v prázdnej nádrži. Zmenila sa os y, a výška - na 1241.5946 a na 664.1317. 
-
-%\begin{figure}[H]
-%	\begin{center}
-%		\includegraphics [height=6.5cm]  {obrazky/jednoduchyKruh.png}
-%		\caption{TODO Plná nádrž}
-%		\label{picture5}
-%	\end{center}
-%\end{figure}
-
-V SVG súbore je to zapísané nasledovným kódom. 
-
-
-\begin{lstlisting} [language=HTML]
-<rect
-	inkscape:label="#hladina"
-	y="1320.1689"
-	x="2507.8459"
-	height="605.83868"
-	width="797.04492"
-	id="hladina"
-	style=
-		...
-        >
-</rect>
-
-\end{lstlisting}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-%
-%Parametre ako stroke, fill, a iné sa dajú meniť prostredníctvom FUNKCIE attr v Snap API. … TODO
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
-%
-%TODO POPIS SURADNICOVEHO SYSTEMU VEDIET VYSVETLIT SUVISLOST MEDZI DPI A PIX SURADNICAMI. .TODO
-%
-%
-%TODO MIERKY OBRAZKOV ZJEDNOTIT
-%TODO aj ich lokalizaciu v dokumente
-%TODO
-
-
-
-
-
-
-
-
-
-%
-
-
-
-
-
-
-
-
-
-
-\section{Integrácia grafického komponentu pre dynamické ovládanie SVG objektu}
-
-Súborová štruktúra príkladu: 
+Súborová štruktúra prečerpávacej stanice: 
 \begin{itemize}
 	\item index.html 
 	\item PumpingStation.js
 	\item PumpingStation.svg
 	\item TestPumpingStation.js
-	\item exec.js 
 \end{itemize}
 
 \subsection{HTML súbor}
-Do HTML súboru index.html pridáme párový tag $<$svg$>$. Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
+Do HTML súboru index.html pridáme párový tag $<$svg$>$.  Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
 \subsection{Kód}
 \begin{lstlisting}
 <svg 
@@ -164,31 +127,33 @@ Do HTML súboru index.html pridáme párový tag $<$svg$>$. Na toto miesto sa ne
 \end{lstlisting}
 
 \subsection{Vysvetlenie kódu}
+Atribúty v tagu sú prispôsobené na to, aby sa grafický element vykreslil responzívne na obrazovku.
 \begin{itemize}
 \item  \textbf{id} - jedinečný identifikátor, cez ktorý meníme vlastnosti.
 \item 	\textbf{viewBox} - je virtuálne okno, ktorým sa užívateľ uvidí svg obrázok. Je atribút, ktorý povoľuje špecifikovať danú množinu grafických komponentov, aby sa zobrazili v daných súradniciach x, y a šírke, výške. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
 \item 	\textbf{width} a \textbf{height} je šírka a výška. Hodnoty atribútov je možné uviesť relatívne v percentách, alebo absolútne v pixloch. 
 \end{itemize}
 
+Do HTML dokumentu sa pridajú jednotlivé JavaScriptové knižnice s ktoré bude daný grafický komponent používať. 
+\begin{lstlisting}[language = HTML]
+<script type="text/javascript" src="../js/snap.svg-min.js">
+</script>
+<script type="text/javascript" src="PumpingStation.js">
+</script>
+\end{lstlisting}
+
 Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spustením funkcií. To zabezpečíme pridaním  onload do tagu $<$body$>$. 
 \begin{lstlisting}
 	<body onload="onPageLoad();">
 \end{lstlisting}
 
-A ešte jedna vec pri HTML súbore - TODO. 
-\begin{lstlisting}[language = HTML]
-  <script type="text/javascript" src="../js/snap.svg-min.js">
-  </script>
-  <script type="text/javascript" src="PumpingStation.js">
-  </script>
-\end{lstlisting}
 
 
 \section{PumpingStation.js}
-TODO
-V súbore PumpingStation.js sú funkcie na animovanie.. TODO
+V súbore PumpingStation.js sú funkcie na vizualizáciu grafického komponentu. V tejto časti je popis jednotlivých funkcií. 
+
 \subsection{onPageLoad()}
-onPageLoad() sa spustí pri načítaní tela HTML súboru index.html. Funkcia spustí funkciu PumpingStation(). Prvý parameter je udaný konkrétny svg súbor, ktorý chcem načítať. Druhý parameter je id tagu svg, ktorý je v html. TODO
+onPageLoad() sa spustí pri načítaní tela HTML súboru index.html. Funkcia vykoná funkciu PumpingStation(par1,, par2). Prvý parameter je udaný svg súbor vytvorení programom Inkscape. Druhý parameter je id tagu svg, kde sa vykreslí prečerpávacia stanica.
 
 \begin{lstlisting}
 function onPageLoad() {
@@ -198,21 +163,39 @@ function onPageLoad() {
 
 \subsection{PumpingStation(par1, par2)}
 
-Funkcia inicializuje daný svg súbor, a vykreslí ho. 
 Parametre pre PumpingStation sú názov svg súboru, a id, ktoré sa nachádza v tagu $<$svg$>$ html súbore.
 
+Vo vnútri PumpingStation sa nachádza inicializácia globálnych atribútov. 
 \begin{lstlisting}
-var PumpingStation = function(nazovFileSVG, nameHTMLidSVG) {
-	paper = Snap(nameHTMLidSVG);
+var paper;
+var idValve, idValve1 idNadrz, idHladina, idEngineMotor;
+
+function PumpingStation(nazovFileSVG, idDOMsvgElement) {
+	paper = Snap(idDOMsvgElement);
 	Snap.load(nazovFileSVG, function (f) {
+		idHladina = "#hladina";
+		idNadrz = "#nadrz";
+		idValve = "#ventil";
+		idValve2 = "#ventil2";
+		idEngineMotor = "#engineMotor";
 		paper.append(f);
 	});
-};
+}
 \end{lstlisting}
 
-\textbf{paper} - globálna premenná. TODO REFERENCIA NA PLOCHU ... Vytvorí plochu na  kreslenie, alebo  wraps existujúci SVG element. Ako parametre môžu byť buď šírka, výška, alebo DOM element. Napríklad Snap(600, 800), alebo Snap("\#svgStanica"), resp Snap(). 
+Atribút paper je globálna premenná cez ktorú sa bude pristupovať k funkciám JavaScriptovej knižnice Snap.svg. Jej parameter je referencia na plochu, kde bude vykreslené SVG elementy.
 
-\textbf{load} - TODO funkciu z knižnice Snap. Cez ňu TODO načítam  svg súbor. Ako parametre funkcie je názov súboru svg, prípadne môže byť prázdny, ak TODO nenačítavam súbor, ale beriem ho priamo z html súboru. Druhý parameter je funkcia, v ktorej TODO volám funkciu na zobrazenie obsahu svg súboru do daného tagu svg s  id, ktorý bol daný pri funkcii paper.  Na plochu TODO ho zobrazím pomocou príkazu append. TODO
+Vo vnútri funkcie volám z Snap.svg API funkciu load(). Má parametre názov súboru, a funkciu, ktorú spustí následne po načítaní. 
+Vo vnútri funkcie load() sa inicializujú globálne premenné.  
+Premenné obsahujú CSS selektor id získaný z programu Inkscape. 
+Význam premenných je nasledový: 
+\begin{itemize}
+	\item idHladina - indikátor prítoku hladiny vody, 
+	\item idNadrz - je miesto, kde bude prichádzať prítok vody,
+	\item idValve1, idValve2 - je ventil, 
+	\item idEngineMotor - je symbol rotora motora.
+\end{itemize}
+
 
 \subsection{Tank}
 Zanimovanie stúpania a klesania hladiny nádrže. 
@@ -270,5 +253,17 @@ Názov farby môže byť uvedený slovne, alebo ako RGB.
 Zmena farby Valve - \begin{verbatim} this.valve().attr  ({fill: this.colorValve}); \end{verbatim}
 
 
-%\section{TODO TRANSFORM}
-TODO TRANSFORM .. TODO
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+

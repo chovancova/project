@@ -25,17 +25,17 @@ https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js
         <div>
             <h2>Run tests</h2>
             <div>  <button id="demo2" type="button" onclick="updateSchema(updateData);">Update Schema / data</button></div>
-                  <div>  <button id="demo2" type="button" onclick="Tank.animateComponentTank(getRandomCislo());">Tank</button></div>
-            <div> <button id="demo5" type="button" onclick="toggleRotation()">Vrtulky</button></div>
+                  <div>  <button id="demo2" type="button" onclick="animateTank(getRandomCislo());">Tank</button></div>
+            <div> <button id="demo5" type="button" onclick="rotateEngine(true)">Rotate On</button></div>
 
-            <div> <button id="demo6" type="button" onclick="Valve.zmenFarbu1(true);">Valve On/Off</button></div>
-            <div> <button id="demo6" type="button" onclick="Valve.zmenFarbu2(false);">Valve On/Off</button></div>
+            <div> <button id="demo6" type="button" onclick="openValve1(0)">Valve Off</button></div>
+            <div> <button id="demo6" type="button" onclick="openValve2(0);">Valve Off</button></div>
             Interface:
             <ul>
-                <li> Valve.zmenFarbu1(boolean) ;
-                <li> Tank.animateComponentTank(percentoVnadrzi);
-                <li> rotujMotor(parIsPaused);
-                <li> Valve.zmenFarbu2(boolean);
+                <li>  openValve1(isOpenValve1) ;
+                <li>  animateTank(intPercent);
+                <li>  rotateEngine(isRotating);
+                <li>  openValve2(isOpenValve2);
                 <br>
                 <li> updateSchema(updateData)
                 <ul>
@@ -44,7 +44,7 @@ https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js
                     "valve": "true",<br>
                     "tank": "20",<br>
                     "engineRotation": "true",<br>
-                    "valve2": "false"<br>
+                    "valve2": "true"<br>
                      };</small>
 
     </body>
