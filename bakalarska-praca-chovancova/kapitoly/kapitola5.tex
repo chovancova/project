@@ -333,7 +333,7 @@ function updateSchema01(isOpenValve1, intPercent, isRotating, isOpenValve2) {
 }
 \end{lstlisting}
 
-Dáta vyjadrené vo formáte \ac*{JSON}. Zároveň je to interfejsná metóda k grafickému komponentu Pumping Station. Toto je príklad objektu update dátami na nastavenie hladiny nádrže na 20 percent a s ventilami, a rotorom zapnutým. 
+Dáta vyjadrené vo formáte \ac*{JSON}. Zároveň je to interfejsná metóda k grafickému komponentu Pumping Station. Toto je príklad objektu update dátami na nastavenie hladiny nádrže na 20 percent a s ventilami, a rotorom zapnutým.  
 \begin{lstlisting}
 var updateData = {
 	"valve1": "true",
@@ -342,7 +342,7 @@ var updateData = {
 	"valve2": "true"
 };
 \end{lstlisting}
-Metóda updateSchema s parametrom objekt updateData, aktualizuje grafický komponent na dané hodnoty. Zároveň je  to interfejsná metóda k REST API prečerpávacej stanice.
+Metóda updateSchema s parametrom objekt updateData, aktualizuje grafický komponent na dané hodnoty. Zároveň je  to interfejsná metóda k REST API prečerpávacej stanice. Na obrázku \ref{fig:updateSchema} je zobrazený animovaný komponent s vopred pripravenými dátami. 
 \begin{lstlisting}
 function updateSchema(updateData){
 	updateSchema01(updateData.valve1, updateData.tank, updateData.engineRotation, updateData.valve2);
@@ -350,6 +350,12 @@ function updateSchema(updateData){
 \end{lstlisting}
 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{obrazky/updateSchema}
+\caption{Prečerpávacia stanica po vykonaní príkazu updateSchema(updateSchema)}
+\label{fig:updateSchema}
+\end{figure}
 
 
 
