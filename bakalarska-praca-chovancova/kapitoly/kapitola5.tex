@@ -2,58 +2,6 @@
 % !TeX root = ../main.tex
 \chapter{Implementácia vzorovej sady grafických komponentov}
 
-\section{Vzorová sada}
-Vzorová sada grafických komponentov SCADA systémov obsahuje:
-\begin{itemize}
-		\item Prečerpávacia stanica - obrázok \ref{fig:pump}
-			\item Prepravný pás - obrázok \ref{fig:belt}
-	\item Trojcestný ventil - obrázok \ref{fig:trippleValve}
-	\item Mapa Slovenska - obrázok \ref{fig:map}
-	\item Thermometer - obrázok \ref{fig:thermometer}
-
-\end{itemize}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/pump}
-	\caption{Prečerpávacia stanica}
-	\label{fig:pump}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/trippleValve}
-	\caption{Trojcestný ventil}
-	\label{fig:trippleValve}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/map}
-	\caption{Mapa Slovenska}
-	\label{fig:map}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{obrazky/belt}
-	\caption{Prepravný pás}
-	\label{fig:belt}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-	\centering
-	\includegraphics{obrazky/thermometer}
-	\caption{Termometer}
-	\label{fig:thermometer}
-\end{figure}
-
 \section{Príklad vytvorenia prečerpávacej stanice v Inkscape}
 
 Nakreslenie jednotlivých častí komponentov prečerpávacej stanice v Inkscape bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z potrubí, indikátora úrovne hladiny vody, motora, a dvoch symbolov prítoku hladiny. Ako je možné vidieť na obrázku  \ref{picture1}.  
@@ -353,9 +301,72 @@ function updateSchema(updateData){
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{obrazky/updateSchema}
-\caption{Prečerpávacia stanica po vykonaní príkazu updateSchema(updateSchema)}
+\caption{Prečerpávacia stanica po vykonaní príkazu updateSchema(updateSchema);}
 \label{fig:updateSchema}
 \end{figure}
 
 
 
+
+
+\section{Vzorová sada}
+Vzorová sada grafických komponentov SCADA systémov obsahuje:
+\begin{itemize}
+	\item Prečerpávacia stanica - obrázok \ref{fig:pump}
+	\item Prepravný pás - obrázok \ref{fig:belt}
+	\item Trojcestný ventil - obrázok \ref{fig:trippleValve}
+	\item Mapa Slovenska - obrázok \ref{fig:map}
+	\item Thermometer - obrázok \ref{fig:thermometer}
+\end{itemize}
+
+Diagram tried vzorovej sady je na obrázku \ref{fig:classD} . 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/pump}
+	\caption{Prečerpávacia stanica}
+	\label{fig:pump}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/belt}
+	\caption{Prepravný pás}
+	\label{fig:belt}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/trippleValve}
+	\caption{Trojcestný ventil}
+	\label{fig:trippleValve}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{obrazky/map}
+	\caption{Mapa Slovenska}
+	\label{fig:map}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\includegraphics{obrazky/thermometer}
+	\caption{Termometer}
+	\label{fig:thermometer}
+\end{figure}
+
+
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\linewidth]{uml/classDiagramTried}
+\caption{Diagram tried vzorovej sady grafických komponetov}
+\label{fig:classD}
+\end{figure}

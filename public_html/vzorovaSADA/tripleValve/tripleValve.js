@@ -14,7 +14,6 @@ function onPageLoad() {
 
 
 function rotuj1(){
-
     toggleRotation("#engineMotor");
 }
 function rotuj2(){
@@ -48,15 +47,10 @@ function rotateLeft(element) {
     }
 }
 
-
-var Valve = {
-    idValve: "#ventil",
-     colorValve: "red",
-    zmenFarbuValve: function(boolOpen){
-        this.openOff = (this.openOff) ? 0 : 1;
-        this.colorValve = (this.openOff) ?   "red" : "green";
-        paper.select(this.idValve).attr({fill: this.colorValve});
-        console.log("zmena na " + this.colorValve)
-    }
-};
-
+function zmenFarbu(boolOpen){
+        idValve = "#ventil";
+        colorValve = "red";
+        openOff = (boolOpen) ? 0 : 1;
+        colorValve = (openOff) ?   "red" : "green";
+        paper.select(this.idValve).attr({fill: colorValve});
+}

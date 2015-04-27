@@ -172,8 +172,7 @@ Tvar, ktorý je vykreslený cez Snap API má nasledovnú syntax:
 \begin{lstlisting}
 var paper = Snap(...);
 var tvar = paper.NazovSnapMetody({
-nazovAtributu: "hodnotaAtributu",
-...
+	nazovAtributu: "hodnotaAtributu", ...
 });
 \end{lstlisting}
 
@@ -337,17 +336,36 @@ skupina.attr({
 
 \section{Gradient} 
 
-Snap.svg podporuje aplikovanie gradientov cez atribút fill s parametrom stringu gradientu. 
+Snap.svg podporuje aplikovanie gradientov cez atribút fill s parametrom stringu gradientu. Cez metódu Paper.gradient(gradient) sa vytvorí gradientový element, ktorý sa dá nasledovne použiť ako hodnota pre atribút fill pre metódy Element.animate(), resp. Element.attr(). 
+Gradientový string vyrezá nasledovne: $<$typ$>$($<$suradnice$>$)$<$farby$>$ .
+\begin{itemize}
+\item Typ môže byť buď lineárny alebo radiálny. Veľkosť písma určuje či ide o absolútne, alebo relatívne súradnice.
+\item Súradnice špecifikujú lineárny gradient ako vektor x1, y1, x2, y2 alebo radiálny gradient ako cx, cy, r.Nepovinné sú fx, fy, ktoré špecifikujú ohniskový bod od centra kruhu. 
+\item Farby je list pomlčkou oddelených hodnôt CSS farieb. Každá farba môže byť nasledovaná vlastným offsetovou hodnotou, oddelenou dvojbodkovým znakom. 
+\end{itemize}
+
+Lineárny grandient, vzťažný na horný ľavý roh do pravého dolného rohu. Farby prechádzajú z čiernej cez červenú do bielej.  
+\begin{lstlisting}
+var g = paper.gradient("l(0, 0, 1, 1)#000-#f00-#fff");
+\end{lstlisting}
+
+Lineárny gradient, absolútne z (0,0) do (100,100) z čiernej cez červenú na 25 percentách do bielej. 
+\begin{lstlisting}
+var g = paper.gradient("L(0, 0, 100, 100)#000-#f00:25-#fff");
+\end{lstlisting}
+
+Radiálny gradient, relatívny zo stredu elemetnu s polomerom polovice šírky, z čiernej do bielej. 
+\begin{lstlisting}
+var g = paper.gradient("r(0.5, 0.5, 0.5)#000-#fff");
+\end{lstlisting}
 
 
+Aplikovanie gradientu: 
+\begin{lstlisting}
+paper.circle.attr({fill: g});
+\end{lstlisting}
 
-\subsubsection{Linerárny gradient}
-Syntax pre lineárny gradient je $<$uhol$>$-$<$farba$>$[-$<$farba$>$[:$<$offset$>$]]*-$<$farba$>$ . Vyjadruje to gradient nakreslený v určitom uhle z prvej do druhej farby.\\ Napríklad rect.attr({fill: '0-\#f00-\#00f'}); . 
-Príklad využitia v SCADA systéme je teplomer. 
 
-\subsubsection{Radiálny gradient}
-Syntax pre radiálny gradient je r[($<$fx$>$, $<$fy$>$)]$<$farba$>$[-$<$farba$>$[:$<$offset$>$]]*-$<$farba$>$ . 
-Vykresľuje radiálne smerom von z fixovaného bodu na elemente. \\Napríklad circle.attr({fill:'r\#fff-000'});
 
 
 
@@ -510,8 +528,6 @@ Na obrázku \ref{fig:textPriklad} je zobrazený text, ktorý bol uvedený v prí
 %
 %\subsection{Suradnicovy system}
 
-\subsection{Jednoduché transformácie}
-
 Transformácia je realizovaná cez metódu Element.transform(), ktorá má v parametri transformačný string. Pri transformácii sa dá využiť klonovanie elementov cez metódu Element.clone(). Syntax transformačného stringu je vyjadrené z príkazov, ktoré sú v tabuľke \ref{tab:trasf}. 
 
 \begin{table}[H]
@@ -533,7 +549,7 @@ Transformácia je realizovaná cez metódu Element.transform(), ktorá má v par
 
 Transformačný string využíva malé a veľké varianty príkazov. Variant s veľkými písmenami znamená to, že sa transformuje, bez ohľadu na predchádzajúcu transformáciu. Opačne to je pri variante s malými písmenami, ktoré berú na vedomie predošlú transformáciu.\cite[p.~52]{Dawber} 
 
-V SVG sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attributeName na transform, a typ a hodnoty sú uvedené v tabuľke \ref{tab:svgTrans}. 
+V SVG SMIL sa vytvorí k elementu nový tag animateTransform, kde sa nastaví attributeName na transform, a typ a hodnoty sú uvedené v tabuľke \ref{tab:svgTrans}. 
 
 \begin{table}[H]
 	\begin{center}
