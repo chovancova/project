@@ -20,54 +20,54 @@
 \contentsline {subsection}{\numberline {2.1.1}Vytvorenenie SVG }{17}{subsection.2.1.1}
 \contentsline {subsubsection}{Cez program WYSWING}{17}{section*.9}
 \contentsline {subsubsection}{na\IeC {\v c}\IeC {\'\i }tanie JavaScriptov\IeC {\'u} kni\IeC {\v z}nicu}{17}{section*.10}
-\contentsline {chapter}{\numberline {3}Vyu\IeC {\v z}itie kni\IeC {\v z}nice Snap.svg}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}Krok 1: Inicializ\IeC {\'a}cia pl\IeC {\'a}tna na kreslenie}{21}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}S\IeC {\'u}radnice pl\IeC {\'a}tna}{21}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}DOM element}{22}{subsection.3.1.2}
-\contentsline {subsubsection}{\acs *{SVG} v HTML dokumente}{22}{section*.11}
-\contentsline {section}{\numberline {3.2}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez kni\IeC {\v z}nicu Snap.svg}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Popis atrib\IeC {\'u}tov tvarov}{24}{subsection.3.2.1}
-\contentsline {subsubsection}{Path tvar}{24}{section*.12}
-\contentsline {section}{\numberline {3.3}Vykreslenie obr\IeC {\'a}zku}{25}{section.3.3}
-\contentsline {section}{\numberline {3.4}Atrib\IeC {\'u}ty elementu}{25}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}V\IeC {\'y}pl\IeC {\v n} elementu - fill }{26}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Nastavenie okraja elementu - stroke}{26}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Zoskupovanie elementov}{26}{section.3.5}
-\contentsline {section}{\numberline {3.6}Gradient}{27}{section.3.6}
-\contentsline {subsubsection}{Liner\IeC {\'a}rny gradient}{28}{section*.13}
-\contentsline {subsubsection}{Radi\IeC {\'a}lny gradient}{28}{section*.14}
-\contentsline {section}{\numberline {3.7}Pr\IeC {\'a}ca s textom - Paper.text(x, y, text)}{28}{section.3.7}
-\contentsline {section}{\numberline {3.8}Transform\IeC {\'a}cie - Element.transform(...)}{29}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Jednoduch\IeC {\'e} transform\IeC {\'a}cie}{29}{subsection.3.8.1}
-\contentsline {section}{\numberline {3.9}Anim\IeC {\'a}cie}{30}{section.3.9}
-\contentsline {subsubsection}{Anim\IeC {\'a}cia met\IeC {\'o}d a jednoduch\IeC {\'y}ch atrib\IeC {\'u}tov anim\IeC {\'a}cie }{31}{section*.15}
-\contentsline {subsubsection}{Animovanie path}{31}{section*.16}
-\contentsline {subsection}{\numberline {3.9.1}Anim\IeC {\'a}cie transform\IeC {\'a}cie}{31}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}\IeC {\v D}al\IeC {\v s}ie met\IeC {\'o}dy v kni\IeC {\v z}nici Snap.svg}{31}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}Snap.load(url, callback, [scope])}{31}{subsection.3.10.1}
-\contentsline {subsection}{\numberline {3.10.2}Element.append(...), Element.add(...), }{32}{subsection.3.10.2}
-\contentsline {subsection}{\numberline {3.10.3}Snap.select(...)}{32}{subsection.3.10.3}
-\contentsline {subsection}{\numberline {3.10.4}Element.getBBox()}{32}{subsection.3.10.4}
-\contentsline {chapter}{\numberline {4}Implement\IeC {\'a}cia vzorovej sady grafick\IeC {\'y}ch komponentov}{33}{chapter.4}
-\contentsline {section}{\numberline {4.1}Vzorov\IeC {\'a} sada}{33}{section.4.1}
-\contentsline {section}{\numberline {4.2}Pr\IeC {\'\i }klad vytvorenia pre\IeC {\v c}erp\IeC {\'a}vacej stanice v Inkscape}{35}{section.4.2}
-\contentsline {section}{\numberline {4.3}Definovanie id v SVG}{36}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Object Properties}{36}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}XML Editor}{37}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Integr\IeC {\'a}cia pre\IeC {\v c}erp\IeC {\'a}vacej stanice pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{38}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}HTML s\IeC {\'u}bor}{38}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}K\IeC {\'o}d}{38}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Vysvetlenie k\IeC {\'o}du}{39}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}PumpingStation.js}{39}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}onPageLoad()}{40}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}PumpingStation(par1, par2)}{40}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}animateTank(percento)}{41}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}openValve1(isOpen)}{42}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}rotateEngine(isRotating)}{43}{subsection.4.5.5}
-\contentsline {subsubsection}{K\IeC {\'o}d met\IeC {\'o}dy}{44}{section*.17}
-\contentsline {section}{\numberline {4.6}updateSchema()}{45}{section.4.6}
-\contentsline {chapter}{\numberline {5}REST API}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}REST API pre grafick\IeC {\'e} komponenty}{47}{section.5.1}
-\contentsline {section}{\numberline {5.2}Data binding pre system D2000}{48}{section.5.2}
-\contentsline {chapter}{\numberline {6}Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } }{49}{chapter.6}
-\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{57}{subsection.Alph0.0.1}
+\contentsline {chapter}{\numberline {3}Vyu\IeC {\v z}itie kni\IeC {\v z}nice Snap.svg}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Krok 1: Inicializ\IeC {\'a}cia pl\IeC {\'a}tna na kreslenie}{22}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}S\IeC {\'u}radnice pl\IeC {\'a}tna}{22}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}DOM element}{23}{subsection.3.1.2}
+\contentsline {subsubsection}{\acs *{SVG} v HTML dokumente}{23}{section*.11}
+\contentsline {section}{\numberline {3.2}Kreslenie z\IeC {\'a}kladn\IeC {\'y}ch tvarov cez kni\IeC {\v z}nicu Snap.svg}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Popis atrib\IeC {\'u}tov tvarov}{25}{subsection.3.2.1}
+\contentsline {subsubsection}{Path tvar}{25}{section*.12}
+\contentsline {section}{\numberline {3.3}Vykreslenie obr\IeC {\'a}zku}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4}Atrib\IeC {\'u}ty elementu}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}V\IeC {\'y}pl\IeC {\v n} elementu - fill }{27}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Nastavenie okraja elementu - stroke}{27}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Zoskupovanie elementov}{27}{section.3.5}
+\contentsline {section}{\numberline {3.6}Gradient}{28}{section.3.6}
+\contentsline {subsubsection}{Liner\IeC {\'a}rny gradient}{29}{section*.13}
+\contentsline {subsubsection}{Radi\IeC {\'a}lny gradient}{29}{section*.14}
+\contentsline {section}{\numberline {3.7}Pr\IeC {\'a}ca s textom - Paper.text(x, y, text)}{29}{section.3.7}
+\contentsline {section}{\numberline {3.8}Transform\IeC {\'a}cie - Element.transform(...)}{30}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Jednoduch\IeC {\'e} transform\IeC {\'a}cie}{30}{subsection.3.8.1}
+\contentsline {section}{\numberline {3.9}Anim\IeC {\'a}cie}{31}{section.3.9}
+\contentsline {subsubsection}{Anim\IeC {\'a}cia met\IeC {\'o}d a jednoduch\IeC {\'y}ch atrib\IeC {\'u}tov anim\IeC {\'a}cie }{32}{section*.15}
+\contentsline {subsubsection}{Animovanie path}{32}{section*.16}
+\contentsline {subsection}{\numberline {3.9.1}Anim\IeC {\'a}cie transform\IeC {\'a}cie}{32}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}\IeC {\v D}al\IeC {\v s}ie met\IeC {\'o}dy v kni\IeC {\v z}nici Snap.svg}{32}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Snap.load(url, callback, [scope])}{32}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Element.append(...), Element.add(...), }{33}{subsection.3.10.2}
+\contentsline {subsection}{\numberline {3.10.3}Snap.select(...)}{33}{subsection.3.10.3}
+\contentsline {subsection}{\numberline {3.10.4}Element.getBBox()}{33}{subsection.3.10.4}
+\contentsline {chapter}{\numberline {4}Implement\IeC {\'a}cia vzorovej sady grafick\IeC {\'y}ch komponentov}{34}{chapter.4}
+\contentsline {section}{\numberline {4.1}Vzorov\IeC {\'a} sada}{34}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pr\IeC {\'\i }klad vytvorenia pre\IeC {\v c}erp\IeC {\'a}vacej stanice v Inkscape}{36}{section.4.2}
+\contentsline {section}{\numberline {4.3}Definovanie id v SVG}{37}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Object Properties}{37}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}XML Editor}{38}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Integr\IeC {\'a}cia pre\IeC {\v c}erp\IeC {\'a}vacej stanice pre dynamick\IeC {\'e} ovl\IeC {\'a}danie SVG objektu}{39}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}HTML s\IeC {\'u}bor}{39}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}K\IeC {\'o}d}{39}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Vysvetlenie k\IeC {\'o}du}{40}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}PumpingStation.js}{40}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}onPageLoad()}{41}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}PumpingStation(par1, par2)}{41}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}animateTank(percento)}{42}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}openValve1(isOpen)}{43}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}rotateEngine(isRotating)}{44}{subsection.4.5.5}
+\contentsline {subsubsection}{K\IeC {\'o}d met\IeC {\'o}dy}{45}{section*.17}
+\contentsline {section}{\numberline {4.6}updateSchema()}{46}{section.4.6}
+\contentsline {chapter}{\numberline {5}REST API}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}REST API pre grafick\IeC {\'e} komponenty}{48}{section.5.1}
+\contentsline {section}{\numberline {5.2}Data binding pre system D2000}{49}{section.5.2}
+\contentsline {chapter}{\numberline {6}Anal\IeC {\'y}za v\IeC {\'y}konnosti a obmedzen\IeC {\'\i } }{50}{chapter.6}
+\contentsline {subsection}{\numberline {.0.1}Pausing a resuming animation}{58}{subsection.Alph0.0.1}
