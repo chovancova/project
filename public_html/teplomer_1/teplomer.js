@@ -77,7 +77,7 @@ function Thermometer(percento) {
     Snap.load("svg/thermometer_o.svg", function (f) {
         paper.append(f);
 
-        console.log("bol vytvoreny teplomer");
+        console.log("bol vytvoreny thermometer");
         nastavTeplomer(percento);
     });
 }

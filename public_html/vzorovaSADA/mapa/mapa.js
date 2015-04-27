@@ -2,273 +2,66 @@
  * Created by chova_000 on 19-Apr-15.
  */
 function onPageLoad() {
-    init("#mojePlatno", "slovakiaHigh2.svg");
-    testZmenyFarbyKraja();
-    paper.select(mesto);
-    paper.select(mesto).attr({
-        fill: "none",
-        strokeWidth: "4",
-        stroke: "#000000",
-        strokeMiterLimit: "10",
-        strokeDasharray: "9 9",
-        strokeDashOffset: "988.01"
-    });
-
+    init("#mojePlatno", "mapa.svg");
 }
-var paper;
 
+var paper, textBA,textNO,textZA, textKE,BC,BL,KI,NI,PV,TA,TC,ZI, cestaBA;
+ /*
+ * Initialization of the map of Slovakia, and selection of id from SVG, change of style some elements*/
 var init = function(id, subor) {
     paper = new Snap(id);
   //  paper.attr({ viewBox: "0 0 800 600" });
-
-
     Snap.load (subor, function (f) {
             paper.append(f);
-            //zabezpecenie responzivneho dizajnu a vzhladu
-
+  //zabezpecenie responzivneho dizajnu a vzhladu
           paper.attr({ viewBox: "0 0 615 305 ", width: "100%", height: "100%" });
-
-        }
+//oznacenie miest
+            textBA ="#textBratislava";
+            textNO =  "#textNamestovo";
+            textZA = "#textZilina";
+           textKE = "#textKosice";
+            cestaBA = "#pathBA"
+//ID jednotlivych krajov
+             BC = "#SK-BC";
+             BL = "#SK-BL";
+           KI = "#SK-KI";
+             NI = "#SK-NI";
+            PV = "#SK-PV";
+            TA = "#SK-TA";
+            TC = "#SK-TC";
+             ZI = "#SK-ZI";
+            //upravenie stylu
+            zmenaVlastnosti();
+       }
     );
 };
-var textBA ="#textBratislava";
-var textNO =  "#textNamestovo";
-var textZA = "#textZilina";
-var textKE = "#textKosice";
-
-var BC = "#SK-BC";
-var BL = "#SK-BL";
-var KI = "#SK-KI";
-var NI = "#SK-NI";
-var PV = "#SK-PV";
-var TA = "#SK-TA";
-var TC = "#SK-TC";
-var ZI = "#SK-ZI";
-
-
-function animujBA-ZA(bool){
-    var   isPaused = bool;
-    var animationRunning = false;
-    toggleRotation("#engineMotor1");
-}
-function animujZA-KE(bool){
-    var   isPaused = bool;
-    var animationRunning = false;
-
-    if (!animationRunning && isPaused) {
-        isPaused = false;
-
-        animujCesu
-
-    } else {
-        isPaused = true;
-    }
-}
-
-
-function AnimujCestu(myPath) {
-    animationRunning = true;
-
-    if (!isPaused) {
-        myPath =   paper.select(mesto);
-        var len = myPath.getTotalLength();
-
-        function haha1(myPath) {  myPath.attr({
-            stroke: '#000',
-            strokeWidth: 4,
-            fill: 'none',
-
-            "stroke-dasharray": "12 6",
-            "stroke-dashoffset": len
-        }).animate({"stroke-dashoffset": 10}, 10000,mina.easeinout, haha1.bind(null, myPath));}
-
-        var Element1 =  paper.select("#bodBratislava");
-        setTimeout( function haha(Element1) {
-            Snap.animate(0, len, function( value ) {
-                movePoint = myPath.getPointAtLength( value );
-                Element1.attr({ cx: movePoint.x, cy: movePoint.y});
-            }, 10000,mina.easeinout, haha.bind(null, Element1));
-        });
-    } else {
-        animationRunning = false;
-    }
-}
-}
 
 
 
-var zmenaVlastnostiTextu = function (nazovIDelementu) {
-var nazov = nazovIDelementu;
-   paper.selectAll(nazov).attr({
-            textAnchor: "right",
-            fill: "#00b",
-            fontSize: '26px',
-            fontFamily: "monospace",
-            fontStyle: "italic",
-            fontVariant: "small-caps",
-            fontWeight: 800
-        });
-    };
+
 
 var zmenaFarbyKraja = function(okr, p_farba){
-
-    var farba = p_farba;
-    paper.selectAll(okr).attr({
+        paper.selectAll(okr).attr({
         strokeWidth:2,
         stroke:"#000",
         fill: p_farba
     });
-    //console.log("chyy");
+  };
+
+var zmenaVlastnostiTextu = function (nazov) {
+    paper.selectAll(nazov).attr({
+        textAnchor: "right",
+        fill: "#00b",
+        fontSize: '26px',
+        fontFamily: "monospace",
+        fontStyle: "italic",
+        fontVariant: "small-caps",
+        fontWeight: 800
+    });
 };
 
-var spustiTesty = function spustTesty(){
-    testZmenaVlastnosti();
-    testZmenyFarbyKraja();
-    testAnimovanieCiest();
-}
-
-function testNaGroup(){
-    g = Snap().g();
-    g.g(paper.select(textBA), paper.select(textKE));
-    g.attr({"fill": "blue"});
-}
-
- function testZmenaVlastnosti(){
-    zmenaVlastnostiTextu(textBA);
-     zmenaVlastnostiTextu(textNO);
-     zmenaVlastnostiTextu(textZA);
-     zmenaVlastnostiTextu(textKE);
-}
-
-function testZmenyFarbyKraja(){
-    zmenaFarbyKraja(BC, "#ffa");
-    zmenaFarbyKraja(BL, "#ffb");
-    zmenaFarbyKraja(KI, "#ffc");
-    zmenaFarbyKraja(NI, "#ffd");
-    zmenaFarbyKraja(PV, "#ffe");
-    zmenaFarbyKraja(TA, "#fff");
-    zmenaFarbyKraja(TC, "#ff0");
-    zmenaFarbyKraja(ZI, "#ff6");
-
-}
-
-function testGroup(){
-    g = Snap().group();
-    g.paper.selectAll("#g8");
-    g.attr({fill: "blue"});
-}
-
-
-function testAnimovanieCiest(){
-    animovanieBodkyPopriPath3("#pathBA");
-    animovanieBodkyPopriPath2("#pathNamestovo");
-    animovanieBodkyPopriPath1("#pathKE");
-}
-
-//http://raphaeljs.com/gear.html ,
-// ALE AJ PODLA CODEPEN http://codepen.io/mattsince87/details/snqLy
-
-function animovanieBodkyPopriPath1(mesto){
-    var myPath =   paper.select(mesto);
-    var dlzkaCesty = myPath.getTotalLength();
-
-
-    myPath.attr({
-
-        fill: "none",
-        strokeWidth: "4",
-        stroke: "#0f0f0f",
-        strokeMiterLimit: "10",
-        strokeDasharray: "9 9",
-        strokeDashOffset: "988.01"
-    });
-
-myPath.attr({
-        stroke: '#000',
-        strokeWidth: 4,
-        fill: 'none',
-        strokeDasharray: "12 6",
-        strokeDashoffset: "180"
-    }).animate({
-    strokeDashoffset: 10},
-    10000,
-    mina.easeinout);
-
-
-    var Triangle = paper.polyline("0,30 15,0 30,30");
-    Triangle.attr({
-        id: "plane",
-        fill: "#000"
-    });
-
-    var triangleGroup = paper.g( Triangle ); // Group polyline
-
-    setTimeout( function() {
-        Snap.animate(0, dlzkaCesty, function( value ) {
-            movePoint = myPath.getPointAtLength( value );
-            triangleGroup.transform(
-                't' + parseInt(movePoint.x - 15) + ','
-                + parseInt( movePoint.y - 15) + 'r'
-                + (movePoint.alpha - 90));
-        }, 10000,mina.easeinout );
-    });
-
-}
-
-
-
-function animovanieBodkyPopriPath2(mesto){
-      // SVG B - "Squiggly" Path
-    var myPath =   paper.select(mesto);
-
-
-    var lenB = myPath.getTotalLength();
-
-
-    myPath.attr({
-
-        fill: "none",
-        strokeWidth: "4",
-        stroke: "#f0f0f0",
-        strokeMiterLimit: "10",
-        strokeDasharray: "9 9",
-        strokeDashOffset: "988.01"
-    });
-
-    // SVG B - Draw Path
-    var lenB = myPath.getTotalLength();
-
-    // SVG B - Animate Path
-    myPath.attr({
-        stroke: '#000',
-        strokeWidth: 4,
-        fill: 'none',
-        // Draw Path
-        strokeDasharray: lenB + " " + lenB,
-        strokeDashoffset: lenB
-    }).animate({"stroke-dashoffset": 10}, 2500,mina.easeinout);
-
-    // SVG B - Circle
-    var CircleB = paper.circle(16,16,8);
-    CircleB.attr({
-        fill: "#3f4445",
-        stroke: "#000",
-        strokeWidth: 2
-    });
-
-    setTimeout( function() {
-        Snap.animate(0, lenB, function( value ) {
-            movePoint = myPath.getPointAtLength( value );
-            CircleB.attr({ cx: movePoint.x, cy: movePoint.y }); // move along path via cx & cy attributes
-        }, 10000,mina.easeinout);
-    });
-
-}
-
-
-function animovanieBodkyPopriPath3(mesto){
-    var myPath =   paper.select(mesto);
-            paper.select(mesto).attr({
+ function zmenaCesty(mesto) {
+    paper.select (mesto).attr({
         fill: "none",
         strokeWidth: "4",
         stroke: "#000000",
@@ -276,35 +69,54 @@ function animovanieBodkyPopriPath3(mesto){
         strokeDasharray: "9 9",
         strokeDashOffset: "988.01"
     });
+}
 
-    // SVG A - Draw Path
-    var len = myPath.getTotalLength();
 
-    // SVG1 - Animate Path
-    myPath.attr({
+function zmenaVlastnosti(){
+    zmenaVlastnostiTextu(textBA);
+     zmenaVlastnostiTextu(textNO);
+     zmenaVlastnostiTextu(textZA);
+     zmenaVlastnostiTextu(textKE);
+     zmenaFarbyKraja(BC, "#ffa");
+     zmenaFarbyKraja(BL, "#ffb");
+     zmenaFarbyKraja(KI, "#ffc");
+     zmenaFarbyKraja(NI, "#ffd");
+     zmenaFarbyKraja(PV, "#ffe");
+     zmenaFarbyKraja(TA, "#fff");
+     zmenaFarbyKraja(TC, "#ff0");
+     zmenaFarbyKraja(ZI, "#ff6");
+     zmenaCesty(cestaBA);
+}
+
+
+
+function animovanieCesty(mesto){
+    var road =   paper.select(mesto);
+    // zistnie dlzky cesty
+    var len = road.getTotalLength();
+    //animovanie cesty
+    road.attr({
         stroke: '#000',
         strokeWidth: 4,
         fill: 'none',
-        // Animate Path
+        // Aimovanie cesty
         "stroke-dasharray": "12 6",
         "stroke-dashoffset": len
-    }).animate({"stroke-dashoffset": 10}, 10000,mina.easeinout);
+    }).animate({"stroke-dashoffset": 10}, 2000,mina.easeinout);
 
-    // SVG A - Circle
-    var CircleA = paper.circle(32,32,16);
-    CircleA.attr({
+    // nakreslenie kruhu, co pojde popri ceste
+     bodCesty = paper.circle(32,32,10).attr({
         fill: "#3f4445",
         stroke: "#000",
         strokeWidth: 2
     });
-
+//animacia kruhu popri ceste
+    //setTimeout() - executes a function, once, after waiting a specified number of milliseconds
     setTimeout( function() {
         Snap.animate(0, len, function( value ) {
-            movePoint = myPath.getPointAtLength( value );
-            CircleA.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
-        }, 10000,mina.easeinout);
+            movePoint = road.getPointAtLength( value );
+            bodCesty.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
+        }, 2000,mina.easeinout);
     });
 
 }
-
-

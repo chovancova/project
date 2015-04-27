@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -106,29 +106,28 @@
     <path
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.79377306;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 129.1259,170.58277 0,43.64998 43.65687,0 c -0.19552,-24.02436 -19.63193,-43.45696 -43.65687,-43.64998 z m -44.375383,44.37539 c 0.193005,24.02656 19.630303,43.46385 43.656863,43.65687 l 0,-43.65687 -43.656863,0 z"
-       id="path3034"
+       id="motor1"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.79377306;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 630.35926,170.34605 0,43.64998 43.65687,0 c -0.19552,-24.02436 -19.63193,-43.45696 -43.65687,-43.64998 z m -44.37539,44.37539 c 0.19301,24.02656 19.63031,43.46385 43.65687,43.65687 l 0,-43.65687 -43.65687,0 z"
-       id="path3034-0"
+       id="motor4"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.79377306;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 460.35926,170.34605 0,43.64998 43.65687,0 c -0.19552,-24.02436 -19.63193,-43.45696 -43.65687,-43.64998 z m -44.37539,44.37539 c 0.19301,24.02656 19.63031,43.46385 43.65687,43.65687 l 0,-43.65687 -43.65687,0 z"
-       id="path3034-9"
+       id="motor3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.79377306;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 302.35926,170.34605 0,43.64998 43.65687,0 c -0.19552,-24.02436 -19.63193,-43.45696 -43.65687,-43.64998 z m -44.37539,44.37539 c 0.19301,24.02656 19.63031,43.46385 43.65687,43.65687 l 0,-43.65687 -43.65687,0 z"
-       id="path3034-4"
+       id="motor2"
        inkscape:connector-curvature="0" />
-    <rect
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1c1111;stroke-opacity:0.80952382"
-       id="rect3072"
-       width="65"
-       height="51"
-       x="134"
-       y="110.36218" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 49,46 509,2"
+       id="cesta"
+       inkscape:connector-curvature="0"
+       transform="translate(79.928571,109.86218)" />
   </g>
 </svg>
