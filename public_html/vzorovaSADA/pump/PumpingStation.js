@@ -86,8 +86,6 @@ function updateSchema(updateData){
 
 
 
-
-
 var min = 0;
 var max = 100;
 var getRandomCislo = function getRandomCislo() {

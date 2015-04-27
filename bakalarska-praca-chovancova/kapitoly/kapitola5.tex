@@ -313,7 +313,41 @@ function rotateEngine(isRotating){
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{updateSchema()}
 
+Metóda updateSchema01 zabezpečí aktualizáciu grafického komponentu. Parametre má nasledovné: 
+\begin{itemize}
+\item isOpenValve - boolean hodnota, ktorá nastaví indikátor prítoku vody, v prípade true - na zelený, v opačnom na červený. 
+\item intPercento - je integer hodnota v rozsahu od 0-100. Vyjadruje percentuálne naplnenie nádrže. 
+\item isRotating - boolean hodnota, ktorá nastaví otáčanie motora, až pokým sa znova nezavolá. 
+\item isOpenValve - boolean hodnota druhého ventila. 
+	
+\end{itemize}
+
+\begin{lstlisting}
+function updateSchema01(isOpenValve1, intPercent, isRotating, isOpenValve2) {
+	openValve1(isOpenValve1) ;
+	animateTank(intPercent);
+	rotateEngine(isRotating);
+	openValve2(isOpenValve2);
+}
+\end{lstlisting}
+
+Dáta vyjadrené vo formáte \ac*{JSON}. Zároveň je to interfejsná metóda k grafickému komponentu Pumping Station. Toto je príklad objektu update dátami na nastavenie hladiny nádrže na 20 percent a s ventilami, a rotorom zapnutým. 
+\begin{lstlisting}
+var updateData = {
+	"valve1": "true",
+	"tank": "20",
+	"engineRotation": "true",
+	"valve2": "true"
+};
+\end{lstlisting}
+Metóda updateSchema s parametrom objekt updateData, aktualizuje grafický komponent na dané hodnoty. Zároveň je  to interfejsná metóda k REST API prečerpávacej stanice.
+\begin{lstlisting}
+function updateSchema(updateData){
+	updateSchema01(updateData.valve1, updateData.tank, updateData.engineRotation, updateData.valve2);
+}
+\end{lstlisting}
 
 
 

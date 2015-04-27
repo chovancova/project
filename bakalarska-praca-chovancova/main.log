@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 13:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  27 APR 2015 13:49
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -799,7 +799,7 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<obrazky/obrazokHTML.jpg, id=252, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=254, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -828,7 +828,7 @@ although it is yet undefined on input line 38.
                                                   \fi \fi 
 l.47 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obrazokHTML.jpg>]
-<obrazky/podpora.jpg, id=272, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=274, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -884,7 +884,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 
 
 ]
-<obrazky/suradnice1.jpg, id=370, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=372, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -928,7 +928,7 @@ dentifier (name{table.4.5}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.312 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=425, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=427, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
@@ -949,7 +949,7 @@ able.4.6}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.448 \begin{lstlisting}
                         ]
-<obrazky/textPriklad.jpg, id=451, 93.34875pt x 30.1125pt>
+<obrazky/textPriklad.jpg, id=453, 93.34875pt x 30.1125pt>
 File: obrazky/textPriklad.jpg Graphic file (type jpg)
 
 <use obrazky/textPriklad.jpg>
@@ -983,7 +983,7 @@ l.611 \subsection
                  {Snap.select(...)}]) [33]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola5.tex
 Kapitola 5.
-<obrazky/pump.jpg, id=490, 246.9225pt x 135.50626pt>
+<obrazky/pump.jpg, id=492, 246.9225pt x 135.50626pt>
 File: obrazky/pump.jpg Graphic file (type jpg)
  <use obrazky/pump.jpg>
 Package pdftex.def Info: obrazky/pump.jpg used on input line 19.
@@ -993,14 +993,14 @@ Package pdftex.def Info: obrazky/pump.jpg used on input line 19.
 
 
 
-] <obrazky/trippleValve.jpg, id=495, 258.21469pt x 163.3603pt>
+] <obrazky/trippleValve.jpg, id=497, 258.21469pt x 163.3603pt>
 File: obrazky/trippleValve.jpg Graphic file (type jpg)
 
 <use obrazky/trippleValve.jpg>
 Package pdftex.def Info: obrazky/trippleValve.jpg used on input line 28.
 (pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
 
-<obrazky/map.jpg, id=496, 490.08093pt x 239.39438pt>
+<obrazky/map.jpg, id=498, 490.08093pt x 239.39438pt>
 File: obrazky/map.jpg Graphic file (type jpg)
  <use obrazky/map.jpg>
 Package pdftex.def Info: obrazky/map.jpg used on input line 35.
@@ -1020,20 +1020,20 @@ l.40
 l.40 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump.jpg> <C:/Gith
 ub/project/bakalarska-praca-chovancova/obrazky/trippleValve.jpg>]
-<obrazky/belt.jpg, id=500, 489.32813pt x 127.97812pt>
+<obrazky/belt.jpg, id=502, 489.32813pt x 127.97812pt>
 File: obrazky/belt.jpg Graphic file (type jpg)
  <use obrazky/belt.jpg>
 Package pdftex.def Info: obrazky/belt.jpg used on input line 44.
 (pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
 
-<obrazky/thermometer.jpg, id=501, 63.23625pt x 124.96687pt>
+<obrazky/thermometer.jpg, id=503, 63.23625pt x 124.96687pt>
 File: obrazky/thermometer.jpg Graphic file (type jpg)
 
 <use obrazky/thermometer.jpg>
 Package pdftex.def Info: obrazky/thermometer.jpg used on input line 52.
 (pdftex.def)             Requested size: 63.23608pt x 124.96657pt.
 
-<obrazky/pump1.jpg, id=503, 587.19376pt x 445.665pt>
+<obrazky/pump1.jpg, id=505, 587.19376pt x 445.665pt>
 File: obrazky/pump1.jpg Graphic file (type jpg)
  <use obrazky/pump1.jpg>
 Package pdftex.def Info: obrazky/pump1.jpg used on input line 64.
@@ -1060,7 +1060,7 @@ l.69
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/map.jpg> <C:/Githu
 b/project/bakalarska-praca-chovancova/obrazky/belt.jpg> <C:/Github/project/baka
 larska-praca-chovancova/obrazky/thermometer.jpg>]
-<obrazky/obr3.png, id=507, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=509, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 83.
@@ -1073,7 +1073,7 @@ Package pdftex.def Info: obrazky/obr3.png used on input line 83.
                                                   \fi \fi 
 l.88 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump1.jpg>]
-<obrazky/XmlEditor2.png, id=514, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=516, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
@@ -1101,43 +1101,47 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 ) [40]
-[41] [42] [43] [44] [45]) [46]
+[41] [42] [43] [44] [45]
+Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
+
+although it is yet undefined on input line 336.
+ [46]) [47]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola6.tex
 Kapitola 6.
-[47
+[48
 
 
 
-]) [48]
+]) [49]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
 Kapitola 7.
-[49
+[50
 
 
 
-]) [50]
+]) [51]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola8.tex)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [51
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [52
 
 
 
 
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [52
+(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [53
 
 
 
-]) [53]
-(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [54
+]) [54]
+(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [55
 
 
 
 ]
-[55]) [56
+[56]) [57
 
 ]
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [57
+(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [58
 
 
 ]
@@ -1164,10 +1168,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 133.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 13625 strings out of 493921
- 189300 string characters out of 3144865
- 312392 words of memory out of 3000000
- 16290 multiletter control sequences out of 15000+200000
+ 13659 strings out of 493921
+ 189789 string characters out of 3144865
+ 312426 words of memory out of 3000000
+ 16304 multiletter control sequences out of 15000+200000
  32379 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,10n,53p,702b,1891s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1180,9 +1184,9 @@ eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (60 pages, 664815 bytes).
+Output written on main.pdf (61 pages, 670125 bytes).
 PDF statistics:
- 789 PDF objects out of 1000 (max. 8388607)
- 314 named destinations out of 1000 (max. 500000)
+ 819 PDF objects out of 1000 (max. 8388607)
+ 334 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
