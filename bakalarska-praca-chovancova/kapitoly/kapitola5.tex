@@ -150,10 +150,10 @@ Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spu
 
 
 \section{PumpingStation.js}
-V súbore PumpingStation.js sú funkcie na vizualizáciu grafického komponentu. V tejto časti je popis jednotlivých funkcií. 
+V súbore PumpingStation.js sú metódy na vizualizáciu grafického komponentu. V tejto časti je popis jednotlivých funkcií. 
 
 \subsection{onPageLoad()}
-onPageLoad() sa spustí pri načítaní tela HTML súboru index.html. Funkcia vykoná funkciu PumpingStation(par1,, par2). Prvý parameter je udaný svg súbor vytvorení programom Inkscape. Druhý parameter je id tagu svg, kde sa vykreslí prečerpávacia stanica.
+onPageLoad() sa spustí pri načítaní tela HTML súboru index.html. Následne spustí  PumpingStation(par1,, par2). Prvý parameter je udaný svg súbor vytvorení programom Inkscape. Druhý parameter je id tagu svg, kde sa vykreslí prečerpávacia stanica.
 
 \begin{lstlisting}
 function onPageLoad() {
@@ -183,11 +183,12 @@ function PumpingStation(nazovFileSVG, idDOMsvgElement) {
 }
 \end{lstlisting}
 
-Atribút paper je globálna premenná cez ktorú sa bude pristupovať k funkciám JavaScriptovej knižnice Snap.svg. Jej parameter je referencia na plochu, kde bude vykreslené SVG elementy.
+Atribút paper je globálna premenná cez ktorú sa bude pristupovať k metódam JavaScriptovej knižnice Snap.svg. Jej parameter je referencia na plochu, kde bude vykreslené SVG elementy.
 
 Vo vnútri funkcie volám z Snap.svg API funkciu load(). Má parametre názov súboru, a funkciu, ktorú spustí následne po načítaní. 
 Vo vnútri funkcie load() sa inicializujú globálne premenné.  
-Premenné obsahujú CSS selektor id získaný z programu Inkscape. 
+Premenné obsahujú CSS selektor id získaný z programu Inkscape. Premenné budú slúžiť ako parameter pri volaní funkcie paper.select(). Pre prípadné zmeny v id, sa dané id zmení na jednom mieste a nemusí sa prepisovať všade. 
+
 Význam premenných je nasledový: 
 \begin{itemize}
 	\item idHladina - indikátor prítoku hladiny vody, 
@@ -196,69 +197,89 @@ Význam premenných je nasledový:
 	\item idEngineMotor - je symbol rotora motora.
 \end{itemize}
 
+Načítaný .svg súbor sa zobrazí volaním metódy append. 
 
-\subsection{Tank}
-Zanimovanie stúpania a klesania hladiny nádrže. 
-\begin{lstlisting}
-var Tank = {
-	idTank: "#hladina",
-	tank: function(){
-		return  paper.select(this.idTank);},
-	animateComponentTank: function(fillPerc) {
-		if (fillPerc === undefined || fillPerc < 0) {
-			fillPerc = 0;
-		}
-		var perHeight = 600 * (fillPerc / 100);
-		var perY = 1912 - perHeight;
-		this.tank().animate  (	{
-			height: perHeight,
-			y: perY
-		}, 800);
-		return console.log("animacia tanku " + fillPerc);
-	}
-};
-\end{lstlisting}
-%TODO PRESTYLIZOVAT VYHODIT RODY MOJE TODO
-%TODO 
-Vytvorila som objekt Tank medzi jeho atribúty patria: idTank, funkcia tank, a animateComponentTank. IdTank - je stringové - je to id, ktoré som získala zo svg súboru, alebo cez Inkscape ako Label. Funkcia tank - vyberie daný objekt, ktorý chcem ovládať. Pomocou Tank.tank() môžem volať funkcie z Snap knižnice. 
-
-Zanimovanie tanku je realizované v funkcii animateComponentTank - kde parametrom je v percentách udané o koľko sa ma zdvihnúť hladina nadrze. 
-Využívam funkciu animate. Kde v prvom parametri - mením výšku a os y. Hodnotu perHeight je výška 600, ktorú vynásobím percentom o ktoré sa ma posunúť. PerY je hodnota, o ktorú sa posuniem po y-osi. Je vypočitaná ako 1912 co je y prázdnej nádrže a je od nej odpočítaná hodnota výšky. 
-Ďalší parameter pri funkcii animate() je rýchlosť animácie vyjadrená v milisekundách.
-
-\subsection{Ventil}
+\subsection{animateTank(percento)}
+V tejto metóde je zobrazená vizualizácia prítoku hladiny do nádrže. Ako parameter slúži percento vyplnenia. 
 
 \begin{lstlisting}
-var Valve = {
-	idValve: "#ventil",
-	valve: function (){ return paper.select(this.idValve);},
-	colorValve: "red",
-	changeIsOpen: function (isOpened) {
-		isOpened = (isOpened) ? 0 : 1;
-		this.colorValve = (isOpened) ?   "red" : "green";
-		this.valve().attr({fill: this.colorValve});
-		return;);
-	}
+function animateTank(percento){
+	var height = paper.select(idNadrz).getBBox().height;
+	var y = paper.select(idNadrz).getBBox().y;
+	var newHeight = height * (percento/100);
+	var newY = y + height - newHeight;
+	
+	paper.select(idHladina).animate({
+	y: newY,
+	height: newHeight
+	}, 1000);
 }
 \end{lstlisting}
 
-Farba sa dá zmeniť aj príkazom 
+Animovanie je realizované cez metódu animate zo Snap.svg API. 
+Význam lokálnych premenných: 
+\begin{itemize}
+	\item height - výška nádrže do, ktorej bude pritekať voda,  získaná volaním metódy getBBox(),
+	\item y - súradnica y - navýšením, alebo znížením hladiny sa mení súradnica y, a x zostava nezmenená,
+	\item newHeight - vypočítaná nová výška hladiny podľa daného percenta, 
+	\item newY - je vypočítaná súradnica - osi y. 
+\end{itemize}
 
-\begin{verbatim}
-Valve.valve().attr({fill: “green”});.
-\end{verbatim}
+Volaním metódy animate, sa zanimuje daný element, v tomto prípade to bude hladina nádrže. Metóda má nasledovné parametre: \begin{itemize}
+	\item atribúty - v pároch udané atribúty, ktoré sa zmenia. Zmení sa iba výška a os y, ostatné atribúty zostávajú nezmenené.
+	\item rýchlosť animácie udaná v milisekundách. 
+\end{itemize}
 
-Názov farby môže byť uvedený slovne, alebo ako RGB. 
+ 
+\subsection{openValve1(isOpen)}
+Indikátor prítoku hladiny do prečerpávacej stanice je ventil, ktorý mení farbu. Ak je nastavený parameter isOpen na true, tak farba ventila bude zelená, v inom prípade červená. 
+Zmena farby je realizovaná volaním metódy attr zo Snap.svg API, ktorá nastavila atribút fill daného elementu na danú farbu. Farba zmeny je zapísaná termálnym operátorom. 
+Pre zmenu farby v druhom elemente je zápis identický až na to, že je zmena pri volaní select - na idValve2. 
+\begin{lstlisting}
+function openValve1(isOpen){
+	paper.select(idValve).attr({
+	fill: ((isOpen === "true") ?   "green" : "red")
+	});
+}
+\end{lstlisting}
 
-Zmena farby Valve - \begin{verbatim} this.valve().attr  ({fill: this.colorValve}); \end{verbatim}
 
 
 
 
 
+\begin{lstlisting}
+var isPaused = true;
+var animationRunning = false;
+function rotateEngine(isRotating){
+	isPaused = isRotating;
 
+	function toggleRotation() {
+		if (!animationRunning && isPaused) {
+			isPaused = false;
+			rotateLeft(paper.select(idEngineMotor));
+		} else {
+			isPaused = true;
+		}
+	}
+	toggleRotation();
 
+	function rotateLeft(element) {
+		animationRunning = true;
+		element.transform(
+		("R0,"+ element.getBBox().cx + ","+ element.getBBox().cy));
 
+	if (!(isPaused)) {
+		element.animate({
+		 transform: ("R360,"+ element.getBBox().cx + ","+  element.getBBox().cy )
+		 },2000, 
+		 mina.linear, 
+		 rotateLeft.bind(null, element));
+		} else { animationRunning = false;}
+	}
+}
+\end{lstlisting}
+\caption{Metóda rotateEngine(isRotating)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

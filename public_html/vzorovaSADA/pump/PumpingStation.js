@@ -43,7 +43,7 @@ function rotateEngine(isRotating){
     function toggleRotation() {
         if (!animationRunning && isPaused) {
             isPaused = false;
-            rotateLeft(paper.select("#engineMotor"));
+            rotateLeft(paper.select(idEngineMotor));
         } else {
             isPaused = true;
         }
@@ -54,7 +54,7 @@ function rotateEngine(isRotating){
         animationRunning = true;
         var rotacia = "R0,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
         element.transform(rotacia);
-        if (!isPaused) {
+        if (!(isPaused)) {
             var rotacia = "R360,"+ element.getBBox().cx + ","+ element.getBBox().cy ;
             element.animate({ transform: rotacia},2000, mina.linear, rotateLeft.bind(null, element));
         } else {
