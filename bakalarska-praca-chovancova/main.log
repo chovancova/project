@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 10:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 11:49
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -776,7 +776,7 @@ l.33 \end{abstract}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \end{abstract}
+l.72 \end{abstract}
                     [1])
 (C:\Github\project\bakalarska-praca-chovancova\main.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 6.
@@ -847,7 +847,7 @@ l.58 ...{4.4.1}onPageLoad()}{39}{subsection.4.4.1}
 
 ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/uvod.tex
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 14.
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 12.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\il2lmtt.fd"
@@ -1172,7 +1172,7 @@ File: uml/aktivityInicializacie.png Graphic file (type png)
 
 <use uml/aktivityInicializacie.png>
 Package pdftex.def Info: uml/aktivityInicializacie.png used on input line 13.
-(pdftex.def)             Requested size: 312.83247pt x 577.31995pt.
+(pdftex.def)             Requested size: 268.14603pt x 494.8573pt.
  [56
 
 
@@ -1184,38 +1184,33 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.17 
       <C:/Github/project/bakalarska-praca-chovancova/uml/usecase.png (PNG copy)
->] [57]
-Overfull \vbox (1.04442pt too high) has occurred while \output is active []
-
-
-[58pdfTeX warning (ext4): destination with the same identifier (name{figure.A.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.17 
-      <C:/Github/project/bakalarska-praca-chovancova/uml/aktivityInicializacie.
-png (PNG copy)>] <uml/aktivity2.png, id=805, 490.83376pt x 1047.915pt>
+>] <uml/aktivity2.png, id=796, 490.83376pt x 1047.915pt>
 File: uml/aktivity2.png Graphic file (type png)
 
 <use uml/aktivity2.png>
 Package pdftex.def Info: uml/aktivity2.png used on input line 22.
 (pdftex.def)             Requested size: 268.14603pt x 572.50146pt.
+ [57pdfTeX warning (ext4): destination with the same identifier (name{figure.A.
+2}) has been already used, duplicate ignored
 
-<uml/classDiagramTried.png, id=807, 501.875pt x 587.19376pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.26 
+      <C:/Github/project/bakalarska-praca-chovancova/uml/aktivityInicializacie.
+png (PNG copy)>] <uml/classDiagramTried.png, id=802, 501.875pt x 587.19376pt>
 File: uml/classDiagramTried.png Graphic file (type png)
 
 <use uml/classDiagramTried.png>
 Package pdftex.def Info: uml/classDiagramTried.png used on input line 37.
 (pdftex.def)             Requested size: 402.21222pt x 470.61578pt.
-) [59pdfTeX warning (ext4): destination with the same identifier (name{figure.A
+) [58pdfTeX warning (ext4): destination with the same identifier (name{figure.A
 .3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.128 \include{prilohy/umlDiagramy}
                                     <C:/Github/project/bakalarska-praca-chovanc
-ova/uml/aktivity2.png (PNG copy)>] [60pdfTeX warning (ext4): destination with t
+ova/uml/aktivity2.png (PNG copy)>] [59pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.A.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1225,32 +1220,32 @@ l.128 \include{prilohy/umlDiagramy}
 ova/uml/classDiagramTried.png (PNG copy)>]
 (C:\Github\project\bakalarska-praca-chovancova\prilohy/vzorovaSada.tex
 Dodatok B.
-<obrazky/pump.jpg, id=816, 246.9225pt x 135.50626pt>
+<obrazky/pump.jpg, id=812, 246.9225pt x 135.50626pt>
 File: obrazky/pump.jpg Graphic file (type jpg)
  <use obrazky/pump.jpg>
 Package pdftex.def Info: obrazky/pump.jpg used on input line 11.
 (pdftex.def)             Requested size: 312.83247pt x 171.68575pt.
 
-<obrazky/belt.jpg, id=817, 489.32813pt x 127.97812pt>
+<obrazky/belt.jpg, id=813, 489.32813pt x 127.97812pt>
 File: obrazky/belt.jpg Graphic file (type jpg)
  <use obrazky/belt.jpg>
 Package pdftex.def Info: obrazky/belt.jpg used on input line 18.
 (pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
 
-<obrazky/trippleValve.jpg, id=818, 258.21469pt x 163.3603pt>
+<obrazky/trippleValve.jpg, id=814, 258.21469pt x 163.3603pt>
 File: obrazky/trippleValve.jpg Graphic file (type jpg)
 
 <use obrazky/trippleValve.jpg>
 Package pdftex.def Info: obrazky/trippleValve.jpg used on input line 25.
 (pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
 
-<obrazky/map.jpg, id=819, 490.08093pt x 239.39438pt>
+<obrazky/map.jpg, id=815, 490.08093pt x 239.39438pt>
 File: obrazky/map.jpg Graphic file (type jpg)
  <use obrazky/map.jpg>
 Package pdftex.def Info: obrazky/map.jpg used on input line 32.
 (pdftex.def)             Requested size: 312.83247pt x 152.81735pt.
 
-[61
+[60
 
 
 
@@ -1268,13 +1263,13 @@ ame{figure.B.2}) has been already used, duplicate ignored
 l.35 \end{figure}
                   <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump.j
 pg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/belt.jpg>]
-<obrazky/thermometer.jpg, id=824, 63.23625pt x 124.96687pt>
+<obrazky/thermometer.jpg, id=820, 63.23625pt x 124.96687pt>
 File: obrazky/thermometer.jpg Graphic file (type jpg)
 
 <use obrazky/thermometer.jpg>
 Package pdftex.def Info: obrazky/thermometer.jpg used on input line 44.
 (pdftex.def)             Requested size: 63.23608pt x 124.96657pt.
-) [62pdfTeX warning (ext4): destination with the same identifier (name{figure.B
+) [61pdfTeX warning (ext4): destination with the same identifier (name{figure.B
 .3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1320,13 +1315,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 13839 strings out of 493921
- 193505 string characters out of 3144865
- 302748 words of memory out of 3000000
+ 13838 strings out of 493921
+ 193498 string characters out of 3144865
+ 302751 words of memory out of 3000000
  16396 multiletter control sequences out of 15000+200000
  48226 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,10n,53p,702b,1891s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,10n,53p,666b,1891s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cstt.enc}{C:/Program Files (x86
 )/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.
@@ -1339,9 +1334,9 @@ KTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on main.pdf (65 pages, 972518 bytes).
+Output written on main.pdf (64 pages, 972424 bytes).
 PDF statistics:
- 947 PDF objects out of 1000 (max. 8388607)
- 414 named destinations out of 1000 (max. 500000)
+ 943 PDF objects out of 1000 (max. 8388607)
+ 413 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
