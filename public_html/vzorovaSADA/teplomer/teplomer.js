@@ -14,7 +14,7 @@ function animujTeplomer(percento){
     var newY = y + height - newHeight;
     paper.select("#empty").animate({
         y: newY,
-        height: newHeight, 
+        height: newHeight
     }, 1000);
 }
 

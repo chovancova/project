@@ -81,7 +81,7 @@ function rotateLeft(element) {
 
 
 
-function animovanieNaPase(){
+function animovanieNaPase(cislo){
 
     var road =   paper.select(pas);
     var len = road.getTotalLength();
@@ -107,7 +107,7 @@ var cas = 2000;
 //animacia kruhu popri ceste
     //setTimeout() - executes a function, once, after waiting a specified number of milliseconds
     setTimeout( function() {
-        Snap.animate(0, len, function( value ) {
+        Snap.animate(0, cislo, function( value ) {
             movePoint = road.getPointAtLength( value );
             vyrobok.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
         },cas
