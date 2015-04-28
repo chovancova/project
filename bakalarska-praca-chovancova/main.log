@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 12:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 12:36
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -921,7 +921,7 @@ although it is yet undefined on input line 83.
                                                   \fi \fi 
 l.254 \end{itemize}
                    ] [14] [15]) [16]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola2.tex)
+No file kapitoly/kapitola2.tex.
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola3.tex
 Kapitola 2.
 [17
@@ -1141,7 +1141,7 @@ Kapitola 6.
 
 
 ]) [50]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola8.tex)
+No file kapitoly/kapitola8.tex.
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [51
 
 
@@ -1315,8 +1315,8 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 13840 strings out of 493921
- 193520 string characters out of 3144865
+ 13836 strings out of 493921
+ 193248 string characters out of 3144865
  302737 words of memory out of 3000000
  16396 multiletter control sequences out of 15000+200000
  48226 words of font info for 51 fonts, out of 3000000 for 9000
