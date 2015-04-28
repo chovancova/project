@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 11:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 12:22
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -847,7 +847,7 @@ l.58 ...{4.4.1}onPageLoad()}{39}{subsection.4.4.1}
 
 ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/uvod.tex
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 12.
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 16.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\il2lmtt.fd"
@@ -863,7 +863,7 @@ File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<obrazky/obrazokHTML.jpg, id=274, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=275, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -892,7 +892,7 @@ although it is yet undefined on input line 38.
                                                   \fi \fi 
 l.47 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obrazokHTML.jpg>]
-<obrazky/podpora.jpg, id=296, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=297, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -949,7 +949,7 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
 
 
 ]
-<obrazky/suradnice1.jpg, id=399, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=400, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
@@ -1002,7 +1002,7 @@ Overfull \hbox (24.61787pt too wide) in paragraph at lines 284--299
                                                   \fi \fi 
 l.311 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=459, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=460, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
@@ -1050,7 +1050,7 @@ Kapitola 4.
 
 
 
-] <obrazky/pump1.jpg, id=544, 587.19376pt x 445.665pt>
+] <obrazky/pump1.jpg, id=545, 587.19376pt x 445.665pt>
 File: obrazky/pump1.jpg Graphic file (type jpg)
 
 <use obrazky/pump1.jpg>
@@ -1070,13 +1070,13 @@ pr�-klad: pa-per.select("#ventil");
 l.39 P
       o kliknutí sa nám zobrazí okno s názvom Object Properties. <C:/Github
 /project/bakalarska-praca-chovancova/obrazky/pump1.jpg>]
-<obrazky/obr3.png, id=549, 203.25937pt x 182.93344pt>
+<obrazky/obr3.png, id=550, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
  <use obrazky/obr3.png>
 Package pdftex.def Info: obrazky/obr3.png used on input line 43.
 (pdftex.def)             Requested size: 142.26378pt x 128.04135pt.
 
-<obrazky/XmlEditor2.png, id=553, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=554, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
@@ -1108,7 +1108,7 @@ Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
 although it is yet undefined on input line 296.
 
-<obrazky/updateSchema.jpg, id=682, 242.40562pt x 134.75343pt>
+<obrazky/updateSchema.jpg, id=683, 242.40562pt x 134.75343pt>
 File: obrazky/updateSchema.jpg Graphic file (type jpg)
 
 <use obrazky/updateSchema.jpg>
@@ -1161,13 +1161,13 @@ Kapitola 6.
 ])
 [55] (C:\Github\project\bakalarska-praca-chovancova\prilohy/umlDiagramy.tex
 Dodatok A.
-<uml/usecase.png, id=790, 370.38374pt x 510.90875pt>
+<uml/usecase.png, id=791, 370.38374pt x 510.90875pt>
 File: uml/usecase.png Graphic file (type png)
  <use uml/usecase.png>
 Package pdftex.def Info: uml/usecase.png used on input line 5.
 (pdftex.def)             Requested size: 223.45274pt x 308.2315pt.
 
-<uml/aktivityInicializacie.png, id=791, 578.16pt x 1066.98625pt>
+<uml/aktivityInicializacie.png, id=792, 578.16pt x 1066.98625pt>
 File: uml/aktivityInicializacie.png Graphic file (type png)
 
 <use uml/aktivityInicializacie.png>
@@ -1184,7 +1184,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.17 
       <C:/Github/project/bakalarska-praca-chovancova/uml/usecase.png (PNG copy)
->] <uml/aktivity2.png, id=796, 490.83376pt x 1047.915pt>
+>] <uml/aktivity2.png, id=797, 490.83376pt x 1047.915pt>
 File: uml/aktivity2.png Graphic file (type png)
 
 <use uml/aktivity2.png>
@@ -1197,7 +1197,7 @@ Package pdftex.def Info: uml/aktivity2.png used on input line 22.
                                                   \fi \fi 
 l.26 
       <C:/Github/project/bakalarska-praca-chovancova/uml/aktivityInicializacie.
-png (PNG copy)>] <uml/classDiagramTried.png, id=802, 501.875pt x 587.19376pt>
+png (PNG copy)>] <uml/classDiagramTried.png, id=803, 501.875pt x 587.19376pt>
 File: uml/classDiagramTried.png Graphic file (type png)
 
 <use uml/classDiagramTried.png>
@@ -1220,26 +1220,26 @@ l.128 \include{prilohy/umlDiagramy}
 ova/uml/classDiagramTried.png (PNG copy)>]
 (C:\Github\project\bakalarska-praca-chovancova\prilohy/vzorovaSada.tex
 Dodatok B.
-<obrazky/pump.jpg, id=812, 246.9225pt x 135.50626pt>
+<obrazky/pump.jpg, id=813, 246.9225pt x 135.50626pt>
 File: obrazky/pump.jpg Graphic file (type jpg)
  <use obrazky/pump.jpg>
 Package pdftex.def Info: obrazky/pump.jpg used on input line 11.
 (pdftex.def)             Requested size: 312.83247pt x 171.68575pt.
 
-<obrazky/belt.jpg, id=813, 489.32813pt x 127.97812pt>
+<obrazky/belt.jpg, id=814, 489.32813pt x 127.97812pt>
 File: obrazky/belt.jpg Graphic file (type jpg)
  <use obrazky/belt.jpg>
 Package pdftex.def Info: obrazky/belt.jpg used on input line 18.
 (pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
 
-<obrazky/trippleValve.jpg, id=814, 258.21469pt x 163.3603pt>
+<obrazky/trippleValve.jpg, id=815, 258.21469pt x 163.3603pt>
 File: obrazky/trippleValve.jpg Graphic file (type jpg)
 
 <use obrazky/trippleValve.jpg>
 Package pdftex.def Info: obrazky/trippleValve.jpg used on input line 25.
 (pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
 
-<obrazky/map.jpg, id=815, 490.08093pt x 239.39438pt>
+<obrazky/map.jpg, id=816, 490.08093pt x 239.39438pt>
 File: obrazky/map.jpg Graphic file (type jpg)
  <use obrazky/map.jpg>
 Package pdftex.def Info: obrazky/map.jpg used on input line 32.
@@ -1263,7 +1263,7 @@ ame{figure.B.2}) has been already used, duplicate ignored
 l.35 \end{figure}
                   <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump.j
 pg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/belt.jpg>]
-<obrazky/thermometer.jpg, id=820, 63.23625pt x 124.96687pt>
+<obrazky/thermometer.jpg, id=821, 63.23625pt x 124.96687pt>
 File: obrazky/thermometer.jpg Graphic file (type jpg)
 
 <use obrazky/thermometer.jpg>
@@ -1315,9 +1315,9 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 13838 strings out of 493921
- 193498 string characters out of 3144865
- 302751 words of memory out of 3000000
+ 13840 strings out of 493921
+ 193520 string characters out of 3144865
+ 302737 words of memory out of 3000000
  16396 multiletter control sequences out of 15000+200000
  48226 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1334,9 +1334,9 @@ KTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on main.pdf (64 pages, 972424 bytes).
+Output written on main.pdf (64 pages, 972631 bytes).
 PDF statistics:
- 943 PDF objects out of 1000 (max. 8388607)
- 413 named destinations out of 1000 (max. 500000)
+ 945 PDF objects out of 1000 (max. 8388607)
+ 415 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
