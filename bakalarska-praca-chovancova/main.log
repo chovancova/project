@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 00:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.4)  28 APR 2015 10:38
 entering extended mode
 **main.tex
 (C:\Github\project\bakalarska-praca-chovancova\main.tex
@@ -641,6 +641,41 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/ztmcm/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/ztmcm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/ztmcm/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/ztmcm/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/ztmcm/m/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ztmcm/m/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/ztmcm/m/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/ztmcm/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/ptm/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/ptm/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/ptm/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/ptm/m/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count123
@@ -651,6 +686,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\special/title.aux)
+(C:\Github\project\bakalarska-praca-chovancova\special/abstrakt.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/uvod.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola1.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola2.aux)
@@ -663,7 +699,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.aux)
 (C:\Github\project\bakalarska-praca-chovancova\special/lit.aux)
 (C:\Github\project\bakalarska-praca-chovancova\special/skratky.aux)
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.aux))
+(C:\Github\project\bakalarska-praca-chovancova\prilohy/umlDiagramy.aux)
+(C:\Github\project\bakalarska-praca-chovancova\prilohy/vzorovaSada.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
@@ -682,14 +719,10 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Try loading font information for IL2+ptm on input line 41.
+LaTeX Font Info:    Try loading font information for IL2+lmr on input line 41.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\cspsfonts\il2ptm.fd"
-File: il2ptm.fd 1998/01/31 CS Times
-LaTeX Font Info:     CS Times on input line 2.
-LaTeX Font Info:    (C) Z. Wagner,1998/01/31 on input line 3.
-LaTeX Font Info:    Created by CsPsFont utility v.1.0e (C) Z. Wagner, 1998/01/3
-1 on input line 4.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\il2lmr.fd"
+File: il2lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -720,38 +753,58 @@ LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
 
-(C:\Github\project\bakalarska-praca-chovancova\special/title.tex
-Package hyperref Info: Option `pageanchor' set `false' on input line 1.
- [1
+(C:\Github\project\bakalarska-praca-chovancova\special/title.tex [1
 
 
-{C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1] [2]
- [1]
-[1]) (C:\Github\project\bakalarska-praca-chovancova\main.toc
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 6.
+{C:/Users/chova_000/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX w
+arning (ext4): destination with the same identifier (name{page.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.72 \newpage
+              [1]) [2]
+(C:\Github\project\bakalarska-praca-chovancova\special/abstrakt.texpdfTeX warni
+ng (ext4): destination with the same identifier (name{page.1}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33 \end{abstract}
+                    [1
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.70 \end{abstract}
+                    [1])
+(C:\Github\project\bakalarska-praca-chovancova\main.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 6.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 6.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 6.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 6.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 6.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 6.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 6.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 6.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
@@ -763,16 +816,27 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 ... {3.1.2}DOM element}{22}{subsection.3.1.2}
+                                                   [1
 \select@language{slovak}
 \@writefile{toc}{\select@language{slovak}}
 \@writefile{lof}{\select@language{slovak}}
 \@writefile{lot}{\select@language{slovak}}
 
 
-] [2])
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 ...{4.4.1}onPageLoad()}{39}{subsection.4.4.1}
+                                                   [2])
 \tf@toc=\write5
- [3] (C:\Github\project\bakalarska-praca-chovancova\main.lof)
+ [3]
+(C:\Github\project\bakalarska-praca-chovancova\main.lof)
 \tf@lof=\write6
  [4
 
@@ -783,11 +847,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 ]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/uvod.tex
-LaTeX Font Info:    Try loading font information for IL2+cmtt on input line 14.
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 14.
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\cslatex\base\il2cmtt.fd"
-File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\il2lmtt.fd"
+File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [8
 
 
@@ -799,7 +863,7 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 Kapitola 1.
 Package acronym Info: Label `acro:W3C' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<obrazky/obrazokHTML.jpg, id=260, 648.92438pt x 455.45157pt>
+<obrazky/obrazokHTML.jpg, id=274, 648.92438pt x 455.45157pt>
 File: obrazky/obrazokHTML.jpg Graphic file (type jpg)
 
 <use obrazky/obrazokHTML.jpg>
@@ -810,13 +874,13 @@ Package pdftex.def Info: obrazky/obrazokHTML.jpg used on input line 22.
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 30.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 30.
 Package acronym Info: Label `acro:SVG' newly defined as it shall be overridden
 although it is yet undefined on input line 36.
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
@@ -828,7 +892,7 @@ although it is yet undefined on input line 38.
                                                   \fi \fi 
 l.47 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/obrazokHTML.jpg>]
-<obrazky/podpora.jpg, id=280, 799.48688pt x 405.01312pt>
+<obrazky/podpora.jpg, id=296, 799.48688pt x 405.01312pt>
 File: obrazky/podpora.jpg Graphic file (type jpg)
 
 <use obrazky/podpora.jpg>
@@ -839,13 +903,13 @@ Package pdftex.def Info: obrazky/podpora.jpg used on input line 68.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 
+l.79 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.1
 .2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.82 
+l.79 
       <C:/Github/project/bakalarska-praca-chovancova/obrazky/podpora.jpg>]
 Package acronym Info: Label `acro:PPI' newly defined as it shall be overridden
 although it is yet undefined on input line 83.
@@ -855,88 +919,54 @@ although it is yet undefined on input line 83.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.258 	\item S
-              criptDraw - online SVG editor vyvinutý pomocou modernej techn...
-] [14] [15]) [16]
+l.254 \end{itemize}
+                   ] [14] [15]) [16]
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola2.tex)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola3.tex
 Kapitola 2.
-<uml/aktivityInicializacie.png, id=329, 578.16pt x 1066.98625pt>
-File: uml/aktivityInicializacie.png Graphic file (type png)
-
-<use uml/aktivityInicializacie.png>
-Package pdftex.def Info: uml/aktivityInicializacie.png used on input line 14.
-(pdftex.def)             Requested size: 312.83247pt x 577.31995pt.
-
-<uml/aktivity2.png, id=330, 490.83376pt x 1047.915pt>
-File: uml/aktivity2.png Graphic file (type png)
- <use uml/aktivity2.png>
-Package pdftex.def Info: uml/aktivity2.png used on input line 21.
-(pdftex.def)             Requested size: 268.14603pt x 572.50146pt.
-
-<uml/usecase.png, id=331, 370.38374pt x 510.90875pt>
-File: uml/usecase.png Graphic file (type png)
- <use uml/usecase.png>
-Package pdftex.def Info: uml/usecase.png used on input line 29.
-(pdftex.def)             Requested size: 370.38283pt x 510.9075pt.
-
 [17
 
 
 
 
 
-] [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.1}) has been already used, duplicate ignored
+] [18]
+Overfull \hbox (15.56447pt too wide) in paragraph at lines 64--65
+[]\IL2/lmr/m/n/12 V tejto chv�li je mo-�n� vo-la� fun-kcie z Snap API pr�-ka-zo
+m: fun-kcia().funkciaAPISnap.. 
+ []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.55 	\item P
-             ridať atribút onPageLoad(); do definicie body. <C:/Github/projec
-t/bakalarska-praca-chovancova/uml/aktivityInicializacie.png (PNG copy)>]
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.55 	\item P
-             ridať atribút onPageLoad(); do definicie body. <C:/Github/projec
-t/bakalarska-praca-chovancova/uml/aktivity2.png (PNG copy)>] [20pdfTeX warning 
-(ext4): destination with the same identifier (name{figure.2.3}) has been alread
-y used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.55 	\item P
-             ridať atribút onPageLoad(); do definicie body. <C:/Github/projec
-t/bakalarska-praca-chovancova/uml/usecase.png (PNG copy)>] [21]) [22]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola4.tex
+) [19] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola4.tex
 Kapitola 3.
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 22.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
-File: omlptm.fd 
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 22.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmr.fd"
+File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 22.
- [23
+LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 22.
+ [20
 
 
 
 ]
-<obrazky/suradnice1.jpg, id=388, 380.17032pt x 149.8097pt>
+<obrazky/suradnice1.jpg, id=399, 380.17032pt x 149.8097pt>
 File: obrazky/suradnice1.jpg Graphic file (type jpg)
 
 <use obrazky/suradnice1.jpg>
 Package pdftex.def Info: obrazky/suradnice1.jpg used on input line 92.
 (pdftex.def)             Requested size: 223.45274pt x 88.05548pt.
- [24] [25pdfTeX warning (ext4): destination with the same identifier (name{figu
+ [21] [22pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.138 
        <C:/Github/project/bakalarska-praca-chovancova/obrazky/suradnice1.jpg>]
-[26pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+Overfull \hbox (16.79141pt too wide) in paragraph at lines 142--142
+[]\IL2/lmr/bx/n/17.28 Kreslenie z�-klad-n�ch tva-rov cez kni-�nicu Snap.svg 
+ []
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -948,33 +978,38 @@ er (name{table.3.2}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.183 \end{lstlisting}
-                      ] [27pdfTeX warning (ext4): destination with the same ide
+                      ] [24pdfTeX warning (ext4): destination with the same ide
 ntifier (name{table.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.247 \end{center}
-                  ] [28pdfTeX warning (ext4): destination with the same identif
+                  ] [25pdfTeX warning (ext4): destination with the same identif
 ier (name{table.3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.268 \begin{lstlisting}
-                        ] [29pdfTeX warning (ext4): destination with the same i
-dentifier (name{table.3.5}) has been already used, duplicate ignored
+                        ]
+Overfull \hbox (24.61787pt too wide) in paragraph at lines 284--299
+ [] 
+ []
+
+[26pdfTeX warning (ext4): destination with the same identifier (name{table.3.5}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.311 \begin{lstlisting}
                         ]
-<obrazky/grupovanieElementov.jpg, id=442, 307.1475pt x 97.11281pt>
+<obrazky/grupovanieElementov.jpg, id=459, 307.1475pt x 97.11281pt>
 File: obrazky/grupovanieElementov.jpg Graphic file (type jpg)
 
 <use obrazky/grupovanieElementov.jpg>
 Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 330
 .
 (pdftex.def)             Requested size: 312.83247pt x 98.91592pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -982,246 +1017,290 @@ Package pdftex.def Info: obrazky/grupovanieElementov.jpg used on input line 330
 l.343 \item S
              úradnice špecifikujú lineárny gradient ako vektor x1, y1, x...
  <C:/Github/project/bakalarska-praca-chovancova/obrazky/grupovanieElementov.jpg
->] [31] <obrazky/textPriklad.jpg, id=473, 93.34875pt x 30.1125pt>
-File: obrazky/textPriklad.jpg Graphic file (type jpg)
+>] [28] [29pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.3.6}) has been already used, duplicate ignored
 
-<use obrazky/textPriklad.jpg>
-Package pdftex.def Info: obrazky/textPriklad.jpg used on input line 485.
-(pdftex.def)             Requested size: 93.34851pt x 30.11241pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{table.3.6
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.532 
+      ] [30pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.3.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.582 E
+       lement.animate(attr, ms, easing, callback).pdfTeX warning (ext4): destin
+ation with the same identifier (name{table.3.8}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.582 E
+       lement.animate(attr, ms, easing, callback).] [31pdfTeX warning (ext4): d
+estination with the same identifier (name{table.3.9}) has been already used, du
+plicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.624 \subsection
+                 {Element.append(...), Element.add(...), }] [32]) [33]
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola5.tex
+Kapitola 4.
+[34
+
+
+
+] <obrazky/pump1.jpg, id=544, 587.19376pt x 445.665pt>
+File: obrazky/pump1.jpg Graphic file (type jpg)
+
+<use obrazky/pump1.jpg>
+Package pdftex.def Info: obrazky/pump1.jpg used on input line 24.
+(pdftex.def)             Requested size: 357.52576pt x 271.35202pt.
+
+Overfull \hbox (5.06615pt too wide) in paragraph at lines 33--34
+\IL2/lmr/m/n/12 cez CSS se-lek-tor, kde pri-st�-pim k id svg cez zna-�ku #. Na-
+pr�-klad: pa-per.select("#ventil");
+ []
+
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.489 
-      ] [33pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.3.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.576 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.3
-.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.576 
-       <C:/Github/project/bakalarska-praca-chovancova/obrazky/textPriklad.jpg>]
-[34pdfTeX warning (ext4): destination with the same identifier (name{table.3.8}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.604 \subsubsection
-                    {Animovanie path}pdfTeX warning (ext4): destination with th
-e same identifier (name{table.3.9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.604 \subsubsection
-                    {Animovanie path}] [35]) [36]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola5.tex
-Kapitola 4.
-<obrazky/pump1.jpg, id=512, 587.19376pt x 445.665pt>
-File: obrazky/pump1.jpg Graphic file (type jpg)
- <use obrazky/pump1.jpg>
-Package pdftex.def Info: obrazky/pump1.jpg used on input line 12.
-(pdftex.def)             Requested size: 312.83247pt x 237.43217pt.
-
-[37
-
-
-
-] <obrazky/obr3.png, id=516, 203.25937pt x 182.93344pt>
+l.39 P
+      o kliknutí sa nám zobrazí okno s názvom Object Properties. <C:/Github
+/project/bakalarska-praca-chovancova/obrazky/pump1.jpg>]
+<obrazky/obr3.png, id=549, 203.25937pt x 182.93344pt>
 File: obrazky/obr3.png Graphic file (type png)
-
-<use obrazky/obr3.png>
-Package pdftex.def Info: obrazky/obr3.png used on input line 31.
+ <use obrazky/obr3.png>
+Package pdftex.def Info: obrazky/obr3.png used on input line 43.
 (pdftex.def)             Requested size: 142.26378pt x 128.04135pt.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-1}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.36 
-      <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump1.jpg>]
-<obrazky/XmlEditor2.png, id=523, 572.89032pt x 376.40625pt>
+<obrazky/XmlEditor2.png, id=553, 572.89032pt x 376.40625pt>
 File: obrazky/XmlEditor2.png Graphic file (type png)
 
 <use obrazky/XmlEditor2.png>
-Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 48.
+Package pdftex.def Info: obrazky/XmlEditor2.png used on input line 61.
 (pdftex.def)             Requested size: 268.14603pt x 176.18153pt.
- [39pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.57 \section
-             {Integrácia prečerpávacej stanice pre dynamické ovládanie ...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
-has been already used, duplicate ignored
+l.66 
+      <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png>]
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.57 \section
-             {Integrácia prečerpávacej stanice pre dynamické ovládanie ...
- <C:/Github/project/bakalarska-praca-chovancova/obrazky/obr3.png> <C:/Github/pr
-oject/bakalarska-praca-chovancova/obrazky/XmlEditor2.png>] [40]
+l.84 	id=
+         "svgStanica" <C:/Github/project/bakalarska-praca-chovancova/obrazky/Xm
+lEditor2.png>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [41]
-[42] [43] [44] [45] [46]
+) [38]
+[39] [40] [41] [42] [43] [44]
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
-although it is yet undefined on input line 284.
- [47]
-<obrazky/updateSchema.jpg, id=648, 242.40562pt x 134.75343pt>
+although it is yet undefined on input line 296.
+
+<obrazky/updateSchema.jpg, id=682, 242.40562pt x 134.75343pt>
 File: obrazky/updateSchema.jpg Graphic file (type jpg)
 
 <use obrazky/updateSchema.jpg>
-Package pdftex.def Info: obrazky/updateSchema.jpg used on input line 303.
+Package pdftex.def Info: obrazky/updateSchema.jpg used on input line 315.
 (pdftex.def)             Requested size: 312.83247pt x 173.92517pt.
- [48pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-4}) has been already used, duplicate ignored
+ [45]) [46pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.315 	\item P
-              rečerpávacia stanica - obrázok \ref{fig:pump} <C:/Github/proje
-ct/bakalarska-praca-chovancova/obrazky/updateSchema.jpg>]
-<obrazky/pump.jpg, id=670, 246.9225pt x 135.50626pt>
-File: obrazky/pump.jpg Graphic file (type jpg)
- <use obrazky/pump.jpg>
-Package pdftex.def Info: obrazky/pump.jpg used on input line 327.
-(pdftex.def)             Requested size: 312.83247pt x 171.68575pt.
+l.110 \include{kapitoly/kapitola5}
+                                   <C:/Github/project/bakalarska-praca-chovanco
+va/obrazky/updateSchema.jpg>]
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola6.tex
+Kapitola 5.
+[47
 
-<obrazky/belt.jpg, id=671, 489.32813pt x 127.97812pt>
-File: obrazky/belt.jpg Graphic file (type jpg)
- <use obrazky/belt.jpg>
-Package pdftex.def Info: obrazky/belt.jpg used on input line 334.
-(pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
 
-<obrazky/trippleValve.jpg, id=672, 258.21469pt x 163.3603pt>
-File: obrazky/trippleValve.jpg Graphic file (type jpg)
 
-<use obrazky/trippleValve.jpg>
-Package pdftex.def Info: obrazky/trippleValve.jpg used on input line 341.
-(pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
+]
+Overfull \hbox (6.16055pt too wide) in paragraph at lines 38--42
+[]$\IL2/lmtt/m/n/12 http : / / localhost : 8080 / scada-[]demo / rest / pumping
+station / getrotorstatus$[] \IL2/lmr/m/n/12 pr�-klad
+ []
 
-<obrazky/map.jpg, id=673, 490.08093pt x 239.39438pt>
-File: obrazky/map.jpg Graphic file (type jpg)
- <use obrazky/map.jpg>
-Package pdftex.def Info: obrazky/map.jpg used on input line 348.
-(pdftex.def)             Requested size: 312.83247pt x 152.81735pt.
+) [48] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
+Kapitola 6.
+[49
 
-[49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+
+
+]) [50]
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola8.tex)
+(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [51
+
+
+
+
+
+]
+(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [52
+
+
+
+]) [53]
+(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [54
+
+
+
+])
+[55] (C:\Github\project\bakalarska-praca-chovancova\prilohy/umlDiagramy.tex
+Dodatok A.
+<uml/usecase.png, id=790, 370.38374pt x 510.90875pt>
+File: uml/usecase.png Graphic file (type png)
+ <use uml/usecase.png>
+Package pdftex.def Info: uml/usecase.png used on input line 5.
+(pdftex.def)             Requested size: 223.45274pt x 308.2315pt.
+
+<uml/aktivityInicializacie.png, id=791, 578.16pt x 1066.98625pt>
+File: uml/aktivityInicializacie.png Graphic file (type png)
+
+<use uml/aktivityInicializacie.png>
+Package pdftex.def Info: uml/aktivityInicializacie.png used on input line 13.
+(pdftex.def)             Requested size: 312.83247pt x 577.31995pt.
+ [56
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.A.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.17 
+      <C:/Github/project/bakalarska-praca-chovancova/uml/usecase.png (PNG copy)
+>] [57]
+Overfull \vbox (1.04442pt too high) has occurred while \output is active []
+
+
+[58pdfTeX warning (ext4): destination with the same identifier (name{figure.A.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.351 \end{figure}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{figure.4.6}) has been already used, duplicate ignored
+l.17 
+      <C:/Github/project/bakalarska-praca-chovancova/uml/aktivityInicializacie.
+png (PNG copy)>] <uml/aktivity2.png, id=805, 490.83376pt x 1047.915pt>
+File: uml/aktivity2.png Graphic file (type png)
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.351 \end{figure}
-                   <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump.
-jpg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/belt.jpg>]
-<obrazky/thermometer.jpg, id=677, 63.23625pt x 124.96687pt>
-File: obrazky/thermometer.jpg Graphic file (type jpg)
+<use uml/aktivity2.png>
+Package pdftex.def Info: uml/aktivity2.png used on input line 22.
+(pdftex.def)             Requested size: 268.14603pt x 572.50146pt.
 
-<use obrazky/thermometer.jpg>
-Package pdftex.def Info: obrazky/thermometer.jpg used on input line 360.
-(pdftex.def)             Requested size: 63.23608pt x 124.96657pt.
-
-<uml/classDiagramTried.png, id=678, 501.875pt x 587.19376pt>
+<uml/classDiagramTried.png, id=807, 501.875pt x 587.19376pt>
 File: uml/classDiagramTried.png Graphic file (type png)
 
 <use uml/classDiagramTried.png>
-Package pdftex.def Info: uml/classDiagramTried.png used on input line 369.
-(pdftex.def)             Requested size: 446.9055pt x 522.90544pt.
-) [50pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.7}) has been already used, duplicate ignored
+Package pdftex.def Info: uml/classDiagramTried.png used on input line 37.
+(pdftex.def)             Requested size: 402.21222pt x 470.61578pt.
+) [59pdfTeX warning (ext4): destination with the same identifier (name{figure.A
+.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.108 \include{kapitoly/kapitola5}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.4.8}) has been already used, duplicate ignored
+l.128 \include{prilohy/umlDiagramy}
+                                    <C:/Github/project/bakalarska-praca-chovanc
+ova/uml/aktivity2.png (PNG copy)>] [60pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.A.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.108 \include{kapitoly/kapitola5}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.4.9}) has been already used, duplicate ignored
+l.128 \include{prilohy/umlDiagramy}
+                                    <C:/Github/project/bakalarska-praca-chovanc
+ova/uml/classDiagramTried.png (PNG copy)>]
+(C:\Github\project\bakalarska-praca-chovancova\prilohy/vzorovaSada.tex
+Dodatok B.
+<obrazky/pump.jpg, id=816, 246.9225pt x 135.50626pt>
+File: obrazky/pump.jpg Graphic file (type jpg)
+ <use obrazky/pump.jpg>
+Package pdftex.def Info: obrazky/pump.jpg used on input line 11.
+(pdftex.def)             Requested size: 312.83247pt x 171.68575pt.
+
+<obrazky/belt.jpg, id=817, 489.32813pt x 127.97812pt>
+File: obrazky/belt.jpg Graphic file (type jpg)
+ <use obrazky/belt.jpg>
+Package pdftex.def Info: obrazky/belt.jpg used on input line 18.
+(pdftex.def)             Requested size: 312.83247pt x 81.81978pt.
+
+<obrazky/trippleValve.jpg, id=818, 258.21469pt x 163.3603pt>
+File: obrazky/trippleValve.jpg Graphic file (type jpg)
+
+<use obrazky/trippleValve.jpg>
+Package pdftex.def Info: obrazky/trippleValve.jpg used on input line 25.
+(pdftex.def)             Requested size: 312.83247pt x 197.93327pt.
+
+<obrazky/map.jpg, id=819, 490.08093pt x 239.39438pt>
+File: obrazky/map.jpg Graphic file (type jpg)
+ <use obrazky/map.jpg>
+Package pdftex.def Info: obrazky/map.jpg used on input line 32.
+(pdftex.def)             Requested size: 312.83247pt x 152.81735pt.
+
+[61
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.B.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.108 \include{kapitoly/kapitola5}
-                                   <C:/Github/project/bakalarska-praca-chovanco
-va/obrazky/trippleValve.jpg> <C:/Github/project/bakalarska-praca-chovancova/obr
-azky/map.jpg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/thermomete
-r.jpg>] [51pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.4.10}) has been already used, duplicate ignored
+l.35 \end{figure}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.B.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.108 \include{kapitoly/kapitola5}
-                                   <C:/Github/project/bakalarska-praca-chovanco
-va/uml/classDiagramTried.png (PNG copy)>]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola6.tex
-Kapitola 5.
-[52
+l.35 \end{figure}
+                  <C:/Github/project/bakalarska-praca-chovancova/obrazky/pump.j
+pg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/belt.jpg>]
+<obrazky/thermometer.jpg, id=824, 63.23625pt x 124.96687pt>
+File: obrazky/thermometer.jpg Graphic file (type jpg)
 
+<use obrazky/thermometer.jpg>
+Package pdftex.def Info: obrazky/thermometer.jpg used on input line 44.
+(pdftex.def)             Requested size: 63.23608pt x 124.96657pt.
+) [62pdfTeX warning (ext4): destination with the same identifier (name{figure.B
+.3}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.129 \include{prilohy/vzorovaSada}
+                                   pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.B.4}) has been already used, duplicate ignored
 
-]
-Overfull \hbox (3.1157pt too wide) in paragraph at lines 38--42
-[]$\IL2/cmtt/m/n/12 http : / / localhost : 8080 / scada-[]demo / rest / pumping
-station / getrotorstatus$[] \IL2/ptm/m/n/12 pr�-klad
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.129 \include{prilohy/vzorovaSada}
+                                   pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.B.5}) has been already used, duplicate ignored
 
-) [53] (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola7.tex
-Kapitola 6.
-[54
-
-
-
-]) [55]
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola8.tex)
-(C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.tex) [56
-
-
-
-
-
-]
-(C:\Github\project\bakalarska-praca-chovancova\special/lit.tex [57
-
-
-
-]) [58]
-(C:\Github\project\bakalarska-praca-chovancova\special/skratky.tex [59
-
-
-
-]
-[60]) [61
-
-]
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.tex) [62
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
-
-(C:\Github\project\bakalarska-praca-chovancova\main.aux
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.129 \include{prilohy/vzorovaSada}
+                                    <C:/Github/project/bakalarska-praca-chovanc
+ova/obrazky/trippleValve.jpg> <C:/Github/project/bakalarska-praca-chovancova/ob
+razky/map.jpg> <C:/Github/project/bakalarska-praca-chovancova/obrazky/thermomet
+er.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+ (C:\Github\project\bakalarska-praca-chovancova\main.aux
 (C:\Github\project\bakalarska-praca-chovancova\special/title.aux)
+(C:\Github\project\bakalarska-praca-chovancova\special/abstrakt.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/uvod.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola1.aux)
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/kapitola2.aux)
@@ -1234,31 +1313,35 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 (C:\Github\project\bakalarska-praca-chovancova\kapitoly/zaver.aux)
 (C:\Github\project\bakalarska-praca-chovancova\special/lit.aux)
 (C:\Github\project\bakalarska-praca-chovancova\special/skratky.aux)
-(C:\Github\project\bakalarska-praca-chovancova\poznamkovaKaptiloa.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 133.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
+(C:\Github\project\bakalarska-praca-chovancova\prilohy/umlDiagramy.aux)
+(C:\Github\project\bakalarska-praca-chovancova\prilohy/vzorovaSada.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 13716 strings out of 493921
- 190852 string characters out of 3144865
- 312768 words of memory out of 3000000
- 16337 multiletter control sequences out of 15000+200000
- 32379 words of font info for 77 fonts, out of 3000000 for 9000
+ 13839 strings out of 493921
+ 193505 string characters out of 3144865
+ 302748 words of memory out of 3000000
+ 16396 multiletter control sequences out of 15000+200000
+ 48226 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,10n,53p,702b,1891s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8a.enc}<C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/cs/cstt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on main.pdf (65 pages, 904195 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-cstt.enc}{C:/Program Files (x86
+)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.
+9/fonts/enc/dvips/lm/lm-cs.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvi
+ps/lm/lm-cssc.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmt
+t12.pfb>
+Output written on main.pdf (65 pages, 972518 bytes).
 PDF statistics:
- 866 PDF objects out of 1000 (max. 8388607)
- 352 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 947 PDF objects out of 1000 (max. 8388607)
+ 414 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

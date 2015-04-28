@@ -33,7 +33,7 @@
 }
 
 
-%\usepackage{lmodern}%INE pismo
+\usepackage{lmodern}%INE pismo
 %\usepackage{type1ec}
 \usepackage{float}%H pri tabulkach
 %\usepackage{pdfpages}
@@ -45,6 +45,8 @@
 \pagestyle{empty}
 \pagenumbering{arabic}
 \include{special/title}	
+\include{special/abstrakt}	
+
 
 \pagestyle{empty}
 {\setlength{\parskip}{1pt plus 1pt}
@@ -119,15 +121,17 @@
 \include{special/lit}	%  Literatura
 %%%%% \MakeBibliography 
 
-\appendix
-
-
 \include{special/skratky}
+
+
+\appendix
+\include{prilohy/umlDiagramy}
+\include{prilohy/vzorovaSada}
 
 
 
 %\include{poznamky}
 
-\include {poznamkovaKaptiloa}
+%\include {poznamkovaKaptiloa}
 
 \end{document}
