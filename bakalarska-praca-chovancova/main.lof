@@ -1,27 +1,28 @@
 \select@language {english}
-\select@language {english}
 \select@language {slovak}
+\select@language {english}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces HTML 5 API}}{11}{figure.1.1}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Podpora SVG vo webov\IeC {\'y}ch prehliada\IeC {\v c}och}}{12}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Postup na\IeC {\v c}\IeC {\'\i }tania SVG s\IeC {\'u}boru v HTML dokumente}}{18}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Postup zistenia id elementu a jeho aktualizovanie}}{19}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Usecase diagram pou\IeC {\v z}itia SCADA syst\IeC {\'e}mov}}{20}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces S\IeC {\'u}radnicov\IeC {\'y} syst\IeC {\'e}m pl\IeC {\'a}tna s bodom (300, 200) v Snap.svg kni\IeC {\v z}nici}}{25}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Pr\IeC {\'\i }klad zoskupenia elementov a n\IeC {\'a}sledn\IeC {\'a} zmena atrib\IeC {\'u}tov}}{30}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Pr\IeC {\'\i }klad na zmenu atrib\IeC {\'u}tov v texte.}}{33}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces S\IeC {\'u}radnicov\IeC {\'y} syst\IeC {\'e}m pl\IeC {\'a}tna s bodom (300, 200) v Snap.svg kni\IeC {\v z}nici}}{22}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pr\IeC {\'\i }klad zoskupenia elementov a n\IeC {\'a}sledn\IeC {\'a} zmena atrib\IeC {\'u}tov}}{27}{figure.3.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafick\IeC {\'e} prostredie programu Inkscape s nakreslenou pre\IeC {\v c}erp\IeC {\'a}vacou stanicou}}{38}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Object Properties}}{39}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Xml Editor v Inkscape}}{39}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica po vykonan\IeC {\'\i } pr\IeC {\'\i }kazu updateSchema(updateSchema);}}{48}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica}}{49}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Prepravn\IeC {\'y} p\IeC {\'a}s}}{49}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Trojcestn\IeC {\'y} ventil}}{50}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Mapa Slovenska}}{50}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Termometer}}{50}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram tried vzorovej sady grafick\IeC {\'y}ch komponetov}}{51}{figure.4.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grafick\IeC {\'e} prostredie programu Inkscape s nakreslenou pre\IeC {\v c}erp\IeC {\'a}vacou stanicou}}{35}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Object Properties}}{36}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Xml Editor v Inkscape}}{37}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica po vykonan\IeC {\'\i } pr\IeC {\'\i }kazu updateSchema(updateSchema);}}{46}{figure.4.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Usecase diagram pou\IeC {\v z}itia SCADA syst\IeC {\'e}mov}}{56}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Postup na\IeC {\v c}\IeC {\'\i }tania SVG s\IeC {\'u}boru v HTML dokumente}}{58}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Postup zistenia id elementu a jeho aktualizovanie}}{59}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Diagram tried vzorovej sady grafick\IeC {\'y}ch komponetov}}{60}{figure.A.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica}}{61}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Prepravn\IeC {\'y} p\IeC {\'a}s}}{61}{figure.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Trojcestn\IeC {\'y} ventil}}{62}{figure.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Mapa Slovenska}}{62}{figure.B.4}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Termometer}}{62}{figure.B.5}
