@@ -12,11 +12,9 @@ function animujTeplomer(percento){
     var y = paper.select("#plny").getBBox().y;
     var newHeight = height * (percento/100);
     var newY = y + height - newHeight;
-var gra =  paper.gradient("L(0, 0, 700, 300)#000-#f00:25-#f00");
     paper.select("#empty").animate({
         y: newY,
         height: newHeight, 
-fill:  gra
     }, 1000);
 }
 

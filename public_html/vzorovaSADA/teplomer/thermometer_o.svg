@@ -33,17 +33,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="686"
-     inkscape:window-height="480"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
      id="namedview61"
      showgrid="false"
-     inkscape:zoom="0.4447562"
-     inkscape:cx="505.81118"
-     inkscape:cy="380.44436"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg6306" />
+     inkscape:zoom="4.12"
+     inkscape:cx="171.96457"
+     inkscape:cy="63.956283"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4331" />
   <defs
      id="defs6308">
     <clipPath
@@ -175,9 +175,9 @@
        transform="translate(20)">
       <g
          id="g6199"
-         transform="matrix(3.8355,0,0,3.8874875,-4528.5399,-1454.2307)"
-         clip-path="url(#clipPath5883)"
-         style="opacity:0.66000001;fill:#ff0000">
+         transform="matrix(3.8355,0,0,3.8226058,-4528.5399,-1415.7286)"
+         style="opacity:0.66000001;fill:#ff0000"
+         clip-path="url(#clipPath5883)">
         <rect
            id="rect6201"
            transform="scale(-1,-1)"
@@ -254,7 +254,7 @@
       </g>
       <g
          id="g55"
-         transform="translate(-2.3848126,5.5645626)">
+         transform="translate(-1.8993757,10.176213)">
         <path
            id="path6241"
            d="m 405.005,144.164 c -37.2764,0 -67.3609,29.9646 -67.3609,67.2411 v 393.378 c 0,0.12235 -7.7e-4,0.23741 0,0.35938 -36.1688,22.5288 -60.289,62.6043 -60.289,108.353 0,70.4828 57.1673,127.65 127.65,127.65 70.4826,0 127.65,-57.1674 127.65,-127.65 0,-45.7853 -24.1916,-85.8342 -60.4091,-108.353 7.7e-4,-0.12197 0,-0.23742 0,-0.35938 v -393.378 c 0,-37.2765 -29.9644,-67.2411 -67.2409,-67.2411 z"
@@ -274,7 +274,7 @@
            style="opacity:0.66000001;fill:#ff0000;stroke:#000000;stroke-width:0.0998583" />
       </g>
       <rect
-         style="opacity:0;fill:#ff2a2a;fill-opacity:1;stroke:none"
+         style="opacity:0"
          id="plny"
          width="124.01025"
          height="367.26111"
