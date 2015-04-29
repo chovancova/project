@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1"
      inkscape:cx="67.598916"
-     inkscape:cy="115.96274"
+     inkscape:cy="155.96274"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -124,10 +124,10 @@
        id="motor2"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 49,46 509,2"
+       style="fill:none;stroke:#000000;stroke-width:1.02210391px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 117.1781,155.86218 520.75047,2"
        id="cesta"
        inkscape:connector-curvature="0"
-       transform="translate(79.928571,109.86218)" />
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
