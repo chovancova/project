@@ -115,7 +115,7 @@ function animovanieCesty(mesto){
     setTimeout( function() {
         Snap.animate(0, len, function( value ) {
             movePoint = road.getPointAtLength( value );
-            bodCesty.attr({ cx: movePoint.y, cy: movePoint.y}); // move along path via cx & cy attributes
+            bodCesty.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
         }, 2000,mina.easeinout);
     });
 

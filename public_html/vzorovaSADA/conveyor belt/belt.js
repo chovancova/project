@@ -84,8 +84,13 @@ function rotateLeft(element) {
 function animovanieNaPase(cislo){
 
     var road =   paper.select(pas);
-    var len = road.getTotalLength();
-var cas = 2000;
+
+    var len= (road.getTotalLength()*(cislo/100));
+    console.log(road.getTotalLength());
+console.log(len);
+
+   // var len = road.getTotalLength();
+ var cas = 800;
     // nakreslenie kruhu, co pojde popri ceste
     var vyrobok = paper.circle(32,32,10).attr({
         fill: "#3f4445",
@@ -107,10 +112,10 @@ var cas = 2000;
 //animacia kruhu popri ceste
     //setTimeout() - executes a function, once, after waiting a specified number of milliseconds
     setTimeout( function() {
-        Snap.animate(0, cislo, function( value ) {
+        Snap.animate(0, len, function( value ) {
             movePoint = road.getPointAtLength( value );
             vyrobok.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
-        },cas
+        },500
             ,
             mina.linear
             );
@@ -119,3 +124,14 @@ var cas = 2000;
 }
 
 
+
+
+
+
+var min = 0;
+var max = 100;
+var getRandomCislo = function getRandomCislo() {
+    var temp = Math.random() * (max - min) + min;
+    // console.log("nahodne cislo je: " + temp);
+    return temp;
+};
