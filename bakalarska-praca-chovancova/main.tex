@@ -36,7 +36,7 @@
 \usepackage{lmodern}%INE pismo
 %\usepackage{type1ec}
 \usepackage{float}%H pri tabulkach
-%\usepackage{pdfpages}
+\usepackage{pdfpages}
 
 \begin{document}
 
@@ -44,14 +44,24 @@
 \selectlanguage{slovak}
 \pagestyle{empty}
 \pagenumbering{arabic}
+
+
+
 \include{special/title}	
 \include{special/abstrakt}	
 
-
 \pagestyle{empty}
+\pagenumbering{arabic} 
+\pagestyle{plain}	%F
+\setcounter{page}{6} %F
+
+
+
 {\setlength{\parskip}{1pt plus 1pt}
 
 \markboth{}{}
+
+
 
 \tableofcontents
 
@@ -75,14 +85,14 @@
 %%%%%%%%%%%%%%%%%% obsah
 % table of contents
 
-
-\pagestyle{plain}
-\pagestyle{myheadings}
+	
+%\pagestyle{plain}
+%\pagestyle{myheadings}
 
 %{\setlength{\parskip}{1pt plus 1pt}
 %\markboth{}{}
-\pagenumbering{arabic}
-\markboth{}{}
+%\pagenumbering{arabic}
+%\markboth{}{}
 
 \clearpage
 	
@@ -91,7 +101,7 @@
 
 %\thispagestyle{empty}
 
-\pagestyle{plain}
+%\pagestyle{plain}
 
 %\clearpage
 
@@ -101,12 +111,15 @@
 %\markboth{}{}
 
 \clearpage
-\setcounter{page}{8}
+
+\setcounter{page}{11} %F
+
 \include{kapitoly/uvod}	
 \include{kapitoly/kapitola1}
 \include{kapitoly/kapitola2}	
 \include{kapitoly/kapitola3}	
 \include{kapitoly/kapitola4}
+\include{prilohy/vzorovaSada}
 \include{kapitoly/kapitola5}
 \include{kapitoly/kapitola6}
 \include{kapitoly/kapitola7}
@@ -126,12 +139,8 @@
 
 \appendix
 \include{prilohy/umlDiagramy}
-\include{prilohy/vzorovaSada}
 
 
 
-%\include{poznamky}
-
-%\include {poznamkovaKaptiloa}
 
 \end{document}

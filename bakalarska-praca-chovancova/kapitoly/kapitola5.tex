@@ -2,18 +2,8 @@
 % !TeX root = ../main.tex
 \chapter{Integrácia grafického komponentu}
 
-Vzorová sada grafických komponentov SCADA systémov obsahuje:
-\begin{itemize}
-	\item Prečerpávacia stanica - obrázok \ref{fig:pump}
-	\item Prepravný pás - obrázok \ref{fig:belt}
-	\item Trojcestný ventil - obrázok \ref{fig:trippleValve}
-	\item Mapa Slovenska - obrázok \ref{fig:map}
-	\item Thermometer - obrázok \ref{fig:thermometer}
-\end{itemize}
-
 V tejto kapitole bližšie popíšem implementáciu prečerpávacej stanice. 
 
-\newpage
 \section{Vytvorenie prečerpávacej stanice v Inkscape}
 
 Nakreslenie jednotlivých častí komponentov prečerpávacej stanice v Inkscape bolo realizované pomocou ľavého bočného panela. Prečerpávacia stanica sa skladá z potrubí, indikátora úrovne hladiny vody, motora, a dvoch symbolov prítoku hladiny. Ako je možné vidieť na obrázku  \ref{picture1}.  
@@ -54,7 +44,7 @@ V okne Object Properties je možné nastaviť script na animovanie. Po kliknutí
 
 \subsection{XML Editor}
 Ďalší spôsob získania informácii o svg cez Inkscape je cez zabudovaný XML Editor.
-Stlačením klávesovej skratky SHIFT + CTRL + X, alebo v hornej lište v menu vybrať ponuku Edit a na spodku je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}. XML Editor umožní zistiť ID jednotlivých komponentov, ale i hodnoty atribútov. 
+Stlačením klávesovej skratky SHIFT + CTRL + X alebo v hornej lište v menu vybrať ponuku Edit a na spodku je XML Editor. Následne sa zobrazí okno, ktoré je na obrázku \ref{xmlEditor}. XML Editor umožní zistiť ID jednotlivých komponentov, ale i hodnoty atribútov. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -77,7 +67,7 @@ Súborová štruktúra prečerpávacej stanice:
 \end{itemize}
 
 \subsection{HTML súbor}
-Do HTML súboru index.html pridáme párový tag $<$svg$>$.  Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané kde presne sa nachádza SVG tag tak sa pridá na najbližšie voľné miesto. 
+Do HTML súboru index.html pridáme párový tag $<$svg$>$.  Na toto miesto sa neskôr vykreslí SVG načítané zo súboru cez JavaScript. Môže sa tu uviesť i celý kód SVG obrázka. V prípade, že nebude v dokumente dané, kde presne sa nachádza SVG, tag tak sa pridá na najbližšie voľné miesto. 
 \subsection{Kód}
 \begin{lstlisting}
 <svg 
@@ -316,6 +306,3 @@ function updateSchema(updateData){
 \caption{Prečerpávacia stanica po vykonaní príkazu updateSchema(updateSchema);}
 \label{fig:updateSchema}
 \end{figure}
-
-
-

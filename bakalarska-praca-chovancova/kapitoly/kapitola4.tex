@@ -19,19 +19,14 @@ Animovanie vektorov je jednoduchšie cez knižnicu Snap.svg ako cez SVG SMIL.
 
 V nasledujúcom príklade je vykreslený a animovaný obdĺžnik cez SVG SMIL. Animácia spočíva v zmene šírky obdĺžnika z 50 na 100 pixlov. SMIL:
 \begin{lstlisting}
-<svg>
-<rect x="10" y="10" width="50" height="30">
-<animate attributeType="XML"
-attributeName="width"
-to="100"
-fill="freeze"
-dur="10s"  />
-</rect></svg>
+<svg><rect x="10" y="10" width="50" height="30">
+	<animate attributeName="width" 
+    to="100" fill="freeze"  dur="10s"/>  </rect></svg>
 \end{lstlisting}
 
 Nakreslíme obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená znova na 50 px. \cite[p.~9]{Dawber}
 
-Ekvivalent k animácii cez Snap API v nasledujúcom príklade:
+Ekvivalent k animácii cez Snap.svg API v nasledujúcom príklade:
 
 \begin{lstlisting}
 paper = Snap();
@@ -53,11 +48,11 @@ Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa
 %Krok 0: ziskanie Snapu...
 
 
-\section{Krok 1: Inicializácia plátna na kreslenie}
+\section{Inicializácia plátna na kreslenie - Snap()}
 %viewport = výrez
 Na to, aby sme boli schopní kresliť grafické komponenty, tak potrebujeme definovať miesto, kde budú vykreslené. 
 %Určenie miesta, kde bude vykreslené plátno je buď viditeľné okno vo webovom prehliadači, alebo viewport. 
-Viditeľná oblasť okna prehliadača, alebo viewport, definuje oblasť, v ktorej sa vykreslí komponent na plátno.
+Viditeľná oblasť okna prehliadača alebo viewport, definuje oblasť, v ktorej sa vykreslí komponent na plátno.
 SVG špecifikácia referuje ako miesto vykreslenia seba ako viewport. 
 Inak povedané viewport je akákoľvek obdĺžniková oblasť.
 Okno prehliadača je referencia na viewport a kresliaca oblasť je plátno.   \cite{Dawber}
@@ -67,9 +62,9 @@ Vytvorenie plátna cez Snap konštruktor sa dá urobiť viacerými spôsobmi.
 
 \subsection{Súradnice plátna}
 
-Na to, aby bolo plátno responzívne vo webovom prehliadači musí byť nastavené nasledujúce atribúty: 
+Na to, aby bolo plátno zobraziteľné vo webovom prehliadači na rôznych zariadeniach musia byť nastavené nasledujúce atribúty: 
  \begin{itemize}
- 	\item definovaný viewBox
+ 	\item definovaný viewBox,
  	\item výška a šírka plátna musí byť v relatívnych rozmeroch, najlepšie nastavená na 100\%
  \end{itemize}
  
@@ -107,7 +102,7 @@ Nasledujúcim kódom vytvorím 500px široké a 300px vysoké plátno.
 var paper = Snap("mojePlatno", 500, 300);
 \end{lstlisting}
 
-Keď využívam túto formu konštruktora, tak prvý element je ID elementu. Alternatívne sa dá prvý parameter DOM element napísať nasledovným spôsobom: 
+Keď využívam túto formu konštruktora, tak prvý parameter v metode je ID elementu. V prípade, že nie je udaný vykreslí sa na najbližšie voľné miesto. Alternatívne sa dá prvý parameter DOM element napísať nasledovným spôsobom: 
 \begin{lstlisting}
 Snap(document.getElementById('mojePlatno'), 500, 300);
 \end{lstlisting}
@@ -116,7 +111,7 @@ Snap(document.getElementById('mojePlatno'), 500, 300);
 
 \subsubsection{\acs*{SVG} v HTML dokumente}
 
-SVG môže byť zobrazená buď ako inline v HTML dokumente, alebo ako vloženým samostatného .SVG súboru. 
+Grafický komponent vo formáte .svg môže byť zobrazený buď ako inline v HTML dokumente, alebo ako vloženým samostatného .svg súboru. 
 V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG. 
 
 
@@ -132,21 +127,51 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 			\hline 
 		\end{tabular} 
 	\end{center}
-	\caption{Spôsoby vytvorenia SVG v HTML dokumente}
+	\caption{Spôsoby zobrazenia SVG elementu v HTML dokumente}
 	\label{vytvorenie:SVG}
 \end{table}
 
+
+Príklady načítania SVG v HTML dokumente pre tag Image:
+%\begin{itemize}
+%\item 
+\begin{lstlisting}
+<img src="stanica2.svg" width = "50" height= "50" />
+\end{lstlisting}
+%\item Embed
+%\begin{lstlisting}
+%<embed src="stanica2.svg" width = "50" height= "50" />
+%\end{lstlisting}
+%\item Objekt
+%\begin{lstlisting}
+%<object type="image/svg+xml" data="stanica2.svg"
+%width="50" height="50"></object>
+%\end{lstlisting}
+%\item IFrame
+%\begin{lstlisting}
+%<iframe src="stanica2.svg" width = "50" height= "50">
+%</iframe>
+%\end{lstlisting}
+%\item Inline
+%\begin{lstlisting}
+%<svg width="100" height="100"> 
+%<circle cx="50" cy="50" r="40"/> </svg>
+%\end{lstlisting}
+%	
+%
+%\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\newpage
 \section{Kreslenie základných tvarov cez knižnicu Snap.svg}
 
-Snap API poskytuje metódy na kreslenie jednoduchých tvarov uvedené v tabuľke \ref{porovnanieSVG:Snap}.
+Snap.svg API poskytuje metódy na kreslenie jednoduchých tvarov. V tabuľke~\ref{porovnanieSVG:Snap} sú základné tvary, ich eqvivalenté vyjadrenie v SVG ako elementy, a  príkazy na vytvorenie nových elementov cez Snap.svg. Keďže sa jedná o vektorovú grafiku, tak pre elementy vytvorené cez SVG alebo Snap.svg platia rovnaké atribúty. Líši sa iba spôsob zápisu. 
 
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{|l|l|l|l|}
-			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap API} & \textbf{Atribúty} \\ 
+			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap.svg API} & \textbf{Atribúty} \\ 
 			\hline
 			\hline Obdlžnik & $<$rect$>$ & .rect() & x, y, šírka, výška, rx, ry \\ 
 			\hline Kruh & $<$circle$>$ & .circle() & r, x, y, cx, cy, rx, ry \\ 
@@ -182,7 +207,7 @@ Tvar, ktorý je vykreslený priamo na HTML webovej stránke má vo vnútri eleme
 <ElementTvar nazovAtributu = "hodnotaAtributu" ... />
 \end{lstlisting}
 
-
+\newpage
 \subsection{Popis atribútov tvarov}
 
 Názvy atribútov a ich význam pre obdĺžnik, kruh, elipsu sú vyjadrené v tabuľke \ref{parametre:tvar} 
@@ -302,9 +327,9 @@ Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad 
 \end{table}
 
 
-\section{Zoskupovanie elementov}
+\section{Zoskupovanie elementov - Paper.group()}
 
-Niekedy je potrebné použiť rovnaké atribúty, transformácie, alebo animácie pre viacero elementov. V Snap API je možné využiť metódu group alebo g. Group zoskupí viacero elementov do množiny. Príkazom add sa dajú pridať ďalšie prvky. V množine sa dajú meniť atribúty pre viacero prvkov naraz volaním metódy attr. 
+Niekedy je potrebné použiť rovnaké atribúty, transformácie, alebo animácie pre viacero elementov. V Snap API je možné využiť metódu Paper.group alebo Paper.g. Group zoskupí viacero elementov do množiny. Príkazom add sa dajú pridať ďalšie prvky. V množine sa dajú meniť atribúty pre viacero prvkov naraz volaním metódy attr. 
 
 Príklad zoskupenia elementov. Výsledné zoskupenie je zobrazené na obrázku \ref{fig:grupovanieElementov}. 
 
@@ -332,6 +357,9 @@ skupina.attr({
 \label{fig:grupovanieElementov}
 \end{figure}
 
+\section{Maskovanie - Paper.mask()}
+Ekvivalentné správanie ako Paper.g až na to, že to je maska. 
+Vráti objekt mask element. 
 
 
 \section{Gradient} 
@@ -617,17 +645,17 @@ Animovanie transformácie atribútu elementu využíva transformačný string.  
 
 \section{Ďalšie metódy v knižnici Snap.svg}
 
-\subsection{Snap.load(url, callback, [scope])}
+\subsection*{Snap.load(url, callback, [scope])}
 Načíta externý .svg súbor ako fragment. 
 
 
-\subsection{Element.append(...), Element.add(...), }
+\subsection*{Element.append(...), Element.add(...), }
 Slúži na pridanie, zobrazenie elementu na danom plátne. 
 
-\subsection{Snap.select(...)}
+\subsection*{Snap.select(...)}
 Slúži na wrapovanie DOM elementu špecifikovaný CSS selektorom.  
 
-\subsection{Element.getBBox()}
+\subsection*{Element.getBBox()}
 Vráti bounding box opisovač pre daný element. Bounding box vyjadruje hranice elementu cez obdĺžnik. 
 
 Vráti objekt s nasledujúcimi atribútmi: 
@@ -642,8 +670,8 @@ Vráti objekt s nasledujúcimi atribútmi:
 	\item w, width - šírka elemetnu 
 	\item x2 - x súradnica pravej strany, 
 	\item x - x súradnica ľavej strany, 
-	\item y2 - y súradnica spodného hrany, 
-	\item y - y horného hrany. 
+	\item y2 - y súradnica spodnej hrany, 
+	\item y - y hornej hrany. 
 \end{itemize}
 
 %\begin{figure}[H]

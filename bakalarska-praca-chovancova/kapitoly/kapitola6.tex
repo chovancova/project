@@ -44,7 +44,7 @@ príklad JSON dát: (môžeš uviesť dáta z puding stati on)
 \section{Data binding pre system D2000}
 Priama väzba v prípade jednoduchých schém. Jednoduchá schéma predstavuje vizualizáciu meraného alebo počítaného bodu v systéme D2000. Takáto vizualizácia je realizovaná pomocou widgetu jedna sa o mapovanie 1:1.
 %(môžeš uviesť príklad ako teplomer alebo ručičkový merač, obrázky) 
-Zložitejšie schémy pozostávajúce z vizualizácie výrobného procesu alebo komplexnej technológie sú mapované vo vzťahu n:1, teda jedna schéma vizualizuje dáta z n meraných alebo počítaných bodov, pripadne získava dáta cez asynchrónne volania RPC (remote procedure call) systému D2000.
+Zložitejšie schémy pozostávajúce z vizualizácie výrobného procesu alebo komplexnej technológie sú mapované vo vzťahu n:1. Jedna schéma vizualizuje dáta z n meraných alebo počítaných bodov, pripadne získava dáta cez asynchrónne volania \ac{RPC} systému D2000.
 
 Ak to vyžaduje logika aplikácie, server implementuje dátový zdroj (service), ktorý agreguje dáta a systémové udalosti. Pre dosiahnutie real-time odozvy web rozhrania výhodne použiť obojstrannú komunikáciu medzi web browserom a serverom - technológiu web sockets.
 

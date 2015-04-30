@@ -2,19 +2,21 @@
 % !TeX spellcheck = sk_SK
 % !TeX encoding = UTF-8
 \chapter{Analýza požiadaviek}
-Kapitola popisuje základné pojmy, a výber z dostupných nástrojov a knižníc. 
+Kapitola popisuje základné pojmy, výber z dostupných nástrojov a knižníc. 
 
-\section{Systémy \acs{SCADA} / HMI}
+\section{Systémy \acs{SCADA} }
 
-Vizualizačné systémy sú systémy realizajúce vizualizáciu procesov. Supervisory Control and Data Acquisition / Human Machine Interface - je Supervízorové riadenie a zber údajov / Rozhranie človek stroj. 
-Prenáša informáciu od stroja k ľuďom, čo umožňuje riadenie, monitorovanie a zaznamenávanie systému cez interfejs ako obrázok, klávesnicu, ethernet, touchscree, softvér atď. 
+Vizualizačné systémy sú systémy realizajúce vizualizáciu procesov. Supervisory Control and Data Acquisition - je Supervízorové riadenie a zber údajov. 
+%Todo prerobit 
+TODO Prenáša informáciu od stroja k ľuďom, čo umožňuje riadenie, monitorovanie a zaznamenávanie systému cez interfejs ako obrázok, ethernet, softvér atď. 
+%TODO PRIDAT ZDROJ
 
 
 \section{\acs{HTML}5 štandard}
 
 \ac{W3C} vydalo štandard \acs{HTML}5 dňa 28. októbra 2014. 
 HTML5 je podporovaný vo všetkých moderných webových prehliadačoch. 
-Na obrázku \ref{fig:obrazokHTML} je HTML5 \acs{API} a súvisiace taxonómia technológií a ich status. 
+Na obrázku \ref{fig:obrazokHTML} \cite{sergey} je HTML5 \acs{API} a súvisiace taxonómia technológií a ich status. 
 
 \begin{center}
 	\begin{figure}[H]
@@ -33,20 +35,20 @@ HTML5 Graphics definuje dva spôsoby vykreslenia využívajúc:
 
 
 \section{Čo je SVG?}
-\ac{SVG} je štandardný formát pre vektorovú grafiku. Vektorová grafika je definovaná cez body, priamky, mnohouholníky, elipsy, krivky, alebo iné geometrické tvary.  
+\ac{SVG} je štandardný formát pre vektorovú grafiku. Vektorová grafika je definovaná cez body, priamky, mnohouholníky, elipsy, krivky alebo iné geometrické tvary.  
 
 \acs{SVG} je jazyk na opísanie dvojrozmernej grafiky v   \ac*{XML}. Vďaka tomu, umožňuje reprezentáciu grafických informácii v kompaktnom a prenositeľnom tvare.
 
  SVG povoľuje tieto tri typy grafických objektov: vektorové grafické tvary, obrázky a text. 
-Grafické objekty môžu byť zoskupené, štylizované, zmenené, a kombinované do predošlých vrstiev objektov. 
+Grafické objekty môžu byť zoskupené, štylizované, zmenené a kombinované do predošlých vrstiev objektov. 
 
 SVG obrázky môžu byť dynamické a interaktívne.
 
-Prispôsobiteľnosť SVG umožňuje zmeniť veľkosť grafického komponentu bez straty kvality vzhľadu. Čo umožňuje zobraziť responzívne na viacerých možných zariadení. 
+Prispôsobiteľnosť SVG umožňuje zmeniť veľkosť grafického komponentu bez straty kvality vzhľadu, čo umožňuje zobraziť responzívne na viacerých možných zariadení. 
 SVG sa bude zobrazovať rovnako na rôznych platformách. Je kompatibilná s štandardmi \acs{HTML}5, ktoré navrhla \ac*{W3C}. 
 
 
- \subsection{Podpora v webovom prehliadači}
+ \subsection{Podpora vo webovom prehliadači}
  Súčasné prehliadače plne podporujú $<$svg$>$ elementy.  
   Čísla v tabuľke \ref{svgpreh} špecifikujú prvé verzie webových prehliadačov, ktoré sú schopné zobraziť $<$svg$>$ element.\cite{w3svg}
   
@@ -78,9 +80,13 @@ SVG patrí do vektorovej grafiky a Canvas zase do raster bitmap grafiky.
  SVG je jazyk na opísanie dvojrozmernej grafiky v XML.  Canvas kreslí dvojrozmernú grafiku za behu programu cez JavaScript.  SVG je XML založený, čo znamená, že každý element je dostupný cez SVG DOM.   JavaScript umožňuje ovládanie udalostí elementov. V SVG je každý tvar zapamätaný ako objekt.  V prípade zmeny $<$svg$>$ elementu sa automaticky prekreslí.  
  
  
- Canvas je prekresľovaný pixel za pixelom. Bitmapová grafika je zložitejšia pre dynamické prekresľovanie, a má menšie pamäťové nároky a je rýchlejšie. 
+ Canvas je prekresľovaný pixel za pixelom. Bitmapová grafika je zložitejšia pre dynamické prekresľovanie a má menšie pamäťové nároky a je rýchlejšia. 
 
-Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektoré potĺáčajú 300 \ac{PPI} s tým, že sa spoliehajú na obmedzenosť ľudských očí rozoznávať jemné detaily. Pixel nemá v reálnom živote equivalent vo veľkosti až pokým je na obrazovke s fixovaným rozmerom a rozlíšením. Text s veľkosťou 16 pixelov bude veľmi malý pre oko. Pre tento dôvod zariadenia jednoducho nezobrazujú 1 CSS pixelovú jednotku na 1 pixel zariadenia. Namiesto toho zdvoja svoju veľkosť.  
+%prestylizovatň
+Moderné zariadenia, ako napríklad smartfóny, majú veľmi vysokú hustotu pixelov. 
+
+
+Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektoré potláčajú 300 \ac{PPI} s tým, že sa spoliehajú na obmedzenosť ľudských očí rozoznávať jemné detaily. Pixel nemá v reálnom živote equivalent vo veľkosti, až pokým je na obrazovke s fixovaným rozmerom a rozlíšením. Text s veľkosťou 16 pixelov bude veľmi malý pre oko. Pre tento dôvod zariadenia jednoducho nezobrazujú 1 CSS pixelovú jednotku na 1 pixel zariadenia. Namiesto toho zdvoja svoju veľkosť. \cite{zdrojCSS}
 %http://www.smashingmagazine.com/2012/01/16/resolution-independence-with-svg/
 
 %SVG and relative sizes, we have solved the three big issues highlighted above. A scalable graphic can be rasterized on demand to perfectly suit any device resolution and any zoom level. By using relative sizes, we can continue implementing a responsive design, minimizing as much as possible the need for the user to zoom. We’re also respecting the browser’s default font size, and enabling our design to adapt accordingly.
@@ -91,11 +97,12 @@ Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektor
 
  \begin{table}[H]
  \centering
- \begin{tabular}{|l|p{7.5cm} |}
+ \begin{tabular}{|p{7.4cm}|p{7.4cm} |}
  	\hline \textbf{Canvas} & \textbf{SVG} \\
  	 	\hline Závislé na rozlíšení a \acs{DPI} & Nezávislé na rozlíšení a DPI \\ 
  	\hline Nepodporuje dynamické zmeny & Podporuje dynamické zmeny \\ 
- 	\hline Obmedzené možnosti na vykresľovanie  & Vhodné pre aplikácie s veľkými plochami na vykresľovanie \\ 
+ 	\hline Obmedzené možnosti na vykresľovanie - pri zväčšovaní obrázka  & Vhodné pre aplikácie s veľkými plochami na vykresľovanie \\ 
+   \hline Bitmap raster, po vykreslení nemáme objektovú reprezentáciu obrázku & Vektorový objektový model zostáva\\  
  	\hline & Väčší výpočtový výkon pri komplexnom obrázku \\ 
  	\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
  	\hline 
@@ -258,6 +265,7 @@ Voľne dostupné online SVG editory:
 	\item ScriptDraw - online SVG editor vyvinutý pomocou modernej technológie Adobe Flex.
 	
 	\item svg-edit - Rýchly, webový SVG editor založený na JavaScriptovej technológii, ktorá funguje v akékoľvek modernom webovom prehliadavači. 
+    \item animatron - online editor, umožnuje vytvoriť HTML5 animácie, a následne vyexportovať do SVG SMIL animácie, dostupný na: \url{https://www.animatron.com/}
 	
 \end{itemize}
 
@@ -289,11 +297,16 @@ Je vhodná na vytváranie interaktívnych SVG grafov s hladkými prechodmi a int
 D3 rieši efektívnu manipuláciu dokumentov zakladajúcich si na dátach. Využíva webové štandardy ako \acs{HTML}, \acs{SVG} a \acs{CSS}3. \cite{d3js}
 
 
-\subsection{SVG.JS}
+\subsection{Veloncity.js}
+Velocity is an animation engine with the same API as jQuery's %$.animate(). It works with and without jQuery. It's incredibly fast, and it features color animation, transforms, loops, easings, SVG support, and scrolling. It is the best of jQuery and CSS transitions combined 
+
+
+
+\subsection{SVG.js}
 
 SVG.JS je ďalšia knižnica umožňujúca manipulovať a animovať SVG.
 
-Medzi hlavné výhody knižnice patrí to, že je má ľahko čitateľnú syntax. Umožňuje animovanie veľkosti, pozície, transformácie, farby. Má modulárnu štruktúru, čo umožňuje používanie rôznych rozšírení. Existuje množstvo užitočných pluginou dostupných na internete. \cite{svgjs}
+Medzi hlavné výhody knižnice patrí to, že má ľahko čitateľnú syntax. Umožňuje animovanie veľkosti, pozície, transformácie, farby. Má modulárnu štruktúru, čo umožňuje používanie rôznych rozšírení. Existuje množstvo užitočných pluginov dostupných na internete. \cite{svgjs}
 
 %TODO NAPISAT NIECO PRECO SOM HO VYLUCILA
 
@@ -302,7 +315,7 @@ Medzi hlavné výhody knižnice patrí to, že je má ľahko čitateľnú syntax
 
 Raphaël je malá JavaScriptová knižnica, ktorá umožňuje jednoducho pracovať s vektorovou grafikou na webe. Umožňuje pomocou jednoduchých príkazov vytvárať špecifické grafy, obrázky. 
 
-Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva, to že každý vytvorený grafický objekt je zároveň aj DOM objekt. To umožňuje cez JavaScriptové pridávať manipuláciu udalostí, alebo upravovať ich neskôr.
+Raphaël využíva \acs{SVG} \acs{W3C} odporúčania a \acs{VML} na tvorbu grafických komponentov. Z toho vyplýva to, že každý vytvorený grafický objekt je zároveň aj DOM objekt. To umožňuje cez JavaScript pridávať manipuláciu udalostí alebo ich upravovať neskôr.
 Momentálne podporuje Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+.\cite{Raphael}
 Autor knižnice je Dmitry Baranovskiy. Raphael API má široké spektrum používateľov. 
 Knižnica neumožňuje load SVG do dokumentu zo súboru. 
@@ -311,7 +324,7 @@ Knižnica neumožňuje load SVG do dokumentu zo súboru.
 
 \subsection{Snap.svg.js}
 
-Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktoré umožňuje animáciu a manipulovanie s buď existujúcim SVG, alebo programátorsky vytvorene cez Snap API. 
+Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktoré umožňuje animáciu a manipulovanie s buď existujúcim SVG alebo programátorsky vytvorene cez Snap API. 
 
 %TODO - NASTUPCA RAPHAELA
 %TODO - PRAGRAMTIC SVG CREATING 
@@ -319,9 +332,9 @@ Snap.svg.js je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových
 %  http://www.ciiycode.com/0z6HNUjXPgQx/programmatically-creating-an-svg-image-element-with-javascript
 %
 
-Tvorca Snap knižnice je rovnaký ako pri Raphael knižnici.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox, and Opera). Z toho vyplýva, že umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín. 
+Tvorca Snap knižnice je rovnaký ako pri Raphael knižnici.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox a Opera). Z toho vyplýva, že umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín. 
 
-Snap API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snap API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať, alebo inak manipulovať cez Snap API.
+Snap API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snap API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať alebo inak manipulovať cez Snap API.
 Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderované. 
 
 %Another unique feature of Snap is its ability to work with existing SVG. That means your SVG content does not have to be generated with Snap for you to be able to use Snap to work with it (think “jQuery or Zepto for SVG”). That means you create SVG content in tools like Illustrator, Inkscape, or Sketch then animate or otherwise manipulate it using Snap. You can even work with strings of SVG (for example, SVG files loaded via Ajax) without having to actually render it first which means you can do things like query specific shapes out of an SVG file, essentially turning it into a resource container or sprite sheet.
@@ -360,14 +373,14 @@ Knižnica Snap.svg podporuje animácie. Poskytuje jednoduché a intuitívne Java
 Animovanie cez SVG \acs{SMIL} poskytuje  časovo orientované animácie, ktoré sa spúšťajú v špecifickom intervale a dĺžky. Môžu byť  zobrazované opakovaných sekvenciách. 
 SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. 
 
-Použitím JavaScriptových knižníc zameraných na animovanie a manipulovanie s SVG súbormi odstránim problém s SVG SMIL animovaním. Umožnujú používať podmienky, stavy, a premenné. 
+Použitím JavaScriptových knižníc zameraných na animovanie a manipulovanie s SVG súbormi odstráni problém s SVG SMIL animovaním. Umožnujú používať podmienky, stavy a premenné.
+%podpora SMIL v 
 
 Každá zmena objektu v SCADA systéme sa vykreslí v animácii okamžite bez toho, aby webový prehliadač znovu načítal celú schému. 
 
-Grafické komponenty sa budú vytvárať v programe Inkscape. Následné budu použité v HTML dokumente. Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg.js. 
+Grafické komponenty sa budú vytvárať v programe Inkscape. Následne budú použité v HTML dokumente. Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg.js. 
 
 Zo spomínaných knižníc najviac vyhovuje práve Snap.svg.js pre splnenie cieľov práce.
 Ďalší dôvod, prečo som sa rozhodla pre túto  knižnicu bol, že dokáže načítavať SVG súbor a~následné s ním manipulovať.
 
 Spĺňa požiadavku kompatibility pre moderné webové prehliadače. Je to open-source knižnica a má licenciu Apache 2.
-
