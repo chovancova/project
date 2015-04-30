@@ -90,10 +90,16 @@ function zmenaVlastnosti(){
 
 
 
-function animovanieCesty(mesto){
+function animovanieCesty(mesto, cislo){
     var road =   paper.select(mesto);
     // zistnie dlzky cesty
-    var len = road.getTotalLength();
+   // var len = road.getTotalLength();
+
+    var dlzka = road.getTotalLength();
+    var len= (dlzka*(cislo/100)) || dlzka;
+    console.log(cislo);
+
+
     //animovanie cesty
     road.attr({
         stroke: '#000',
@@ -120,3 +126,13 @@ function animovanieCesty(mesto){
     });
 
 }
+
+
+
+var min = 0;
+var max = 100;
+var getRandomCislo = function getRandomCislo() {
+    var temp = Math.random() * (max - min) + min;
+    // console.log("nahodne cislo je: " + temp);
+    return temp;
+};

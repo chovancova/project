@@ -15,7 +15,7 @@ var ConveyorBelt = function(id, subor) {
     Snap.load (subor, function (f) {
             paper.append(f);
   //zabezpecenie responzivneho dizajnu a vzhladu
-          paper.attr({ viewBox: "0 0 615 305 ", width: "100%", height: "100%" });
+          paper.attr({ viewBox: "0 0 615 170 ", width: "100%", height: "100%" });
 //oznacenie miest
 pas = "#cesta"
             motor1 = "#motor1";
