@@ -110,7 +110,7 @@ Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektor
 %SVG and relative sizes, we have solved the three big issues highlighted above. A scalable graphic can be rasterized on demand to perfectly suit any device resolution and any zoom level. By using relative sizes, we can continue implementing a responsive design, minimizing as much as possible the need for the user to zoom. We’re also respecting the browser’s default font size, and enabling our design to adapt accordingly.
 
 
- Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG.%cite 
+ Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG.\cite{microsoft}%cite 
 % The table below shows some important differences between Canvas and SVG:
 
  \begin{table}[H]
@@ -121,7 +121,9 @@ Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektor
         \hline 
     Založený na pixeloch &
 Založené na tvaroch \\ 
-   	\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
+   	%\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
+   \hline Vhodné pre komplexné scény, real-time matematické animácie & Vhodné pre statické obrázky.\\
+    
  	\hline Nepodporuje dynamické zmeny & Podporuje dynamické zmeny \\
 \hline
 Jednoduchý HTML element &
