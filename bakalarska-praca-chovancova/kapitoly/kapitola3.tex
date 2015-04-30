@@ -1,8 +1,5 @@
 \chapter{Postup vytvorenia komponentov}
 
-V dodatku A sú zobrazené UML diagramy, ktoré zobrazujú postup načítania, vytvorenia, ovládania grafických komponentov. 
-
-
 Spôsob vytvorenia grafických komponentov je nasledovný. Najprv používateľ vytvorí SVG súbor, následne ho načíta a vytvorí funkcie v JavaScripte na ovládanie atribútov SVG elementu. 
 Alternatívna možnosť je vytvoriť SVG elementy prostredníctvom JavaScriptovej knižnice a nenačítavať súbor. 
 
@@ -69,3 +66,36 @@ Postup ovládania SVG elementu:
 	
 \end{enumerate}
 %TODO - odkazat tuto na vsetky mozne attributy, ktore sa daju zmeniť.
+
+
+
+
+\section{UML diagramy}
+
+V nasledujúcej časti sú zobrazené UML diagramy, ktoré zobrazujú postup načítania, vytvorenia, ovládania grafických komponentov.
+
+	\subsection{Usecase diagram použitia SCADA systémov}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.50\linewidth]{uml/usecase.png}
+		\caption{Usecase diagram použitia SCADA systémov}
+		\label{fig:USECASE}
+	\end{figure}
+
+	\subsection{Postup načítania SVG súboru v HTML}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{uml/aktivityInicializacie}
+	\caption{Postup načítania SVG súboru v HTML dokumente}
+	\label{fig:aktivity1}
+\end{figure}
+
+\subsection{Postup zistenia id elementu}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{uml/aktivity2.png}
+	\caption{Postup zistenia id elementu a jeho aktualizovanie}
+	\label{fig:ovladanie}
+\end{figure}
+

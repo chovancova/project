@@ -88,14 +88,12 @@ Atribúty v tagu sú prispôsobené na to, aby sa grafický element vykreslil re
 
 Do HTML dokumentu sa pridajú jednotlivé JavaScriptové knižnice s ktoré bude daný grafický komponent používať. 
 \begin{lstlisting}[language = HTML]
-<script type="text/javascript" src="../js/snap.svg-min.js">
-</script>
-<script type="text/javascript" src="PumpingStation.js">
-</script>
+<script src="../js/snap.svg-min.js"></script>
+<script src="PumpingStation.js"></script>
 \end{lstlisting}
 
 Musíme sa uistiť, aby sa načítali všetky JavaScriptové knižnice, pred spustením funkcií. To zabezpečíme pridaním  onload do tagu $<$body$>$. 
-\begin{lstlisting}
+\begin{lstlisting}[language = HTML]
 	<body onload="onPageLoad();">
 \end{lstlisting}
 
@@ -129,7 +127,7 @@ function onPageLoad() {
 Parametre pre PumpingStation sú názov svg súboru, a id, ktoré sa nachádza v tagu $<$svg$>$ html súbore.
 
 Vo vnútri PumpingStation sa nachádza inicializácia globálnych atribútov. 
-\begin{lstlisting}
+\begin{lstlisting}[language = HTML]
 var paper;
 var idValve, idValve1 idNadrz, idHladina, idEngineMotor;
 
@@ -165,7 +163,7 @@ Načítaný .svg súbor sa zobrazí volaním metódy append.
 \subsection{animateTank(percento)}
 V tejto metóde je zobrazená vizualizácia prítoku hladiny do nádrže. Ako parameter slúži percento vyplnenia. 
 
-\begin{lstlisting}
+\begin{lstlisting}[language = HTML]
 function animateTank(percento){
 	var height = paper.select(idNadrz).getBBox().height;
 	var y = paper.select(idNadrz).getBBox().y;
