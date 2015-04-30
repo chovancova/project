@@ -110,7 +110,7 @@ Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektor
 %SVG and relative sizes, we have solved the three big issues highlighted above. A scalable graphic can be rasterized on demand to perfectly suit any device resolution and any zoom level. By using relative sizes, we can continue implementing a responsive design, minimizing as much as possible the need for the user to zoom. We’re also respecting the browser’s default font size, and enabling our design to adapt accordingly.
 
 
- Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG. 
+ Tabuľka \ref{canvas:SVG} zobrazuje niekoľko dôležitých odlišností medzi Canvas a SVG.%cite 
 % The table below shows some important differences between Canvas and SVG:
 
  \begin{table}[H]
@@ -118,12 +118,23 @@ Zariadenia ako moderné smartfóny majú veľmi vysokú hustotu pixelov. Niektor
  \begin{tabular}{|p{7.4cm}|p{7.4cm} |}
  	\hline \textbf{Canvas} & \textbf{SVG} \\
  	 	\hline Závislé na rozlíšení a \acs{DPI} & Nezávislé na rozlíšení a DPI \\ 
- 	\hline Nepodporuje dynamické zmeny & Podporuje dynamické zmeny \\ 
- 	\hline Obmedzené možnosti na vykresľovanie - pri zväčšovaní obrázka sa zhoršuje kvalita & Vhodné pre aplikácie s veľkými plochami na vykresľovanie\\ 
-   \hline Bitmap raster, po vykreslení nemáme objektovú reprezentáciu obrázku & Vektorový objektový model zostáva\\  
- 	\hline & Väčší výpočtový výkon pri komplexnom obrázku \\ 
- 	\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
- 	\hline 
+        \hline 
+    Založený na pixeloch &
+Založené na tvaroch \\ 
+   	\hline Vhodné pre grafické-intenzívne hry & Nevhodné pre dynamické hry \\ 
+ 	\hline Nepodporuje dynamické zmeny & Podporuje dynamické zmeny \\
+\hline
+Jednoduchý HTML element &
+Zložený z grafických elementov, ktoré sa stanú časťou DOM \\
+\hline
+Modifikovateľný len cez script & Modifikovateľné cez script a CSS
+\\
+\hline
+
+Výkonnosť je lepšia s menšou plochou, a väčším množstvom objektov ($>$10k)
+& 
+Výkonnosť je lepšia s menším množstvom objektov ($<$10k) a vačšou plochou\\
+\hline
  \end{tabular} 
 
  \caption{Porovnanie Canvas a SVG}
@@ -391,10 +402,11 @@ Má licenciu  Apache 2, tkré
 \section{Zhodnotenie požiadaviek}
 
 Animovanie cez SVG \acs{SMIL} poskytuje  časovo orientované animácie, ktoré sa spúšťajú v špecifickom intervale a dĺžky. Môžu byť  zobrazované opakovaných sekvenciách. 
-SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. 
+SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. Ďalšia nevýhoda SVG SMIL je, že Internet Expolorer ju nepodporuje. %http://caniuse.com/#feat=svg-smil
 
 Použitím JavaScriptových knižníc zameraných na animovanie a manipulovanie s SVG súbormi odstráni problém s SVG SMIL animovaním. Umožnujú používať podmienky, stavy a premenné.
 %podpora SMIL v 
+
 
 Každá zmena objektu v SCADA systéme sa vykreslí v animácii okamžite bez toho, aby webový prehliadač znovu načítal celú schému. 
 

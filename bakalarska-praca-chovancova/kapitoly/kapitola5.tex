@@ -2,7 +2,7 @@
 % !TeX root = ../main.tex
 \chapter{Integrácia grafického komponentu}
 
-V tejto kapitole bližšie popíšem implementáciu prečerpávacej stanice. 
+%V tejto kapitole bližšie popíšem implementáciu prečerpávacej stanice. 
 
 \section{Vytvorenie prečerpávacej stanice v Inkscape}
 
@@ -11,7 +11,7 @@ Nakreslenie jednotlivých častí komponentov prečerpávacej stanice v Inkscape
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.8\linewidth] {obrazky/pump1.jpg}
+		\includegraphics[width=0.\linewidth] {obrazky/pump1.jpg}
 		\caption{Grafické prostredie programu Inkscape s nakreslenou prečerpávacou stanicou}
 		\label{picture1}
 	\end{center}
@@ -73,17 +73,17 @@ Do HTML súboru index.html pridáme párový tag $<$svg$>$.  Na toto miesto sa n
 <svg 
 	id="svgStanica" 
 	viewBox="0 0 750 600" 
-	width="40%" 
-	height="40%"> 
+	width="100%" 
+	height="100%"> 
 </svg>
 \end{lstlisting}
 
 \subsection{Vysvetlenie kódu}
 Atribúty v tagu sú prispôsobené na to, aby sa grafický element vykreslil responzívne na obrazovku.
 \begin{itemize}
-\item  \textbf{id} - jedinečný identifikátor, cez ktorý meníme vlastnosti.
+\item  \textbf{id} - jedinečný identifikátor. 
 \item 	\textbf{viewBox} - je virtuálne okno, ktorým sa užívateľ uvidí svg obrázok. Je atribút, ktorý povoľuje špecifikovať danú množinu grafických komponentov, aby sa zobrazili v daných súradniciach x, y a šírke, výške. Hodnoty atribútov v viewBox sú štyri čísla - min-x, min-y, width a height. 
-\item 	\textbf{width} a \textbf{height} je šírka a výška. Hodnoty atribútov je možné uviesť relatívne v percentách, alebo absolútne v pixloch. 
+\item 	\textbf{width} a \textbf{height} je šírka a výška. Hodnoty atribútov je možné uviesť relatívne v percentách alebo absolútne v pixloch. 
 \end{itemize}
 
 Do HTML dokumentu sa pridajú jednotlivé JavaScriptové knižnice s ktoré bude daný grafický komponent používať. 
@@ -146,7 +146,7 @@ function PumpingStation(nazovFileSVG, idDOMsvgElement) {
 
 Atribút paper je globálna premenná cez ktorú sa bude pristupovať k metódam JavaScriptovej knižnice Snap.svg. Jej parameter je referencia na plochu, kde bude vykreslené SVG elementy.
 
-Vo vnútri funkcie volám z Snap.svg API funkciu load(). Má parametre názov súboru, a funkciu, ktorú spustí následne po načítaní. 
+Vo vnútri funkcie sa volá z Snap.svg API funkcia load(). Má parametre názov súboru, a funkciu, ktorú spustí následne po načítaní. 
 Vo vnútri funkcie load() sa inicializujú globálne premenné.  
 Premenné obsahujú CSS selektor id získaný z programu Inkscape. Premenné budú slúžiť ako parameter pri volaní funkcie paper.select(). Pre prípadné zmeny v id, sa dané id zmení na jednom mieste a nemusí sa prepisovať všade. 
 

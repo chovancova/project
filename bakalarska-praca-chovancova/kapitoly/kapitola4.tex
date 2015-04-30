@@ -18,13 +18,13 @@
 Animovanie vektorov je jednoduchšie cez knižnicu Snap.svg ako cez SVG SMIL. 
 
 V nasledujúcom príklade je vykreslený a animovaný obdĺžnik cez SVG SMIL. Animácia spočíva v zmene šírky obdĺžnika z 50 na 100 pixlov. SMIL:
-\begin{lstlisting}
+\begin{lstlisting}[language = html]
 <svg><rect x="10" y="10" width="50" height="30">
 	<animate attributeName="width" 
     to="100" fill="freeze"  dur="10s"/>  </rect></svg>
 \end{lstlisting}
 
-Nakreslíme obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená znova na 50 px. \cite[p.~9]{Dawber}
+Nakreslí sa obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená znova na 50 px. \cite[p.~9]{Dawber}
 
 Ekvivalent k animácii cez Snap.svg API v nasledujúcom príklade:
 
@@ -273,7 +273,7 @@ Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30
 
 
 \section{Vykreslenie obrázku}
-Snap povoľuje vloženie bitmapových obrázkov (.jpg alebo .png) na plátno. Používa metódu image z Paper objektu. Parametre metódy image sú: zdroj, x, y, šírka, výška. Príklad kódu, ktorý vkladá .jpg obrázok do plátna:
+Snap.svg API povoľuje vloženie bitmapových obrázkov (.jpg alebo .png) na plátno. Používa na to metódu image z Paper objektu. Parametre metódy image sú: zdroj, x, y, šírka, výška. Príklad kódu, ktorý vkladá .jpg obrázok do plátna:
 \begin{lstlisting}
 var paper = Snap("mojePlatno", 300, 200);
 paper.image("obrazok.jpg", 15, 15, 100, 150);
@@ -329,7 +329,7 @@ Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad 
 
 \section{Zoskupovanie elementov - Paper.group()}
 
-Niekedy je potrebné použiť rovnaké atribúty, transformácie, alebo animácie pre viacero elementov. V Snap API je možné využiť metódu Paper.group alebo Paper.g. Group zoskupí viacero elementov do množiny. Príkazom add sa dajú pridať ďalšie prvky. V množine sa dajú meniť atribúty pre viacero prvkov naraz volaním metódy attr. 
+Niekedy je potrebné použiť rovnaké atribúty, transformácie, alebo animácie pre viacero elementov. V Snap.svg API je možné využiť metódu Paper.group alebo Paper.g. Group zoskupí viacero elementov do množiny. Príkazom add sa dajú pridať ďalšie prvky. V množine sa dajú meniť atribúty pre viacero prvkov naraz volaním metódy attr. 
 
 Príklad zoskupenia elementov. Výsledné zoskupenie je zobrazené na obrázku \ref{fig:grupovanieElementov}. 
 
@@ -357,14 +357,14 @@ skupina.attr({
 \label{fig:grupovanieElementov}
 \end{figure}
 
-\section{Maskovanie - Paper.mask()}
+\subsection{Maskovanie - Paper.mask()}
 Ekvivalentné správanie ako Paper.g až na to, že to je maska. 
 Vráti objekt mask element. 
 
 
 \section{Gradient} 
 
-Snap.svg podporuje aplikovanie gradientov cez atribút fill s parametrom stringu gradientu. Cez metódu Paper.gradient(gradient) sa vytvorí gradientový element, ktorý sa dá nasledovne použiť ako hodnota pre atribút fill pre metódy Element.animate(), resp. Element.attr(). 
+Snap.svg  podporuje aplikovanie gradientov cez atribút fill s parametrom stringu gradientu. Cez metódu Paper.gradient(gradient) sa vytvorí gradientový element, ktorý sa dá nasledovne použiť ako hodnota pre atribút fill pre metódy Element.animate(), resp. Element.attr(). 
 Gradientový string vyrezá nasledovne: $<$typ$>$($<$suradnice$>$)$<$farby$>$ .
 \begin{itemize}
 \item Typ môže byť buď lineárny alebo radiálny. Veľkosť písma určuje či ide o absolútne, alebo relatívne súradnice.
@@ -491,18 +491,12 @@ Vykreslenie textu na plátne namiesto HTML markup s CSS štýlovaným umožňuje
 \end{table}
 
 Príklad zmeny farby: 
-\begin{lstlisting}
+\begin{lstlisting}[language = html]
 var paper = Snap();
 var text = paper.text(30, 100, "Namestovo");
 
 text.attr({
-	textAnchor: "middle",
-	fill: "#00b", 
-	fontSize: '16px', 
-	fontFamily: "Veranda", 
-	fontStyle: "italic", 
-	fontVariant: "small-caps", 
-	fontWeight: 800, 
+	textAnchor: "middle", 	fill: "#00b", 	fontSize: '16px', 	fontFamily: "Veranda", 	fontStyle: "italic", 	fontVariant: "small-caps", 	fontWeight: 800, 
 });
 \end{lstlisting}
 
@@ -651,6 +645,17 @@ Načíta externý .svg súbor ako fragment.
 
 \subsection*{Element.append(...), Element.add(...), }
 Slúži na pridanie, zobrazenie elementu na danom plátne. 
+
+\subsection*{Element.stop()}
+Zastaví všetky animácie pre súčastný element. Vracia súčastný element. 
+
+\subsection*{Element.remove()}
+Odstráni element z DOM. 
+
+\subsection*{Element.removeData([key])}
+Odstráni hodnotu asociovanú s elementom s daným kľúčom. Ak kľúč nie je zadaný, odstráni všetky dáta z elementu. 
+
+
 
 \subsection*{Snap.select(...)}
 Slúži na wrapovanie DOM elementu špecifikovaný CSS selektorom.  

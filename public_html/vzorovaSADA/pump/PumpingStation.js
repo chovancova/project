@@ -19,7 +19,7 @@ function PumpingStation(nazovFileSVG, idDOMsvgElement) {
 function animateTank(percento){
     var height = paper.select(idNadrz).getBBox().height;
     var y = paper.select(idNadrz).getBBox().y;
-    var newHeight = height * (percento/100) ;
+    var newHeight = height * (percento/100);
     var newY = y + height - newHeight;
     paper.select(idHladina).animate({
         y: newY,

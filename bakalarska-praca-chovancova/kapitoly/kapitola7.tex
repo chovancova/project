@@ -1,32 +1,39 @@
 \chapter{Analýza výkonnosti a obmedzení }
-Pre meranie výkonnosti vizualizácie grafických komponentov v reálnom čase zadefinujem v nasledujúce kritéria
-\begin{itemize}
-	\item počet komponentov, 
-	\item čas načítania stránky, 
-	\item čas vykonania zmeny atribútov v komponentoch.
-\end{itemize}
 
-Testy boli vykonané vo webovom prehliadači Chrome verzia 45 a Firefox verzia 40.  
+SVG. vs Canvas 
+Počet objektov SVG 
 
-V teste boli použité nasledujúce navrhnuté komponenty:
-\begin{itemize}
-	\item teplomer, 
-	\item prečerpávacia stanica, 
-	\item trojcestný ventil, 
-	\item mapa Slovenska, 
-	\item prepravný pás. 
-\end{itemize}
+Zložitosť SVG - výpočtový výkon
 
-Objekty boli v rovnakom zastúpení v jednom HTML súbore  v počtoch: 1,5,10,25, 50, 100.
-Ukážka testovacej situácie je na obrázku TODO SCREEN. 
-A výsledky sú uvedené v tabuľke TODO TABULKA. 
+\url{https://msdn.microsoft.com/library/gg193983(v=vs.85).aspx}
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{obrazky/porovnanie}
+\caption{Porovnanie výkonnosti Canvas vs. SVG}
+\label{fig:podpora}
+\end{figure}
+
+Generally, as the size of the screen increases, canvas begins to degrade as more pixels need to be drawn. As the number of objects increases on the screen, SVG begins to degrade as we are continually adding them to the DOM. These measurements are not necessarily accurate and can certainly change depending upon implementation and platform, whether fully hardware accelerated graphics are being used, and the speed of the JavaScript engine.
 
 
-\newpage
-Alebo vytvorim test -
-\url{http://jsperf.com/}
-- kde porovnam SVG smil animaciu s snap.svg.js
-ktore je v kapitole 4 - strana vtedy bola 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Pre meranie výkonnosti vizualizácie grafických komponentov v reálnom čase zadefinujem v nasledujúce kritéria \begin{itemize}	\item počet komponentov, 	\item čas načítania stránky, 	\item čas vykonania zmeny atribútov v komponentoch.\end{itemize}Testy boli vykonané vo webovom prehliadači Chrome verzia 45 a Firefox verzia 40.  V teste boli použité nasledujúce navrhnuté komponenty:\begin{itemize}	\item teplomer, 	\item prečerpávacia stanica, 	\item trojcestný ventil, 	\item mapa Slovenska, 	\item prepravný pás. \end{itemize}Objekty boli v rovnakom zastúpení v jednom HTML súbore  v počtoch: 1,5,10,25, 50, 100.Ukážka testovacej situácie je na obrázku TODO SCREEN. A výsledky sú uvedené v tabuľke TODO TABULKA. \newpage Alebo vytvorim test -\url{http://jsperf.com/}- kde porovnam SVG smil animaciu s snap.svg.jsktore je v kapitole 4 - strana vtedy bola 20
 
 %
 %\url{http://www.sitepoint.com/advanced-snap-svg/}
