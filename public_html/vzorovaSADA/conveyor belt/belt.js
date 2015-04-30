@@ -80,23 +80,18 @@ function rotateLeft(element) {
 
 
 
-
 function animovanieNaPase(cislo){
 
     var road =   paper.select(pas);
-
-    var len= (road.getTotalLength()*(cislo/100));
-    console.log(road.getTotalLength());
+var dlzka = road.getTotalLength();
+    var len= (dlzka*(cislo/100)) || dlzka;
+      console.log(dlzka);
 console.log(len);
 
    // var len = road.getTotalLength();
  var cas = 800;
     // nakreslenie kruhu, co pojde popri ceste
-    var vyrobok = paper.circle(32,32,10).attr({
-        fill: "#3f4445",
-        stroke: "#000",
-        strokeWidth: 2
-    });
+
 
     //animovanie cesty
     road.attr({
@@ -109,14 +104,20 @@ console.log(len);
     }).animate({"stroke-dashoffset": 10}, cas,mina.linear());
 
 
+
+    var vyrobok = paper.circle(25,25,10).attr({
+        fill: "#3f4445",
+        stroke: "#000",
+        strokeWidth: 2
+    });
+
 //animacia kruhu popri ceste
     //setTimeout() - executes a function, once, after waiting a specified number of milliseconds
     setTimeout( function() {
-        Snap.animate(0, len, function( value ) {
-            movePoint = road.getPointAtLength( value );
-            vyrobok.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
-        },500
-            ,
+        Snap.animate(0, len, function(f) {
+            movePoint = road.getPointAtLength(f);
+            vyrobok.attr({ cx: movePoint.x, cy: movePoint.y});
+        },500            ,
             mina.linear
             );
     });
