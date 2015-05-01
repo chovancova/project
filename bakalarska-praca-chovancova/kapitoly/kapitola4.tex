@@ -1,27 +1,14 @@
-% !TeX encoding = UTF-8
-% !TeX spellcheck = sk_SK
-% !TeX root = ../main.tex
-%\chapter{Knižnica Snap.svg.js}
-
-
-
-
-
 \chapter{Využitie knižnice Snap.svg}
-%V práci cituj: \cite{Dawber} , strany sa cituju takto: \cite[p.~215]{Dawber} \\ Priklady z knihy:\url{http://raphaeljsvectorgraphics.com/}  \cite{Dawber} .
-%Z tejto knihy idem pridávať do bakalárky nasledovné veci:
-%Namet na zmenu: pouzit to demo, ktore mi poslal veduci na transformaciu zmeny. 
+Táto kapitola je o spôsoboch realizácie vizualizácie grafických komponentov cez JavaScriptovú knižnicu Snap.svg. 
 
-
-%\section{Porovnanie spôsobu vizualizácie cez \acs{SVG} \acs{SMIL} a  Snap.svg}
-
-Animovanie vektorov je jednoduchšie cez knižnicu Snap.svg ako cez SVG SMIL. 
-
-V nasledujúcom príklade je vykreslený a animovaný obdĺžnik cez SVG SMIL. Animácia spočíva v zmene šírky obdĺžnika z 50 na 100 pixlov. SMIL:
+\section{Porovnanie Snap.svg API a SVG SMIL}
+Animovanie vektorov je jednoduchšie cez knižnicu Snap.svg ako cez SVG SMIL.  V nasledujúcom príklade je vykreslený a animovaný obdĺžnik cez SVG SMIL. Animácia spočíva v zmene šírky obdĺžnika z 50 na 100 pixlov.
 \begin{lstlisting}[language = html]
-<svg><rect x="10" y="10" width="50" height="30">
-	<animate attributeName="width" 
-    to="100" fill="freeze"  dur="10s"/>  </rect></svg>
+<svg>
+	<rect x="10" y="10" width="50" height="30">
+		<animate attributeName="width"  to="100" fill="freeze"  
+		dur="10s"</rect>
+</svg>
 \end{lstlisting}
 
 Nakreslí sa obdĺžnik na súradniciach (10, 10) s šírkou 50, a výškou 30 použitím elementu $<$rect$>$. Zoskupený element $<$animate$>$ definuje animáciu zmeny šírky obdĺžnika na šírku 100 px, ktorá trvá desať sekúnd. Kde fill="freeze" je použité na zachovanie stavu obdĺžnika po ukončení animácie. Inak by bola nastavená znova na 50 px. \cite[p.~9]{Dawber}
@@ -39,47 +26,27 @@ width: 100
 Syntax metód animate a rect je výstižnejšia a lepšia na pochopenie. Snap sa tiež dobre integruje s inými knižnicami. V práci som využívala iba Snap.svg knižnicu.  
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%Jednoduche kreslenie ,
-%Interakcia ,
-%Animovanie.. 
-%
-%Krok 0: ziskanie Snapu...
-
-
 \section{Inicializácia plátna na kreslenie - Snap()}
-%viewport = výrez
-Na to, aby sme boli schopní kresliť grafické komponenty, tak potrebujeme definovať miesto, kde budú vykreslené. 
-%Určenie miesta, kde bude vykreslené plátno je buď viditeľné okno vo webovom prehliadači, alebo viewport. 
-Viditeľná oblasť okna prehliadača alebo viewport, definuje oblasť, v ktorej sa vykreslí komponent na plátno.
-SVG špecifikácia referuje ako miesto vykreslenia seba ako viewport. 
-Inak povedané viewport je akákoľvek obdĺžniková oblasť.
-Okno prehliadača je referencia na viewport a kresliaca oblasť je plátno.   \cite{Dawber}
+Na to, aby sme boli schopní kresliť grafické komponenty, tak potrebujeme definovať miesto, kde budú vykreslené. Viditeľná oblasť okna prehliadača alebo viewport, definuje oblasť, v ktorej sa vykreslí komponent na plátno. SVG špecifikácia referuje ako miesto vykreslenia seba ako viewport. 
+Inak povedané viewport je akákoľvek obdĺžniková oblasť. Okno prehliadača je referencia na viewport a kresliaca oblasť je plátno.   \cite{Dawber}
 
-
-Vytvorenie plátna cez Snap konštruktor sa dá urobiť viacerými spôsobmi.
 
 \subsection{Súradnice plátna}
+Vytvorenie plátna cez Snap konštruktor sa dá urobiť viacerými spôsobmi. Preto je potrebné vedieť súradnice plátna.  
 
 Na to, aby bolo plátno zobraziteľné vo webovom prehliadači na rôznych zariadeniach musia byť nastavené nasledujúce atribúty: 
  \begin{itemize}
  	\item definovaný viewBox,
  	\item výška a šírka plátna musí byť v relatívnych rozmeroch, najlepšie nastavená na 100\%
  \end{itemize}
- 
- %var s = Snap("$ #s $vgout"); 
- %s.attr({ viewBox: "0 0 600 600" });
- %2. sposob pri definicii svg $ <svg id="idsvg" viewBox="0 0 600 600" weight="100\%" height="100\%"> $
 
 Nasledujúci príkaz zadefinuje plátno s rozmermi šírka je 300 a výška 200. 
 \begin{lstlisting}
 var paper = Snap(300, 200);
 \end{lstlisting}
 
-
 Na obrázku \ref{fig:suradnice1}  je znázornená východzí súradnicový systém plátna vytvoreného cez Snap konštruktor. 
-Začiatok súradnic na osi x, y je rovné nule. Bod na plátne so súradnicami x = 300, y = 200 alebo (300, 200) vo vektorovom zápisu je bod 300px vpravo od začiatku x-ovej osi a 200px dole od počiatku y-ovej osi. 
+Začiatok súradníc na osi x, y je rovné nule. Bod na plátne so súradnicami x = 300, y = 200 alebo (300, 200) vo vektorovom zápisu je bod 300px vpravo od začiatku x-ovej osi a 200px dole od počiatku y-ovej osi. 
 
 \begin{center}
 	\begin{figure}[H]
@@ -102,7 +69,7 @@ Nasledujúcim kódom vytvorím 500px široké a 300px vysoké plátno.
 var paper = Snap("mojePlatno", 500, 300);
 \end{lstlisting}
 
-Keď využívam túto formu konštruktora, tak prvý parameter v metode je ID elementu. V prípade, že nie je udaný vykreslí sa na najbližšie voľné miesto. Alternatívne sa dá prvý parameter DOM element napísať nasledovným spôsobom: 
+Keď využívam túto formu konštruktora, tak prvý parameter v metóde je ID elementu. V prípade, že nie je udaný vykreslí sa na najbližšie voľné miesto. Alternatívne sa dá prvý parameter DOM element napísať nasledovným spôsobom: 
 \begin{lstlisting}
 Snap(document.getElementById('mojePlatno'), 500, 300);
 \end{lstlisting}
@@ -133,64 +100,32 @@ V tabuľke \ref{vytvorenie:SVG} sú vymenované HTML tagy na zobrazenie SVG.
 
 
 Príklady načítania SVG v HTML dokumente pre tag Image:
-%\begin{itemize}
-%\item 
 \begin{lstlisting}
 <img src="stanica2.svg" width = "50" height= "50" />
 \end{lstlisting}
-%\item Embed
-%\begin{lstlisting}
-%<embed src="stanica2.svg" width = "50" height= "50" />
-%\end{lstlisting}
-%\item Objekt
-%\begin{lstlisting}
-%<object type="image/svg+xml" data="stanica2.svg"
-%width="50" height="50"></object>
-%\end{lstlisting}
-%\item IFrame
-%\begin{lstlisting}
-%<iframe src="stanica2.svg" width = "50" height= "50">
-%</iframe>
-%\end{lstlisting}
-%\item Inline
-%\begin{lstlisting}
-%<svg width="100" height="100"> 
-%<circle cx="50" cy="50" r="40"/> </svg>
-%\end{lstlisting}
-%	
-%
-%\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
 \section{Kreslenie základných tvarov cez knižnicu Snap.svg}
 
-Snap.svg API poskytuje metódy na kreslenie jednoduchých tvarov. V tabuľke~\ref{porovnanieSVG:Snap} sú základné tvary, ich eqvivalenté vyjadrenie v SVG ako elementy, a  príkazy na vytvorenie nových elementov cez Snap.svg. Keďže sa jedná o vektorovú grafiku, tak pre elementy vytvorené cez SVG alebo Snap.svg platia rovnaké atribúty. Líši sa iba spôsob zápisu. 
+Snap.svg API poskytuje metódy na kreslenie jednoduchých tvarov. V tabuľke~\ref{porovnanieSVG:Snap} sú základné tvary, ich ekvivalentné vyjadrenie v SVG ako elementy, a  príkazy na vytvorenie nových elementov cez Snap.svg. Keďže sa jedná o vektorovú grafiku, tak pre elementy vytvorené cez SVG alebo Snap.svg platia rovnaké atribúty. Líši sa iba spôsob zápisu. 
 
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{|l|l|l|l|}
-			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap.svg API} & \textbf{Atribúty} \\ 
-			\hline
+			\hline \textbf{Tvar} & \textbf{SVG element} & \textbf{Snap.svg API} & \textbf{Atribúty} \\  \hline
 			\hline Obdlžnik & $<$rect$>$ & .rect() & x, y, šírka, výška, rx, ry \\ 
 			\hline Kruh & $<$circle$>$ & .circle() & r, x, y, cx, cy, rx, ry \\ 
 			\hline Elipsa & $<$ellipse $>$ & .ellipse() & x, y, cx, cy, rx, ry \\ 
 			\hline Čiara & $<$line$>$ & .line() & x1, y1, x2, y2 \\ 
-			\hline Polyline & $<$polyline$>$ & .polyline() & pole x, y súradnic bodov \\ 
-			\hline Polygon & $<$polygon$>$ & .polygone() & pole x, y súradnic bodov \\ 
-			\hline Path & $<$path$>$ & .path() & vid tabuľka \ref{prikazy:Path}  \\ 
+			\hline Polyline & $<$polyline$>$ & .polyline() & pole x, y súradníc bodov \\ 
+			\hline Polygon & $<$polygon$>$ & .polygone() & pole x, y súradníc bodov \\ 
+			\hline Path & $<$path$>$ & .path() & viď tabuľka \ref{prikazy:Path}  \\ 
 			\hline 
 		\end{tabular} 
-		
 	\end{center}
-	
 	\label{porovnanieSVG:Snap}
 	\caption{Zoznam tvarov, ktoré podporuje SVG a Snap API}
 \end{table}
-
-
-
 
 Tvar, ktorý je vykreslený cez Snap API má nasledovnú syntax: 
 
@@ -207,7 +142,6 @@ Tvar, ktorý je vykreslený priamo na HTML webovej stránke má vo vnútri eleme
 <ElementTvar nazovAtributu = "hodnotaAtributu" ... />
 \end{lstlisting}
 
-\newpage
 \subsection{Popis atribútov tvarov}
 
 Názvy atribútov a ich význam pre obdĺžnik, kruh, elipsu sú vyjadrené v tabuľke \ref{parametre:tvar} 
@@ -218,16 +152,13 @@ Názvy atribútov a ich význam pre obdĺžnik, kruh, elipsu sú vyjadrené v ta
 			\hline \textbf{Parameter} & \textbf{Poznámka} \\ 
 			\hline
 			\hline x, y & súradnica x-osi, y-osi  \\ 
-			
 			\hline cx & x-os súradnica centra kruhu, alebo elipsy \\ 
 			\hline cy & y-os súradnica centra kruhu, alebo elipsy \\ 
-			\hline r & polomer kruhu, elipsy alebo okruhlých rohov na obdĺžniku \\ 
+			\hline r & polomer kruhu, elipsy alebo okrúhlych rohov na obdĺžniku\\ 
 			\hline rx & horizontálny polomer elipsy \\ 
 			\hline ry & vertikálny polomer elipsy \\ 
 			\hline x1, y1 & začiatočné x, y súradnice \\
 			\hline x2, y2 & konečné x, y súradnice \\
-			
-			%\hline width, height & šírka, výška\\
 			\hline
 		\end{tabular} 
 		
@@ -273,18 +204,17 @@ Napríklad: "M10,20L30,40" - obsahuje príkazy: M s argumentami (10, 20) a L (30
 
 
 \section{Vykreslenie obrázku}
-Snap.svg API povoľuje vloženie bitmapových obrázkov (.jpg alebo .png) na plátno. Používa na to metódu image z Paper objektu. Parametre metódy image sú: zdroj, x, y, šírka, výška. Príklad kódu, ktorý vkladá .jpg obrázok do plátna:
+Snap.svg API povoľuje vloženie bit-mapových obrázkov (.jpg alebo .png) na plátno. Používa na to metódu image z Paper objektu. Parametre metódy image sú: zdroj, x, y, šírka, výška. Príklad kódu, ktorý vkladá .jpg obrázok do plátna:
+
 \begin{lstlisting}
 var paper = Snap("mojePlatno", 300, 200);
 paper.image("obrazok.jpg", 15, 15, 100, 150);
 \end{lstlisting}
 
 
-\section{Atribúty elementu}
+\section{Atribúty elementu - Element.attr()}
 
 Tvary, ktoré sa dajú nakresliť sa môžu vyfarbiť, orámovať alebo mnoho iných atribútov sa dá nastaviť. Keď sa vytvorí tvar, tak sa vráti Element objekt. Tento objekt má attr metódu, ktorá akceptuje key-value pár atribútov. V tomto odseku sa pozrieme na rôzne atribúty, ktoré môžu byť aplikované na naše grafické komponenty používajúc túto metódu. 
-
-%Element.attr(...) vráti alebo nastaví dané atribúty elementu. Medzi parametre patrí buď objekt, ktorý sa skladá s páru kľúč-hodnota, alebo názvu atribútu. 
 
 \subsection{Výplň elementu - fill }
 
@@ -307,18 +237,13 @@ Elementy môžu mať niekoľko rôznych druhov okrajových atribútov. Prehľad 
 	\begin{center}
 		
 		\begin{tabular}{|l|l|l|}
-			\hline \textbf{Atribút pre attr() } &\textbf{CSS atribút} & \textbf{Poznámka} \\ 
-			\hline 
-			
+			\hline \textbf{Atribút pre attr() } &\textbf{CSS atribút} & \textbf{Poznámka} \\  \hline 			
 			\hline stroke & stroke & farba výplne okraja \\ 
 			\hline strokeWidth & stroke-width & šírka okraja v px, default je 1 \\ 
-			\hline
-			strokeOpacity & stroke-opacity & neprehľadnosť, 0-1 \\
+			\hline strokeOpacity & stroke-opacity & neprehľadnosť, 0-1 \\
 			\hline strokeLinecap & stroke-linecap & ["butt", "square", "round"], tvar - okraj konca\\ 
 			\hline strokeLinejoin & stroke-linejoin & ["bevel", "round", "miter"], tvar - okraj roku\\ 
-			
 			\hline strokeDasharray &stroke-dasharray & pole čiarok, bodiek.., napr.5,3,2\\
-			
 			\hline
 		\end{tabular} 
 	\end{center}
@@ -358,8 +283,7 @@ skupina.attr({
 \end{figure}
 
 \subsection{Maskovanie - Paper.mask()}
-Ekvivalentné správanie ako Paper.g až na to, že to je maska. 
-Vráti objekt mask element. 
+Ekvivalentné správanie ako Paper.g až na to, že to je maska.  Vráti objekt mask element.  
 
 
 \section{Gradient} 
@@ -395,80 +319,13 @@ paper.circle.attr({fill: g});
 
 
 
-
-
-
-%
-%
-%\newpage
-%\clearpage
-%TOTO BUDE PRIKLAD KED BUDEM MAT UZ NAPISANE ATTRIBUTY NA ZMENU STYLU
-%asi by bolo velmi vhodne pouzit nejake ine demo, ako ubohy kruh, teda asi teplomer, alebo mapu, ale urcite nieco ine ako kruh!!!!!!!!!!
-%
-%\subsubsection{PRIKLAD TVORBY KRUHU A NASTAVENIE ATRIBUTOV }
-%
-%Kód vytvoreného kruhu: 
-%
-%\begin{lstlisting}
-%<svg width="100" height="100">
-%<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="silver" />
-%</svg>	
-%\end{lstlisting}
-%
-%SVG obrázok začína s $<$svg$>$ elementom. Atribúty elementu $<$svg$>$ sú width a height. Definujú šírku a výšku SVG obrázka. Element $<$circle$>$ je použitý na nakreslenie kruhu.
-%
-%
-%TODO TODO TODO
-%
-%Atribúty stroke a stroke-width určujú to ako bude vyzerať obrys útvaru. Kruh má nastavený 2px čierny okraj. 
-%Atribút fill vyplní vnútro kruhu. V príklade je vyplnený sivou farbou. Tag, ktorý uzavrie SVG obrázok je $<$$/$svg$>$. Keďže SVG je validné XML, tak všetky elementy musia byť správne zatvorené. \cite{inline}
-%
-%Kruh vytvorený cez Snap API má nasledovný kód:
-%
-%\begin{lstlisting}
-%var paper = Snap(100, 100);
-%var kruh = paper.circle(50, 50, 40);
-%kruh.attr({
-%stroke: "black", 
-%strokeWidth: 2, 
-%fill: "silver"
-%});
-%
-%\end{lstlisting}
-%
-%
-%Vykreslí sa na HTML stránku obrázok \ref{jednoduchyKruh}. Obidva spôsoby vykreslili kruh na webovej stránke úplne rovnako.  
-%
-%\begin{figure}[hp]
-%	\begin{center}
-%		\includegraphics  {obrazky/jednoduchyKruh.png}
-%		\caption{Vykreslený kruh vytvorený cez SVG, a Snap API}
-%		\label{jednoduchyKruh}
-%	\end{center}
-%\end{figure}
-%
-%
-
-%\subsection{Maskovanie - Element.mask()}
-%TODO - 
-%PRE DANY ELEMENT VOLAM FUNKCIU ATTR, KDE NASTAVIM VLASTNOST MASK 
-%NAPR. mask: ellipse
-%
-%/ Now more interesting stuff
-%// Let's assign this group as a mask for our big circle
-%bigCircle.attr({
-%	mask: discs
-%});
-
 \section{Práca s textom - Paper.text(x, y, text)}
 
 Vykreslenie textu na plátne namiesto HTML markup s CSS štýlovaným umožňuje animovať a transformovať v rovnakým spôsobom ako iné tvary. Text vytvorení cez metódu text. Parametre metódy text sú súradnice x, y a text, ktorý sa vykreslí. Vlastnosti textu sa dajú zmeniť volaním metódy attr. V tabuľke sú atribúty, ktoré sa dajú zmeniť prostredníctvom metódy attr. 
 
 
 \begin{table}[H]
-	
 	\begin{center}
-		
 		\begin{tabular}{|l|l|p{8cm}|}
 			\hline \textbf{Snap atribút}  &\textbf{ CSS atribút}  & \textbf{Poznámka} \\ 
 						\hline
@@ -479,12 +336,9 @@ Vykreslenie textu na plátne namiesto HTML markup s CSS štýlovaným umožňuje
 			\hline fontFamily & font-family & napr. "monospace" \\ 
 			\hline fontStyle & font-style  & štýl písma, napr. kurzíva  \\ 
 			\hline fontVariant  & font-variant  & napr. "small-caps"  \\ 
-			\hline  fontWeight & font-weight  &  hrúbka písma,  napr. normal, bold, bolder, lighter, 100-900\\ 
+			\hline fontWeight & font-weight  &  hrúbka písma,  napr. normal, bold, bolder, lighter, 100-900\\ 
 			\hline 
-		
 		\end{tabular} 
-		
-		
 	\end{center}
 \label{tab:text}
 \caption{Atribúty na zmenu vlastností elementu text}
@@ -500,62 +354,12 @@ text.attr({
 });
 \end{lstlisting}
 
-%Na obrázku \ref{fig:textPriklad} je zobrazený text, ktorý bol uvedený v príklade. 
-%
-%\begin{figure}[H]
-%\centering
-%\includegraphics{obrazky/textPriklad}
-%\caption{Príklad na zmenu atribútov v texte.}
-%\label{fig:textPriklad}
-%\end{figure}
-
-
-
-
 \section{Transformácie - Element.transform(...)}
-
-
-%
-%"t100,100r30,100,100s2,2,100,100r45s1.5"
-%Each letter is a command. There are four commands: t is for translate, r is for rotate, s is for scale and m is for matrix.
-%
-%There are also alternative “absolute” translation, rotation and scale: T, R and S. They will not take previous transformation into account. For example, ...T100,0 will always move element 100 px horisontally, while ...t100,0 could move it vertically if there is r90 before. Just compare results of r90t100,0 and r90T100,0.
-%
-%So, the example line above could be read like “translate by 100, 100; rotate 30 stupnov around 100, 100; scale twice around 100, 100; rotate 45 stupnov around centre; scale 1.5 times relative to centre”. As you can see rotate and scale commands have origin coordinates as optional parameters, the default is the centre point of the element. Matrix accepts six parameters.
-%
-%Usage
-%\begin{lstlisting}
-%
-%
-%var el = paper.rect(10, 20, 300, 200);
-%// translate 100, 100, rotate 45, translate -100, 0
-%el.transform("t100,100r45t-100,0");
-%// if you want you can append or prepend transformations
-%el.transform("...t50,50");
-%el.transform("s2...");
-%// or even wrap
-%el.transform("t50,50...t-50-50");
-%// to reset transformation call method with empty string
-%el.transform("");
-%// to get current value call it without parameters
-%console.log(el.transform());
-%\end{lstlisting}
-
-
-
-%
-%
-%
-%Keď vytváram element v Snap, tak efektívne vytváram \ac{DOM} objekt. TODO... \cite [page~51] {Dawber} 
-%
-%\subsection{Suradnicovy system}
 
 Transformácia je realizovaná cez metódu Element.transform(), ktorá má v parametri transformačný string. Pri transformácii sa dá využiť klonovanie elementov cez metódu Element.clone(). Syntax transformačného stringu je vyjadrené z príkazov, ktoré sú v tabuľke \ref{tab:trasf}. 
 
 \begin{table}[H]
-	
 	\begin{center}
-		
 		\begin{tabular}{|c|c|c|c|}
 			\hline \textbf{Názov} & \textbf{Príkaz} & \textbf{Parameter} & \textbf{Príklad} \\ 
 			\hline Posunutie & T, t & x, y & t50,100 \\ 
@@ -566,7 +370,6 @@ Transformácia je realizovaná cez metódu Element.transform(), ktorá má v par
 	\end{center}
 	\label{tab:trasf}
 	\caption{Syntax transformačného stringu pre Snap API}
-	
 \end{table}
 
 Transformačný string využíva malé a veľké varianty príkazov. Variant s veľkými písmenami znamená to, že sa transformuje, bez ohľadu na predchádzajúcu transformáciu. Opačne to je pri variante s malými písmenami, ktoré berú na vedomie predošlú transformáciu.\cite[p.~52]{Dawber} 
@@ -590,12 +393,6 @@ V SVG SMIL sa vytvorí k elementu nový tag animateTransform, kde sa nastaví at
 	\label{tab:svgTrans}
 	\caption{Typy transformácií vo vnútri SVG tagu animateTransform }
 \end{table}
-%
-%\section{Pracovanie s maticami}
-%
-%Metóda Snap.matrix(a, b, c, d, e, f) vráti maticu nastavenú podľa daných parametrov.
-%Matica je obdĺžníková matica elementov zoradených v riadkoch a stĺpcoch. Konvencia špecifikuje číslo riadka ako prvé, keď sa referuje veľkosti matice. Každý element v matici môže byť považovaný ako komponent, ktorý mapuje niektoré body do ďalšieho budu. ---TODO, ALEBO TO VYHODIM
-
 
 \section{Animácie}
 
@@ -635,31 +432,20 @@ Animovanie transformácie atribútu elementu využíva transformačný string.  
 \end{lstlisting}
 
 
-
-
 \section{Ďalšie metódy v knižnici Snap.svg}
 
 \subsection*{Snap.load(url, callback, [scope])}
 Načíta externý .svg súbor ako fragment. 
-
-
 \subsection*{Element.append(...), Element.add(...), }
 Slúži na pridanie, zobrazenie elementu na danom plátne. 
-
 \subsection*{Element.stop()}
 Zastaví všetky animácie pre súčastný element. Vracia súčastný element. 
-
 \subsection*{Element.remove()}
 Odstráni element z DOM. 
-
 \subsection*{Element.removeData([key])}
 Odstráni hodnotu asociovanú s elementom s daným kľúčom. Ak kľúč nie je zadaný, odstráni všetky dáta z elementu. 
-
-
-
 \subsection*{Snap.select(...)}
 Slúži na wrapovanie DOM elementu špecifikovaný CSS selektorom.  
-
 \subsection*{Element.getBBox()}
 Vráti bounding box opisovač pre daný element. Bounding box vyjadruje hranice elementu cez obdĺžnik. 
 
@@ -678,144 +464,3 @@ Vráti objekt s nasledujúcimi atribútmi:
 	\item y2 - y súradnica spodnej hrany, 
 	\item y - y hornej hrany. 
 \end{itemize}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.7\linewidth]{obrazky/getBBox}
-%\caption{}
-%\label{fig:getBBox}
-%\end{figure}
-
-
-
-
-
-%\begin{table}[H]
-%	
-%	\begin{center}
-%		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-%			\hline \textbf{Animacia} & \textbf{SVG akcia} & \textbf{JavaScript akcia} & \textbf{Popis} \\ 
-%			\hline Animácia &  &  &  \\ 
-%			\hline Nastavenie farby &  &  &  \\ 
-%			\hline Transformácia &  &  &  \\ 
-%			\hline Skryvanie  &  & attr({visibility: true}) &  \\ 
-%			\hline Atributy farby & animateColor  & attr({fill: farba}) &  \\ 
-%			\hline  &  &  &  \\ 
-%			\hline Nastavenie atributov & set element & metoda attr &  \\ 
-%			\hline zmena farby & animateColor element & attr(fill: farba) &  \\ 
-%			\hline animovanie transformacie & animateTransform element & transform() &  \\ 
-%			\hline  & animateMotion element &  &  zoznam atributov pridate este\\ 
-%			\hline  &  &  &  \\ 
-%			\hline  &  &  &  \\ 
-%			\hline 
-%			
-%			\hline 
-%		\end{tabular} 
-%	\end{center}
-%	
-%	\caption{Mapovacia tabuľka}
-%	\label{haha2}
-%\end{table}
-
-
-
-
-%V SVG SMIL animacia používa na animáciu elementy, :
-%V tabuľke \ref{haha2} je
-%
-%\begin{table}[H]
-%\begin{center}
-%	
-%\begin{tabular}{|c|c|c|}
-%	\hline Názov & Elementy v SVG SMIL & Metódy v Snap.svg.js \\ 
-%	\hline Animácia & animate & Element.animate(...) \\ 
-%	\hline Nastavovanie & set & Element.attr(...) \\ 
-%	\hline Animovanie pohybu & animateMotion & Element.animate(..) \\ 
-%	\hline Transformácia & animateTransform & Element.animate({transform: ..}) \\ 
-%	\hline 
-%\end{tabular} 	\caption{Animovanie v SVG SMIL a v Snap.svg.js }
-%	\label{haha2}
-%\end{center}
-%\end{table}
-%
-%
-%O čom bude táto časť: 
-%\begin{itemize}
-%	\item Animácia metód a jednoduchých atribútov animácie TODO ZMENA FARBY INDIKATORA 
-%	\item Animovanie path TODO KAPITOLA O NADRZI
-%	\item Easing využívajúc kubickú Bézierovú syntax
-%	\item Animácie transformácie TODO KAPITOLA ROTOR
-%	\item Animácie využívajúce spoločné atribúty a animácie popri path TODO MAPA CESTY
-%\end{itemize}
-%
-%\section{Animacia - Element.animate(...)}
-%Snap.animation = function (attr, ms, easing, callback) 
-%\begin{itemize}
-%	\item	- attr (object) atribúty finalného produktu
-%	\item	- duration (number) trvanie animácie v milisekundách , 
-%	\item - easing (function) vid tabluka, alebo kapitola o tom 	funkcie  @mina 
-%	\item funkcia, ktorá sa vykoná po skončení animácii
-%\end{itemize}
-%
-%
-%
-%\subsection{Animácia atribútov}
-%TODO NAPR ZMENA FARBY INDIKATORA TOKU VODY
-%
-%tabulka ake atributy sa daju menit
-%napr
-%\begin{itemize}
-%	\item visibility: / attr({visibility: true})
-%	\item okrajov: pozri tabulku c. \ref{parametre:styl}
-%	\item farby: pozri tabulku 
-%	\item textu: tabulka \ref{tab:text}
-%	\item tvarov: tabulka \ref{parametre:tvar}
-%\end{itemize}
-%
-%
-%
-%\subsection{Animácia elementov, path}
-%TODO NAPR ANIMOVANIE ZMENY PRITOKU VODY DO NADRZE
-%%\subsection{Animation easing}
-%%Easing describes how the value of an attribute varies with regard to time. By default,
-%%the value of an attribute changes consistently—that is, linearly—over the course of
-%%an animation but by specifying a particular easing type, we can change the way in
-%%which the attribute is animated. Consider the following graph that demonstrates
-%%three of the available easing types\ref{fig:easing}:
-%%\cite{Dawber}[p~70]
-%%
-%%\begin{figure}[H]
-%%	\centering
-%%	\includegraphics[width=0.7\linewidth]{obrazky/easing}
-%%	\caption{Graf troch easing typov}
-%%	\label{fig:easing}
-%%\end{figure}
-%%
-%%
-%%For each easing type, the rate at which the attribute changes varies along the graph in
-%%the time axis. Each easing type can be described as such:
-%%\begin{itemize}
-%%	
-%%	
-%%	\item Linear: The value varies consistently from its start value to its end value over
-%%	the course of the animation
-%%	\item Ease Out: The value increases quickly towards its end point before slowing
-%%	down towards the end of the animation
-%%	\item Ease In Out: The value decreases slowly at first and then increases quickly
-%%	before finally slowing down to its end point towards the end of the animation
-%%\end{itemize}
-%%
-%%
-%%
-%
-%\subsection{Animácia transformácií}
-%TODO ASI TEN VENTIL BY BOLO VHODNE ZANIMOVAT A TRANSFORMOVAT
-%
-%\subsection{Animacia vyuzivajuca vlastne atributy}
-%
-%\subsection{Animacia podla path}
-%toto uz v prikladoch mam ako mapu TODO /
-%todo urobit pri nadrzi 
-%
-%
-%

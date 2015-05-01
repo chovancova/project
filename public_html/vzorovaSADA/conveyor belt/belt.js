@@ -80,6 +80,8 @@ function rotateLeft(element) {
 
 
 
+
+
 function animovanieNaPase(cislo){
 
     var road =   paper.select(pas);
@@ -123,6 +125,45 @@ console.log(len);
     });
 
 }
+
+function zastavNaDanejPozicii(element, velkost){
+
+
+}
+
+
+
+function updateSchema(rotujMoroty, element, velkost){
+
+}
+
+
+function updateSchema(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
