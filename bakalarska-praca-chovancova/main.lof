@@ -19,15 +19,14 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Mapa Slovenska}}{43}{figure.4.5}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Termometer}}{43}{figure.4.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Grafick\IeC {\'e} prostredie programu Inkscape s nakreslenou pre\IeC {\v c}erp\IeC {\'a}vacou stanicou}}{45}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Object Properties}}{46}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Xml Editor v Inkscape}}{47}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica po vykonan\IeC {\'\i } pr\IeC {\'\i }kazu updateSchema(updateSchema);}}{56}{figure.5.4}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Grafick\IeC {\'e} prostredie programu Inkscape s nakreslenou pre\IeC {\v c}erp\IeC {\'a}vacou stanicou}}{44}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Object Properties}}{45}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Xml Editor v Inkscape}}{46}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Pre\IeC {\v c}erp\IeC {\'a}vacia stanica po vykonan\IeC {\'\i } pr\IeC {\'\i }kazu updateSchema(updateSchema);}}{55}{figure.5.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Po spusten\IeC {\'\i } testovania v\IeC {\'y}konnosti kni\IeC {\v z}n\IeC {\'\i }c Raphael.js vs Snap.svg.js - zobrazenie spusten\IeC {\'\i }ch anim\IeC {\'a}ci\IeC {\'\i }}}{61}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Po spusten\IeC {\'\i } testovania v\IeC {\'y}konnosti kni\IeC {\v z}n\IeC {\'\i }c Raphael.js vs Snap.svg.js - v\IeC {\'y}sledky pre konkr\IeC {\'e}tny prehliada\IeC {\v c}}}{61}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Graf v\IeC {\'y}sledkov pre webov\IeC {\'e} prehliada\IeC {\v c}e}}{63}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Test pre funkciu attr() pre webov\IeC {\'y} prehliada\IeC {\v c} Chrome 42}}{65}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Graf v\IeC {\'y}sledkov pre webov\IeC {\'e} prehliada\IeC {\v c}e}}{66}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Porovnanie v\IeC {\'y}konnosti Canvas vs. SVG}}{67}{figure.7.6}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Po spusten\IeC {\'\i } testovania v\IeC {\'y}konnosti kni\IeC {\v z}n\IeC {\'\i }c Raphael.js vs Snap.svg.js - zobrazenie spusten\IeC {\'\i }ch anim\IeC {\'a}ci\IeC {\'\i }}}{60}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Graf v\IeC {\'y}sledkov pre webov\IeC {\'e} prehliada\IeC {\v c}e}}{61}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Test pre funkciu attr() pre webov\IeC {\'y} prehliada\IeC {\v c} Chrome 42}}{64}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Graf v\IeC {\'y}sledkov pre webov\IeC {\'e} prehliada\IeC {\v c}e}}{64}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Porovnanie v\IeC {\'y}konnosti Canvas vs. SVG}}{66}{figure.7.5}

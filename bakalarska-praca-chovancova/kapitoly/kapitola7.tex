@@ -64,23 +64,22 @@ raphaelCircle.animate({
 \end{figure}
 
 
-Na obrázku \ref{fig:podpora2} je výsledok animácie vykonaného testu. Test som spustila na viacerých platformách a webových prehliadačoch. Príklad výsledku pre konkrétny webový prehliadač je na obrázku \ref{fig:vyslMozila}
 
-
-
- \begin{figure}[H]
-\centering
-\includegraphics[width=0.7\linewidth]{obrazky/testovanieSnapVsRaphael2.jpg}
-\caption{Po spustení testovania výkonnosti knižníc Raphael.js vs Snap.svg.js - výsledky pre konkrétny prehliadač}
-\label{fig:vyslMozila}
-\end{figure}
-
-Výsledky testu sú nasledovné: 
+Test som spustila na viacerých platformách a webových prehliadačoch.   Ukážka testovacej situácie je na obrázku \ref{fig:podpora2}.
+Výsledky testu môžeme vidieť 
 \begin{itemize}
-\item pre mobilné zariadenia a ich príslušné webové prehliadače sú v tabuľke \ref{tab:mobily}
-\item pre súčastné a staršie verzie webových prehliadačoch, ktoré sú spustiteľné na počítačoch sú v tabuľke \ref{tab:pocitace}
-\item pre staršie verzie webových prehliadačoch sú v tabuľke %\ref{tab:starsie}
+	\item pre mobilné zariadenia a ich príslušné webové prehliadače v tabuľke \ref{tab:mobily},
+	\item  pre súčasné a staršie verzie webových prehliadačoch, ktoré sú spustiteľné na počítačoch  v tabuľke \ref{tab:pocitace}.
 \end{itemize}
+
+% \begin{figure}[H]
+%\centering
+%\includegraphics[width=0.6\linewidth]{obrazky/testovanieSnapVsRaphael2.jpg}
+%\caption{Po spustení testovania výkonnosti knižníc Raphael.js vs Snap.svg.js - výsledky pre konkrétny prehliadač}
+%\label{fig:vyslMozila}
+%\end{figure}
+
+
 
 
 
@@ -137,10 +136,9 @@ Súhrný graf výsledkov webových prehliadačov je na obrázku \ref{fig:graf}. 
 
 
 \section{Raphael.js vs Snap.SVG.js vs SVG.js - attr()}
-Tento test bol zameraný na porovnanie výkonosti troch knižníc, ktoré umožňujú animáciu SVG. V teste sa vytváralo hmomadne kruhy s náhodnými hodnotami a následne po vykonaní iterácie sa vymazali. Iterácií prebehlo 100. 
+Tento test bol zameraný na porovnanie výkonnosti troch knižníc, ktoré umožňujú animáciu SVG. V teste sa vytváralo hromadne kruhy s náhodnými hodnotami a následne po vykonaní iterácie sa vymazali. Iterácií prebehlo 100. 
 %http://jsperf.com/raphael-vs-snapsvg-attr/7
 
-multiple circles moved to the back
 
 Kód testu: 
 
@@ -186,7 +184,6 @@ snapcirc = function () {
   circs.push(snapCircle);
   if (circs.length>=ncircs) removecircs();
 };
-
 
 var draw = SVG('svgjs').size(800, 600);
 svgcirc = function () {
