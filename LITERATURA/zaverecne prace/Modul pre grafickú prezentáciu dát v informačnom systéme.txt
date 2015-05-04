@@ -1,6 +1,0 @@
-Modul pre grafickú prezentáciu dát v informaènom systéme
-
-http://crzp.sk/crzpopacxe/openURL?crzpID=EZP012479&crzpSigla=zuzilina 
-
-strucne zhnutie svg, canvas, a ine js kniznice
-praca je zamerana skor na grafy

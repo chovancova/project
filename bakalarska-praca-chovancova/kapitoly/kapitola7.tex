@@ -3,7 +3,7 @@
 
 \section{Test výkonnosti knižníc Snap.svg.js a Raphael.js - animate()}
 
-Vytvorila som test prostredníctvom webovej stránky, ktorá umožnuje robiť spustiteľné testy na rôznych platformách. Test sledoval počet operácií za sekundu. Čím viac operácií sa vykonalo, tým lepšie. Test sa spustil 100 krát za sebou najprv pre Raphael.js a potom pre Snap.svg.js. 
+Vytvorila som test prostredníctvom webovej stránky, ktorá umožnuje robiť spustiteľné testy na rôznych platformách. Test sledoval počet operácií za sekundu. Čím viac operácií sa vykonalo, tým lepšie. Test sa spustil 100 krát za sebou najprv pre Raphael.js a potom pre Snap.svg.js. \cite{test}
 % \url{http://jsperf.com/snap-svg-raphael-js-animate}
  
 % Benchmark.js v1.0.0 A robust benchmarking library that works on nearly all JavaScript platforms, supports high-resolution timers, and returns statistically significant results.
@@ -89,8 +89,7 @@ Výsledky testu môžeme vidieť
 
 \begin{tabular}{|l|c|c|}
 	\hline \textbf{Webový prehliadač} & \textbf{Raphael.js (ops/sec)} & \textbf{Snap.svg.js (ops/sec)} \\ 
-	\hline Android 4.1.2 & 292 & 292 \\ 
-	\hline Chrome 11.0.6996 & 1 283 & 1 283 \\ 
+	\hline Android 4.1.2 & 292 & 292 \\  
 	\hline Chrome Mobile 42.0.2311 & 181 & 266 \\ 
 	\hline Firefox Mobile 33.0 & 285 & 414 \\ 
 	\hline 
@@ -105,6 +104,7 @@ Výsledky testu môžeme vidieť
 \begin{center}
 		\begin{tabular}{|l|c|c|}
 		\hline \textbf{Webový prehliadač} & \textbf{Raphael.js (ops/sec)} & \textbf{Snap.svg.js (ops/sec)} \\ 
+        \hline Chrome 11.0.6996 & 1 283 & 1 283 \\
 		\hline Chrome 42.0.2311 & 2 753 & 2 171 \\ 
 		\hline Epiphany 3.10.3 & 2 609 & 2 609 \\ 
 		\hline Firefox 37.0. & 3 626 & 3 626 \\ 
@@ -240,20 +240,8 @@ Výsledky vykonaných testov vo viacerých webových prehliadačoch sú na obrá
 
 
 \section{SVG vs Canvas}
-%Počet objektov SVG 
-%Zložitosť SVG - výpočtový výkon
-
-
-
-
-
-%Sometimes there are outside influences that require a choice of technology that is, or is mostly, independent of functionality. For the question of using Canvas or SVG, there are two primary differentiators. Sometimes developer knowledge, skill set, and existing assets play a significant role into the choice of technologies. If a developer has deep knowledge of low level graphic APIs and limited knowledge of web technologies, the likely technology to choose is canvas.Also, performance is absolutely critical on high traffic websites. It is necessary to compare the performance characteristics of the two technologies. This might require the development of accessibility, custom styling, and more granular user interactions that do not come with canvas. It does not mean that canvas, though typically viewed as highly performant, is the obvious choice. The following graphs show the difference between of rendering time between SVG and Canvas objects.
 
 Na obrázku \ref{fig:podpora23} sú zobrazené dva grafy, ktoré porovnavajú vlastnosti Canvas a SVG. 
-
-
-Všeobecne platí, ak sa veľkosť obrazovky zvýši, plátno sa začne zmenšovať až na toľko pixelov, koľko je potrebné vykresliť. Pri SVG je to tak, ak sa počet objektov na obrazovke zvýši, tak začne neustále dané objekty pridávať do DOM.Tieto merania nie sú nevyhnutné presné a môžu sa zmeniť v závislosti od implementácie a platformy, hardvérovej akcelerácie grafiky. \cite{microsoft}
-
 
  \begin{figure}[H]
 \centering
@@ -262,8 +250,7 @@ Všeobecne platí, ak sa veľkosť obrazovky zvýši, plátno sa začne zmenšov
 \label{fig:podpora23}
 \end{figure}
 
-
-
+Všeobecne platí, ak sa veľkosť obrazovky zvýši, plátno sa začne zmenšovať až na toľko pixelov, koľko je potrebné vykresliť. Pri SVG je to tak, ak sa počet objektov na obrazovke zvýši, tak začne neustále dané objekty pridávať do DOM. Tieto merania nie sú nevyhnutne presné a môžu sa zmeniť v závislosti od implementácie a platformy, hardvérovej akcelerácie grafiky. \cite{microsoft}
 
 
 

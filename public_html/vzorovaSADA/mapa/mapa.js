@@ -90,8 +90,9 @@ function zmenaVlastnosti(){
 
 
 
-function animovanieCesty(mesto, cislo){
-    var road =   paper.select(mesto);
+function animovanieCesty(cislo){
+
+    var road =   paper.select(cestaBA);
     // zistnie dlzky cesty
    // var len = road.getTotalLength();
 
@@ -111,17 +112,17 @@ function animovanieCesty(mesto, cislo){
     }).animate({"stroke-dashoffset": 10}, 2000,mina.easeinout);
 
     // nakreslenie kruhu, co pojde popri ceste
-     bodCesty = paper.circle(32,32,10).attr({
-        fill: "#3f4445",
-        stroke: "#000",
-        strokeWidth: 2
-    });
+    // bodCesty = paper.circle(32,32,10).attr({
+      //  fill: "#3f4445",
+    //    stroke: "#000",
+   //     strokeWidth: 2
+  //  });
 //animacia kruhu popri ceste
     //setTimeout() - executes a function, once, after waiting a specified number of milliseconds
     setTimeout( function() {
         Snap.animate(0, len, function( value ) {
             movePoint = road.getPointAtLength( value );
-            bodCesty.attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
+            paper.select("#bodBratislava").attr({ cx: movePoint.x, cy: movePoint.y}); // move along path via cx & cy attributes
         }, 2000,mina.easeinout);
     });
 

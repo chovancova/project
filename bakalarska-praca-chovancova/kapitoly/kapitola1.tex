@@ -1,5 +1,14 @@
-\chapter{Analýza požiadaviek}
-Kapitola popisuje základné pojmy, výber z dostupných nástrojov a knižníc. 
+
+
+
+
+
+
+
+
+\chapter{Analýza požiadaviek} 
+
+V tejto kapitole popisujem základné pojmy, výber z dostupných nástrojov a knižníc. 
 
 \section{Systémy \acs{SCADA} }
 IPESOFT D2000® je softvérová technológia reálneho času vyvinutá spoločnosťou IPESOFT. Využíva sa pre tvorbu aplikačných riešení pre oblasť výrobných, energetických a obchodných systémov. Táto platforma je vhodná pre aplikácie, kde je potrebné zabezpečiť zber a vizualizáciu dát z priemyselných automatov, riadenie technologických procesov, tvorbu bilančných nástrojov a prehľadov, integráciu rôznych podnikových systémov.\cite{ipesoft}
@@ -122,12 +131,12 @@ Na internete sa nachádzajú tieto OpenSource JavaScriptové knižnice na tvorbu
     \item jQuery.js, \item Velocity.js.
 \end{itemize}
 
-Popis jednotlivých JavaScriptových knižníc.
+V nasledujúcej časti sa nachádza popis jednotlivých JavaScriptových knižníc.
 \subsection{D3.js}
 D3.js je JavaScriptová knižnica určená na manipuláciu dokumentov založených na dátach. Pomocou \acs{HTML}, \acs{SVG} a \acs{CSS} umožňuje vizualizáciu dát. Je vhodná na vytváranie interaktívnych SVG grafov s hladkými prechodmi a interakciami.  D3 rieši efektívnu manipuláciu dokumentov zakladajúcich si na dátach. Využíva webové štandardy ako \acs{HTML}, \acs{SVG} a \acs{CSS}3. \cite{d3js} Má licenciu BSD.
 
 \subsection{jQuery.js}
-JQUery je knižnica s otvoreným zdrojovým kódom, ktorá poskytuje funkcionální programovacie rozhranie k JavaScriptu. Jedná sa o kompletnú knižnicu, ktorej jadro je postavené pomocou selektorov jazyka \acs{CSS} pracujúcimi s elementami modelu \acs{DOM}. Knižnicu jQuery napísal a spravuje John Resig. Má licenciu MIT alebo GPL.  \cite{Zakas}  
+JQUery je knižnica s otvoreným zdrojovým kódom, ktorá poskytuje funkcionální programovacie rozhranie k JavaScriptu. Jedná sa o kompletnú knižnicu, ktorej jadro je postavené pomocou selektorov jazyka \acs{CSS} pracujúcimi s elementami modelu \acs{DOM}. Knižnicu jQuery napísal a spravuje John Resig. Má licenciu MIT.  \cite{Zakas}  
 V jQuery API metóda animate() umožňuje vytvoriť efekt animácie, ktoré ovplyvňujú CSS vlastnosti. Požadovaný parameter je objekt s CSS vlastnosťami. \cite{jquery}
 
 \subsection{Veloncity.js}
@@ -148,18 +157,22 @@ Autor knižnice je Dmitry Baranovskiy. Raphael \acs{API} má široké spektrum p
 
 Snap.svg je JavaScriptová knižnica na prácu s SVG. Poskytuje pre webových developerov \acs{API}, ktoré umožňuje animáciu a manipulovanie s buď existujúcim SVG alebo programátorsky vytvorene cez Snap.svg API. Tvorca Snap.svg knižnice je rovnaký ako pri Raphael knižnici.  Bola navrhnutá špeciálne pre moderné prehliadače (IE9 a vyššie, Safari, Chrome, Firefox a Opera). Umožňuje podporu maskovania, strihania, vzorov, plných gradientov, skupín čo doposiaľ nebolo možné pri knižnici Raphael. 
 
-Snap.svg API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snapl.svg API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať alebo inak manipulovať cez Snap.svg API. Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderované. 
+Snap.svg API je schopné pracovať s existujúcim SVG súborom. To znamená, že SVG obsah sa nemusí  generovať cez Snap.svg API, aby sa mohol oddelene používať. Obrázok vytvorený v nástroji  Inkscape sa dá animovať alebo inak manipulovať cez Snap.svg API. Súbory načítané cez Ajax sa dajú vykresliť, bez toho, aby boli renderované. 
 
 Knižnica Snap.svg podporuje animácie. Poskytuje jednoduché a intuitívne JavaScript API pre vizualizáciu grafických komponentov. Snap.svg umožňuje urobiť SVG obsah viac interaktívnejší a záživnejší. \cite{snapsvg}
 
-\section{Zhodnotenie požiadaviek}
+\section{Výber vhodných nástrojov}
 
-Animovanie cez SVG \acs{SMIL} poskytuje  časovo orientované animácie, ktoré sa spúšťajú v špecifickom intervale a dĺžky. Môžu byť  zobrazované opakovaných sekvenciách. SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. Ďalšia nevýhoda SVG SMIL je, že Internet Expolorer ju nepodporuje.
+
+Animovanie cez SVG \acs{SMIL} poskytuje  časovo orientované animácie, ktoré sa spúšťajú v špecifickom intervale a dĺžky. Môžu byť  zobrazované opakovaných sekvenciách. SCADA aplikácie požadujú okamžitú animáciu na zmenu v okamihu, keď  asociované dáta sú aktualizované. Z~toho~robí samotné použitie SVG~SMIL animácií nehodiace sa pre vizualizáciu SCADA systémov. Ďalšia nevýhoda SVG SMIL je, že Internet Explorer ju nepodporuje.
 
 Použitím JavaScriptových knižníc zameraných na animovanie a manipulovanie s SVG súbormi odstráni problém s SVG SMIL animovaním. Umožnujú používať podmienky, stavy a premenné.
 
 Každá zmena objektu v SCADA systéme sa vykreslí v animácii okamžite bez toho, aby webový prehliadač znovu načítal celú schému. 
 
-Grafické komponenty sa budú vytvárať v programe Inkscape. Následne budú použité v HTML dokumente. Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg. 
+
+ Podarilo sa mi nájisť editor s možnosťou exportu do SVG súboru, ale nenašla som taký, ktorý umožňuje export aj do formátov JSON, XML a JavaScript. Grafické komponenty sa budú vytvárať v programe Inkscape. Následne budú použité v HTML dokumente.
+
+Ovládanie a animovanie bude realizované prostredníctvom knižnice Snap.svg. 
 
 Zo spomínaných knižníc najviac vyhovuje práve Snap.svg.js pre splnenie cieľov práce. Ďalší dôvod, prečo som sa rozhodla pre túto  knižnicu bol, že dokáže načítavať SVG súbor a~následné s ním manipulovať. Spĺňa požiadavku kompatibility pre moderné webové prehliadače. Je to open-source knižnica a má licenciu Apache 2.

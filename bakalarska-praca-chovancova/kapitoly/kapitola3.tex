@@ -12,10 +12,7 @@ SVG sa dá použiť a vytvoriť viacerými spôsobmi:
 	\item načítanie pomocou JavaScriptovej knižnice.
 \end{itemize}
 
-
- \subsection{Vytvorenenie SVG }
- 
- \subsubsection{Načítanie JavaScript knižnice}
+\subsubsection{Postup pri načítaní JavaScript knižnice a SVG súboru}
 
 Postup (načítanie súboru v tele JavaScriptovej metóde): 
 \begin{enumerate}
@@ -37,7 +34,7 @@ Postup (načítanie súboru v tele JavaScriptovej metóde):
 	
 \end{enumerate}
 
-Postup ovládania SVG elementu:
+V nasledujúcej časti je postup krokov pre ovládania SVG elementu:
 
 \begin{enumerate}
 	\item Vytvorenie novej funkcie. 
@@ -51,31 +48,35 @@ Postup ovládania SVG elementu:
 	\item s.select(id SVG)
 	\item V tejto chvíli je možné volať funkcie z Snap.svg API príkazom: element.funkciaAPISnap.. 
 	\begin{itemize}
-		\item .animate() - animácia
-		\item .attr() - nastavenie atribútu
-		\item .add(), a íné.	
+		\item element.animate() - animácia
+		\item element.attr() - nastavenie atribútu
+		\item element.add(), a iné.	
 	\end{itemize}	
 \end{enumerate}
 
-\section{UML diagramy}
-V nasledujúcej časti sú zobrazené UML diagramy, ktoré zobrazujú postup načítania, vytvorenia, ovládania grafických komponentov.
-	\subsection{Usecase diagram použitia SCADA systémov}
-	\begin{figure}[H]
+
+V nasledujúcej časti sú zobrazené UML diagramy, ktoré zobrazujú postup načítania, vytvorenia, ovládania grafických komponentov. 
+
+Webový prehliadač dostáva informácie zo SCADA systému, ktoré musí spracovať. Následné zmeny sa dajú animovať a vizualizovať. Na obrázku \ref{fig:USECASE} sú zobrazené možnosti na vizualizáciu. 
+	
+    V predošlej časti bolo popísané v krokoch ako postupovať pri načítaní SVG súboru. Pre lepšie pochopenie je vytvorený UML diagram aktivít, ktorý popisuje postup načítania SVG. Je zobrazený na obrázku \ref{fig:aktivity1}. 
+    
+    Pre ovládanie elementu je potrebné zistiť id elementu. Existuje viacero spôsobov, ako to realizovať. Na obrázku \ref{fig:ovladanie} je diagram aktivít. Diagram zobrazuje aj postup ako animovať a meniť atribúty daného elementu. 
+    
+\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\linewidth]{uml/usecase.png}
+		\includegraphics[width=0.4\linewidth]{uml/usecase_update.png}
 		\caption{Diagram prípadov použitia vizualizácie v SCADA systémoch}
 		\label{fig:USECASE}
 	\end{figure}
 
-	\subsection{Postup načítania SVG súboru v HTML}
+	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{uml/aktivityInicializacie}
+		\includegraphics[width=0.6\linewidth]{uml/aktivityInicializacie.png}
 		\caption{Postup načítania SVG súboru v HTML dokumente}
 		\label{fig:aktivity1}
-	\end{figure}
-
-\subsection{Postup zistenia id elementu}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -83,4 +84,3 @@ V nasledujúcej časti sú zobrazené UML diagramy, ktoré zobrazujú postup na�
 	\caption{Postup zistenia id elementu a jeho aktualizovanie}
 	\label{fig:ovladanie}
 \end{figure}
-

@@ -1,31 +1,30 @@
 \chapter*{Úvod}
 \addcontentsline{toc}{chapter}{Úvod}
 
-Téma práce je vizualizácia dát získaných pomocou SCADA systémov. Cieľ práce je nájsť postup tvorby a vizualizácie grafických komponentov. Produktom bakalárskej práce je grafický komponent na vizualizáciu technologických procesov s využitím HTML 5 štandardov. 
-V práci je popísaný detailný postup vizualizácie prečerpávacej stanice. Bol navrhnutý jednoduchý interface, pomocou ktorého komponenty komunikujú so serverovou časťou SCADA systému. 
+Témou mojej práce je vizualizácia dát získaných pomocou SCADA systémov. 
 
-\section*{Súčasná situácia}
+Náplňou prvej časti práce je všeobecné popísanie dostupných JavaScriptových knižníc na tvorbu a vizualizáciu grafických komponentov. 
+
+Ďalšia časť sa zaoberá návrhom a tvorbou grafických komponentov. Vzorová sada je vytvorená pomocou programu Inkscape a na vizualizovanie využíva JavaScriptovú knižnicu Snap.svg. Možnosti knižnice sú popísané v práci ako aj spôsob ako je knižnica schopná animovať a meniť atribúty. Je uvedený podrobnejší postup implementácie prečerpávacej stanice, ktorá je zo sady grafických komponentov. Bol navrhnutý jednoduchý interface, pomocou ktorého komponenty komunikujú so serverovou časťou SCADA systému. 
+
+Ďalšia kapitola popisuje v stručnosti návrh REST API. V poslednej kapitole je výkonnostné zhodnotenie JavaScriptových knižníc Raphael a Snap.svg. 
+
+Zdrojové kódy práce sú udržiavané v Git repository.\cite{github} Dostupné na:  \\https://github.com/chovancova/project, ktorý obsahuje odkaz na webovú stránku s implementovanou grafickou sadou komponentov. \\ 
+
+
+\chapter{Analýza súčasného stavu}
+
+V súčasnosti je internet bežnou súčasťou každodenného života. Doposiaľ bol rozšírený iba na stolných počítačoch, ale nástupom moderných mobilných zariadený sa stal neodmysliteľnou súčasťou života. V dnešnej dobe je požiadavka, aby desktopové programy, ktoré išli spustiť iba cez určitý program, sa dali spustiť aj v mobilných zariadeniach. 
 
 V súčasnosti je v IPESOFT s.r.o. software, ktorý dokáže vizualizovať dáta z technológii pomocou "hrubých klientov",  čo sú natívne (.exe) Windows aplikácie. Aktuálna webová prezentácia takýchto dát nespĺňa súčasné štandardy pre moderné webové aplikácie a preto bolo potrebné nájsť nový spôsob vizualizácie na webe, ktorý bude v budúcnosti použiteľný na rôznych platformách, nielen na PC. 
 
 
-Výsledná webová aplikácia je kompatibilná s štandardmi HTML 5. Riešenie využíva výhradne open-source knižnice s licenciami typu MIT, GNU GPL, BSD, Apache 2. 
 
-Zdrojové kódy práce sú udržiavané v Git repository.\cite{github}\\ 
 
-%Cieľová platforma pre výslednú webovú aplikáciu bude každý webový prehliadač kompatibilný s rodinou štandardov HTML 5. Riešenie bude využívať výhradne open-source knižnice s licenciami typu MIT, GNU GPL, BSD. Zdrojové kódy práce budú udržiavané v Git repository.
+\chapter{Cieľ práce}
+ Cieľ práce je vytvoriť postup ako tvoriť a vizualizovať grafické komponenty. Produktom bakalárskej práce je sada grafických komponentov na vizualizáciu technologických procesov s využitím HTML 5 štandardov. 
 
-%Predbežný postup práce:
-%
-%\begin{enumerate}
-%\item  Analýza požiadaviek, prieskum možnosti využitia \acs{WYSIWYG}\par editorov na tvorbu grafických komponent s možnosťou exportu do formátov \acs{SVG}, \acs{JSON}, \acs{XML}, alebo JavaScript.
-%\item Výber vhodných open-source knižníc na tvorbu grafických komponent kompatibilných s HTML 5.
-%\item Návrh \acs{REST} \acs{API} na prepojenie grafických komponent so \acs{SCADA} serverom.
-%\item  Analýza možnosti automatického mapovania API grafických prvkov pomocou metadát na existujúce API dostupné pre SCADA server D2000.
-%\item  Implementácia vzorovej sady grafických komponent.
-%\item  Analýza výkonnosti a výkonnostné obmedzenia.
-%\end{enumerate}
-\newpage
+
 \section*{Postup práce}
  
 \begin{enumerate}
@@ -46,3 +45,21 @@ Zdrojové kódy práce sú udržiavané v Git repository.\cite{github}\\
 %pridat / sucastna situacia 
 %a ciel prace
 %metodika vypracovani
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
