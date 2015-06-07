@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+    <h:head>
+        <f:facet name="first">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        </f:facet>
+        <h:outputStylesheet library="css" name="style-default.css"/>
+        <h:outputScript library="js" name="snap.svg-min.js" />
+        <h:outputScript library="js" name="triplevalve-ws.js" />
+        <h:outputScript library="js" name="triplevalveController.js" />
+        <title>SCADA HTML5 demo</title>
+    </h:head>
+    <h:body onload="onPageLoad();">
+        
+        <h1>Triplevalve WS demo</h1>
+        
+        <svg id ="svg1" viewBox="0 0 620 750" width="20%" height="20%"></svg>
+        
+        <p:socket channel="/globalPush" onMessage="handlePushEvent"></p:socket>
+    
+    </h:body>
+</html>
