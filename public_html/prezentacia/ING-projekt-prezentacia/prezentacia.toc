@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.07pt}
-\select@language {slovak}
-\beamer@sectionintoc {1}{Cieľ práce}{3}{0}{1}
-\beamer@sectionintoc {2}{Použite}{4}{0}{2}
-\beamer@sectionintoc {3}{Požiadavky}{5}{0}{3}
-\beamer@sectionintoc {4}{Stručný opis}{6}{0}{4}
-\beamer@sectionintoc {5}{Bližšie ku senzoru}{10}{0}{5}
-\beamer@sectionintoc {6}{Možnosti rozšírenia}{11}{0}{6}
