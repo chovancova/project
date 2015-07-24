@@ -1,7 +1,3 @@
-<h3>Finalna verzia textovej casti: https://www.overleaf.com/read/stvktrgsnxpp </h3>
-
-web page: http://vaii.fri.uniza.sk/~chovancova26/
-<br/>
 
 <h1>Vizualizácia dát získaných pomocou SCADA systémov s využitím HTML 5 štandardov</h1>
 <h3>Data visualization acquired by SCADA systems using HTML 5 standards </h3>
@@ -22,4 +18,9 @@ web page: http://vaii.fri.uniza.sk/~chovancova26/
 <li>Implementujte vzorovú sadu grafických komponentov.
 <li>Zhodnoťte výkonnosť riešenia a definujte výkonnostné obmedzenia.
 </ol>
+
+<h3>Finalna verzia textovej casti: https://www.overleaf.com/read/stvktrgsnxpp </h3>
+
+web page: http://vaii.fri.uniza.sk/~chovancova26/
+<br/>
 
