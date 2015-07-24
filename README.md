@@ -1,11 +1,32 @@
+<h2>Data visualization acquired by SCADA systems using HTML 5 standards</h2>
+<h4>Bachelor thesis</h4>
 
-<h1>Vizualizácia dát získaných pomocou SCADA systémov s využitím HTML 5 štandardov</h1>
-<h3>Data visualization acquired by SCADA systems using HTML 5 standards </h3>
- 
-<br>Vedúci: Ing. Juraj Veverka
-<br>Tútor:	Ing. Patrik Hrkút, PhD.
+University of Žilina, Faculty of Management Science and Informatics, Department of
+Software Technologies
+<p>
+<br>Tutor: Ing. Juraj Veverka
+<br>Tutor:	Ing. Patrik Hrkút, PhD.
+</p>
+<p>
+Qualification level: Bachelor of Informatics
+</p>
+<p>
+The main aim of this thesis was to visualizate of data obtained by SCADA systems.
+Aim is to provide a process of creation and visualization of graphical components. Product 
+of the thesis is a graphical components for visualization of technological processes
+using HTML 5 standards. The paper describes the detailed process visualization of
+pumping station. It was designed simple interface through which components communicate
+with the server part of the SCADA system. The target platform for the resulting
+web application will be compatible with your family the HTML 5 for each Web browser.
+</p>
+<h5>Key words:</h5>
+visualization, HTML5, JavaScript, Snap.svg, SCADA, REST API
 
-<h2>Cieľ</h2>
+
+
+<h3>Vizualizácia dát získaných pomocou SCADA systémov s využitím HTML 5 štandardov</h3>
+
+<h4>Cieľ</h4>
 <body>
 	Cieľom práce je vytvorenie vzorovej sady grafických komponentov na vizualizáciu technologických procesov s využitím HTML 5 štandardov. Jedná sa o grafické komponenty, ktoré nie sú bežne dostupné na tvorbu interaktívnych webových aplikácii ako napríklad vizualizácie mechanických súčasti hydraulických systémov, technologických liniek, silových a výkonových častí automatizačných sústav. Cieľová platforma pre výslednú webovú aplikáciu bude kompatibilná s rodinou štandardov HTML 5 pre každý webový prehliadač. Riešenie bude využívať výhradne open-source knižnice s licenciami typu MIT, GNU, GPL, BSD.
 </body>
